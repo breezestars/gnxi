@@ -27,15 +27,11 @@ import (
 	log "github.com/golang/glog"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
-	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/reflection"
-	"google.golang.org/grpc/status"
 
 	"github.com/breezestars/gnxi/gnmi"
 	"github.com/breezestars/gnxi/gnmi/modeldata"
 	"github.com/breezestars/gnxi/gnmi/modeldata/gostruct"
-
-	"github.com/breezestars/gnxi/utils/credentials"
 
 	pb "github.com/openconfig/gnmi/proto/gnmi"
 )
@@ -59,25 +55,11 @@ func newServer(model *gnmi.Model, config []byte) (*server, error) {
 
 // Get overrides the Get func of gnmi.Target to provide user auth.
 func (s *server) Get(ctx context.Context, req *pb.GetRequest) (*pb.GetResponse, error) {
-	msg, ok := credentials.AuthorizeUser(ctx)
-	ok = true
-	if !ok {
-		log.Infof("denied a Get request: %v", msg)
-		return nil, status.Error(codes.PermissionDenied, msg)
-	}
-	log.Infof("allowed a Get request: %v", msg)
 	return s.Server.Get(ctx, req)
 }
 
 // Set overrides the Set func of gnmi.Target to provide user auth.
 func (s *server) Set(ctx context.Context, req *pb.SetRequest) (*pb.SetResponse, error) {
-	msg, ok := credentials.AuthorizeUser(ctx)
-	ok = true
-	if !ok {
-		log.Infof("denied a Set request: %v", msg)
-		return nil, status.Error(codes.PermissionDenied, msg)
-	}
-	log.Infof("allowed a Set request: %v", msg)
 	return s.Server.Set(ctx, req)
 }
 

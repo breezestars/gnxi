@@ -26,7 +26,6 @@ import (
 	"google.golang.org/grpc"
 
 	"github.com/breezestars/gnxi/utils"
-	"github.com/breezestars/gnxi/utils/credentials"
 
 	pb "github.com/openconfig/gnmi/proto/gnmi"
 )
@@ -40,8 +39,9 @@ var (
 func main() {
 	flag.Parse()
 
-	opts := credentials.ClientCredentials(*targetName)
-	conn, err := grpc.Dial(*targetAddr, opts...)
+	//opts := credentials.ClientCredentials(*targetName)
+	opts := grpc.WithInsecure()
+	conn, err := grpc.Dial(*targetAddr, opts)
 	if err != nil {
 		log.Exitf("Dialing to %q failed: %v", *targetAddr, err)
 	}

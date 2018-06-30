@@ -30,7 +30,6 @@ import (
 	"google.golang.org/grpc"
 
 	"github.com/breezestars/gnxi/utils"
-	"github.com/breezestars/gnxi/utils/credentials"
 	"github.com/breezestars/gnxi/utils/xpath"
 
 	pb "github.com/openconfig/gnmi/proto/gnmi"
@@ -127,8 +126,9 @@ func main() {
 	flag.Var(&updateOpt, "update", "xpath:value pair to be updated. Value can be numeric, boolean, string, or IETF JSON file (. starts with '@').")
 	flag.Parse()
 
-	opts := credentials.ClientCredentials(*targetName)
-	conn, err := grpc.Dial(*targetAddr, opts...)
+	//opts := credentials.ClientCredentials(*targetName)
+	opts := grpc.WithInsecure()
+	conn, err := grpc.Dial(*targetAddr, opts)
 	if err != nil {
 		log.Exitf("Dialing to %q failed: %v", *targetAddr, err)
 	}
