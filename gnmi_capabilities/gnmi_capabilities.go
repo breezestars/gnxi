@@ -25,8 +25,8 @@ import (
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 
-	"github.com/google/gnxi/utils"
-	"github.com/google/gnxi/utils/credentials"
+	"github.com/breezestars/gnxi/utils"
+	"github.com/breezestars/gnxi/utils/credentials"
 
 	pb "github.com/openconfig/gnmi/proto/gnmi"
 )

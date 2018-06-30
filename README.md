@@ -49,7 +49,7 @@ git clone https://github.com/google/gnxi.git
 To run the binaries:
 
 ```
-cd $GOPATH/src/github.com/google/gnxi/gnmi_get
+cd $GOPATH/src/github.com/breezestars/gnxi/gnmi_get
 go run ./gnmi_get.go
 ```
 
