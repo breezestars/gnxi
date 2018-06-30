@@ -60,6 +60,7 @@ func newServer(model *gnmi.Model, config []byte) (*server, error) {
 // Get overrides the Get func of gnmi.Target to provide user auth.
 func (s *server) Get(ctx context.Context, req *pb.GetRequest) (*pb.GetResponse, error) {
 	msg, ok := credentials.AuthorizeUser(ctx)
+	ok = true
 	if !ok {
 		log.Infof("denied a Get request: %v", msg)
 		return nil, status.Error(codes.PermissionDenied, msg)
@@ -71,6 +72,7 @@ func (s *server) Get(ctx context.Context, req *pb.GetRequest) (*pb.GetResponse, 
 // Set overrides the Set func of gnmi.Target to provide user auth.
 func (s *server) Set(ctx context.Context, req *pb.SetRequest) (*pb.SetResponse, error) {
 	msg, ok := credentials.AuthorizeUser(ctx)
+	ok = true
 	if !ok {
 		log.Infof("denied a Set request: %v", msg)
 		return nil, status.Error(codes.PermissionDenied, msg)
@@ -98,8 +100,8 @@ func main() {
 
 	flag.Parse()
 
-	opts := credentials.ServerCredentials()
-	g := grpc.NewServer(opts...)
+	//opts := credentials.ServerCredentials()
+	g := grpc.NewServer()
 
 	var configData []byte
 	if *configFile != "" {
