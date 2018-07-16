@@ -71,10 +71,22 @@ func (m *Model) NewConfigStruct(jsonConfig []byte) (ygot.ValidatedGoStruct, erro
 		if err := m.jsonUnmarshaler(jsonConfig, rootStruct); err != nil {
 			return nil, err
 		}
-		if err := rootStruct.Validate(); err != nil {
+			if err := rootStruct.Validate(); err != nil {
 			return nil, err
 		}
 	}
+	//json, err := ygot.EmitJSON(rootStruct, &ygot.EmitJSONConfig{
+	//	Format: ygot.RFC7951,
+	//	Indent: "  ",
+	//	RFC7951Config: &ygot.RFC7951JSONConfig{
+	//		AppendModuleName: true,
+	//	},
+	//})
+	//
+	//if err != nil {
+	//	panic(fmt.Sprintf("JSON demo error: %v", err))
+	//}
+	//fmt.Println(json)
 	return rootStruct, nil
 }
 

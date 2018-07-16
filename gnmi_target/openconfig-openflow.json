@@ -2,82 +2,227 @@
   "openconfig-interfaces:interfaces": {
     "interface": [
       {
-        "name": "admin",
+        "name": "eth0",
         "config": {
-          "name": "admin"
+          "name": "eth0"
+        }
+      },
+      {
+        "name": "Ethernet0",
+        "config": {
+          "name": "Ethernet0"
+        }
+      },
+      {
+        "name": "Ethernet4",
+        "config": {
+          "name": "Ethernet4"
+        }
+      },
+      {
+        "name": "Ethernet8",
+        "config": {
+          "name": "Ethernet8"
+        }
+      },
+      {
+        "name": "Ethernet12",
+        "config": {
+          "name": "Ethernet12"
+        }
+      },
+      {
+        "name": "Ethernet16",
+        "config": {
+          "name": "Ethernet16"
+        }
+      },
+      {
+        "name": "Ethernet20",
+        "config": {
+          "name": "Ethernet20"
+        }
+      },
+      {
+        "name": "Ethernet24",
+        "config": {
+          "name": "Ethernet24"
+        }
+      },
+      {
+        "name": "Ethernet28",
+        "config": {
+          "name": "Ethernet28"
+        }
+      },
+      {
+        "name": "Ethernet32",
+        "config": {
+          "name": "Ethernet32"
+        }
+      },
+      {
+        "name": "Ethernet36",
+        "config": {
+          "name": "Ethernet36"
+        }
+      },
+      {
+        "name": "Ethernet40",
+        "config": {
+          "name": "Ethernet40"
+        }
+      },
+      {
+        "name": "Ethernet44",
+        "config": {
+          "name": "Ethernet44"
+        }
+      },
+      {
+        "name": "Ethernet48",
+        "config": {
+          "name": "Ethernet48"
+        }
+      },
+      {
+        "name": "Ethernet52",
+        "config": {
+          "name": "Ethernet52"
+        }
+      },
+      {
+        "name": "Ethernet56",
+        "config": {
+          "name": "Ethernet56"
+        }
+      },
+      {
+        "name": "Ethernet60",
+        "config": {
+          "name": "Ethernet60"
+        }
+      },
+      {
+        "name": "Ethernet64",
+        "config": {
+          "name": "Ethernet64"
+        }
+      },
+      {
+        "name": "Ethernet68",
+        "config": {
+          "name": "Ethernet68"
+        }
+      },
+      {
+        "name": "Ethernet72",
+        "config": {
+          "name": "Ethernet72"
+        }
+      },
+      {
+        "name": "Ethernet76",
+        "config": {
+          "name": "Ethernet76"
+        }
+      },
+      {
+        "name": "Ethernet80",
+        "config": {
+          "name": "Ethernet80"
+        }
+      },
+      {
+        "name": "Ethernet84",
+        "config": {
+          "name": "Ethernet84"
+        }
+      },
+      {
+        "name": "Ethernet88",
+        "config": {
+          "name": "Ethernet88"
+        }
+      },
+      {
+        "name": "Ethernet92",
+        "config": {
+          "name": "Ethernet92"
+        }
+      },
+      {
+        "name": "Ethernet96",
+        "config": {
+          "name": "Ethernet96"
+        }
+      },
+      {
+        "name": "Ethernet100",
+        "config": {
+          "name": "Ethernet100"
+        }
+      },
+      {
+        "name": "Ethernet104",
+        "config": {
+          "name": "Ethernet104"
+        }
+      },
+      {
+        "name": "Ethernet108",
+        "config": {
+          "name": "Ethernet108"
+        }
+      },
+      {
+        "name": "Ethernet112",
+        "config": {
+          "name": "Ethernet112"
+        }
+      },
+      {
+        "name": "Ethernet116",
+        "config": {
+          "name": "Ethernet116"
+        }
+      },
+      {
+        "name": "Ethernet120",
+        "config": {
+          "name": "Ethernet120"
+        }
+      },
+      {
+        "name": "Ethernet124",
+        "config": {
+          "name": "Ethernet124"
         }
       }
     ]
   },
-  "openconfig-system:system": {
-    "aaa": {
-      "authentication": {
-        "admin-user": {
-          "config": {
-            "admin-password": "password"
-          }
-        },
-        "config": {
-          "authentication-method": [
-            "openconfig-aaa-types:LOCAL"
-          ]
-        }
-      }
-    },
-    "clock": {
-      "config": {
-        "timezone-name": "Europe/Stockholm"
-      }
-    },
-    "config": {
-      "hostname": "zz-tri-dev01",
-      "domain-name": "foo.bar.com",
-      "login-banner": "This device is for authorized use only",
-      "motd-banner": "Welcome to Open vSwitch"
-    },
-    "openconfig-openflow:openflow": {
-      "agent": {
-        "config": {
-          "backoff-interval": 5,
-          "datapath-id": "00:16:3e:00:00:00:00:00",
-          "failure-mode": "SECURE",
-          "inactivity-probe": 10,
-          "max-backoff": 10
-        }
-      },
-      "controllers": {
-        "controller": [
-          {
-            "config": {
-              "name": "main"
-            },
-            "connections": {
-              "connection": [
-                {
-                  "aux-id": 0,
-                  "config": {
-                    "address": "192.0.2.10",
-                    "aux-id": 0,
-                    "port": 6633,
-                    "priority": 1,
-                    "source-interface": "admin",
-                    "transport": "TLS"
-                  },
-                  "state": {
-                    "address": "192.0.2.10",
-                    "aux-id": 0,
-                    "port": 6633,
-                    "priority": 1,
-                    "source-interface": "admin",
-                    "transport": "TLS"
-                  }
+  "openconfig-lldp:lldp": {
+    "interfaces": {
+      "interface": [
+        {
+          "name": "eth0",
+          "config":{
+            "name":"eth0"
+          },
+          "neighbors": {
+            "neighbor": [
+              {
+                "id": "1",
+                "state": {
+                  "chassis-id": "cc:37:ab:60:cd:c1",
+                  "chassis-id-type": "MAC_ADDRESS",
+                  "id": "1"
                 }
-              ]
-            },
-            "name": "main"
+              }
+            ]
           }
-        ]
-      }
+        }
+      ]
     }
   }
 }

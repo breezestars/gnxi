@@ -14,10 +14,13 @@ limitations under the License.
 */
 
 // Package modeldata contains the following model data in gnmi proto struct:
-//	openconfig-interfaces 2.0.0,
-//	openconfig-openflow 0.1.0,
-//	openconfig-platform 0.5.0,
-//	openconfig-system 0.2.0.
+//	openconfig-if-aggregate 2.3.1,
+//	openconfig-if-ethernet 2.4.0,
+//	openconfig-interfaces 2.3.1,
+//	openconfig-lldp 0.1.0,
+//	openconfig-platform 0.11.0,
+//	openconfig-system 0.5.0,
+//	openconfig-vlan 3.0.1,
 package modeldata
 
 import (
@@ -25,33 +28,57 @@ import (
 )
 
 const (
+	// OpenconfigInterfaceAggregateModel is the openconfig YANG model for interface-if-aggregate.
+	OpenconfigInterfaceAggregateModel = "openconfig-if-aggregate"
+	// OpenconfigInterfaceEthernetModel is the openconfig YANG model for interface-if-ethernet.
+	OpenconfigInterfaceEthernetModel = "openconfig-if-ethernet"
 	// OpenconfigInterfacesModel is the openconfig YANG model for interfaces.
 	OpenconfigInterfacesModel = "openconfig-interfaces"
-	// OpenconfigOpenflowModel is the openconfig YANG model for openflow.
-	OpenconfigOpenflowModel = "openconfig-openflow"
+	// OpenconfigLldpModel is the openconfig YANG model for lldp.
+	OpenconfigLldpModel = "openconfig-lldp"
+	// OpenconfigNetworkInstanceModel is the openconfig YANG model for network-instance.
+	OpenconfigNetworkInstanceModel = "openconfig-network-instance"
 	// OpenconfigPlatformModel is the openconfig YANG model for platform.
 	OpenconfigPlatformModel = "openconfig-platform"
 	// OpenconfigSystemModel is the openconfig YANG model for system.
 	OpenconfigSystemModel = "openconfig-system"
+	// OpenconfigVlanModel is the openconfig YANG model for vlan.
+	OpenconfigVlanModel = "openconfig-vlan"
 )
 
 var (
 	// ModelData is a list of supported models.
 	ModelData = []*pb.ModelData{{
+		Name:         OpenconfigInterfaceAggregateModel,
+		Organization: "OpenConfig working group",
+		Version:      "2.3.1",
+	}, {
+		Name:         OpenconfigInterfaceEthernetModel,
+		Organization: "OpenConfig working group",
+		Version:      "2.4.0",
+	}, {
 		Name:         OpenconfigInterfacesModel,
 		Organization: "OpenConfig working group",
-		Version:      "2.0.0",
+		Version:      "2.3.1",
 	}, {
-		Name:         OpenconfigOpenflowModel,
+		Name:         OpenconfigLldpModel,
 		Organization: "OpenConfig working group",
 		Version:      "0.1.0",
 	}, {
+		Name:         OpenconfigNetworkInstanceModel,
+		Organization: "OpenConfig working group",
+		Version:      "0.10.2",
+	}, {
 		Name:         OpenconfigPlatformModel,
 		Organization: "OpenConfig working group",
-		Version:      "0.5.0",
+		Version:      "0.11.0",
 	}, {
 		Name:         OpenconfigSystemModel,
 		Organization: "OpenConfig working group",
-		Version:      "0.2.0",
-	}}
+		Version:      "0.5.0",
+	}, {
+		Name:         OpenconfigVlanModel,
+		Organization: "OpenConfig working group",
+		Version:      "3.0.1",
+	},}
 )

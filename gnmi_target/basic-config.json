@@ -1,0 +1,790 @@
+{
+  "openconfig-interfaces:interfaces": {
+    "interface": [
+      {
+        "config": {
+          "enabled": true,
+          "mtu": 9100,
+          "name": "Ethernet0"
+        },
+        "name": "Ethernet0",
+        "state": {
+          "admin-status": "UP",
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "enabled": true,
+          "mtu": 9100,
+          "name": "Ethernet100"
+        },
+        "name": "Ethernet100",
+        "state": {
+          "admin-status": "UP",
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "enabled": true,
+          "mtu": 9100,
+          "name": "Ethernet104"
+        },
+        "name": "Ethernet104",
+        "state": {
+          "admin-status": "UP",
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "enabled": true,
+          "mtu": 9100,
+          "name": "Ethernet108"
+        },
+        "name": "Ethernet108",
+        "state": {
+          "admin-status": "UP",
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "enabled": true,
+          "mtu": 9100,
+          "name": "Ethernet112"
+        },
+        "name": "Ethernet112",
+        "state": {
+          "admin-status": "UP",
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "enabled": true,
+          "mtu": 9100,
+          "name": "Ethernet116"
+        },
+        "name": "Ethernet116",
+        "state": {
+          "admin-status": "UP",
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "enabled": true,
+          "mtu": 9100,
+          "name": "Ethernet12"
+        },
+        "name": "Ethernet12",
+        "state": {
+          "admin-status": "UP",
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "enabled": true,
+          "mtu": 9100,
+          "name": "Ethernet120"
+        },
+        "name": "Ethernet120",
+        "state": {
+          "admin-status": "UP",
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "enabled": true,
+          "mtu": 9100,
+          "name": "Ethernet124"
+        },
+        "name": "Ethernet124",
+        "state": {
+          "admin-status": "UP",
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "enabled": true,
+          "mtu": 9100,
+          "name": "Ethernet16"
+        },
+        "name": "Ethernet16",
+        "state": {
+          "admin-status": "UP",
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "enabled": true,
+          "mtu": 9100,
+          "name": "Ethernet20"
+        },
+        "name": "Ethernet20",
+        "state": {
+          "admin-status": "UP",
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "enabled": true,
+          "mtu": 9100,
+          "name": "Ethernet24"
+        },
+        "name": "Ethernet24",
+        "state": {
+          "admin-status": "UP",
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "enabled": true,
+          "mtu": 9100,
+          "name": "Ethernet28"
+        },
+        "name": "Ethernet28",
+        "state": {
+          "admin-status": "UP",
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "enabled": true,
+          "mtu": 9100,
+          "name": "Ethernet32"
+        },
+        "name": "Ethernet32",
+        "state": {
+          "admin-status": "UP",
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "enabled": true,
+          "mtu": 9100,
+          "name": "Ethernet36"
+        },
+        "name": "Ethernet36",
+        "state": {
+          "admin-status": "UP",
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "enabled": true,
+          "mtu": 9100,
+          "name": "Ethernet4"
+        },
+        "name": "Ethernet4",
+        "state": {
+          "admin-status": "UP",
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "enabled": true,
+          "mtu": 9100,
+          "name": "Ethernet40"
+        },
+        "name": "Ethernet40",
+        "state": {
+          "admin-status": "UP",
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "enabled": true,
+          "mtu": 9100,
+          "name": "Ethernet44"
+        },
+        "name": "Ethernet44",
+        "state": {
+          "admin-status": "UP",
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "enabled": true,
+          "mtu": 9100,
+          "name": "Ethernet48"
+        },
+        "name": "Ethernet48",
+        "state": {
+          "admin-status": "UP",
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "enabled": true,
+          "mtu": 9100,
+          "name": "Ethernet52"
+        },
+        "name": "Ethernet52",
+        "state": {
+          "admin-status": "UP",
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "enabled": true,
+          "mtu": 9100,
+          "name": "Ethernet56"
+        },
+        "name": "Ethernet56",
+        "state": {
+          "admin-status": "UP",
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "enabled": true,
+          "mtu": 9100,
+          "name": "Ethernet60"
+        },
+        "name": "Ethernet60",
+        "state": {
+          "admin-status": "UP",
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "enabled": true,
+          "mtu": 9100,
+          "name": "Ethernet64"
+        },
+        "name": "Ethernet64",
+        "state": {
+          "admin-status": "UP",
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "enabled": true,
+          "mtu": 9100,
+          "name": "Ethernet68"
+        },
+        "name": "Ethernet68",
+        "state": {
+          "admin-status": "UP",
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "enabled": true,
+          "mtu": 9100,
+          "name": "Ethernet72"
+        },
+        "name": "Ethernet72",
+        "state": {
+          "admin-status": "UP",
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "enabled": true,
+          "mtu": 9100,
+          "name": "Ethernet76"
+        },
+        "name": "Ethernet76",
+        "state": {
+          "admin-status": "UP",
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "enabled": true,
+          "mtu": 9100,
+          "name": "Ethernet8"
+        },
+        "name": "Ethernet8",
+        "state": {
+          "admin-status": "UP",
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "enabled": true,
+          "mtu": 9100,
+          "name": "Ethernet80"
+        },
+        "name": "Ethernet80",
+        "state": {
+          "admin-status": "UP",
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "enabled": true,
+          "mtu": 9100,
+          "name": "Ethernet84"
+        },
+        "name": "Ethernet84",
+        "state": {
+          "admin-status": "UP",
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "enabled": true,
+          "mtu": 9100,
+          "name": "Ethernet88"
+        },
+        "name": "Ethernet88",
+        "state": {
+          "admin-status": "UP",
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "enabled": true,
+          "mtu": 9100,
+          "name": "Ethernet92"
+        },
+        "name": "Ethernet92",
+        "state": {
+          "admin-status": "UP",
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "enabled": true,
+          "mtu": 9100,
+          "name": "Ethernet96"
+        },
+        "name": "Ethernet96",
+        "state": {
+          "admin-status": "UP",
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "enabled": true,
+          "name": "eth0"
+        },
+        "name": "eth0",
+        "state": {
+          "admin-status": "UP",
+          "oper-status": "UP"
+        }
+      }
+    ]
+  },
+  "openconfig-lldp:lldp": {
+    "interfaces": {
+      "interface": [
+        {
+          "config": {
+            "name": "Ethernet0"
+          },
+          "name": "Ethernet0"
+        },
+        {
+          "config": {
+            "name": "Ethernet100"
+          },
+          "name": "Ethernet100"
+        },
+        {
+          "config": {
+            "name": "Ethernet104"
+          },
+          "name": "Ethernet104"
+        },
+        {
+          "config": {
+            "name": "Ethernet108"
+          },
+          "name": "Ethernet108"
+        },
+        {
+          "config": {
+            "name": "Ethernet112"
+          },
+          "name": "Ethernet112"
+        },
+        {
+          "config": {
+            "name": "Ethernet116"
+          },
+          "name": "Ethernet116"
+        },
+        {
+          "config": {
+            "name": "Ethernet12"
+          },
+          "name": "Ethernet12"
+        },
+        {
+          "config": {
+            "name": "Ethernet120"
+          },
+          "name": "Ethernet120"
+        },
+        {
+          "config": {
+            "name": "Ethernet124"
+          },
+          "name": "Ethernet124"
+        },
+        {
+          "config": {
+            "name": "Ethernet16"
+          },
+          "name": "Ethernet16"
+        },
+        {
+          "config": {
+            "name": "Ethernet20"
+          },
+          "name": "Ethernet20"
+        },
+        {
+          "config": {
+            "name": "Ethernet24"
+          },
+          "name": "Ethernet24"
+        },
+        {
+          "config": {
+            "name": "Ethernet28"
+          },
+          "name": "Ethernet28"
+        },
+        {
+          "config": {
+            "name": "Ethernet32"
+          },
+          "name": "Ethernet32"
+        },
+        {
+          "config": {
+            "name": "Ethernet36"
+          },
+          "name": "Ethernet36"
+        },
+        {
+          "config": {
+            "name": "Ethernet4"
+          },
+          "name": "Ethernet4"
+        },
+        {
+          "config": {
+            "name": "Ethernet40"
+          },
+          "name": "Ethernet40"
+        },
+        {
+          "config": {
+            "name": "Ethernet44"
+          },
+          "name": "Ethernet44"
+        },
+        {
+          "config": {
+            "name": "Ethernet48"
+          },
+          "name": "Ethernet48"
+        },
+        {
+          "config": {
+            "name": "Ethernet52"
+          },
+          "name": "Ethernet52"
+        },
+        {
+          "config": {
+            "name": "Ethernet56"
+          },
+          "name": "Ethernet56"
+        },
+        {
+          "config": {
+            "name": "Ethernet60"
+          },
+          "name": "Ethernet60"
+        },
+        {
+          "config": {
+            "name": "Ethernet64"
+          },
+          "name": "Ethernet64"
+        },
+        {
+          "config": {
+            "name": "Ethernet68"
+          },
+          "name": "Ethernet68"
+        },
+        {
+          "config": {
+            "name": "Ethernet72"
+          },
+          "name": "Ethernet72"
+        },
+        {
+          "config": {
+            "name": "Ethernet76"
+          },
+          "name": "Ethernet76"
+        },
+        {
+          "config": {
+            "name": "Ethernet8"
+          },
+          "name": "Ethernet8"
+        },
+        {
+          "config": {
+            "name": "Ethernet80"
+          },
+          "name": "Ethernet80"
+        },
+        {
+          "config": {
+            "name": "Ethernet84"
+          },
+          "name": "Ethernet84"
+        },
+        {
+          "config": {
+            "name": "Ethernet88"
+          },
+          "name": "Ethernet88"
+        },
+        {
+          "config": {
+            "name": "Ethernet92"
+          },
+          "name": "Ethernet92"
+        },
+        {
+          "config": {
+            "name": "Ethernet96"
+          },
+          "name": "Ethernet96"
+        },
+        {
+          "config": {
+            "name": "eth0"
+          },
+          "name": "eth0"
+        }
+      ]
+    }
+  },
+  "openconfig-network-instance:network-instances": {
+    "network-instance": [
+      {
+        "config": {
+          "name": "771232X1721087"
+        },
+        "name": "771232X1721087",
+        "vlans": {
+          "vlan": [
+            {
+              "config": {
+                "name": "VLAN1",
+                "vlan-id": 1
+              },
+              "members": {
+                "member": [
+                  {
+                    "state": {
+                      "interface": "Ethernet0"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet4"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet8"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet12"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet16"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet20"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet24"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet28"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet32"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet36"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet40"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet44"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet48"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet52"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet56"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet60"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet64"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet68"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet72"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet76"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet80"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet84"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet88"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet92"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet96"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet100"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet104"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet108"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet112"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet116"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet120"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet124"
+                    }
+                  }
+                ]
+              },
+              "vlan-id": 1
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

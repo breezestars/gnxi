@@ -40,6 +40,7 @@ import (
 	dpb "github.com/golang/protobuf/protoc-gen-go/descriptor"
 	pb "github.com/openconfig/gnmi/proto/gnmi"
 	cpb "google.golang.org/genproto/googleapis/rpc/code"
+	"github.com/breezestars/gnxi/utils"
 )
 
 // ConfigCallback is the signature of the function to apply a validated config to the physical device.
@@ -76,11 +77,21 @@ type Server struct {
 }
 
 // NewServer creates an instance of Server with given json config.
-func NewServer(model *Model, config []byte, callback ConfigCallback) (*Server, error) {
-	rootStruct, err := model.NewConfigStruct(config)
-	if err != nil {
-		return nil, err
+func NewServer(model *Model, config []byte, callback ConfigCallback, opts ...bool) (*Server, error) {
+	var rootStruct ygot.ValidatedGoStruct
+	var err error
+	if opts[0] {
+		rootStruct, err = utils.InitGoStruct()
+		if err != nil {
+			return nil, err
+		}
+	} else {
+		rootStruct, err = model.NewConfigStruct(config)
+		if err != nil {
+			return nil, err
+		}
 	}
+
 	s := &Server{
 		model:    model,
 		config:   rootStruct,

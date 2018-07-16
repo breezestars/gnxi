@@ -46,7 +46,7 @@ type server struct {
 }
 
 func newServer(model *gnmi.Model, config []byte) (*server, error) {
-	s, err := gnmi.NewServer(model, config, nil)
+	s, err := gnmi.NewServer(model, config, nil,true)
 	if err != nil {
 		return nil, err
 	}
