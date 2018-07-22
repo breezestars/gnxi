@@ -54,6 +54,7 @@ var (
 )
 
 func main() {
+	getTimeStart := time.Now()
 	flag.Var(&xPathFlags, "xpath", "xpath of the config node to be fetched")
 	flag.Var(&pbPathFlags, "pbpath", "protobuf format path of the config node to be fetched")
 	flag.Parse()
@@ -96,19 +97,31 @@ func main() {
 		pbPathList = append(pbPathList, &pbPath)
 	}
 
+
 	getRequest := &pb.GetRequest{
 		Encoding: pb.Encoding(encoding),
 		Path:     pbPathList,
 	}
 
+	printTimeStart := time.Now()
+
 	fmt.Println("== getRequest:")
 	utils.PrintProto(getRequest)
 
+	reqTimeStart := time.Now()
 	getResponse, err := cli.Get(ctx, getRequest)
+	reqTimeUp := time.Since(reqTimeStart)
 	if err != nil {
 		log.Exitf("Get failed: %v", err)
 	}
 
 	fmt.Println("== getResponse:")
 	utils.PrintProto(getResponse)
+
+	printTimeUp := time.Since(printTimeStart)
+	getTimeUp := time.Since(getTimeStart)
+
+	fmt.Println("getRequest took time: ", reqTimeUp)
+	fmt.Println("All get took time: ", getTimeUp)
+	fmt.Println("All print took time: ", printTimeUp)
 }
