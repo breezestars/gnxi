@@ -428,19 +428,16 @@ func SyncInterface(device *gostruct.Device) error {
 				inf.State.Mtu = ygot.Uint16(uint16(mtu))
 			}
 
-			inf.State = &gostruct.OpenconfigInterfaces_Interfaces_Interface_State{
-				Counters: &gostruct.OpenconfigInterfaces_Interfaces_Interface_State_Counters{
-					InOctets:    ygot.Uint64(InOctets),
-					InErrors:    ygot.Uint64(InErrors),
-					InDiscards:  ygot.Uint64(InDiscards),
-					OutOctets:   ygot.Uint64(OutOctets),
-					OutErrors:   ygot.Uint64(OutErrors),
-					OutDiscards: ygot.Uint64(OutDiscards),
-				},
+			inf.State.Counters=&gostruct.OpenconfigInterfaces_Interfaces_Interface_State_Counters{
+				InOctets:    ygot.Uint64(InOctets),
+				InErrors:    ygot.Uint64(InErrors),
+				InDiscards:  ygot.Uint64(InDiscards),
+				OutOctets:   ygot.Uint64(OutOctets),
+				OutErrors:   ygot.Uint64(OutErrors),
+				OutDiscards: ygot.Uint64(OutDiscards),
 			}
-
 		}
-		time.Sleep(2*time.Second)
+		time.Sleep(2 * time.Second)
 	}
 
 	return nil
