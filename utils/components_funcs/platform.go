@@ -69,6 +69,7 @@ func InitPlatform(device *gostruct.Device) error {
 	partNo, err := search(consoleArray, "0x22")
 	mfgName, err := search(consoleArray, "0x2B")
 	mfgDate, err := search(consoleArray, "0x25")
+	splitMfgDate := strings.Split(mfgDate,"/")
 	swVersion := strings.Split(string(versionOutput), ": ")[1]
 
 	device.Components = &gostruct.OpenconfigPlatform_Components{}
@@ -88,7 +89,7 @@ func InitPlatform(device *gostruct.Device) error {
 		HardwareVersion: ygot.String(hwVersion),
 		SoftwareVersion: ygot.String(swVersion),
 		MfgName:         ygot.String(mfgName),
-		MfgDate:         ygot.String(mfgDate),
+		MfgDate:         ygot.String(splitMfgDate[2]+"-"+splitMfgDate[0]+"-"+splitMfgDate[1]),
 		Type: &gostruct.OpenconfigPlatform_Components_Component_State_Type_Union_E_OpenconfigPlatformTypes_OPENCONFIG_HARDWARE_COMPONENT{
 			gostruct.OpenconfigPlatformTypes_OPENCONFIG_HARDWARE_COMPONENT_CHASSIS,
 		},
