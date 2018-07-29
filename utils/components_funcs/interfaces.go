@@ -428,7 +428,7 @@ func SyncInterface(device *gostruct.Device) error {
 				inf.State.Mtu = ygot.Uint16(uint16(mtu))
 			}
 
-			inf.State.Counters=&gostruct.OpenconfigInterfaces_Interfaces_Interface_State_Counters{
+			inf.State.Counters = &gostruct.OpenconfigInterfaces_Interfaces_Interface_State_Counters{
 				InOctets:    ygot.Uint64(InOctets),
 				InErrors:    ygot.Uint64(InErrors),
 				InDiscards:  ygot.Uint64(InDiscards),
@@ -438,6 +438,28 @@ func SyncInterface(device *gostruct.Device) error {
 			}
 		}
 		time.Sleep(2 * time.Second)
+	}
+
+	return nil
+}
+
+func SetInterfaceConfigEnabled(enable bool, intf string) error {
+	// sudo config interface startup Ethernet0
+
+	var cmd string
+
+	if enable {
+		cmd = "sudo config interface startup " + intf
+	} else {
+		cmd = "sudo config interface shutdown " + intf
+	}
+
+	result, err := exec.Command("bash", "-c", cmd).Output()
+	if err != nil {
+		return fmt.Errorf("Failed to execute command: %s", cmd)
+	}
+	if strings.Contains(string(result),"Cannot find device") {
+		return fmt.Errorf("Cannot find device: %s", intf)
 	}
 
 	return nil

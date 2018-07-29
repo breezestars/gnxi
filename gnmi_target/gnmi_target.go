@@ -39,6 +39,7 @@ import (
 var (
 	bindAddr   = flag.String("bind_address", ":10161", "Bind to address:port or just :port")
 	configFile = flag.String("config", "", "IETF JSON file for target startup config")
+	emulator   = flag.Bool("emulator", false, "Avtie emalator mode")
 )
 
 type server struct {
@@ -46,7 +47,7 @@ type server struct {
 }
 
 func newServer(model *gnmi.Model, config []byte) (*server, error) {
-	s, err := gnmi.NewServer(model, config, nil,true)
+	s, err := gnmi.NewServer(model, config, nil, *emulator)
 	if err != nil {
 		return nil, err
 	}
