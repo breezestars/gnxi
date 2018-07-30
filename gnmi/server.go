@@ -41,6 +41,7 @@ import (
 	pb "github.com/openconfig/gnmi/proto/gnmi"
 	cpb "google.golang.org/genproto/googleapis/rpc/code"
 	"github.com/breezestars/gnxi/utils"
+	"github.com/breezestars/gnxi/utils/components_funcs"
 )
 
 // ConfigCallback is the signature of the function to apply a validated config to the physical device.
@@ -81,12 +82,12 @@ func NewServer(model *Model, config []byte, callback ConfigCallback, opts ...boo
 	var rootStruct ygot.ValidatedGoStruct
 	var err error
 	if opts[0] {
-		rootStruct, err = utils.InitGoStruct()
+		rootStruct, err = model.NewConfigStruct(config)
 		if err != nil {
 			return nil, err
 		}
 	} else {
-		rootStruct, err = model.NewConfigStruct(config)
+		rootStruct, err = utils.InitGoStruct()
 		if err != nil {
 			return nil, err
 		}
@@ -278,10 +279,49 @@ func (s *Server) doReplaceOrUpdate(jsonTree map[string]interface{}, op pb.Update
 			return nil, status.Errorf(codes.Aborted, "error in applying operation to device: %v", applyErr)
 		}
 	}
+	cmdFullPath := gnmiFullPath(prefix, path)
+	err = callFuncs(cmdFullPath, val)
+	if err != nil {
+		return nil, err
+	}
+
 	return &pb.UpdateResult{
 		Path: path,
 		Op:   op,
 	}, nil
+}
+func callFuncs(path *pb.Path, val *pb.TypedValue) error {
+	idx := 0;
+	switch path.Elem[idx].Name {
+	case "interfaces":
+		//idx+1 is interface with key
+		intfName := path.Elem[idx+1].Key["name"]
+		idx = idx + 2;
+		switch path.Elem[idx].Name {
+		case "config":
+			idx++;
+			switch path.Elem[idx].Name {
+			case "name":
+				return status.Error(codes.Unimplemented, "interface/name is unsupported")
+			case "mtu":
+				return status.Error(codes.Unimplemented, "interface/mtu is unsupported")
+			case "enabled":
+				//fmt.Printf("Setting Interfaces/Interface[name=%s]/config/Enabled:%v\n", intfName, val.GetBoolVal())
+				if err := components_funcs.SetInterfacesInterfaceConfigEnabled(intfName, val.GetBoolVal()); err != nil {
+					return err
+				} else {
+					return nil
+				}
+			}
+		case "subinterfaces":
+			return status.Error(codes.Unimplemented, "set interfaces/interface/subinterface is unsupported")
+		}
+	case "platform":
+		return status.Error(codes.Unimplemented, "set platform is unsupported")
+	default:
+		return status.Error(codes.Unimplemented, "the path for setting function is unsupported")
+	}
+	return status.Error(codes.Internal, "setting function is not execute")
 }
 
 func (s *Server) toGoStruct(jsonTree map[string]interface{}) (ygot.ValidatedGoStruct, error) {

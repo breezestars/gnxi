@@ -30,6 +30,12 @@
   revision = "d65d576e9348f5982d7f6d83682b694e731a45c6"
 
 [[projects]]
+  name = "github.com/novalagung/golpal"
+  packages = ["."]
+  revision = "daa8960ff0fd2e65b6a28c3f8e4981d63f906905"
+  version = "v1.0.0"
+
+[[projects]]
   branch = "master"
   name = "github.com/openconfig/gnmi"
   packages = [
@@ -141,6 +147,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "c1aa257a0dd63b93ba249de0dfd715af1eefb0786b2feffe8d7746ee594aec26"
+  inputs-digest = "8a031ef3f9d779e213c56909c86c65a59b2775f261eafb982dc8e1ebbe18bb3a"
   solver-name = "gps-cdcl"
   solver-version = 1

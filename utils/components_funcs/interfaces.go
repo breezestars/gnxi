@@ -180,6 +180,7 @@ func InitInterface(device *gostruct.Device) error {
 			panic(err)
 		}
 
+
 		inf, err := device.Interfaces.NewInterface(intName)
 		inf.Config = &gostruct.OpenconfigInterfaces_Interfaces_Interface_Config{
 			Name: ygot.String(intName),
@@ -443,9 +444,10 @@ func SyncInterface(device *gostruct.Device) error {
 	return nil
 }
 
-func SetInterfaceConfigEnabled(enable bool, intf string) error {
+func SetInterfacesInterfaceConfigEnabled(intf string, enable bool,) error {
 	// sudo config interface startup Ethernet0
 
+	//fmt.Println("Here is SetInterfacesInterfaceConfigEnabled, GJ")
 	var cmd string
 
 	if enable {
