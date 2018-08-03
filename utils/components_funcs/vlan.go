@@ -1,37 +1,94 @@
 package components_funcs
 
-import "github.com/breezestars/gnxi/gnmi/modeldata/gostruct"
+import (
+	"github.com/breezestars/gnxi/gnmi/modeldata/gostruct"
+	"github.com/go-redis/redis"
+	"strconv"
+	"github.com/openconfig/ygot/ygot"
+)
 
-func InitVlan(device *gostruct.Device) error {
+func InitVlan(device *gostruct.Device, client *redis.Client) error {
 
-	// TODO: Should gather information from switch, here is still use static data
+	device.NetworkInstances = &gostruct.OpenconfigNetworkInstance_NetworkInstances{}
+	// TODO: Here is use static 'sonic' to be name, need to change to dynamic
+	ni, err := device.NetworkInstances.NewNetworkInstance("sonic")
+	if err != nil {
+		return err
+	}
+	ni.Vlans = &gostruct.OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Vlans{}
 
-	// I use the Switch Serial Number to this forwarding instance unique name
-	// The Serial Number is come from following command
-	// show platform syseeprom | grep 0x23 | awk -F' ' '{print $5}'
-	//int, err := device.NewNetworkInstance("switch1")
-	//if err != nil {
-	//	return err
-	//}
-	//
-	//vlan1, err := int.NewVlan(uint16(1))
-	//if err != nil {
-	//	return err
-	//}
-	//vlan1.Name = ygot.String("VLAN1")
-	//
-	//for idx := 0; idx < len(device.Interface)-1; idx++ {
-	//	name := device.GetInterface("Ethernet" + strconv.Itoa(idx*4)).Name
-	//	vlan1.Member = append(vlan1.Member, &gostruct.NetworkInstance_Vlan_Member{
-	//		Interface: name,
-	//	})
-	//}
-	//
-	//vlan1.Member = make([]*gostruct.NetworkInstance_Vlan_Member, len(device.Interface))
-	//for idx := range vlan1.Member {
-	//	//name:=device.GetInterface("Ethernet" + strconv.Itoa(idx*4)).Name
-	//	vlan1.Member[idx].Interface=ygot.String("Test")
-	//}
+	keys := client.Keys("VLAN|*")
+	//vlanMembers := client.Keys("VLAN_MEMBER|*")
+
+	for _, v := range keys.Val() {
+		//fmt.Println("key is: ", k, " and value is: ", string(v[9:]))
+		vid := string(v[9:])
+		vlanId, err := strconv.Atoi(vid)
+		if err != nil {
+			return err
+		}
+
+		vlan := ni.Vlans.GetOrCreateVlan(uint16(vlanId))
+		vlanMbs := vlan.GetOrCreateMembers()
+
+		intfs := client.Keys("VLAN_MEMBER|Vlan" + vid + "|*")
+
+		for _, intf := range intfs.Val() {
+			vlanMbs.Member = append(vlanMbs.Member, &gostruct.OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Vlans_Vlan_Members_Member{
+				State: &gostruct.OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Vlans_Vlan_Members_Member_State{
+					Interface: ygot.String(string(intf[21:])),
+				},
+			})
+		}
+
+		// TODO: Need to Check the performance, which will be more faster? Redis search or process by for in for
+		//for _, vlanMember := range vlanMembers.Val(){
+		//	fmt.Println("range in "+vlanMember+" and will filter with: VLAN"+vid)
+		//	if strings.Contains(vlanMember, "Vlan"+vid) {
+		//		// VLAN_MEMBER|Vlan1000|
+		//		intf :=  string(vlanMember[21:])
+		//		fmt.Println("Got "+intf)
+		//
+		//		vlanMbs.Member = append(vlanMbs.Member, &gostruct.OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Vlans_Vlan_Members_Member{
+		//			State: &gostruct.OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Vlans_Vlan_Members_Member_State{
+		//				Interface: ygot.String(intf),
+		//			},
+		//		})
+		//
+		//	}
+		//}
+	}
+	return nil
+}
+
+func SyncVlan(device *gostruct.Device, client *redis.Client) error {
+	// TODO: Here is use static 'sonic' to be name, need to change to dynamic
+	vlans := device.NetworkInstances.GetNetworkInstance("sonic").Vlans
+
+	keys := client.Keys("VLAN|*")
+
+	for _, v := range keys.Val() {
+		//fmt.Println("key is: ", k, " and value is: ", string(v[9:]))
+		vid := string(v[9:])
+		vlanId, err := strconv.Atoi(vid)
+		if err != nil {
+			return err
+		}
+
+		vlan := vlans.GetOrCreateVlan(uint16(vlanId))
+		vlan.Members = &gostruct.OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Vlans_Vlan_Members{}
+		vlanMbs := vlan.Members
+
+		intfs := client.Keys("VLAN_MEMBER|Vlan" + vid + "|*")
+
+		for _, intf := range intfs.Val() {
+			vlanMbs.Member = append(vlanMbs.Member, &gostruct.OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Vlans_Vlan_Members_Member{
+				State: &gostruct.OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Vlans_Vlan_Members_Member_State{
+					Interface: ygot.String(string(intf[21:])),
+				},
+			})
+		}
+	}
 
 	return nil
 }

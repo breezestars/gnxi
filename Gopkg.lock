@@ -2,6 +2,21 @@
 
 
 [[projects]]
+  name = "github.com/go-redis/redis"
+  packages = [
+    ".",
+    "internal",
+    "internal/consistenthash",
+    "internal/hashtag",
+    "internal/pool",
+    "internal/proto",
+    "internal/singleflight",
+    "internal/util"
+  ]
+  revision = "480db94d33e6088e08d628833b6c0705451d24bb"
+  version = "v6.13.2"
+
+[[projects]]
   branch = "master"
   name = "github.com/golang/glog"
   packages = ["."]
@@ -28,12 +43,6 @@
     "pretty"
   ]
   revision = "d65d576e9348f5982d7f6d83682b694e731a45c6"
-
-[[projects]]
-  name = "github.com/novalagung/golpal"
-  packages = ["."]
-  revision = "daa8960ff0fd2e65b6a28c3f8e4981d63f906905"
-  version = "v1.0.0"
 
 [[projects]]
   branch = "master"
@@ -147,6 +156,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "8a031ef3f9d779e213c56909c86c65a59b2775f261eafb982dc8e1ebbe18bb3a"
+  inputs-digest = "cd97c5710d1d9e37c1e41255b83b319c645f197bfe3981a464e85f6631d3d722"
   solver-name = "gps-cdcl"
   solver-version = 1

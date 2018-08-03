@@ -1,24 +1,18 @@
 package components_funcs
 
 import (
-	"github.com/breezestars/gnxi/gnmi/modeldata/gostruct"
-	"strconv"
-	"github.com/openconfig/ygot/ygot"
-	"time"
 	"fmt"
+	"github.com/breezestars/gnxi/gnmi/modeldata/gostruct"
+	"github.com/openconfig/ygot/ygot"
+	"google.golang.org/grpc/codes"
+	"google.golang.org/grpc/status"
 	"os/exec"
+	"strconv"
 	"strings"
+	"time"
 )
 
 func InitInterface(device *gostruct.Device) error {
-
-	//cmd := exec.Command("/bin/sh", "-c", `show interfaces status | grep Ethernet | awk -F' ' '{print $1" "$2" "$3" "$4" "$5" "$6" "$7}'`)
-	//cmd.Stderr = os.Stderr
-	//cmd.Stdout = os.Stdout
-	//cmd.Start()
-	//cmd.Run()
-	//cmd.Wait()
-
 	t0 := time.Now()
 	cmd := "show interfaces status | grep Ethernet | awk -F' ' '{print $1\" \"$2\" \"$3\" \"$4\" \"$5\" \"$6\" \"$7}'"
 	intfStatus, err := exec.Command("bash", "-c", cmd).Output()
@@ -123,21 +117,6 @@ func InitInterface(device *gostruct.Device) error {
 
 	device.Interfaces = &gostruct.OpenconfigInterfaces_Interfaces{}
 
-	//inf, err := device.Interfaces.NewInterface("eth0")
-	//if err != nil {
-	//	return err
-	//}
-	//
-	//inf.Config.Name = ygot.String("eth0")
-	//inf.State=&gostruct.OpenconfigInterfaces_Interfaces_Interface_State{
-	//	AdminStatus:gostruct.OpenconfigInterfaces_Interfaces_Interface_State_AdminStatus_UP,
-	//	OperStatus:gostruct.OpenconfigInterfaces_Interfaces_Interface_State_OperStatus_UP,
-	//
-	//}
-	//inf.Enabled = ygot.Bool(true)
-	//inf.AdminStatus = gostruct.OpenconfigInterfaces_Interface_AdminStatus_UP
-	//inf.OperStatus = gostruct.OpenconfigInterfaces_Interface_OperStatus_UP
-
 	for j := 0; j < len(intfStatusArray)-1; j++ {
 		intDetail := strings.Split(intfStatusArray[j], " ")
 		//fmt.Println("Doing str: ", intDetail)
@@ -179,7 +158,6 @@ func InitInterface(device *gostruct.Device) error {
 		if err != nil {
 			panic(err)
 		}
-
 
 		inf, err := device.Interfaces.NewInterface(intName)
 		inf.Config = &gostruct.OpenconfigInterfaces_Interfaces_Interface_Config{
@@ -230,14 +208,6 @@ func InitInterface(device *gostruct.Device) error {
 }
 
 func SyncInterface(device *gostruct.Device) error {
-
-	//cmd := exec.Command("/bin/sh", "-c", `show interfaces status | grep Ethernet | awk -F' ' '{print $1" "$2" "$3" "$4" "$5" "$6" "$7}'`)
-	//cmd.Stderr = os.Stderr
-	//cmd.Stdout = os.Stdout
-	//cmd.Start()
-	//cmd.Run()
-	//cmd.Wait()
-
 	for {
 		cmd := "show interfaces status | grep Ethernet | awk -F' ' '{print $1\" \"$2\" \"$3\" \"$4\" \"$5\" \"$6\" \"$7}'"
 		intfStatus, err := exec.Command("bash", "-c", cmd).Output()
@@ -335,23 +305,6 @@ func SyncInterface(device *gostruct.Device) error {
 		intfStatusArray := strings.Split(string(intfStatus), "\n")
 		portstatArray := strings.Split(string(portstat), "\n")
 
-		//device.Interfaces = &gostruct.OpenconfigInterfaces_Interfaces{}
-
-		//inf, err := device.Interfaces.NewInterface("eth0")
-		//if err != nil {
-		//	return err
-		//}
-		//
-		//inf.Config.Name = ygot.String("eth0")
-		//inf.State=&gostruct.OpenconfigInterfaces_Interfaces_Interface_State{
-		//	AdminStatus:gostruct.OpenconfigInterfaces_Interfaces_Interface_State_AdminStatus_UP,
-		//	OperStatus:gostruct.OpenconfigInterfaces_Interfaces_Interface_State_OperStatus_UP,
-		//
-		//}
-		//inf.Enabled = ygot.Bool(true)
-		//inf.AdminStatus = gostruct.OpenconfigInterfaces_Interface_AdminStatus_UP
-		//inf.OperStatus = gostruct.OpenconfigInterfaces_Interface_OperStatus_UP
-
 		for j := 0; j < len(intfStatusArray)-1; j++ {
 			intDetail := strings.Split(intfStatusArray[j], " ")
 			//fmt.Println("Doing str: ", intDetail)
@@ -414,15 +367,13 @@ func SyncInterface(device *gostruct.Device) error {
 				operStatus = gostruct.OpenconfigInterfaces_Interfaces_Interface_State_OperStatus_DOWN
 			}
 
-			//state := &inf.State
-
 			if inf.State.AdminStatus != adminStatus {
-				inf.State.AdminStatus = adminStatus;
-				inf.State.Enabled = enabled;
+				inf.State.AdminStatus = adminStatus
+				inf.State.Enabled = enabled
 			}
 
 			if inf.State.OperStatus != operStatus {
-				inf.State.OperStatus = operStatus;
+				inf.State.OperStatus = operStatus
 			}
 
 			if inf.State.Mtu != ygot.Uint16(uint16(mtu)) {
@@ -440,14 +391,10 @@ func SyncInterface(device *gostruct.Device) error {
 		}
 		time.Sleep(2 * time.Second)
 	}
-
 	return nil
 }
 
-func SetInterfacesInterfaceConfigEnabled(intf string, enable bool,) error {
-	// sudo config interface startup Ethernet0
-
-	//fmt.Println("Here is SetInterfacesInterfaceConfigEnabled, GJ")
+func SetInterfacesInterfaceConfigEnabled(intf string, enable bool) error {
 	var cmd string
 
 	if enable {
@@ -458,12 +405,11 @@ func SetInterfacesInterfaceConfigEnabled(intf string, enable bool,) error {
 
 	result, err := exec.Command("bash", "-c", cmd).Output()
 	if err != nil {
-		return fmt.Errorf("Failed to execute command: %s", cmd)
+		return status.Error(codes.Internal, "Failed to execute command: "+cmd)
 	}
-	if strings.Contains(string(result),"Cannot find device") {
-		return fmt.Errorf("Cannot find device: %s", intf)
+	if strings.Contains(string(result), "Cannot find device") {
+		return status.Error(codes.Internal, "Cannot find device: "+intf)
 	}
-
 	return nil
 }
 
