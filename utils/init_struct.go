@@ -27,10 +27,13 @@ func InitGoStruct() (ygot.ValidatedGoStruct, error) {
 
 	device := &gostruct.Device{}
 
+	tComponent := time.Now()
 	err = components_funcs.InitPlatform(device)
 	if err != nil {
 		return nil, err
 	}
+	tComponentD := time.Since(tComponent)
+	fmt.Printf("=== Init Components, took %s === \n", tComponentD)
 
 	tLldp := time.Now()
 	err = components_funcs.InitLldp(device)
@@ -40,10 +43,13 @@ func InitGoStruct() (ygot.ValidatedGoStruct, error) {
 	tLldpD := time.Since(tLldp)
 	fmt.Printf("=== Init LLDP, took %s === \n", tLldpD)
 
+	tInterface := time.Now()
 	err = components_funcs.InitInterface(device)
 	if err != nil {
 		return nil, err
 	}
+	tInterfaceD := time.Since(tInterface)
+	fmt.Printf("=== Init Interface, took %s === \n", tInterfaceD)
 
 	go components_funcs.SyncInterface(device)
 
