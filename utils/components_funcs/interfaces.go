@@ -118,7 +118,7 @@ func InitInterface(device *gostruct.Device) error {
 
 	device.Interfaces = &gostruct.OpenconfigInterfaces_Interfaces{}
 
-	for j := 0; j < len(intfStatusArray); j++ {
+	for j := 0; j < len(intfStatusArray)-1; j++ {
 		intDetail := strings.Split(intfStatusArray[j], " ")
 		//fmt.Println("Doing str: ", intDetail)
 		intStatDetail := strings.Split(portstatArray[j], " ")
@@ -306,7 +306,7 @@ func SyncInterface(device *gostruct.Device, mu *sync.RWMutex) error {
 		intfStatusArray := strings.Split(string(intfStatus), "\n")
 		portstatArray := strings.Split(string(portstat), "\n")
 
-		for j := 0; j < len(intfStatusArray); j++ {
+		for j := 0; j < len(intfStatusArray)-1; j++ {
 			intDetail := strings.Split(intfStatusArray[j], " ")
 			//fmt.Println("Doing str: ", intDetail)
 			intStatDetail := strings.Split(portstatArray[j], " ")
