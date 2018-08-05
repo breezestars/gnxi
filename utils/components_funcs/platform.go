@@ -1,20 +1,20 @@
 package components_funcs
 
 import (
-	"os/exec"
 	"fmt"
 	"time"
 	"strings"
 	"github.com/openconfig/ygot/ygot"
 	"github.com/breezestars/gnxi/gnmi/modeldata/gostruct"
+	"os/exec"
 )
 
 func InitPlatform(device *gostruct.Device) error {
 
 	t0 := time.Now()
-	cmd:="show platform syseeprom | grep '0x' | awk -F'0x' '{print $2,$3}' | awk -F' ' '{print \"0x\"$1,$3}'"
+	cmd := "show platform syseeprom | grep '0x' | awk -F'0x' '{print $2,$3}' | awk -F' ' '{print \"0x\"$1,$3}'"
 
-	syseeprom, err := exec.Command("bash","-c",cmd).Output()
+	syseeprom, err := exec.Command("bash", "-c", cmd).Output()
 	if err != nil {
 		return fmt.Errorf("Failed to execute command: %s", cmd)
 	}
@@ -37,7 +37,7 @@ func InitPlatform(device *gostruct.Device) error {
 	//CRC-32               0xFE
 	//(checksum valid)`
 
-	//	syseeprom := `0x25 05/25/2017
+	//syseeprom := `0x25 05/25/2017
 	//0x27 R02B
 	//0x28 x86_64-accton_as7712_32x-r0
 	//0x29 2016.08.00.03
@@ -52,8 +52,8 @@ func InitPlatform(device *gostruct.Device) error {
 	//0x2D Edgecore
 	//0xFE CB07A5F3`
 
-	cmd="show version | grep 'Software Version'"
-	versionOutput, err := exec.Command("bash","-c",cmd).Output()
+	cmd = "show version | grep 'Software Version'"
+	versionOutput, err := exec.Command("bash", "-c", cmd).Output()
 	if err != nil {
 		return fmt.Errorf("Failed to execute command: %s", cmd)
 	}
@@ -69,7 +69,7 @@ func InitPlatform(device *gostruct.Device) error {
 	partNo, err := search(consoleArray, "0x22")
 	mfgName, err := search(consoleArray, "0x2B")
 	mfgDate, err := search(consoleArray, "0x25")
-	splitMfgDate := strings.Split(mfgDate,"/")
+	splitMfgDate := strings.Split(mfgDate, "/")
 	swVersion := strings.Split(string(versionOutput), ": ")[1]
 
 	device.Components = &gostruct.OpenconfigPlatform_Components{}
@@ -89,7 +89,7 @@ func InitPlatform(device *gostruct.Device) error {
 		HardwareVersion: ygot.String(hwVersion),
 		SoftwareVersion: ygot.String(swVersion),
 		MfgName:         ygot.String(mfgName),
-		MfgDate:         ygot.String(splitMfgDate[2]+"-"+splitMfgDate[0]+"-"+splitMfgDate[1]),
+		MfgDate:         ygot.String(splitMfgDate[2] + "-" + splitMfgDate[0] + "-" + splitMfgDate[1]),
 		Type: &gostruct.OpenconfigPlatform_Components_Component_State_Type_Union_E_OpenconfigPlatformTypes_OPENCONFIG_HARDWARE_COMPONENT{
 			gostruct.OpenconfigPlatformTypes_OPENCONFIG_HARDWARE_COMPONENT_CHASSIS,
 		},

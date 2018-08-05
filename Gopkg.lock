@@ -2,6 +2,12 @@
 
 
 [[projects]]
+  branch = "master"
+  name = "github.com/derekparker/trie"
+  packages = ["."]
+  revision = "e608c2733dc704cd4a73f825f4acab8f3c3d4d15"
+
+[[projects]]
   name = "github.com/go-redis/redis"
   packages = [
     ".",
@@ -156,6 +162,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "cd97c5710d1d9e37c1e41255b83b319c645f197bfe3981a464e85f6631d3d722"
+  inputs-digest = "be7dae7a9ce5ac15db2108a2be178f9f330e435c3c9a6f522c9ea8271958af85"
   solver-name = "gps-cdcl"
   solver-version = 1

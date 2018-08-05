@@ -1,15 +1,15 @@
 package utils
 
 import (
-	"github.com/openconfig/ygot/ygot"
 	"github.com/breezestars/gnxi/gnmi/modeldata/gostruct"
 	"github.com/breezestars/gnxi/utils/components_funcs"
 	"github.com/go-redis/redis"
 	"fmt"
 	"time"
+	"sync"
 )
 
-func InitGoStruct() (ygot.ValidatedGoStruct, error) {
+func InitGoStruct(mu *sync.RWMutex) (*gostruct.Device, error) {
 
 	configClient := redis.NewClient(&redis.Options{
 		Addr:     "localhost:6379",
@@ -51,7 +51,7 @@ func InitGoStruct() (ygot.ValidatedGoStruct, error) {
 	tInterfaceD := time.Since(tInterface)
 	fmt.Printf("=== Init Interface, took %s === \n", tInterfaceD)
 
-	go components_funcs.SyncInterface(device)
+	go components_funcs.SyncInterface(device, mu)
 
 	tVlan := time.Now()
 	err = components_funcs.InitVlan(device, configClient)
@@ -61,7 +61,7 @@ func InitGoStruct() (ygot.ValidatedGoStruct, error) {
 	tVlanD := time.Since(tVlan)
 	fmt.Printf("=== Init Vlan, took %s === \n", tVlanD)
 
-	go components_funcs.SyncVlan(device, configClient)
+	go components_funcs.SyncVlan(device, configClient, mu)
 
 	return device, nil
 }

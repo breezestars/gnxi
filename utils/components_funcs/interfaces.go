@@ -10,6 +10,7 @@ import (
 	"strconv"
 	"strings"
 	"time"
+	"sync"
 )
 
 func InitInterface(device *gostruct.Device) error {
@@ -21,7 +22,7 @@ func InitInterface(device *gostruct.Device) error {
 	}
 	t0d := time.Since(t0)
 
-	//	intfStatus := `Ethernet0 49,50,51,52 N/A 9100 hundredGigE1 down up
+	//		intfStatus := `Ethernet0 49,50,51,52 N/A 9100 hundredGigE1 down up
 	//Ethernet4 53,54,55,56 N/A 9100 hundredGigE2 down up
 	//Ethernet8 57,58,59,60 N/A 9100 hundredGigE3 down up
 	//Ethernet12 61,62,63,64 N/A 9100 hundredGigE4 down up
@@ -67,10 +68,10 @@ func InitInterface(device *gostruct.Device) error {
 	portstatCmd := "portstat | grep 'Ethernet' | awk -F' ' '{print $1,$3,$6,$7,$9,$12,$13}'"
 	portstat, err := exec.Command("bash", "-c", portstatCmd).Output()
 	if err != nil {
-		return fmt.Errorf("Failed to execute command: %s", cmd)
+		return fmt.Errorf("Failed to execute command: %s", portstatCmd)
 	}
 	t1d := time.Since(t1)
-	//	portstat := `Ethernet0 1595169299934 1824671749079 0 3739096352458 837308284053 0
+	//		portstat := `Ethernet0 1595169299934 1824671749079 0 3739096352458 837308284053 0
 	//Ethernet4 2708494058496 1903492724623 0 2449799110453 787421450391 0
 	//Ethernet8 2199032828538 1860401179957 0 1883327787315 717481680718 0
 	//Ethernet12 3123175735980 2042899780017 0 2418081566910 914335203010 0
@@ -117,7 +118,7 @@ func InitInterface(device *gostruct.Device) error {
 
 	device.Interfaces = &gostruct.OpenconfigInterfaces_Interfaces{}
 
-	for j := 0; j < len(intfStatusArray)-1; j++ {
+	for j := 0; j < len(intfStatusArray); j++ {
 		intDetail := strings.Split(intfStatusArray[j], " ")
 		//fmt.Println("Doing str: ", intDetail)
 		intStatDetail := strings.Split(portstatArray[j], " ")
@@ -207,7 +208,7 @@ func InitInterface(device *gostruct.Device) error {
 	return nil
 }
 
-func SyncInterface(device *gostruct.Device) error {
+func SyncInterface(device *gostruct.Device, mu *sync.RWMutex) error {
 	for {
 		cmd := "show interfaces status | grep Ethernet | awk -F' ' '{print $1\" \"$2\" \"$3\" \"$4\" \"$5\" \"$6\" \"$7}'"
 		intfStatus, err := exec.Command("bash", "-c", cmd).Output()
@@ -215,7 +216,7 @@ func SyncInterface(device *gostruct.Device) error {
 			return fmt.Errorf("Failed to execute command: %s", cmd)
 		}
 
-		//	intfStatus := `Ethernet0 49,50,51,52 N/A 9100 hundredGigE1 down up
+		//			intfStatus := `Ethernet0 49,50,51,52 N/A 9100 hundredGigE1 down up
 		//Ethernet4 53,54,55,56 N/A 9100 hundredGigE2 down up
 		//Ethernet8 57,58,59,60 N/A 9100 hundredGigE3 down up
 		//Ethernet12 61,62,63,64 N/A 9100 hundredGigE4 down up
@@ -259,9 +260,9 @@ func SyncInterface(device *gostruct.Device) error {
 		portstatCmd := "portstat | grep 'Ethernet' | awk -F' ' '{print $1,$3,$6,$7,$9,$12,$13}'"
 		portstat, err := exec.Command("bash", "-c", portstatCmd).Output()
 		if err != nil {
-			return fmt.Errorf("Failed to execute command: %s", cmd)
+			return fmt.Errorf("Failed to execute command: %s", portstatCmd)
 		}
-		//	portstat := `Ethernet0 1595169299934 1824671749079 0 3739096352458 837308284053 0
+		//			portstat := `Ethernet0 1595169299934 1824671749079 0 3739096352458 837308284053 0
 		//Ethernet4 2708494058496 1903492724623 0 2449799110453 787421450391 0
 		//Ethernet8 2199032828538 1860401179957 0 1883327787315 717481680718 0
 		//Ethernet12 3123175735980 2042899780017 0 2418081566910 914335203010 0
@@ -305,7 +306,7 @@ func SyncInterface(device *gostruct.Device) error {
 		intfStatusArray := strings.Split(string(intfStatus), "\n")
 		portstatArray := strings.Split(string(portstat), "\n")
 
-		for j := 0; j < len(intfStatusArray)-1; j++ {
+		for j := 0; j < len(intfStatusArray); j++ {
 			intDetail := strings.Split(intfStatusArray[j], " ")
 			//fmt.Println("Doing str: ", intDetail)
 			intStatDetail := strings.Split(portstatArray[j], " ")
@@ -389,18 +390,23 @@ func SyncInterface(device *gostruct.Device) error {
 				OutDiscards: ygot.Uint64(OutDiscards),
 			}
 		}
-		time.Sleep(2 * time.Second)
+		fmt.Println("Syncing Interfaces...")
+		time.Sleep(5 * time.Second)
 	}
 	return nil
 }
 
-func SetInterfacesInterfaceConfigEnabled(intf string, enable bool) error {
+func SetInterfaceConfigEnabled(key []string, value []string, str string, b bool) error {
 	var cmd string
 
+	enable, err := strconv.ParseBool(str)
+	if err != nil {
+		return err
+	}
 	if enable {
-		cmd = "sudo config interface startup " + intf
+		cmd = "sudo config interface startup " + value[len(value)-1]
 	} else {
-		cmd = "sudo config interface shutdown " + intf
+		cmd = "sudo config interface shutdown " + value[len(value)-1]
 	}
 
 	result, err := exec.Command("bash", "-c", cmd).Output()
@@ -408,7 +414,7 @@ func SetInterfacesInterfaceConfigEnabled(intf string, enable bool) error {
 		return status.Error(codes.Internal, "Failed to execute command: "+cmd)
 	}
 	if strings.Contains(string(result), "Cannot find device") {
-		return status.Error(codes.Internal, "Cannot find device: "+intf)
+		return status.Error(codes.Internal, "Cannot find device: "+value[len(value)-1])
 	}
 	return nil
 }

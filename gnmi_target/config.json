@@ -2,227 +2,885 @@
   "openconfig-interfaces:interfaces": {
     "interface": [
       {
-        "name": "eth0",
-        "config": {
-          "name": "eth0"
-        }
-      },
-      {
-        "name": "Ethernet0",
         "config": {
           "name": "Ethernet0"
+        },
+        "name": "Ethernet0",
+        "state": {
+          "admin-status": "UP",
+          "counters": {
+            "in-discards": "0",
+            "in-errors": "1824673846231",
+            "in-octets": "2301040778593",
+            "out-discards": "0",
+            "out-errors": "837308284053",
+            "out-octets": "3809982193116"
+          },
+          "enabled": true,
+          "mtu": 9100,
+          "oper-status": "UP"
         }
       },
       {
-        "name": "Ethernet4",
-        "config": {
-          "name": "Ethernet4"
-        }
-      },
-      {
-        "name": "Ethernet8",
-        "config": {
-          "name": "Ethernet8"
-        }
-      },
-      {
-        "name": "Ethernet12",
-        "config": {
-          "name": "Ethernet12"
-        }
-      },
-      {
-        "name": "Ethernet16",
-        "config": {
-          "name": "Ethernet16"
-        }
-      },
-      {
-        "name": "Ethernet20",
-        "config": {
-          "name": "Ethernet20"
-        }
-      },
-      {
-        "name": "Ethernet24",
-        "config": {
-          "name": "Ethernet24"
-        }
-      },
-      {
-        "name": "Ethernet28",
-        "config": {
-          "name": "Ethernet28"
-        }
-      },
-      {
-        "name": "Ethernet32",
-        "config": {
-          "name": "Ethernet32"
-        }
-      },
-      {
-        "name": "Ethernet36",
-        "config": {
-          "name": "Ethernet36"
-        }
-      },
-      {
-        "name": "Ethernet40",
-        "config": {
-          "name": "Ethernet40"
-        }
-      },
-      {
-        "name": "Ethernet44",
-        "config": {
-          "name": "Ethernet44"
-        }
-      },
-      {
-        "name": "Ethernet48",
-        "config": {
-          "name": "Ethernet48"
-        }
-      },
-      {
-        "name": "Ethernet52",
-        "config": {
-          "name": "Ethernet52"
-        }
-      },
-      {
-        "name": "Ethernet56",
-        "config": {
-          "name": "Ethernet56"
-        }
-      },
-      {
-        "name": "Ethernet60",
-        "config": {
-          "name": "Ethernet60"
-        }
-      },
-      {
-        "name": "Ethernet64",
-        "config": {
-          "name": "Ethernet64"
-        }
-      },
-      {
-        "name": "Ethernet68",
-        "config": {
-          "name": "Ethernet68"
-        }
-      },
-      {
-        "name": "Ethernet72",
-        "config": {
-          "name": "Ethernet72"
-        }
-      },
-      {
-        "name": "Ethernet76",
-        "config": {
-          "name": "Ethernet76"
-        }
-      },
-      {
-        "name": "Ethernet80",
-        "config": {
-          "name": "Ethernet80"
-        }
-      },
-      {
-        "name": "Ethernet84",
-        "config": {
-          "name": "Ethernet84"
-        }
-      },
-      {
-        "name": "Ethernet88",
-        "config": {
-          "name": "Ethernet88"
-        }
-      },
-      {
-        "name": "Ethernet92",
-        "config": {
-          "name": "Ethernet92"
-        }
-      },
-      {
-        "name": "Ethernet96",
-        "config": {
-          "name": "Ethernet96"
-        }
-      },
-      {
-        "name": "Ethernet100",
         "config": {
           "name": "Ethernet100"
+        },
+        "name": "Ethernet100",
+        "state": {
+          "admin-status": "UP",
+          "counters": {
+            "in-discards": "0",
+            "in-errors": "769844330684",
+            "in-octets": "3990434965302",
+            "out-discards": "0",
+            "out-errors": "736452539717",
+            "out-octets": "2555043625126"
+          },
+          "enabled": true,
+          "mtu": 9100,
+          "oper-status": "DOWN"
         }
       },
       {
-        "name": "Ethernet104",
         "config": {
           "name": "Ethernet104"
+        },
+        "name": "Ethernet104",
+        "state": {
+          "admin-status": "UP",
+          "counters": {
+            "in-discards": "0",
+            "in-errors": "1139573274782",
+            "in-octets": "3098811343465",
+            "out-discards": "0",
+            "out-errors": "783955711425",
+            "out-octets": "3416114540276"
+          },
+          "enabled": true,
+          "mtu": 9100,
+          "oper-status": "DOWN"
         }
       },
       {
-        "name": "Ethernet108",
         "config": {
           "name": "Ethernet108"
+        },
+        "name": "Ethernet108",
+        "state": {
+          "admin-status": "UP",
+          "counters": {
+            "in-discards": "0",
+            "in-errors": "2015462098448",
+            "in-octets": "3574455927852",
+            "out-discards": "0",
+            "out-errors": "1094810755307",
+            "out-octets": "2439711674741"
+          },
+          "enabled": true,
+          "mtu": 9100,
+          "oper-status": "DOWN"
         }
       },
       {
-        "name": "Ethernet112",
         "config": {
           "name": "Ethernet112"
+        },
+        "name": "Ethernet112",
+        "state": {
+          "admin-status": "UP",
+          "counters": {
+            "in-discards": "0",
+            "in-errors": "2739171212708",
+            "in-octets": "2941314466490",
+            "out-discards": "0",
+            "out-errors": "201815970459",
+            "out-octets": "2134155665920"
+          },
+          "enabled": true,
+          "mtu": 1500,
+          "oper-status": "DOWN"
         }
       },
       {
-        "name": "Ethernet116",
         "config": {
           "name": "Ethernet116"
+        },
+        "name": "Ethernet116",
+        "state": {
+          "admin-status": "UP",
+          "counters": {
+            "in-discards": "0",
+            "in-errors": "3087596869548",
+            "in-octets": "2513587750852",
+            "out-discards": "0",
+            "out-errors": "1046746620041",
+            "out-octets": "2867692689702"
+          },
+          "enabled": true,
+          "mtu": 1500,
+          "oper-status": "DOWN"
         }
       },
       {
-        "name": "Ethernet120",
+        "config": {
+          "name": "Ethernet12"
+        },
+        "name": "Ethernet12",
+        "state": {
+          "admin-status": "UP",
+          "counters": {
+            "in-discards": "0",
+            "in-errors": "2043436519792",
+            "in-octets": "3123171222136",
+            "out-discards": "0",
+            "out-errors": "854003285698",
+            "out-octets": "2418050928334"
+          },
+          "enabled": true,
+          "mtu": 9100,
+          "oper-status": "DOWN"
+        }
+      },
+      {
         "config": {
           "name": "Ethernet120"
+        },
+        "name": "Ethernet120",
+        "state": {
+          "admin-status": "UP",
+          "counters": {
+            "in-discards": "0",
+            "in-errors": "2627703934587",
+            "in-octets": "3840943285661",
+            "out-discards": "0",
+            "out-errors": "119888636893",
+            "out-octets": "2329605106629"
+          },
+          "enabled": true,
+          "mtu": 1500,
+          "oper-status": "DOWN"
         }
       },
       {
-        "name": "Ethernet124",
         "config": {
           "name": "Ethernet124"
+        },
+        "name": "Ethernet124",
+        "state": {
+          "admin-status": "UP",
+          "counters": {
+            "in-discards": "0",
+            "in-errors": "1484791272063",
+            "in-octets": "3681640014481",
+            "out-discards": "0",
+            "out-errors": "911429516147",
+            "out-octets": "2635851456991"
+          },
+          "enabled": true,
+          "mtu": 1500,
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "name": "Ethernet16"
+        },
+        "name": "Ethernet16",
+        "state": {
+          "admin-status": "UP",
+          "counters": {
+            "in-discards": "0",
+            "in-errors": "2094103475149",
+            "in-octets": "1871316803672",
+            "out-discards": "0",
+            "out-errors": "957743984340",
+            "out-octets": "2274462492085"
+          },
+          "enabled": true,
+          "mtu": 9100,
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "name": "Ethernet20"
+        },
+        "name": "Ethernet20",
+        "state": {
+          "admin-status": "UP",
+          "counters": {
+            "in-discards": "0",
+            "in-errors": "2777146348661",
+            "in-octets": "2497268163772",
+            "out-discards": "0",
+            "out-errors": "1002867931189",
+            "out-octets": "2186796760808"
+          },
+          "enabled": true,
+          "mtu": 9100,
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "name": "Ethernet24"
+        },
+        "name": "Ethernet24",
+        "state": {
+          "admin-status": "UP",
+          "counters": {
+            "in-discards": "0",
+            "in-errors": "1518059028465",
+            "in-octets": "2976898105989",
+            "out-discards": "0",
+            "out-errors": "915280185349",
+            "out-octets": "2578397431123"
+          },
+          "enabled": true,
+          "mtu": 9100,
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "name": "Ethernet28"
+        },
+        "name": "Ethernet28",
+        "state": {
+          "admin-status": "UP",
+          "counters": {
+            "in-discards": "0",
+            "in-errors": "1592896639562",
+            "in-octets": "3523908344258",
+            "out-discards": "0",
+            "out-errors": "1038801159742",
+            "out-octets": "2379418477565"
+          },
+          "enabled": true,
+          "mtu": 9100,
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "name": "Ethernet32"
+        },
+        "name": "Ethernet32",
+        "state": {
+          "admin-status": "UP",
+          "counters": {
+            "in-discards": "0",
+            "in-errors": "1468561794612",
+            "in-octets": "1736151023794",
+            "out-discards": "0",
+            "out-errors": "998206388461",
+            "out-octets": "2956754734568"
+          },
+          "enabled": true,
+          "mtu": 9100,
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "name": "Ethernet36"
+        },
+        "name": "Ethernet36",
+        "state": {
+          "admin-status": "UP",
+          "counters": {
+            "in-discards": "0",
+            "in-errors": "2790686063410",
+            "in-octets": "1305967137907",
+            "out-discards": "0",
+            "out-errors": "513691786965",
+            "out-octets": "3282185635747"
+          },
+          "enabled": true,
+          "mtu": 9100,
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "name": "Ethernet4"
+        },
+        "name": "Ethernet4",
+        "state": {
+          "admin-status": "UP",
+          "counters": {
+            "in-discards": "0",
+            "in-errors": "1078858542963",
+            "in-octets": "2498032272394",
+            "out-discards": "0",
+            "out-errors": "237665637047",
+            "out-octets": "3016049504736"
+          },
+          "enabled": true,
+          "mtu": 9100,
+          "oper-status": "UP"
+        }
+      },
+      {
+        "config": {
+          "name": "Ethernet40"
+        },
+        "name": "Ethernet40",
+        "state": {
+          "admin-status": "UP",
+          "counters": {
+            "in-discards": "0",
+            "in-errors": "1651075478798",
+            "in-octets": "1917811711941",
+            "out-discards": "0",
+            "out-errors": "1071753723587",
+            "out-octets": "1874577974793"
+          },
+          "enabled": true,
+          "mtu": 9100,
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "name": "Ethernet44"
+        },
+        "name": "Ethernet44",
+        "state": {
+          "admin-status": "UP",
+          "counters": {
+            "in-discards": "0",
+            "in-errors": "1200565342649",
+            "in-octets": "3303572591008",
+            "out-discards": "0",
+            "out-errors": "234051655477",
+            "out-octets": "2309000233117"
+          },
+          "enabled": true,
+          "mtu": 9100,
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "name": "Ethernet48"
+        },
+        "name": "Ethernet48",
+        "state": {
+          "admin-status": "UP",
+          "counters": {
+            "in-discards": "0",
+            "in-errors": "2401683043885",
+            "in-octets": "2859223605574",
+            "out-discards": "0",
+            "out-errors": "882729016685",
+            "out-octets": "2231342043993"
+          },
+          "enabled": true,
+          "mtu": 9100,
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "name": "Ethernet52"
+        },
+        "name": "Ethernet52",
+        "state": {
+          "admin-status": "UP",
+          "counters": {
+            "in-discards": "0",
+            "in-errors": "2517095738914",
+            "in-octets": "2657394991814",
+            "out-discards": "0",
+            "out-errors": "547857315118",
+            "out-octets": "2631937908958"
+          },
+          "enabled": true,
+          "mtu": 9100,
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "name": "Ethernet56"
+        },
+        "name": "Ethernet56",
+        "state": {
+          "admin-status": "UP",
+          "counters": {
+            "in-discards": "0",
+            "in-errors": "1266489873725",
+            "in-octets": "1515135546480",
+            "out-discards": "0",
+            "out-errors": "274298928051",
+            "out-octets": "1550849265041"
+          },
+          "enabled": true,
+          "mtu": 9100,
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "name": "Ethernet60"
+        },
+        "name": "Ethernet60",
+        "state": {
+          "admin-status": "UP",
+          "counters": {
+            "in-discards": "0",
+            "in-errors": "1738775608254",
+            "in-octets": "2551343411998",
+            "out-discards": "0",
+            "out-errors": "283228698611",
+            "out-octets": "3925087520917"
+          },
+          "enabled": true,
+          "mtu": 9100,
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "name": "Ethernet64"
+        },
+        "name": "Ethernet64",
+        "state": {
+          "admin-status": "UP",
+          "counters": {
+            "in-discards": "0",
+            "in-errors": "2489487221874",
+            "in-octets": "3071566673928",
+            "out-discards": "0",
+            "out-errors": "614889086585",
+            "out-octets": "3002190484313"
+          },
+          "enabled": true,
+          "mtu": 9100,
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "name": "Ethernet68"
+        },
+        "name": "Ethernet68",
+        "state": {
+          "admin-status": "UP",
+          "counters": {
+            "in-discards": "0",
+            "in-errors": "2268432087524",
+            "in-octets": "2307749469007",
+            "out-discards": "0",
+            "out-errors": "1044746706837",
+            "out-octets": "3954448573926"
+          },
+          "enabled": true,
+          "mtu": 9100,
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "name": "Ethernet72"
+        },
+        "name": "Ethernet72",
+        "state": {
+          "admin-status": "UP",
+          "counters": {
+            "in-discards": "0",
+            "in-errors": "2894719915488",
+            "in-octets": "2583225478040",
+            "out-discards": "0",
+            "out-errors": "488947772343",
+            "out-octets": "2583241680651"
+          },
+          "enabled": true,
+          "mtu": 9100,
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "name": "Ethernet76"
+        },
+        "name": "Ethernet76",
+        "state": {
+          "admin-status": "UP",
+          "counters": {
+            "in-discards": "0",
+            "in-errors": "1870827986802",
+            "in-octets": "2000082104941",
+            "out-discards": "0",
+            "out-errors": "3723458252",
+            "out-octets": "1830377101238"
+          },
+          "enabled": true,
+          "mtu": 9100,
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "name": "Ethernet8"
+        },
+        "name": "Ethernet8",
+        "state": {
+          "admin-status": "UP",
+          "counters": {
+            "in-discards": "0",
+            "in-errors": "1697523805365",
+            "in-octets": "3040914375288",
+            "out-discards": "0",
+            "out-errors": "717481385804",
+            "out-octets": "1832054484279"
+          },
+          "enabled": true,
+          "mtu": 9100,
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "name": "Ethernet80"
+        },
+        "name": "Ethernet80",
+        "state": {
+          "admin-status": "UP",
+          "counters": {
+            "in-discards": "0",
+            "in-errors": "1196008186463",
+            "in-octets": "2066965977387",
+            "out-discards": "0",
+            "out-errors": "159710854782",
+            "out-octets": "3010537745503"
+          },
+          "enabled": true,
+          "mtu": 9100,
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "name": "Ethernet84"
+        },
+        "name": "Ethernet84",
+        "state": {
+          "admin-status": "UP",
+          "counters": {
+            "in-discards": "0",
+            "in-errors": "2236083961630",
+            "in-octets": "1564876022181",
+            "out-discards": "0",
+            "out-errors": "581347966940",
+            "out-octets": "2050236739465"
+          },
+          "enabled": true,
+          "mtu": 9100,
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "name": "Ethernet88"
+        },
+        "name": "Ethernet88",
+        "state": {
+          "admin-status": "UP",
+          "counters": {
+            "in-discards": "0",
+            "in-errors": "1048442389640",
+            "in-octets": "2913147759848",
+            "out-discards": "0",
+            "out-errors": "411690766358",
+            "out-octets": "2928827709569"
+          },
+          "enabled": true,
+          "mtu": 9100,
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "name": "Ethernet92"
+        },
+        "name": "Ethernet92",
+        "state": {
+          "admin-status": "UP",
+          "counters": {
+            "in-discards": "0",
+            "in-errors": "2055201602447",
+            "in-octets": "3149844817176",
+            "out-discards": "0",
+            "out-errors": "499918252947",
+            "out-octets": "2118272987912"
+          },
+          "enabled": true,
+          "mtu": 9100,
+          "oper-status": "DOWN"
+        }
+      },
+      {
+        "config": {
+          "name": "Ethernet96"
+        },
+        "name": "Ethernet96",
+        "state": {
+          "admin-status": "UP",
+          "counters": {
+            "in-discards": "0",
+            "in-errors": "2054191994068",
+            "in-octets": "3728976118830",
+            "out-discards": "0",
+            "out-errors": "326836746734",
+            "out-octets": "3589267228084"
+          },
+          "enabled": true,
+          "mtu": 9100,
+          "oper-status": "DOWN"
         }
       }
     ]
   },
-  "openconfig-lldp:lldp": {
-    "interfaces": {
-      "interface": [
-        {
-          "name": "eth0",
-          "config":{
-            "name":"eth0"
-          },
-          "neighbors": {
-            "neighbor": [
-              {
-                "id": "1",
-                "state": {
-                  "chassis-id": "cc:37:ab:60:cd:c1",
-                  "chassis-id-type": "MAC_ADDRESS",
-                  "id": "1"
-                }
-              }
-            ]
-          }
+  "openconfig-network-instance:network-instances": {
+    "network-instance": [
+      {
+        "config": {
+          "name": "sonic"
+        },
+        "name": "sonic",
+        "vlans": {
+          "vlan": [
+            {
+              "config": {
+                "vlan-id": 1000
+              },
+              "members": {
+                "member": [
+                  {
+                    "state": {
+                      "interface": "Ethernet76"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet64"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet84"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet52"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet24"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet124"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet32"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet68"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet8"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet16"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet112"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet88"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet40"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet44"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet48"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet60"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet0"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet104"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet120"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet12"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet28"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet72"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet56"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet92"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet4"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet116"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet108"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet100"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet96"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet80"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet36"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet20"
+                    }
+                  }
+                ]
+              },
+              "vlan-id": 1000
+            },
+            {
+              "config": {
+                "vlan-id": 11
+              },
+              "vlan-id": 11
+            },
+            {
+              "config": {
+                "vlan-id": 12
+              },
+              "members": {
+                "member": [
+                  {
+                    "state": {
+                      "interface": "Ethernet16"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet20"
+                    }
+                  },
+                  {
+                    "state": {
+                      "interface": "Ethernet12"
+                    }
+                  }
+                ]
+              },
+              "vlan-id": 12
+            },
+            {
+              "config": {
+                "vlan-id": 13
+              },
+              "vlan-id": 13
+            }
+          ]
         }
-      ]
-    }
+      }
+    ]
+  },
+  "openconfig-platform:components": {
+    "component": [
+      {
+        "config": {
+          "name": "7712-32X-O-AC-F"
+        },
+        "name": "7712-32X-O-AC-F",
+        "state": {
+          "hardware-version": "x86_64-accton_as7712_32x-r0",
+          "mfg-date": "2017-05-25",
+          "mfg-name": "Accton",
+          "part-no": "FP3ZZ7632014A",
+          "serial-no": "771232X1721087",
+          "software-version": "SONiC.HEAD.638-a0bd656n",
+          "type": "openconfig-platform-types:CHASSIS"
+        }
+      }
+    ]
   }
 }
