@@ -34,6 +34,8 @@ const (
 	OpenconfigInterfaceEthernetModel = "openconfig-if-ethernet"
 	// OpenconfigInterfacesModel is the openconfig YANG model for interfaces.
 	OpenconfigInterfacesModel = "openconfig-interfaces"
+	// OpenconfigLacpModel is the openconfig YANG model for lacp.
+	OpenconfigLacpModel = "openconfig-lacp"
 	// OpenconfigLldpModel is the openconfig YANG model for lldp.
 	OpenconfigLldpModel = "openconfig-lldp"
 	// OpenconfigNetworkInstanceModel is the openconfig YANG model for network-instance.
@@ -60,6 +62,9 @@ var (
 		Name:         OpenconfigInterfacesModel,
 		Organization: "OpenConfig working group",
 		Version:      "2.3.1",
+	}, {	Name:         OpenconfigLacpModel,
+		Organization: "OpenConfig working group",
+		Version:      "1.1.0",
 	}, {
 		Name:         OpenconfigLldpModel,
 		Organization: "OpenConfig working group",

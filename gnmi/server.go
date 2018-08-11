@@ -149,7 +149,7 @@ func (s *Server) doDelete(jsonTree map[string]interface{}, prefix, path *pb.Path
 	}
 	err = delFunc(k, v, "", false)
 	if err != nil {
-		return nil, status.Errorf(codes.Unknown, "Del function failed")
+		return nil, status.Errorf(codes.Unknown, "Del function execute failed due %s", err.Error())
 	}
 	return &pb.UpdateResult{
 		Path: path,
@@ -168,7 +168,7 @@ func (s *Server) doReplaceOrUpdate(jsonTree map[string]interface{}, op pb.Update
 	}
 	err = setFunc(k, v, typedValue2String(val), false)
 	if err != nil {
-		return nil, status.Errorf(codes.Unknown, "Del function failed")
+		return nil, status.Errorf(codes.Unknown, "Set function execute failed due %s", err.Error())
 	}
 
 	return &pb.UpdateResult{
@@ -247,8 +247,15 @@ func path2Func(prefix, path *pb.Path) ([]string, []string, []string) {
 
 func typedValue2String(val *pb.TypedValue) string {
 	str := strings.Split(val.String(), ":")[1]
+	fmt.Println("|"+str+"|")
 	if strings.Contains(str, "\"") {
 		str = str[1 : len(str)-2]
+	}
+	if strings.Contains(str,"\n"){
+		str = strings.Replace(str,"\n","",-1)
+	}
+	if strings.Contains(str," "){
+		str = strings.Replace(str," ","",-1)
 	}
 	return str
 }

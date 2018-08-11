@@ -9,6 +9,7 @@ using the following YANG input files:
 	- github.com/openconfig/public/release/models/interfaces/openconfig-if-aggregate.yang
 	- github.com/openconfig/public/release/models/interfaces/openconfig-if-ethernet.yang
 	- github.com/openconfig/public/release/models/interfaces/openconfig-interfaces.yang
+	- github.com/openconfig/public/release/models/lacp/openconfig-lacp.yang
 	- github.com/openconfig/public/release/models/lldp/openconfig-lldp.yang
 	- github.com/openconfig/public/release/models/network-instance/openconfig-network-instance.yang
 	- github.com/openconfig/public/release/models/platform/openconfig-platform.yang
@@ -23,7 +24,6 @@ package gostruct
 import (
 	"github.com/openconfig/ygot/ygot"
 )
-
 
 // E_IETFInterfaces_InterfaceType is a derived int64 type which is used to represent
 // the enumerated node IETFInterfaces_InterfaceType. An additional value named
@@ -44,7 +44,6 @@ const (
 	// IETFInterfaces_InterfaceType_UNSET corresponds to the value UNSET of IETFInterfaces_InterfaceType
 	IETFInterfaces_InterfaceType_UNSET E_IETFInterfaces_InterfaceType = 0
 )
-
 
 // E_OpenconfigAaaTypes_AAA_ACCOUNTING_EVENT_TYPE is a derived int64 type which is used to represent
 // the enumerated node OpenconfigAaaTypes_AAA_ACCOUNTING_EVENT_TYPE. An additional value named
@@ -70,7 +69,6 @@ const (
 	OpenconfigAaaTypes_AAA_ACCOUNTING_EVENT_TYPE_AAA_ACCOUNTING_EVENT_LOGIN E_OpenconfigAaaTypes_AAA_ACCOUNTING_EVENT_TYPE = 2
 )
 
-
 // E_OpenconfigAaaTypes_AAA_AUTHORIZATION_EVENT_TYPE is a derived int64 type which is used to represent
 // the enumerated node OpenconfigAaaTypes_AAA_AUTHORIZATION_EVENT_TYPE. An additional value named
 // OpenconfigAaaTypes_AAA_AUTHORIZATION_EVENT_TYPE_UNSET is added to the enumeration which is used as
@@ -94,7 +92,6 @@ const (
 	// OpenconfigAaaTypes_AAA_AUTHORIZATION_EVENT_TYPE_AAA_AUTHORIZATION_EVENT_CONFIG corresponds to the value AAA_AUTHORIZATION_EVENT_CONFIG of OpenconfigAaaTypes_AAA_AUTHORIZATION_EVENT_TYPE
 	OpenconfigAaaTypes_AAA_AUTHORIZATION_EVENT_TYPE_AAA_AUTHORIZATION_EVENT_CONFIG E_OpenconfigAaaTypes_AAA_AUTHORIZATION_EVENT_TYPE = 2
 )
-
 
 // E_OpenconfigAaaTypes_AAA_METHOD_TYPE is a derived int64 type which is used to represent
 // the enumerated node OpenconfigAaaTypes_AAA_METHOD_TYPE. An additional value named
@@ -122,7 +119,6 @@ const (
 	OpenconfigAaaTypes_AAA_METHOD_TYPE_TACACS_ALL E_OpenconfigAaaTypes_AAA_METHOD_TYPE = 3
 )
 
-
 // E_OpenconfigAaaTypes_AAA_SERVER_TYPE is a derived int64 type which is used to represent
 // the enumerated node OpenconfigAaaTypes_AAA_SERVER_TYPE. An additional value named
 // OpenconfigAaaTypes_AAA_SERVER_TYPE_UNSET is added to the enumeration which is used as
@@ -147,7 +143,6 @@ const (
 	OpenconfigAaaTypes_AAA_SERVER_TYPE_TACACS E_OpenconfigAaaTypes_AAA_SERVER_TYPE = 2
 )
 
-
 // E_OpenconfigAaaTypes_SYSTEM_DEFINED_ROLES is a derived int64 type which is used to represent
 // the enumerated node OpenconfigAaaTypes_SYSTEM_DEFINED_ROLES. An additional value named
 // OpenconfigAaaTypes_SYSTEM_DEFINED_ROLES_UNSET is added to the enumeration which is used as
@@ -169,7 +164,6 @@ const (
 	// OpenconfigAaaTypes_SYSTEM_DEFINED_ROLES_SYSTEM_ROLE_ADMIN corresponds to the value SYSTEM_ROLE_ADMIN of OpenconfigAaaTypes_SYSTEM_DEFINED_ROLES
 	OpenconfigAaaTypes_SYSTEM_DEFINED_ROLES_SYSTEM_ROLE_ADMIN E_OpenconfigAaaTypes_SYSTEM_DEFINED_ROLES = 1
 )
-
 
 // E_OpenconfigAcl_ACL_COUNTER_CAPABILITY is a derived int64 type which is used to represent
 // the enumerated node OpenconfigAcl_ACL_COUNTER_CAPABILITY. An additional value named
@@ -196,7 +190,6 @@ const (
 	// OpenconfigAcl_ACL_COUNTER_CAPABILITY_INTERFACE_ONLY corresponds to the value INTERFACE_ONLY of OpenconfigAcl_ACL_COUNTER_CAPABILITY
 	OpenconfigAcl_ACL_COUNTER_CAPABILITY_INTERFACE_ONLY E_OpenconfigAcl_ACL_COUNTER_CAPABILITY = 3
 )
-
 
 // E_OpenconfigAcl_ACL_TYPE is a derived int64 type which is used to represent
 // the enumerated node OpenconfigAcl_ACL_TYPE. An additional value named
@@ -226,7 +219,6 @@ const (
 	OpenconfigAcl_ACL_TYPE_ACL_MIXED E_OpenconfigAcl_ACL_TYPE = 4
 )
 
-
 // E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_DestinationPort is a derived int64 type which is used to represent
 // the enumerated node OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_DestinationPort. An additional value named
 // OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_DestinationPort_UNSET is added to the enumeration which is used as
@@ -249,7 +241,6 @@ const (
 	OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_DestinationPort_ANY E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_DestinationPort = 1
 )
 
-
 // E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_SourcePort is a derived int64 type which is used to represent
 // the enumerated node OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_SourcePort. An additional value named
 // OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_SourcePort_UNSET is added to the enumeration which is used as
@@ -271,7 +262,6 @@ const (
 	// OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_SourcePort_ANY corresponds to the value ANY of OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_SourcePort
 	OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_SourcePort_ANY E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_SourcePort = 1
 )
-
 
 // E_OpenconfigAcl_FORWARDING_ACTION is a derived int64 type which is used to represent
 // the enumerated node OpenconfigAcl_FORWARDING_ACTION. An additional value named
@@ -299,7 +289,6 @@ const (
 	OpenconfigAcl_FORWARDING_ACTION_REJECT E_OpenconfigAcl_FORWARDING_ACTION = 3
 )
 
-
 // E_OpenconfigAcl_LOG_ACTION is a derived int64 type which is used to represent
 // the enumerated node OpenconfigAcl_LOG_ACTION. An additional value named
 // OpenconfigAcl_LOG_ACTION_UNSET is added to the enumeration which is used as
@@ -323,7 +312,6 @@ const (
 	// OpenconfigAcl_LOG_ACTION_LOG_SYSLOG corresponds to the value LOG_SYSLOG of OpenconfigAcl_LOG_ACTION
 	OpenconfigAcl_LOG_ACTION_LOG_SYSLOG E_OpenconfigAcl_LOG_ACTION = 2
 )
-
 
 // E_OpenconfigAft_EncapsulationHeaderType is a derived int64 type which is used to represent
 // the enumerated node OpenconfigAft_EncapsulationHeaderType. An additional value named
@@ -352,7 +340,6 @@ const (
 	// OpenconfigAft_EncapsulationHeaderType_MPLS corresponds to the value MPLS of OpenconfigAft_EncapsulationHeaderType
 	OpenconfigAft_EncapsulationHeaderType_MPLS E_OpenconfigAft_EncapsulationHeaderType = 4
 )
-
 
 // E_OpenconfigAlarmTypes_OPENCONFIG_ALARM_SEVERITY is a derived int64 type which is used to represent
 // the enumerated node OpenconfigAlarmTypes_OPENCONFIG_ALARM_SEVERITY. An additional value named
@@ -384,7 +371,6 @@ const (
 	OpenconfigAlarmTypes_OPENCONFIG_ALARM_SEVERITY_WARNING E_OpenconfigAlarmTypes_OPENCONFIG_ALARM_SEVERITY = 5
 )
 
-
 // E_OpenconfigAlarmTypes_OPENCONFIG_ALARM_TYPE_ID is a derived int64 type which is used to represent
 // the enumerated node OpenconfigAlarmTypes_OPENCONFIG_ALARM_TYPE_ID. An additional value named
 // OpenconfigAlarmTypes_OPENCONFIG_ALARM_TYPE_ID_UNSET is added to the enumeration which is used as
@@ -412,7 +398,6 @@ const (
 	// OpenconfigAlarmTypes_OPENCONFIG_ALARM_TYPE_ID_OTS corresponds to the value OTS of OpenconfigAlarmTypes_OPENCONFIG_ALARM_TYPE_ID
 	OpenconfigAlarmTypes_OPENCONFIG_ALARM_TYPE_ID_OTS E_OpenconfigAlarmTypes_OPENCONFIG_ALARM_TYPE_ID = 4
 )
-
 
 // E_OpenconfigBgpTypes_AFI_SAFI_TYPE is a derived int64 type which is used to represent
 // the enumerated node OpenconfigBgpTypes_AFI_SAFI_TYPE. An additional value named
@@ -458,7 +443,6 @@ const (
 	OpenconfigBgpTypes_AFI_SAFI_TYPE_SRTE_POLICY_IPV6 E_OpenconfigBgpTypes_AFI_SAFI_TYPE = 12
 )
 
-
 // E_OpenconfigBgpTypes_BGP_CAPABILITY is a derived int64 type which is used to represent
 // the enumerated node OpenconfigBgpTypes_BGP_CAPABILITY. An additional value named
 // OpenconfigBgpTypes_BGP_CAPABILITY_UNSET is added to the enumeration which is used as
@@ -488,7 +472,6 @@ const (
 	// OpenconfigBgpTypes_BGP_CAPABILITY_ROUTE_REFRESH corresponds to the value ROUTE_REFRESH of OpenconfigBgpTypes_BGP_CAPABILITY
 	OpenconfigBgpTypes_BGP_CAPABILITY_ROUTE_REFRESH E_OpenconfigBgpTypes_BGP_CAPABILITY = 5
 )
-
 
 // E_OpenconfigBgpTypes_BGP_ERROR_CODE is a derived int64 type which is used to represent
 // the enumerated node OpenconfigBgpTypes_BGP_ERROR_CODE. An additional value named
@@ -523,7 +506,6 @@ const (
 	// OpenconfigBgpTypes_BGP_ERROR_CODE_UPDATE_MESSAGE_ERROR corresponds to the value UPDATE_MESSAGE_ERROR of OpenconfigBgpTypes_BGP_ERROR_CODE
 	OpenconfigBgpTypes_BGP_ERROR_CODE_UPDATE_MESSAGE_ERROR E_OpenconfigBgpTypes_BGP_ERROR_CODE = 7
 )
-
 
 // E_OpenconfigBgpTypes_BGP_ERROR_SUBCODE is a derived int64 type which is used to represent
 // the enumerated node OpenconfigBgpTypes_BGP_ERROR_SUBCODE. An additional value named
@@ -621,7 +603,6 @@ const (
 	OpenconfigBgpTypes_BGP_ERROR_SUBCODE_UPDATE_MESSAGE_SUBCODE E_OpenconfigBgpTypes_BGP_ERROR_SUBCODE = 38
 )
 
-
 // E_OpenconfigBgp_Bgp_Neighbors_Neighbor_GracefulRestart_State_Mode is a derived int64 type which is used to represent
 // the enumerated node OpenconfigBgp_Bgp_Neighbors_Neighbor_GracefulRestart_State_Mode. An additional value named
 // OpenconfigBgp_Bgp_Neighbors_Neighbor_GracefulRestart_State_Mode_UNSET is added to the enumeration which is used as
@@ -647,7 +628,6 @@ const (
 	// OpenconfigBgp_Bgp_Neighbors_Neighbor_GracefulRestart_State_Mode_REMOTE_HELPER corresponds to the value REMOTE_HELPER of OpenconfigBgp_Bgp_Neighbors_Neighbor_GracefulRestart_State_Mode
 	OpenconfigBgp_Bgp_Neighbors_Neighbor_GracefulRestart_State_Mode_REMOTE_HELPER E_OpenconfigBgp_Bgp_Neighbors_Neighbor_GracefulRestart_State_Mode = 3
 )
-
 
 // E_OpenconfigBgp_Bgp_Neighbors_Neighbor_State_SessionState is a derived int64 type which is used to represent
 // the enumerated node OpenconfigBgp_Bgp_Neighbors_Neighbor_State_SessionState. An additional value named
@@ -681,7 +661,6 @@ const (
 	OpenconfigBgp_Bgp_Neighbors_Neighbor_State_SessionState_ESTABLISHED E_OpenconfigBgp_Bgp_Neighbors_Neighbor_State_SessionState = 6
 )
 
-
 // E_OpenconfigBgp_CommunityType is a derived int64 type which is used to represent
 // the enumerated node OpenconfigBgp_CommunityType. An additional value named
 // OpenconfigBgp_CommunityType_UNSET is added to the enumeration which is used as
@@ -710,7 +689,6 @@ const (
 	OpenconfigBgp_CommunityType_NONE E_OpenconfigBgp_CommunityType = 4
 )
 
-
 // E_OpenconfigBgp_PeerType is a derived int64 type which is used to represent
 // the enumerated node OpenconfigBgp_PeerType. An additional value named
 // OpenconfigBgp_PeerType_UNSET is added to the enumeration which is used as
@@ -734,7 +712,6 @@ const (
 	// OpenconfigBgp_PeerType_EXTERNAL corresponds to the value EXTERNAL of OpenconfigBgp_PeerType
 	OpenconfigBgp_PeerType_EXTERNAL E_OpenconfigBgp_PeerType = 2
 )
-
 
 // E_OpenconfigBgp_RemovePrivateAsOption is a derived int64 type which is used to represent
 // the enumerated node OpenconfigBgp_RemovePrivateAsOption. An additional value named
@@ -760,7 +737,6 @@ const (
 	OpenconfigBgp_RemovePrivateAsOption_PRIVATE_AS_REPLACE_ALL E_OpenconfigBgp_RemovePrivateAsOption = 2
 )
 
-
 // E_OpenconfigIfAggregate_AggregationType is a derived int64 type which is used to represent
 // the enumerated node OpenconfigIfAggregate_AggregationType. An additional value named
 // OpenconfigIfAggregate_AggregationType_UNSET is added to the enumeration which is used as
@@ -784,7 +760,6 @@ const (
 	// OpenconfigIfAggregate_AggregationType_STATIC corresponds to the value STATIC of OpenconfigIfAggregate_AggregationType
 	OpenconfigIfAggregate_AggregationType_STATIC E_OpenconfigIfAggregate_AggregationType = 2
 )
-
 
 // E_OpenconfigIfEthernet_ETHERNET_SPEED is a derived int64 type which is used to represent
 // the enumerated node OpenconfigIfEthernet_ETHERNET_SPEED. An additional value named
@@ -828,7 +803,6 @@ const (
 	OpenconfigIfEthernet_ETHERNET_SPEED_SPEED_UNKNOWN E_OpenconfigIfEthernet_ETHERNET_SPEED = 11
 )
 
-
 // E_OpenconfigInterfaces_Interfaces_Interface_Ethernet_Config_DuplexMode is a derived int64 type which is used to represent
 // the enumerated node OpenconfigInterfaces_Interfaces_Interface_Ethernet_Config_DuplexMode. An additional value named
 // OpenconfigInterfaces_Interfaces_Interface_Ethernet_Config_DuplexMode_UNSET is added to the enumeration which is used as
@@ -853,7 +827,6 @@ const (
 	OpenconfigInterfaces_Interfaces_Interface_Ethernet_Config_DuplexMode_HALF E_OpenconfigInterfaces_Interfaces_Interface_Ethernet_Config_DuplexMode = 2
 )
 
-
 // E_OpenconfigInterfaces_Interfaces_Interface_Ethernet_State_NegotiatedDuplexMode is a derived int64 type which is used to represent
 // the enumerated node OpenconfigInterfaces_Interfaces_Interface_Ethernet_State_NegotiatedDuplexMode. An additional value named
 // OpenconfigInterfaces_Interfaces_Interface_Ethernet_State_NegotiatedDuplexMode_UNSET is added to the enumeration which is used as
@@ -877,7 +850,6 @@ const (
 	// OpenconfigInterfaces_Interfaces_Interface_Ethernet_State_NegotiatedDuplexMode_HALF corresponds to the value HALF of OpenconfigInterfaces_Interfaces_Interface_Ethernet_State_NegotiatedDuplexMode
 	OpenconfigInterfaces_Interfaces_Interface_Ethernet_State_NegotiatedDuplexMode_HALF E_OpenconfigInterfaces_Interfaces_Interface_Ethernet_State_NegotiatedDuplexMode = 2
 )
-
 
 // E_OpenconfigInterfaces_Interfaces_Interface_State_AdminStatus is a derived int64 type which is used to represent
 // the enumerated node OpenconfigInterfaces_Interfaces_Interface_State_AdminStatus. An additional value named
@@ -904,7 +876,6 @@ const (
 	// OpenconfigInterfaces_Interfaces_Interface_State_AdminStatus_TESTING corresponds to the value TESTING of OpenconfigInterfaces_Interfaces_Interface_State_AdminStatus
 	OpenconfigInterfaces_Interfaces_Interface_State_AdminStatus_TESTING E_OpenconfigInterfaces_Interfaces_Interface_State_AdminStatus = 3
 )
-
 
 // E_OpenconfigInterfaces_Interfaces_Interface_State_OperStatus is a derived int64 type which is used to represent
 // the enumerated node OpenconfigInterfaces_Interfaces_Interface_State_OperStatus. An additional value named
@@ -939,7 +910,6 @@ const (
 	// OpenconfigInterfaces_Interfaces_Interface_State_OperStatus_LOWER_LAYER_DOWN corresponds to the value LOWER_LAYER_DOWN of OpenconfigInterfaces_Interfaces_Interface_State_OperStatus
 	OpenconfigInterfaces_Interfaces_Interface_State_OperStatus_LOWER_LAYER_DOWN E_OpenconfigInterfaces_Interfaces_Interface_State_OperStatus = 8
 )
-
 
 // E_OpenconfigIsisLsdbTypes_ISIS_SUBTLV_TYPE is a derived int64 type which is used to represent
 // the enumerated node OpenconfigIsisLsdbTypes_ISIS_SUBTLV_TYPE. An additional value named
@@ -1031,7 +1001,6 @@ const (
 	OpenconfigIsisLsdbTypes_ISIS_SUBTLV_TYPE_ROUTER_CAPABILITY_SUBTLVS_TYPE E_OpenconfigIsisLsdbTypes_ISIS_SUBTLV_TYPE = 35
 )
 
-
 // E_OpenconfigIsisLsdbTypes_ISIS_TLV_TYPE is a derived int64 type which is used to represent
 // the enumerated node OpenconfigIsisLsdbTypes_ISIS_TLV_TYPE. An additional value named
 // OpenconfigIsisLsdbTypes_ISIS_TLV_TYPE_UNSET is added to the enumeration which is used as
@@ -1106,7 +1075,6 @@ const (
 	OpenconfigIsisLsdbTypes_ISIS_TLV_TYPE_ROUTER_CAPABILITY E_OpenconfigIsisLsdbTypes_ISIS_TLV_TYPE = 27
 )
 
-
 // E_OpenconfigIsisTypes_AFI_SAFI_TYPE is a derived int64 type which is used to represent
 // the enumerated node OpenconfigIsisTypes_AFI_SAFI_TYPE. An additional value named
 // OpenconfigIsisTypes_AFI_SAFI_TYPE_UNSET is added to the enumeration which is used as
@@ -1135,7 +1103,6 @@ const (
 	OpenconfigIsisTypes_AFI_SAFI_TYPE_IPV6_UNICAST E_OpenconfigIsisTypes_AFI_SAFI_TYPE = 4
 )
 
-
 // E_OpenconfigIsisTypes_AFI_TYPE is a derived int64 type which is used to represent
 // the enumerated node OpenconfigIsisTypes_AFI_TYPE. An additional value named
 // OpenconfigIsisTypes_AFI_TYPE_UNSET is added to the enumeration which is used as
@@ -1159,7 +1126,6 @@ const (
 	// OpenconfigIsisTypes_AFI_TYPE_IPV6 corresponds to the value IPV6 of OpenconfigIsisTypes_AFI_TYPE
 	OpenconfigIsisTypes_AFI_TYPE_IPV6 E_OpenconfigIsisTypes_AFI_TYPE = 2
 )
-
 
 // E_OpenconfigIsisTypes_OVERLOAD_RESET_TRIGGER_TYPE is a derived int64 type which is used to represent
 // the enumerated node OpenconfigIsisTypes_OVERLOAD_RESET_TRIGGER_TYPE. An additional value named
@@ -1185,7 +1151,6 @@ const (
 	OpenconfigIsisTypes_OVERLOAD_RESET_TRIGGER_TYPE_WAIT_FOR_SYSTEM E_OpenconfigIsisTypes_OVERLOAD_RESET_TRIGGER_TYPE = 2
 )
 
-
 // E_OpenconfigIsisTypes_SAFI_TYPE is a derived int64 type which is used to represent
 // the enumerated node OpenconfigIsisTypes_SAFI_TYPE. An additional value named
 // OpenconfigIsisTypes_SAFI_TYPE_UNSET is added to the enumeration which is used as
@@ -1209,7 +1174,6 @@ const (
 	// OpenconfigIsisTypes_SAFI_TYPE_UNICAST corresponds to the value UNICAST of OpenconfigIsisTypes_SAFI_TYPE
 	OpenconfigIsisTypes_SAFI_TYPE_UNICAST E_OpenconfigIsisTypes_SAFI_TYPE = 2
 )
-
 
 // E_OpenconfigIsis_AdaptiveTimerType is a derived int64 type which is used to represent
 // the enumerated node OpenconfigIsis_AdaptiveTimerType. An additional value named
@@ -1235,7 +1199,6 @@ const (
 	OpenconfigIsis_AdaptiveTimerType_EXPONENTIAL E_OpenconfigIsis_AdaptiveTimerType = 2
 )
 
-
 // E_OpenconfigIsis_CircuitType is a derived int64 type which is used to represent
 // the enumerated node OpenconfigIsis_CircuitType. An additional value named
 // OpenconfigIsis_CircuitType_UNSET is added to the enumeration which is used as
@@ -1259,7 +1222,6 @@ const (
 	// OpenconfigIsis_CircuitType_BROADCAST corresponds to the value BROADCAST of OpenconfigIsis_CircuitType
 	OpenconfigIsis_CircuitType_BROADCAST E_OpenconfigIsis_CircuitType = 2
 )
-
 
 // E_OpenconfigIsis_HelloPaddingType is a derived int64 type which is used to represent
 // the enumerated node OpenconfigIsis_HelloPaddingType. An additional value named
@@ -1289,7 +1251,6 @@ const (
 	OpenconfigIsis_HelloPaddingType_DISABLE E_OpenconfigIsis_HelloPaddingType = 4
 )
 
-
 // E_OpenconfigIsis_IsisInterfaceAdjState is a derived int64 type which is used to represent
 // the enumerated node OpenconfigIsis_IsisInterfaceAdjState. An additional value named
 // OpenconfigIsis_IsisInterfaceAdjState_UNSET is added to the enumeration which is used as
@@ -1318,7 +1279,6 @@ const (
 	OpenconfigIsis_IsisInterfaceAdjState_FAILED E_OpenconfigIsis_IsisInterfaceAdjState = 4
 )
 
-
 // E_OpenconfigIsis_IsisMetricFlags is a derived int64 type which is used to represent
 // the enumerated node OpenconfigIsis_IsisMetricFlags. An additional value named
 // OpenconfigIsis_IsisMetricFlags_UNSET is added to the enumeration which is used as
@@ -1342,7 +1302,6 @@ const (
 	// OpenconfigIsis_IsisMetricFlags_UNSUPPORTED corresponds to the value UNSUPPORTED of OpenconfigIsis_IsisMetricFlags
 	OpenconfigIsis_IsisMetricFlags_UNSUPPORTED E_OpenconfigIsis_IsisMetricFlags = 2
 )
-
 
 // E_OpenconfigIsis_LevelType is a derived int64 type which is used to represent
 // the enumerated node OpenconfigIsis_LevelType. An additional value named
@@ -1370,7 +1329,6 @@ const (
 	OpenconfigIsis_LevelType_LEVEL_1_2 E_OpenconfigIsis_LevelType = 3
 )
 
-
 // E_OpenconfigIsis_MetricStyle is a derived int64 type which is used to represent
 // the enumerated node OpenconfigIsis_MetricStyle. An additional value named
 // OpenconfigIsis_MetricStyle_UNSET is added to the enumeration which is used as
@@ -1395,6 +1353,101 @@ const (
 	OpenconfigIsis_MetricStyle_WIDE_METRIC E_OpenconfigIsis_MetricStyle = 2
 )
 
+// E_OpenconfigLacp_LacpActivityType is a derived int64 type which is used to represent
+// the enumerated node OpenconfigLacp_LacpActivityType. An additional value named
+// OpenconfigLacp_LacpActivityType_UNSET is added to the enumeration which is used as
+// the nil value, indicating that the enumeration was not explicitly set by
+// the program importing the generated structures.
+type E_OpenconfigLacp_LacpActivityType int64
+
+// IsYANGGoEnum ensures that OpenconfigLacp_LacpActivityType implements the yang.GoEnum
+// interface. This ensures that OpenconfigLacp_LacpActivityType can be identified as a
+// mapped type for a YANG enumeration.
+func (E_OpenconfigLacp_LacpActivityType) IsYANGGoEnum() {}
+
+// ΛMap returns the value lookup map associated with  OpenconfigLacp_LacpActivityType.
+func (E_OpenconfigLacp_LacpActivityType) ΛMap() map[string]map[int64]ygot.EnumDefinition { return ΛEnum; }
+
+const (
+	// OpenconfigLacp_LacpActivityType_UNSET corresponds to the value UNSET of OpenconfigLacp_LacpActivityType
+	OpenconfigLacp_LacpActivityType_UNSET E_OpenconfigLacp_LacpActivityType = 0
+	// OpenconfigLacp_LacpActivityType_ACTIVE corresponds to the value ACTIVE of OpenconfigLacp_LacpActivityType
+	OpenconfigLacp_LacpActivityType_ACTIVE E_OpenconfigLacp_LacpActivityType = 1
+	// OpenconfigLacp_LacpActivityType_PASSIVE corresponds to the value PASSIVE of OpenconfigLacp_LacpActivityType
+	OpenconfigLacp_LacpActivityType_PASSIVE E_OpenconfigLacp_LacpActivityType = 2
+)
+
+// E_OpenconfigLacp_LacpPeriodType is a derived int64 type which is used to represent
+// the enumerated node OpenconfigLacp_LacpPeriodType. An additional value named
+// OpenconfigLacp_LacpPeriodType_UNSET is added to the enumeration which is used as
+// the nil value, indicating that the enumeration was not explicitly set by
+// the program importing the generated structures.
+type E_OpenconfigLacp_LacpPeriodType int64
+
+// IsYANGGoEnum ensures that OpenconfigLacp_LacpPeriodType implements the yang.GoEnum
+// interface. This ensures that OpenconfigLacp_LacpPeriodType can be identified as a
+// mapped type for a YANG enumeration.
+func (E_OpenconfigLacp_LacpPeriodType) IsYANGGoEnum() {}
+
+// ΛMap returns the value lookup map associated with  OpenconfigLacp_LacpPeriodType.
+func (E_OpenconfigLacp_LacpPeriodType) ΛMap() map[string]map[int64]ygot.EnumDefinition { return ΛEnum; }
+
+const (
+	// OpenconfigLacp_LacpPeriodType_UNSET corresponds to the value UNSET of OpenconfigLacp_LacpPeriodType
+	OpenconfigLacp_LacpPeriodType_UNSET E_OpenconfigLacp_LacpPeriodType = 0
+	// OpenconfigLacp_LacpPeriodType_FAST corresponds to the value FAST of OpenconfigLacp_LacpPeriodType
+	OpenconfigLacp_LacpPeriodType_FAST E_OpenconfigLacp_LacpPeriodType = 1
+	// OpenconfigLacp_LacpPeriodType_SLOW corresponds to the value SLOW of OpenconfigLacp_LacpPeriodType
+	OpenconfigLacp_LacpPeriodType_SLOW E_OpenconfigLacp_LacpPeriodType = 2
+)
+
+// E_OpenconfigLacp_LacpSynchronizationType is a derived int64 type which is used to represent
+// the enumerated node OpenconfigLacp_LacpSynchronizationType. An additional value named
+// OpenconfigLacp_LacpSynchronizationType_UNSET is added to the enumeration which is used as
+// the nil value, indicating that the enumeration was not explicitly set by
+// the program importing the generated structures.
+type E_OpenconfigLacp_LacpSynchronizationType int64
+
+// IsYANGGoEnum ensures that OpenconfigLacp_LacpSynchronizationType implements the yang.GoEnum
+// interface. This ensures that OpenconfigLacp_LacpSynchronizationType can be identified as a
+// mapped type for a YANG enumeration.
+func (E_OpenconfigLacp_LacpSynchronizationType) IsYANGGoEnum() {}
+
+// ΛMap returns the value lookup map associated with  OpenconfigLacp_LacpSynchronizationType.
+func (E_OpenconfigLacp_LacpSynchronizationType) ΛMap() map[string]map[int64]ygot.EnumDefinition { return ΛEnum; }
+
+const (
+	// OpenconfigLacp_LacpSynchronizationType_UNSET corresponds to the value UNSET of OpenconfigLacp_LacpSynchronizationType
+	OpenconfigLacp_LacpSynchronizationType_UNSET E_OpenconfigLacp_LacpSynchronizationType = 0
+	// OpenconfigLacp_LacpSynchronizationType_IN_SYNC corresponds to the value IN_SYNC of OpenconfigLacp_LacpSynchronizationType
+	OpenconfigLacp_LacpSynchronizationType_IN_SYNC E_OpenconfigLacp_LacpSynchronizationType = 1
+	// OpenconfigLacp_LacpSynchronizationType_OUT_SYNC corresponds to the value OUT_SYNC of OpenconfigLacp_LacpSynchronizationType
+	OpenconfigLacp_LacpSynchronizationType_OUT_SYNC E_OpenconfigLacp_LacpSynchronizationType = 2
+)
+
+// E_OpenconfigLacp_LacpTimeoutType is a derived int64 type which is used to represent
+// the enumerated node OpenconfigLacp_LacpTimeoutType. An additional value named
+// OpenconfigLacp_LacpTimeoutType_UNSET is added to the enumeration which is used as
+// the nil value, indicating that the enumeration was not explicitly set by
+// the program importing the generated structures.
+type E_OpenconfigLacp_LacpTimeoutType int64
+
+// IsYANGGoEnum ensures that OpenconfigLacp_LacpTimeoutType implements the yang.GoEnum
+// interface. This ensures that OpenconfigLacp_LacpTimeoutType can be identified as a
+// mapped type for a YANG enumeration.
+func (E_OpenconfigLacp_LacpTimeoutType) IsYANGGoEnum() {}
+
+// ΛMap returns the value lookup map associated with  OpenconfigLacp_LacpTimeoutType.
+func (E_OpenconfigLacp_LacpTimeoutType) ΛMap() map[string]map[int64]ygot.EnumDefinition { return ΛEnum; }
+
+const (
+	// OpenconfigLacp_LacpTimeoutType_UNSET corresponds to the value UNSET of OpenconfigLacp_LacpTimeoutType
+	OpenconfigLacp_LacpTimeoutType_UNSET E_OpenconfigLacp_LacpTimeoutType = 0
+	// OpenconfigLacp_LacpTimeoutType_LONG corresponds to the value LONG of OpenconfigLacp_LacpTimeoutType
+	OpenconfigLacp_LacpTimeoutType_LONG E_OpenconfigLacp_LacpTimeoutType = 1
+	// OpenconfigLacp_LacpTimeoutType_SHORT corresponds to the value SHORT of OpenconfigLacp_LacpTimeoutType
+	OpenconfigLacp_LacpTimeoutType_SHORT E_OpenconfigLacp_LacpTimeoutType = 2
+)
 
 // E_OpenconfigLldpTypes_LLDP_SYSTEM_CAPABILITY is a derived int64 type which is used to represent
 // the enumerated node OpenconfigLldpTypes_LLDP_SYSTEM_CAPABILITY. An additional value named
@@ -1438,7 +1491,6 @@ const (
 	OpenconfigLldpTypes_LLDP_SYSTEM_CAPABILITY_WLAN_ACCESS_POINT E_OpenconfigLldpTypes_LLDP_SYSTEM_CAPABILITY = 11
 )
 
-
 // E_OpenconfigLldpTypes_LLDP_TLV is a derived int64 type which is used to represent
 // the enumerated node OpenconfigLldpTypes_LLDP_TLV. An additional value named
 // OpenconfigLldpTypes_LLDP_TLV_UNSET is added to the enumeration which is used as
@@ -1472,7 +1524,6 @@ const (
 	// OpenconfigLldpTypes_LLDP_TLV_SYSTEM_NAME corresponds to the value SYSTEM_NAME of OpenconfigLldpTypes_LLDP_TLV
 	OpenconfigLldpTypes_LLDP_TLV_SYSTEM_NAME E_OpenconfigLldpTypes_LLDP_TLV = 7
 )
-
 
 // E_OpenconfigLldp_ChassisIdType is a derived int64 type which is used to represent
 // the enumerated node OpenconfigLldp_ChassisIdType. An additional value named
@@ -1508,7 +1559,6 @@ const (
 	OpenconfigLldp_ChassisIdType_LOCAL E_OpenconfigLldp_ChassisIdType = 7
 )
 
-
 // E_OpenconfigLldp_PortIdType is a derived int64 type which is used to represent
 // the enumerated node OpenconfigLldp_PortIdType. An additional value named
 // OpenconfigLldp_PortIdType_UNSET is added to the enumeration which is used as
@@ -1543,7 +1593,6 @@ const (
 	OpenconfigLldp_PortIdType_LOCAL E_OpenconfigLldp_PortIdType = 7
 )
 
-
 // E_OpenconfigLocalRouting_LOCAL_DEFINED_NEXT_HOP is a derived int64 type which is used to represent
 // the enumerated node OpenconfigLocalRouting_LOCAL_DEFINED_NEXT_HOP. An additional value named
 // OpenconfigLocalRouting_LOCAL_DEFINED_NEXT_HOP_UNSET is added to the enumeration which is used as
@@ -1567,7 +1616,6 @@ const (
 	// OpenconfigLocalRouting_LOCAL_DEFINED_NEXT_HOP_LOCAL_LINK corresponds to the value LOCAL_LINK of OpenconfigLocalRouting_LOCAL_DEFINED_NEXT_HOP
 	OpenconfigLocalRouting_LOCAL_DEFINED_NEXT_HOP_LOCAL_LINK E_OpenconfigLocalRouting_LOCAL_DEFINED_NEXT_HOP = 2
 )
-
 
 // E_OpenconfigMplsTypes_LSP_METRIC_TYPE is a derived int64 type which is used to represent
 // the enumerated node OpenconfigMplsTypes_LSP_METRIC_TYPE. An additional value named
@@ -1595,7 +1643,6 @@ const (
 	OpenconfigMplsTypes_LSP_METRIC_TYPE_LSP_METRIC_RELATIVE E_OpenconfigMplsTypes_LSP_METRIC_TYPE = 3
 )
 
-
 // E_OpenconfigMplsTypes_LSP_OPER_STATUS is a derived int64 type which is used to represent
 // the enumerated node OpenconfigMplsTypes_LSP_OPER_STATUS. An additional value named
 // OpenconfigMplsTypes_LSP_OPER_STATUS_UNSET is added to the enumeration which is used as
@@ -1619,7 +1666,6 @@ const (
 	// OpenconfigMplsTypes_LSP_OPER_STATUS_UP corresponds to the value UP of OpenconfigMplsTypes_LSP_OPER_STATUS
 	OpenconfigMplsTypes_LSP_OPER_STATUS_UP E_OpenconfigMplsTypes_LSP_OPER_STATUS = 2
 )
-
 
 // E_OpenconfigMplsTypes_LSP_ROLE is a derived int64 type which is used to represent
 // the enumerated node OpenconfigMplsTypes_LSP_ROLE. An additional value named
@@ -1647,7 +1693,6 @@ const (
 	OpenconfigMplsTypes_LSP_ROLE_TRANSIT E_OpenconfigMplsTypes_LSP_ROLE = 3
 )
 
-
 // E_OpenconfigMplsTypes_NULL_LABEL_TYPE is a derived int64 type which is used to represent
 // the enumerated node OpenconfigMplsTypes_NULL_LABEL_TYPE. An additional value named
 // OpenconfigMplsTypes_NULL_LABEL_TYPE_UNSET is added to the enumeration which is used as
@@ -1671,7 +1716,6 @@ const (
 	// OpenconfigMplsTypes_NULL_LABEL_TYPE_IMPLICIT corresponds to the value IMPLICIT of OpenconfigMplsTypes_NULL_LABEL_TYPE
 	OpenconfigMplsTypes_NULL_LABEL_TYPE_IMPLICIT E_OpenconfigMplsTypes_NULL_LABEL_TYPE = 2
 )
-
 
 // E_OpenconfigMplsTypes_PATH_COMPUTATION_METHOD is a derived int64 type which is used to represent
 // the enumerated node OpenconfigMplsTypes_PATH_COMPUTATION_METHOD. An additional value named
@@ -1699,7 +1743,6 @@ const (
 	OpenconfigMplsTypes_PATH_COMPUTATION_METHOD_LOCALLY_COMPUTED E_OpenconfigMplsTypes_PATH_COMPUTATION_METHOD = 3
 )
 
-
 // E_OpenconfigMplsTypes_PATH_SETUP_PROTOCOL is a derived int64 type which is used to represent
 // the enumerated node OpenconfigMplsTypes_PATH_SETUP_PROTOCOL. An additional value named
 // OpenconfigMplsTypes_PATH_SETUP_PROTOCOL_UNSET is added to the enumeration which is used as
@@ -1725,7 +1768,6 @@ const (
 	// OpenconfigMplsTypes_PATH_SETUP_PROTOCOL_PATH_SETUP_SR corresponds to the value PATH_SETUP_SR of OpenconfigMplsTypes_PATH_SETUP_PROTOCOL
 	OpenconfigMplsTypes_PATH_SETUP_PROTOCOL_PATH_SETUP_SR E_OpenconfigMplsTypes_PATH_SETUP_PROTOCOL = 3
 )
-
 
 // E_OpenconfigMplsTypes_PROTECTION_TYPE is a derived int64 type which is used to represent
 // the enumerated node OpenconfigMplsTypes_PROTECTION_TYPE. An additional value named
@@ -1753,7 +1795,6 @@ const (
 	OpenconfigMplsTypes_PROTECTION_TYPE_UNPROTECTED E_OpenconfigMplsTypes_PROTECTION_TYPE = 3
 )
 
-
 // E_OpenconfigMplsTypes_TUNNEL_ADMIN_STATUS is a derived int64 type which is used to represent
 // the enumerated node OpenconfigMplsTypes_TUNNEL_ADMIN_STATUS. An additional value named
 // OpenconfigMplsTypes_TUNNEL_ADMIN_STATUS_UNSET is added to the enumeration which is used as
@@ -1778,7 +1819,6 @@ const (
 	OpenconfigMplsTypes_TUNNEL_ADMIN_STATUS_ADMIN_UP E_OpenconfigMplsTypes_TUNNEL_ADMIN_STATUS = 2
 )
 
-
 // E_OpenconfigMplsTypes_TUNNEL_TYPE is a derived int64 type which is used to represent
 // the enumerated node OpenconfigMplsTypes_TUNNEL_TYPE. An additional value named
 // OpenconfigMplsTypes_TUNNEL_TYPE_UNSET is added to the enumeration which is used as
@@ -1802,7 +1842,6 @@ const (
 	// OpenconfigMplsTypes_TUNNEL_TYPE_P2P corresponds to the value P2P of OpenconfigMplsTypes_TUNNEL_TYPE
 	OpenconfigMplsTypes_TUNNEL_TYPE_P2P E_OpenconfigMplsTypes_TUNNEL_TYPE = 2
 )
-
 
 // E_OpenconfigMpls_CspfTieBreaking is a derived int64 type which is used to represent
 // the enumerated node OpenconfigMpls_CspfTieBreaking. An additional value named
@@ -1830,7 +1869,6 @@ const (
 	OpenconfigMpls_CspfTieBreaking_MOST_FILL E_OpenconfigMpls_CspfTieBreaking = 3
 )
 
-
 // E_OpenconfigMpls_MplsHopType is a derived int64 type which is used to represent
 // the enumerated node OpenconfigMpls_MplsHopType. An additional value named
 // OpenconfigMpls_MplsHopType_UNSET is added to the enumeration which is used as
@@ -1855,7 +1893,6 @@ const (
 	OpenconfigMpls_MplsHopType_STRICT E_OpenconfigMpls_MplsHopType = 2
 )
 
-
 // E_OpenconfigMpls_MplsSrlgFloodingType is a derived int64 type which is used to represent
 // the enumerated node OpenconfigMpls_MplsSrlgFloodingType. An additional value named
 // OpenconfigMpls_MplsSrlgFloodingType_UNSET is added to the enumeration which is used as
@@ -1879,7 +1916,6 @@ const (
 	// OpenconfigMpls_MplsSrlgFloodingType_STATIC_SRLG corresponds to the value STATIC_SRLG of OpenconfigMpls_MplsSrlgFloodingType
 	OpenconfigMpls_MplsSrlgFloodingType_STATIC_SRLG E_OpenconfigMpls_MplsSrlgFloodingType = 2
 )
-
 
 // E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound is a derived int64 type which is used to represent
 // the enumerated node OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound. An additional value named
@@ -1913,7 +1949,6 @@ const (
 	OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound_NO_LABEL E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound = 9
 )
 
-
 // E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound is a derived int64 type which is used to represent
 // the enumerated node OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound. An additional value named
 // OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound_UNSET is added to the enumeration which is used as
@@ -1946,7 +1981,6 @@ const (
 	OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound_NO_LABEL E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound = 9
 )
 
-
 // E_OpenconfigMpls_Mpls_Lsps_ConstrainedPath_NamedExplicitPaths_NamedExplicitPath_Config_SidSelectionMode is a derived int64 type which is used to represent
 // the enumerated node OpenconfigMpls_Mpls_Lsps_ConstrainedPath_NamedExplicitPaths_NamedExplicitPath_Config_SidSelectionMode. An additional value named
 // OpenconfigMpls_Mpls_Lsps_ConstrainedPath_NamedExplicitPaths_NamedExplicitPath_Config_SidSelectionMode_UNSET is added to the enumeration which is used as
@@ -1970,7 +2004,6 @@ const (
 	// OpenconfigMpls_Mpls_Lsps_ConstrainedPath_NamedExplicitPaths_NamedExplicitPath_Config_SidSelectionMode_MIXED_MODE corresponds to the value MIXED_MODE of OpenconfigMpls_Mpls_Lsps_ConstrainedPath_NamedExplicitPaths_NamedExplicitPath_Config_SidSelectionMode
 	OpenconfigMpls_Mpls_Lsps_ConstrainedPath_NamedExplicitPaths_NamedExplicitPath_Config_SidSelectionMode_MIXED_MODE E_OpenconfigMpls_Mpls_Lsps_ConstrainedPath_NamedExplicitPaths_NamedExplicitPath_Config_SidSelectionMode = 2
 )
-
 
 // E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel is a derived int64 type which is used to represent
 // the enumerated node OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel. An additional value named
@@ -2004,7 +2037,6 @@ const (
 	OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel_NO_LABEL E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel = 9
 )
 
-
 // E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel is a derived int64 type which is used to represent
 // the enumerated node OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel. An additional value named
 // OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel_UNSET is added to the enumeration which is used as
@@ -2037,6 +2069,27 @@ const (
 	OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel_NO_LABEL E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel = 9
 )
 
+// E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority is a derived int64 type which is used to represent
+// the enumerated node OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority. An additional value named
+// OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_UNSET is added to the enumeration which is used as
+// the nil value, indicating that the enumeration was not explicitly set by
+// the program importing the generated structures.
+type E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority int64
+
+// IsYANGGoEnum ensures that OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority implements the yang.GoEnum
+// interface. This ensures that OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority can be identified as a
+// mapped type for a YANG enumeration.
+func (E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority) IsYANGGoEnum() {}
+
+// ΛMap returns the value lookup map associated with  OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority.
+func (E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority) ΛMap() map[string]map[int64]ygot.EnumDefinition { return ΛEnum; }
+
+const (
+	// OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_UNSET corresponds to the value UNSET of OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority
+	OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_UNSET E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority = 0
+	// OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_ALL corresponds to the value ALL of OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority
+	OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_ALL E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority = 1
+)
 
 // E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Neighbors_Neighbor_State_NeighborStatus is a derived int64 type which is used to represent
 // the enumerated node OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Neighbors_Neighbor_State_NeighborStatus. An additional value named
@@ -2061,7 +2114,6 @@ const (
 	// OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Neighbors_Neighbor_State_NeighborStatus_DOWN corresponds to the value DOWN of OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Neighbors_Neighbor_State_NeighborStatus
 	OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Neighbors_Neighbor_State_NeighborStatus_DOWN E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Neighbors_Neighbor_State_NeighborStatus = 2
 )
-
 
 // E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_RecordRouteObjects_RecordRouteObject_State_ReportedLabel is a derived int64 type which is used to represent
 // the enumerated node OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_RecordRouteObjects_RecordRouteObject_State_ReportedLabel. An additional value named
@@ -2095,7 +2147,6 @@ const (
 	OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_RecordRouteObjects_RecordRouteObject_State_ReportedLabel_NO_LABEL E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_RecordRouteObjects_RecordRouteObject_State_ReportedLabel = 9
 )
 
-
 // E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelIn is a derived int64 type which is used to represent
 // the enumerated node OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelIn. An additional value named
 // OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelIn_UNSET is added to the enumeration which is used as
@@ -2127,7 +2178,6 @@ const (
 	// OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelIn_NO_LABEL corresponds to the value NO_LABEL of OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelIn
 	OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelIn_NO_LABEL E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelIn = 9
 )
-
 
 // E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelOut is a derived int64 type which is used to represent
 // the enumerated node OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelOut. An additional value named
@@ -2161,7 +2211,6 @@ const (
 	OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelOut_NO_LABEL E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelOut = 9
 )
 
-
 // E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_SenderTspec_PeakDataRate is a derived int64 type which is used to represent
 // the enumerated node OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_SenderTspec_PeakDataRate. An additional value named
 // OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_SenderTspec_PeakDataRate_UNSET is added to the enumeration which is used as
@@ -2183,7 +2232,6 @@ const (
 	// OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_SenderTspec_PeakDataRate_INFINITY corresponds to the value INFINITY of OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_SenderTspec_PeakDataRate
 	OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_SenderTspec_PeakDataRate_INFINITY E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_SenderTspec_PeakDataRate = 1
 )
-
 
 // E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_Status is a derived int64 type which is used to represent
 // the enumerated node OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_Status. An additional value named
@@ -2209,6 +2257,37 @@ const (
 	OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_Status_DOWN E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_Status = 2
 )
 
+// E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel is a derived int64 type which is used to represent
+// the enumerated node OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel. An additional value named
+// OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_UNSET is added to the enumeration which is used as
+// the nil value, indicating that the enumeration was not explicitly set by
+// the program importing the generated structures.
+type E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel int64
+
+// IsYANGGoEnum ensures that OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel implements the yang.GoEnum
+// interface. This ensures that OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel can be identified as a
+// mapped type for a YANG enumeration.
+func (E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel) IsYANGGoEnum() {}
+
+// ΛMap returns the value lookup map associated with  OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel.
+func (E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel) ΛMap() map[string]map[int64]ygot.EnumDefinition { return ΛEnum; }
+
+const (
+	// OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_UNSET corresponds to the value UNSET of OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel
+	OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_UNSET E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel = 0
+	// OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_IPV4_EXPLICIT_NULL corresponds to the value IPV4_EXPLICIT_NULL of OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel
+	OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_IPV4_EXPLICIT_NULL E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel = 1
+	// OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_ROUTER_ALERT corresponds to the value ROUTER_ALERT of OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel
+	OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_ROUTER_ALERT E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel = 2
+	// OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_IPV6_EXPLICIT_NULL corresponds to the value IPV6_EXPLICIT_NULL of OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel
+	OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_IPV6_EXPLICIT_NULL E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel = 3
+	// OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_IMPLICIT_NULL corresponds to the value IMPLICIT_NULL of OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel
+	OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_IMPLICIT_NULL E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel = 4
+	// OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_ENTROPY_LABEL_INDICATOR corresponds to the value ENTROPY_LABEL_INDICATOR of OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel
+	OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_ENTROPY_LABEL_INDICATOR E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel = 8
+	// OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_NO_LABEL corresponds to the value NO_LABEL of OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel
+	OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_NO_LABEL E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel = 9
+)
 
 // E_OpenconfigMpls_Mpls_TeInterfaceAttributes_Interface_IgpFloodingBandwidth_Config_ThresholdSpecification is a derived int64 type which is used to represent
 // the enumerated node OpenconfigMpls_Mpls_TeInterfaceAttributes_Interface_IgpFloodingBandwidth_Config_ThresholdSpecification. An additional value named
@@ -2234,7 +2313,6 @@ const (
 	OpenconfigMpls_Mpls_TeInterfaceAttributes_Interface_IgpFloodingBandwidth_Config_ThresholdSpecification_SEPARATE_UP_DOWN E_OpenconfigMpls_Mpls_TeInterfaceAttributes_Interface_IgpFloodingBandwidth_Config_ThresholdSpecification = 2
 )
 
-
 // E_OpenconfigMpls_Mpls_TeInterfaceAttributes_Interface_IgpFloodingBandwidth_Config_ThresholdType is a derived int64 type which is used to represent
 // the enumerated node OpenconfigMpls_Mpls_TeInterfaceAttributes_Interface_IgpFloodingBandwidth_Config_ThresholdType. An additional value named
 // OpenconfigMpls_Mpls_TeInterfaceAttributes_Interface_IgpFloodingBandwidth_Config_ThresholdType_UNSET is added to the enumeration which is used as
@@ -2258,7 +2336,6 @@ const (
 	// OpenconfigMpls_Mpls_TeInterfaceAttributes_Interface_IgpFloodingBandwidth_Config_ThresholdType_THRESHOLD_CROSSED corresponds to the value THRESHOLD_CROSSED of OpenconfigMpls_Mpls_TeInterfaceAttributes_Interface_IgpFloodingBandwidth_Config_ThresholdType
 	OpenconfigMpls_Mpls_TeInterfaceAttributes_Interface_IgpFloodingBandwidth_Config_ThresholdType_THRESHOLD_CROSSED E_OpenconfigMpls_Mpls_TeInterfaceAttributes_Interface_IgpFloodingBandwidth_Config_ThresholdType = 2
 )
-
 
 // E_OpenconfigMpls_TeBandwidthType is a derived int64 type which is used to represent
 // the enumerated node OpenconfigMpls_TeBandwidthType. An additional value named
@@ -2284,7 +2361,6 @@ const (
 	OpenconfigMpls_TeBandwidthType_AUTO E_OpenconfigMpls_TeBandwidthType = 2
 )
 
-
 // E_OpenconfigNetworkInstanceTypes_ENCAPSULATION is a derived int64 type which is used to represent
 // the enumerated node OpenconfigNetworkInstanceTypes_ENCAPSULATION. An additional value named
 // OpenconfigNetworkInstanceTypes_ENCAPSULATION_UNSET is added to the enumeration which is used as
@@ -2309,7 +2385,6 @@ const (
 	OpenconfigNetworkInstanceTypes_ENCAPSULATION_VXLAN E_OpenconfigNetworkInstanceTypes_ENCAPSULATION = 2
 )
 
-
 // E_OpenconfigNetworkInstanceTypes_ENDPOINT_TYPE is a derived int64 type which is used to represent
 // the enumerated node OpenconfigNetworkInstanceTypes_ENDPOINT_TYPE. An additional value named
 // OpenconfigNetworkInstanceTypes_ENDPOINT_TYPE_UNSET is added to the enumeration which is used as
@@ -2333,7 +2408,6 @@ const (
 	// OpenconfigNetworkInstanceTypes_ENDPOINT_TYPE_REMOTE corresponds to the value REMOTE of OpenconfigNetworkInstanceTypes_ENDPOINT_TYPE
 	OpenconfigNetworkInstanceTypes_ENDPOINT_TYPE_REMOTE E_OpenconfigNetworkInstanceTypes_ENDPOINT_TYPE = 2
 )
-
 
 // E_OpenconfigNetworkInstanceTypes_LABEL_ALLOCATION_MODE is a derived int64 type which is used to represent
 // the enumerated node OpenconfigNetworkInstanceTypes_LABEL_ALLOCATION_MODE. An additional value named
@@ -2360,7 +2434,6 @@ const (
 	// OpenconfigNetworkInstanceTypes_LABEL_ALLOCATION_MODE_PER_PREFIX corresponds to the value PER_PREFIX of OpenconfigNetworkInstanceTypes_LABEL_ALLOCATION_MODE
 	OpenconfigNetworkInstanceTypes_LABEL_ALLOCATION_MODE_PER_PREFIX E_OpenconfigNetworkInstanceTypes_LABEL_ALLOCATION_MODE = 3
 )
-
 
 // E_OpenconfigNetworkInstanceTypes_NETWORK_INSTANCE_TYPE is a derived int64 type which is used to represent
 // the enumerated node OpenconfigNetworkInstanceTypes_NETWORK_INSTANCE_TYPE. An additional value named
@@ -2391,7 +2464,6 @@ const (
 	// OpenconfigNetworkInstanceTypes_NETWORK_INSTANCE_TYPE_L3VRF corresponds to the value L3VRF of OpenconfigNetworkInstanceTypes_NETWORK_INSTANCE_TYPE
 	OpenconfigNetworkInstanceTypes_NETWORK_INSTANCE_TYPE_L3VRF E_OpenconfigNetworkInstanceTypes_NETWORK_INSTANCE_TYPE = 5
 )
-
 
 // E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack is a derived int64 type which is used to represent
 // the enumerated node OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack. An additional value named
@@ -2425,7 +2497,6 @@ const (
 	OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack_NO_LABEL E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack = 9
 )
 
-
 // E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack is a derived int64 type which is used to represent
 // the enumerated node OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack. An additional value named
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack_UNSET is added to the enumeration which is used as
@@ -2457,7 +2528,6 @@ const (
 	// OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack_NO_LABEL corresponds to the value NO_LABEL of OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack
 	OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack_NO_LABEL E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack = 9
 )
-
 
 // E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_Config_Label is a derived int64 type which is used to represent
 // the enumerated node OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_Config_Label. An additional value named
@@ -2491,7 +2561,6 @@ const (
 	OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_Config_Label_NO_LABEL E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_Config_Label = 9
 )
 
-
 // E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_Config_MplsLabel is a derived int64 type which is used to represent
 // the enumerated node OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_Config_MplsLabel. An additional value named
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_Config_MplsLabel_UNSET is added to the enumeration which is used as
@@ -2524,7 +2593,6 @@ const (
 	OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_Config_MplsLabel_NO_LABEL E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_Config_MplsLabel = 9
 )
 
-
 // E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Fdb_MacTable_Entries_Entry_State_EntryType is a derived int64 type which is used to represent
 // the enumerated node OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Fdb_MacTable_Entries_Entry_State_EntryType. An additional value named
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Fdb_MacTable_Entries_Entry_State_EntryType_UNSET is added to the enumeration which is used as
@@ -2549,63 +2617,6 @@ const (
 	OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Fdb_MacTable_Entries_Entry_State_EntryType_DYNAMIC E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Fdb_MacTable_Entries_Entry_State_EntryType = 2
 )
 
-
-// E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority is a derived int64 type which is used to represent
-// the enumerated node OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority. An additional value named
-// OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_UNSET is added to the enumeration which is used as
-// the nil value, indicating that the enumeration was not explicitly set by
-// the program importing the generated structures.
-type E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority int64
-
-// IsYANGGoEnum ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority implements the yang.GoEnum
-// interface. This ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority can be identified as a
-// mapped type for a YANG enumeration.
-func (E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority) IsYANGGoEnum() {}
-
-// ΛMap returns the value lookup map associated with  OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority.
-func (E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority) ΛMap() map[string]map[int64]ygot.EnumDefinition { return ΛEnum; }
-
-const (
-	// OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_UNSET corresponds to the value UNSET of OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority
-	OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_UNSET E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority = 0
-	// OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_ALL corresponds to the value ALL of OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority
-	OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_ALL E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority = 1
-)
-
-
-// E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel is a derived int64 type which is used to represent
-// the enumerated node OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel. An additional value named
-// OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_UNSET is added to the enumeration which is used as
-// the nil value, indicating that the enumeration was not explicitly set by
-// the program importing the generated structures.
-type E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel int64
-
-// IsYANGGoEnum ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel implements the yang.GoEnum
-// interface. This ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel can be identified as a
-// mapped type for a YANG enumeration.
-func (E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel) IsYANGGoEnum() {}
-
-// ΛMap returns the value lookup map associated with  OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel.
-func (E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel) ΛMap() map[string]map[int64]ygot.EnumDefinition { return ΛEnum; }
-
-const (
-	// OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_UNSET corresponds to the value UNSET of OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel
-	OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_UNSET E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel = 0
-	// OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_IPV4_EXPLICIT_NULL corresponds to the value IPV4_EXPLICIT_NULL of OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel
-	OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_IPV4_EXPLICIT_NULL E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel = 1
-	// OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_ROUTER_ALERT corresponds to the value ROUTER_ALERT of OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel
-	OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_ROUTER_ALERT E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel = 2
-	// OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_IPV6_EXPLICIT_NULL corresponds to the value IPV6_EXPLICIT_NULL of OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel
-	OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_IPV6_EXPLICIT_NULL E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel = 3
-	// OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_IMPLICIT_NULL corresponds to the value IMPLICIT_NULL of OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel
-	OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_IMPLICIT_NULL E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel = 4
-	// OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_ENTROPY_LABEL_INDICATOR corresponds to the value ENTROPY_LABEL_INDICATOR of OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel
-	OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_ENTROPY_LABEL_INDICATOR E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel = 8
-	// OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_NO_LABEL corresponds to the value NO_LABEL of OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel
-	OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_NO_LABEL E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel = 9
-)
-
-
 // E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_Adjacencies_Adjacency_State_Nlpid is a derived int64 type which is used to represent
 // the enumerated node OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_Adjacencies_Adjacency_State_Nlpid. An additional value named
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_Adjacencies_Adjacency_State_Nlpid_UNSET is added to the enumeration which is used as
@@ -2629,7 +2640,6 @@ const (
 	// OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_Adjacencies_Adjacency_State_Nlpid_IPV6 corresponds to the value IPV6 of OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_Adjacencies_Adjacency_State_Nlpid
 	OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_Adjacencies_Adjacency_State_Nlpid_IPV6 E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_Adjacencies_Adjacency_State_Nlpid = 2
 )
-
 
 // E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_Config_SidId is a derived int64 type which is used to represent
 // the enumerated node OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_Config_SidId. An additional value named
@@ -2663,7 +2673,6 @@ const (
 	OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_Config_SidId_NO_LABEL E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_Config_SidId = 9
 )
 
-
 // E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_State_AllocatedDynamicLocal is a derived int64 type which is used to represent
 // the enumerated node OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_State_AllocatedDynamicLocal. An additional value named
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_State_AllocatedDynamicLocal_UNSET is added to the enumeration which is used as
@@ -2696,7 +2705,6 @@ const (
 	OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_State_AllocatedDynamicLocal_NO_LABEL E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_State_AllocatedDynamicLocal = 9
 )
 
-
 // E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_Config_LabelOptions is a derived int64 type which is used to represent
 // the enumerated node OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_Config_LabelOptions. An additional value named
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_Config_LabelOptions_UNSET is added to the enumeration which is used as
@@ -2720,7 +2728,6 @@ const (
 	// OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_Config_LabelOptions_EXPLICIT_NULL corresponds to the value EXPLICIT_NULL of OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_Config_LabelOptions
 	OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_Config_LabelOptions_EXPLICIT_NULL E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_Config_LabelOptions = 2
 )
-
 
 // E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_Config_SidId is a derived int64 type which is used to represent
 // the enumerated node OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_Config_SidId. An additional value named
@@ -2754,7 +2761,6 @@ const (
 	OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_Config_SidId_NO_LABEL E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_Config_SidId = 9
 )
 
-
 // E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_State_Flags is a derived int64 type which is used to represent
 // the enumerated node OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_State_Flags. An additional value named
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_State_Flags_UNSET is added to the enumeration which is used as
@@ -2787,7 +2793,6 @@ const (
 	OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_State_Flags_OVERLOAD E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_State_Flags = 6
 )
 
-
 // E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_State_PduType is a derived int64 type which is used to represent
 // the enumerated node OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_State_PduType. An additional value named
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_State_PduType_UNSET is added to the enumeration which is used as
@@ -2812,7 +2817,6 @@ const (
 	OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_State_PduType_LEVEL_2 E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_State_PduType = 2
 )
 
-
 // E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_Authentication_State_CryptoType is a derived int64 type which is used to represent
 // the enumerated node OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_Authentication_State_CryptoType. An additional value named
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_Authentication_State_CryptoType_UNSET is added to the enumeration which is used as
@@ -2836,7 +2840,6 @@ const (
 	// OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_Authentication_State_CryptoType_CLEARTEXT corresponds to the value CLEARTEXT of OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_Authentication_State_CryptoType
 	OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_Authentication_State_CryptoType_CLEARTEXT E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_Authentication_State_CryptoType = 2
 )
-
 
 // E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_ExtendedIpv4Reachability_Prefixes_Prefix_Subtlvs_Subtlv_Flags_State_Flags is a derived int64 type which is used to represent
 // the enumerated node OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_ExtendedIpv4Reachability_Prefixes_Prefix_Subtlvs_Subtlv_Flags_State_Flags. An additional value named
@@ -2863,7 +2866,6 @@ const (
 	// OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_ExtendedIpv4Reachability_Prefixes_Prefix_Subtlvs_Subtlv_Flags_State_Flags_NODE_FLAG corresponds to the value NODE_FLAG of OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_ExtendedIpv4Reachability_Prefixes_Prefix_Subtlvs_Subtlv_Flags_State_Flags
 	OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_ExtendedIpv4Reachability_Prefixes_Prefix_Subtlvs_Subtlv_Flags_State_Flags_NODE_FLAG E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_ExtendedIpv4Reachability_Prefixes_Prefix_Subtlvs_Subtlv_Flags_State_Flags = 3
 )
-
 
 // E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_ExtendedIpv4Reachability_Prefixes_Prefix_Subtlvs_Subtlv_PrefixSids_PrefixSid_State_Flags is a derived int64 type which is used to represent
 // the enumerated node OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_ExtendedIpv4Reachability_Prefixes_Prefix_Subtlvs_Subtlv_PrefixSids_PrefixSid_State_Flags. An additional value named
@@ -2897,7 +2899,6 @@ const (
 	OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_ExtendedIpv4Reachability_Prefixes_Prefix_Subtlvs_Subtlv_PrefixSids_PrefixSid_State_Flags_LOCAL E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_ExtendedIpv4Reachability_Prefixes_Prefix_Subtlvs_Subtlv_PrefixSids_PrefixSid_State_Flags = 6
 )
 
-
 // E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_ExtendedIsReachability_Neighbors_Neighbor_Instances_Instance_Subtlvs_Subtlv_AdjacencySids_AdjacencySid_State_Flags is a derived int64 type which is used to represent
 // the enumerated node OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_ExtendedIsReachability_Neighbors_Neighbor_Instances_Instance_Subtlvs_Subtlv_AdjacencySids_AdjacencySid_State_Flags. An additional value named
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_ExtendedIsReachability_Neighbors_Neighbor_Instances_Instance_Subtlvs_Subtlv_AdjacencySids_AdjacencySid_State_Flags_UNSET is added to the enumeration which is used as
@@ -2927,7 +2928,6 @@ const (
 	// OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_ExtendedIsReachability_Neighbors_Neighbor_Instances_Instance_Subtlvs_Subtlv_AdjacencySids_AdjacencySid_State_Flags_SET corresponds to the value SET of OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_ExtendedIsReachability_Neighbors_Neighbor_Instances_Instance_Subtlvs_Subtlv_AdjacencySids_AdjacencySid_State_Flags
 	OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_ExtendedIsReachability_Neighbors_Neighbor_Instances_Instance_Subtlvs_Subtlv_AdjacencySids_AdjacencySid_State_Flags_SET E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_ExtendedIsReachability_Neighbors_Neighbor_Instances_Instance_Subtlvs_Subtlv_AdjacencySids_AdjacencySid_State_Flags = 5
 )
-
 
 // E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_ExtendedIsReachability_Neighbors_Neighbor_Instances_Instance_Subtlvs_Subtlv_LanAdjacencySids_LanAdjacencySid_State_Flags is a derived int64 type which is used to represent
 // the enumerated node OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_ExtendedIsReachability_Neighbors_Neighbor_Instances_Instance_Subtlvs_Subtlv_LanAdjacencySids_LanAdjacencySid_State_Flags. An additional value named
@@ -2959,7 +2959,6 @@ const (
 	OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_ExtendedIsReachability_Neighbors_Neighbor_Instances_Instance_Subtlvs_Subtlv_LanAdjacencySids_LanAdjacencySid_State_Flags_SET E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_ExtendedIsReachability_Neighbors_Neighbor_Instances_Instance_Subtlvs_Subtlv_LanAdjacencySids_LanAdjacencySid_State_Flags = 5
 )
 
-
 // E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_ExtendedIsReachability_Neighbors_Neighbor_Instances_Instance_Subtlvs_Subtlv_LinkAttributes_State_LocalProtection is a derived int64 type which is used to represent
 // the enumerated node OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_ExtendedIsReachability_Neighbors_Neighbor_Instances_Instance_Subtlvs_Subtlv_LinkAttributes_State_LocalProtection. An additional value named
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_ExtendedIsReachability_Neighbors_Neighbor_Instances_Instance_Subtlvs_Subtlv_LinkAttributes_State_LocalProtection_UNSET is added to the enumeration which is used as
@@ -2983,7 +2982,6 @@ const (
 	// OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_ExtendedIsReachability_Neighbors_Neighbor_Instances_Instance_Subtlvs_Subtlv_LinkAttributes_State_LocalProtection_LINK_EXCLUDED corresponds to the value LINK_EXCLUDED of OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_ExtendedIsReachability_Neighbors_Neighbor_Instances_Instance_Subtlvs_Subtlv_LinkAttributes_State_LocalProtection
 	OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_ExtendedIsReachability_Neighbors_Neighbor_Instances_Instance_Subtlvs_Subtlv_LinkAttributes_State_LocalProtection_LINK_EXCLUDED E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_ExtendedIsReachability_Neighbors_Neighbor_Instances_Instance_Subtlvs_Subtlv_LinkAttributes_State_LocalProtection = 2
 )
-
 
 // E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_ExtendedIsReachability_Neighbors_Neighbor_Instances_Instance_Subtlvs_Subtlv_LinkProtectionType_State_Type is a derived int64 type which is used to represent
 // the enumerated node OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_ExtendedIsReachability_Neighbors_Neighbor_Instances_Instance_Subtlvs_Subtlv_LinkProtectionType_State_Type. An additional value named
@@ -3017,7 +3015,6 @@ const (
 	OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_ExtendedIsReachability_Neighbors_Neighbor_Instances_Instance_Subtlvs_Subtlv_LinkProtectionType_State_Type_ENHANCED E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_ExtendedIsReachability_Neighbors_Neighbor_Instances_Instance_Subtlvs_Subtlv_LinkProtectionType_State_Type = 6
 )
 
-
 // E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_Ipv4ExternalReachability_Prefixes_Prefix_DefaultMetric_State_Flags is a derived int64 type which is used to represent
 // the enumerated node OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_Ipv4ExternalReachability_Prefixes_Prefix_DefaultMetric_State_Flags. An additional value named
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_Ipv4ExternalReachability_Prefixes_Prefix_DefaultMetric_State_Flags_UNSET is added to the enumeration which is used as
@@ -3039,7 +3036,6 @@ const (
 	// OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_Ipv4ExternalReachability_Prefixes_Prefix_DefaultMetric_State_Flags_INTERNAL corresponds to the value INTERNAL of OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_Ipv4ExternalReachability_Prefixes_Prefix_DefaultMetric_State_Flags
 	OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_Ipv4ExternalReachability_Prefixes_Prefix_DefaultMetric_State_Flags_INTERNAL E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_Ipv4ExternalReachability_Prefixes_Prefix_DefaultMetric_State_Flags = 1
 )
-
 
 // E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_Ipv4Srlgs_Ipv4Srlg_State_Flags is a derived int64 type which is used to represent
 // the enumerated node OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_Ipv4Srlgs_Ipv4Srlg_State_Flags. An additional value named
@@ -3063,7 +3059,6 @@ const (
 	OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_Ipv4Srlgs_Ipv4Srlg_State_Flags_NUMBERED E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_Ipv4Srlgs_Ipv4Srlg_State_Flags = 1
 )
 
-
 // E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_Ipv6Srlgs_Ipv6Srlg_State_Flags is a derived int64 type which is used to represent
 // the enumerated node OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_Ipv6Srlgs_Ipv6Srlg_State_Flags. An additional value named
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_Ipv6Srlgs_Ipv6Srlg_State_Flags_UNSET is added to the enumeration which is used as
@@ -3085,7 +3080,6 @@ const (
 	// OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_Ipv6Srlgs_Ipv6Srlg_State_Flags_NA corresponds to the value NA of OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_Ipv6Srlgs_Ipv6Srlg_State_Flags
 	OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_Ipv6Srlgs_Ipv6Srlg_State_Flags_NA E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_Ipv6Srlgs_Ipv6Srlg_State_Flags = 1
 )
-
 
 // E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_MultiTopology_Topologies_Topology_State_Attributes is a derived int64 type which is used to represent
 // the enumerated node OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_MultiTopology_Topologies_Topology_State_Attributes. An additional value named
@@ -3111,7 +3105,6 @@ const (
 	OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_MultiTopology_Topologies_Topology_State_Attributes_ATTACHED E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_MultiTopology_Topologies_Topology_State_Attributes = 2
 )
 
-
 // E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_Nlpid_State_Nlpid is a derived int64 type which is used to represent
 // the enumerated node OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_Nlpid_State_Nlpid. An additional value named
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_Nlpid_State_Nlpid_UNSET is added to the enumeration which is used as
@@ -3135,7 +3128,6 @@ const (
 	// OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_Nlpid_State_Nlpid_IPV6 corresponds to the value IPV6 of OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_Nlpid_State_Nlpid
 	OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_Nlpid_State_Nlpid_IPV6 E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_Nlpid_State_Nlpid = 2
 )
-
 
 // E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_RouterCapabilities_Capability_State_Flags is a derived int64 type which is used to represent
 // the enumerated node OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_RouterCapabilities_Capability_State_Flags. An additional value named
@@ -3161,7 +3153,6 @@ const (
 	OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_RouterCapabilities_Capability_State_Flags_DOWN E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_RouterCapabilities_Capability_State_Flags = 2
 )
 
-
 // E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_RouterCapabilities_Capability_Subtlvs_Subtlv_SegmentRoutingAlgorithms_State_Algorithm is a derived int64 type which is used to represent
 // the enumerated node OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_RouterCapabilities_Capability_Subtlvs_Subtlv_SegmentRoutingAlgorithms_State_Algorithm. An additional value named
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_RouterCapabilities_Capability_Subtlvs_Subtlv_SegmentRoutingAlgorithms_State_Algorithm_UNSET is added to the enumeration which is used as
@@ -3185,7 +3176,6 @@ const (
 	// OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_RouterCapabilities_Capability_Subtlvs_Subtlv_SegmentRoutingAlgorithms_State_Algorithm_STRICT_SPF corresponds to the value STRICT_SPF of OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_RouterCapabilities_Capability_Subtlvs_Subtlv_SegmentRoutingAlgorithms_State_Algorithm
 	OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_RouterCapabilities_Capability_Subtlvs_Subtlv_SegmentRoutingAlgorithms_State_Algorithm_STRICT_SPF E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_RouterCapabilities_Capability_Subtlvs_Subtlv_SegmentRoutingAlgorithms_State_Algorithm = 2
 )
-
 
 // E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_RouterCapabilities_Capability_Subtlvs_Subtlv_SegmentRoutingCapability_SrgbDescriptors_SrgbDescriptor_State_Label is a derived int64 type which is used to represent
 // the enumerated node OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_RouterCapabilities_Capability_Subtlvs_Subtlv_SegmentRoutingCapability_SrgbDescriptors_SrgbDescriptor_State_Label. An additional value named
@@ -3219,7 +3209,6 @@ const (
 	OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_RouterCapabilities_Capability_Subtlvs_Subtlv_SegmentRoutingCapability_SrgbDescriptors_SrgbDescriptor_State_Label_NO_LABEL E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_RouterCapabilities_Capability_Subtlvs_Subtlv_SegmentRoutingCapability_SrgbDescriptors_SrgbDescriptor_State_Label = 9
 )
 
-
 // E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_RouterCapabilities_Capability_Subtlvs_Subtlv_SegmentRoutingCapability_State_Flags is a derived int64 type which is used to represent
 // the enumerated node OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_RouterCapabilities_Capability_Subtlvs_Subtlv_SegmentRoutingCapability_State_Flags. An additional value named
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_RouterCapabilities_Capability_Subtlvs_Subtlv_SegmentRoutingCapability_State_Flags_UNSET is added to the enumeration which is used as
@@ -3246,7 +3235,6 @@ const (
 	OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_RouterCapabilities_Capability_Subtlvs_Subtlv_SegmentRoutingCapability_State_Flags_IPV6_SR E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_RouterCapabilities_Capability_Subtlvs_Subtlv_SegmentRoutingCapability_State_Flags = 3
 )
 
-
 // E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_AsExternalLsa_State_MetricType is a derived int64 type which is used to represent
 // the enumerated node OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_AsExternalLsa_State_MetricType. An additional value named
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_AsExternalLsa_State_MetricType_UNSET is added to the enumeration which is used as
@@ -3271,7 +3259,6 @@ const (
 	OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_AsExternalLsa_State_MetricType_TYPE_2 E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_AsExternalLsa_State_MetricType = 2
 )
 
-
 // E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_ExtendedPrefix_State_AddressFamily is a derived int64 type which is used to represent
 // the enumerated node OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_ExtendedPrefix_State_AddressFamily. An additional value named
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_ExtendedPrefix_State_AddressFamily_UNSET is added to the enumeration which is used as
@@ -3293,7 +3280,6 @@ const (
 	// OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_ExtendedPrefix_State_AddressFamily_IPV4_UNICAST corresponds to the value IPV4_UNICAST of OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_ExtendedPrefix_State_AddressFamily
 	OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_ExtendedPrefix_State_AddressFamily_IPV4_UNICAST E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_ExtendedPrefix_State_AddressFamily = 1
 )
-
 
 // E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_ExtendedPrefix_State_RouteType is a derived int64 type which is used to represent
 // the enumerated node OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_ExtendedPrefix_State_RouteType. An additional value named
@@ -3325,7 +3311,6 @@ const (
 	OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_ExtendedPrefix_State_RouteType_NSSA_EXTERNAL E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_ExtendedPrefix_State_RouteType = 8
 )
 
-
 // E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_ExtendedPrefix_Tlvs_Tlv_PrefixSid_State_SidScope is a derived int64 type which is used to represent
 // the enumerated node OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_ExtendedPrefix_Tlvs_Tlv_PrefixSid_State_SidScope. An additional value named
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_ExtendedPrefix_Tlvs_Tlv_PrefixSid_State_SidScope_UNSET is added to the enumeration which is used as
@@ -3350,7 +3335,6 @@ const (
 	OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_ExtendedPrefix_Tlvs_Tlv_PrefixSid_State_SidScope_GLOBAL E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_ExtendedPrefix_Tlvs_Tlv_PrefixSid_State_SidScope = 2
 )
 
-
 // E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_ExtendedPrefix_Tlvs_Tlv_PrefixSid_State_SidValueType is a derived int64 type which is used to represent
 // the enumerated node OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_ExtendedPrefix_Tlvs_Tlv_PrefixSid_State_SidValueType. An additional value named
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_ExtendedPrefix_Tlvs_Tlv_PrefixSid_State_SidValueType_UNSET is added to the enumeration which is used as
@@ -3374,7 +3358,6 @@ const (
 	// OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_ExtendedPrefix_Tlvs_Tlv_PrefixSid_State_SidValueType_INDEX corresponds to the value INDEX of OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_ExtendedPrefix_Tlvs_Tlv_PrefixSid_State_SidValueType
 	OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_ExtendedPrefix_Tlvs_Tlv_PrefixSid_State_SidValueType_INDEX E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_ExtendedPrefix_Tlvs_Tlv_PrefixSid_State_SidValueType = 2
 )
-
 
 // E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_GraceLsa_Tlvs_Tlv_State_Reason is a derived int64 type which is used to represent
 // the enumerated node OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_GraceLsa_Tlvs_Tlv_State_Reason. An additional value named
@@ -3404,7 +3387,6 @@ const (
 	OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_GraceLsa_Tlvs_Tlv_State_Reason_CONTROL_PROCESSOR_SWITCH E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_GraceLsa_Tlvs_Tlv_State_Reason = 4
 )
 
-
 // E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_RouterInformation_Tlvs_Tlv_SegmentRoutingSidLabelRange_Tlvs_Tlv_State_Type is a derived int64 type which is used to represent
 // the enumerated node OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_RouterInformation_Tlvs_Tlv_SegmentRoutingSidLabelRange_Tlvs_Tlv_State_Type. An additional value named
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_RouterInformation_Tlvs_Tlv_SegmentRoutingSidLabelRange_Tlvs_Tlv_State_Type_UNSET is added to the enumeration which is used as
@@ -3427,7 +3409,6 @@ const (
 	OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_RouterInformation_Tlvs_Tlv_SegmentRoutingSidLabelRange_Tlvs_Tlv_State_Type_UNKNOWN E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_RouterInformation_Tlvs_Tlv_SegmentRoutingSidLabelRange_Tlvs_Tlv_State_Type = 1
 )
 
-
 // E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_RouterInformation_Tlvs_Tlv_State_Type is a derived int64 type which is used to represent
 // the enumerated node OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_RouterInformation_Tlvs_Tlv_State_Type. An additional value named
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_RouterInformation_Tlvs_Tlv_State_Type_UNSET is added to the enumeration which is used as
@@ -3449,7 +3430,6 @@ const (
 	// OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_RouterInformation_Tlvs_Tlv_State_Type_UNKNOWN corresponds to the value UNKNOWN of OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_RouterInformation_Tlvs_Tlv_State_Type
 	OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_RouterInformation_Tlvs_Tlv_State_Type_UNKNOWN E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_RouterInformation_Tlvs_Tlv_State_Type = 1
 )
-
 
 // E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_State_Scope is a derived int64 type which is used to represent
 // the enumerated node OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_State_Scope. An additional value named
@@ -3477,7 +3457,6 @@ const (
 	OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_State_Scope_AS E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_State_Scope = 3
 )
 
-
 // E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_Link_SubTlvs_SubTlv_State_LinkType is a derived int64 type which is used to represent
 // the enumerated node OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_Link_SubTlvs_SubTlv_State_LinkType. An additional value named
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_Link_SubTlvs_SubTlv_State_LinkType_UNSET is added to the enumeration which is used as
@@ -3504,7 +3483,6 @@ const (
 	OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_Link_SubTlvs_SubTlv_State_LinkType_UNKNOWN E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_Link_SubTlvs_SubTlv_State_LinkType = 3
 )
 
-
 // E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_Link_SubTlvs_SubTlv_State_Type is a derived int64 type which is used to represent
 // the enumerated node OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_Link_SubTlvs_SubTlv_State_Type. An additional value named
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_Link_SubTlvs_SubTlv_State_Type_UNSET is added to the enumeration which is used as
@@ -3527,7 +3505,6 @@ const (
 	OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_Link_SubTlvs_SubTlv_State_Type_UNKNOWN E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_Link_SubTlvs_SubTlv_State_Type = 1
 )
 
-
 // E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_NodeAttribute_SubTlvs_SubTlv_State_Type is a derived int64 type which is used to represent
 // the enumerated node OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_NodeAttribute_SubTlvs_SubTlv_State_Type. An additional value named
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_NodeAttribute_SubTlvs_SubTlv_State_Type_UNSET is added to the enumeration which is used as
@@ -3549,7 +3526,6 @@ const (
 	// OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_NodeAttribute_SubTlvs_SubTlv_State_Type_UNKNOWN corresponds to the value UNKNOWN of OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_NodeAttribute_SubTlvs_SubTlv_State_Type
 	OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_NodeAttribute_SubTlvs_SubTlv_State_Type_UNKNOWN E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_NodeAttribute_SubTlvs_SubTlv_State_Type = 1
 )
-
 
 // E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Global_Config_SummaryRouteCostMode is a derived int64 type which is used to represent
 // the enumerated node OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Global_Config_SummaryRouteCostMode. An additional value named
@@ -3575,7 +3551,6 @@ const (
 	OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Global_Config_SummaryRouteCostMode_RFC2328_COMPATIBLE E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Global_Config_SummaryRouteCostMode = 2
 )
 
-
 // E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Global_Timers_LsaGeneration_State_TimerType is a derived int64 type which is used to represent
 // the enumerated node OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Global_Timers_LsaGeneration_State_TimerType. An additional value named
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Global_Timers_LsaGeneration_State_TimerType_UNSET is added to the enumeration which is used as
@@ -3600,7 +3575,6 @@ const (
 	OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Global_Timers_LsaGeneration_State_TimerType_EXPONENTIAL_BACKOFF E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Global_Timers_LsaGeneration_State_TimerType = 2
 )
 
-
 // E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Vlans_Vlan_Config_Status is a derived int64 type which is used to represent
 // the enumerated node OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Vlans_Vlan_Config_Status. An additional value named
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Vlans_Vlan_Config_Status_UNSET is added to the enumeration which is used as
@@ -3624,7 +3598,6 @@ const (
 	// OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Vlans_Vlan_Config_Status_SUSPENDED corresponds to the value SUSPENDED of OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Vlans_Vlan_Config_Status
 	OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Vlans_Vlan_Config_Status_SUSPENDED E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Vlans_Vlan_Config_Status = 2
 )
-
 
 // E_OpenconfigOspfTypes_GRACE_LSA_TLV_TYPES is a derived int64 type which is used to represent
 // the enumerated node OpenconfigOspfTypes_GRACE_LSA_TLV_TYPES. An additional value named
@@ -3652,7 +3625,6 @@ const (
 	OpenconfigOspfTypes_GRACE_LSA_TLV_TYPES_GRACE_RESTART_REASON E_OpenconfigOspfTypes_GRACE_LSA_TLV_TYPES = 3
 )
 
-
 // E_OpenconfigOspfTypes_MAX_METRIC_INCLUDE is a derived int64 type which is used to represent
 // the enumerated node OpenconfigOspfTypes_MAX_METRIC_INCLUDE. An additional value named
 // OpenconfigOspfTypes_MAX_METRIC_INCLUDE_UNSET is added to the enumeration which is used as
@@ -3677,7 +3649,6 @@ const (
 	OpenconfigOspfTypes_MAX_METRIC_INCLUDE_MAX_METRIC_INCLUDE_TYPE2_EXTERNAL E_OpenconfigOspfTypes_MAX_METRIC_INCLUDE = 2
 )
 
-
 // E_OpenconfigOspfTypes_MAX_METRIC_TRIGGER is a derived int64 type which is used to represent
 // the enumerated node OpenconfigOspfTypes_MAX_METRIC_TRIGGER. An additional value named
 // OpenconfigOspfTypes_MAX_METRIC_TRIGGER_UNSET is added to the enumeration which is used as
@@ -3700,7 +3671,6 @@ const (
 	OpenconfigOspfTypes_MAX_METRIC_TRIGGER_MAX_METRIC_ON_SYSTEM_BOOT E_OpenconfigOspfTypes_MAX_METRIC_TRIGGER = 1
 )
 
-
 // E_OpenconfigOspfTypes_OSPFV2_EXTENDED_LINK_SUBTLV_TYPE is a derived int64 type which is used to represent
 // the enumerated node OpenconfigOspfTypes_OSPFV2_EXTENDED_LINK_SUBTLV_TYPE. An additional value named
 // OpenconfigOspfTypes_OSPFV2_EXTENDED_LINK_SUBTLV_TYPE_UNSET is added to the enumeration which is used as
@@ -3722,7 +3692,6 @@ const (
 	// OpenconfigOspfTypes_OSPFV2_EXTENDED_LINK_SUBTLV_TYPE_ADJACENCY_SID corresponds to the value ADJACENCY_SID of OpenconfigOspfTypes_OSPFV2_EXTENDED_LINK_SUBTLV_TYPE
 	OpenconfigOspfTypes_OSPFV2_EXTENDED_LINK_SUBTLV_TYPE_ADJACENCY_SID E_OpenconfigOspfTypes_OSPFV2_EXTENDED_LINK_SUBTLV_TYPE = 1
 )
-
 
 // E_OpenconfigOspfTypes_OSPFV2_EXTENDED_PREFIX_SID_LABEL_BINDING_SUBTLV_TYPE is a derived int64 type which is used to represent
 // the enumerated node OpenconfigOspfTypes_OSPFV2_EXTENDED_PREFIX_SID_LABEL_BINDING_SUBTLV_TYPE. An additional value named
@@ -3750,7 +3719,6 @@ const (
 	OpenconfigOspfTypes_OSPFV2_EXTENDED_PREFIX_SID_LABEL_BINDING_SUBTLV_TYPE_SID_MPLS_LABEL_BINDING E_OpenconfigOspfTypes_OSPFV2_EXTENDED_PREFIX_SID_LABEL_BINDING_SUBTLV_TYPE = 3
 )
 
-
 // E_OpenconfigOspfTypes_OSPFV2_EXTENDED_PREFIX_SUBTLV_TYPE is a derived int64 type which is used to represent
 // the enumerated node OpenconfigOspfTypes_OSPFV2_EXTENDED_PREFIX_SUBTLV_TYPE. An additional value named
 // OpenconfigOspfTypes_OSPFV2_EXTENDED_PREFIX_SUBTLV_TYPE_UNSET is added to the enumeration which is used as
@@ -3777,7 +3745,6 @@ const (
 	OpenconfigOspfTypes_OSPFV2_EXTENDED_PREFIX_SUBTLV_TYPE_SID_LABEL_BINDING E_OpenconfigOspfTypes_OSPFV2_EXTENDED_PREFIX_SUBTLV_TYPE = 3
 )
 
-
 // E_OpenconfigOspfTypes_OSPFV2_EXTPREFIX_BINDING_ERO_PATH_SEGMENT_TYPE is a derived int64 type which is used to represent
 // the enumerated node OpenconfigOspfTypes_OSPFV2_EXTPREFIX_BINDING_ERO_PATH_SEGMENT_TYPE. An additional value named
 // OpenconfigOspfTypes_OSPFV2_EXTPREFIX_BINDING_ERO_PATH_SEGMENT_TYPE_UNSET is added to the enumeration which is used as
@@ -3801,7 +3768,6 @@ const (
 	// OpenconfigOspfTypes_OSPFV2_EXTPREFIX_BINDING_ERO_PATH_SEGMENT_TYPE_UNNUMBERED_INTERFACE_SEGMENT corresponds to the value UNNUMBERED_INTERFACE_SEGMENT of OpenconfigOspfTypes_OSPFV2_EXTPREFIX_BINDING_ERO_PATH_SEGMENT_TYPE
 	OpenconfigOspfTypes_OSPFV2_EXTPREFIX_BINDING_ERO_PATH_SEGMENT_TYPE_UNNUMBERED_INTERFACE_SEGMENT E_OpenconfigOspfTypes_OSPFV2_EXTPREFIX_BINDING_ERO_PATH_SEGMENT_TYPE = 2
 )
-
 
 // E_OpenconfigOspfTypes_OSPFV2_ROUTER_LINK_TYPE is a derived int64 type which is used to represent
 // the enumerated node OpenconfigOspfTypes_OSPFV2_ROUTER_LINK_TYPE. An additional value named
@@ -3830,7 +3796,6 @@ const (
 	// OpenconfigOspfTypes_OSPFV2_ROUTER_LINK_TYPE_VIRTUAL_LINK corresponds to the value VIRTUAL_LINK of OpenconfigOspfTypes_OSPFV2_ROUTER_LINK_TYPE
 	OpenconfigOspfTypes_OSPFV2_ROUTER_LINK_TYPE_VIRTUAL_LINK E_OpenconfigOspfTypes_OSPFV2_ROUTER_LINK_TYPE = 4
 )
-
 
 // E_OpenconfigOspfTypes_OSPF_LSA_TYPE is a derived int64 type which is used to represent
 // the enumerated node OpenconfigOspfTypes_OSPF_LSA_TYPE. An additional value named
@@ -3870,7 +3835,6 @@ const (
 	OpenconfigOspfTypes_OSPF_LSA_TYPE_SUMMARY_IP_NETWORK_LSA E_OpenconfigOspfTypes_OSPF_LSA_TYPE = 9
 )
 
-
 // E_OpenconfigOspfTypes_OSPF_NEIGHBOR_STATE is a derived int64 type which is used to represent
 // the enumerated node OpenconfigOspfTypes_OSPF_NEIGHBOR_STATE. An additional value named
 // OpenconfigOspfTypes_OSPF_NEIGHBOR_STATE_UNSET is added to the enumeration which is used as
@@ -3907,7 +3871,6 @@ const (
 	OpenconfigOspfTypes_OSPF_NEIGHBOR_STATE_TWO_WAY E_OpenconfigOspfTypes_OSPF_NEIGHBOR_STATE = 8
 )
 
-
 // E_OpenconfigOspfTypes_OSPF_NETWORK_TYPE is a derived int64 type which is used to represent
 // the enumerated node OpenconfigOspfTypes_OSPF_NETWORK_TYPE. An additional value named
 // OpenconfigOspfTypes_OSPF_NETWORK_TYPE_UNSET is added to the enumeration which is used as
@@ -3933,7 +3896,6 @@ const (
 	// OpenconfigOspfTypes_OSPF_NETWORK_TYPE_POINT_TO_POINT_NETWORK corresponds to the value POINT_TO_POINT_NETWORK of OpenconfigOspfTypes_OSPF_NETWORK_TYPE
 	OpenconfigOspfTypes_OSPF_NETWORK_TYPE_POINT_TO_POINT_NETWORK E_OpenconfigOspfTypes_OSPF_NETWORK_TYPE = 3
 )
-
 
 // E_OpenconfigOspfTypes_OSPF_OPAQUE_LSA_TYPE is a derived int64 type which is used to represent
 // the enumerated node OpenconfigOspfTypes_OSPF_OPAQUE_LSA_TYPE. An additional value named
@@ -3965,7 +3927,6 @@ const (
 	OpenconfigOspfTypes_OSPF_OPAQUE_LSA_TYPE_TRAFFIC_ENGINEERING E_OpenconfigOspfTypes_OSPF_OPAQUE_LSA_TYPE = 5
 )
 
-
 // E_OpenconfigOspfTypes_OSPF_RI_SR_SID_LABEL_TLV_TYPES is a derived int64 type which is used to represent
 // the enumerated node OpenconfigOspfTypes_OSPF_RI_SR_SID_LABEL_TLV_TYPES. An additional value named
 // OpenconfigOspfTypes_OSPF_RI_SR_SID_LABEL_TLV_TYPES_UNSET is added to the enumeration which is used as
@@ -3987,7 +3948,6 @@ const (
 	// OpenconfigOspfTypes_OSPF_RI_SR_SID_LABEL_TLV_TYPES_SR_SID_LABEL_TLV corresponds to the value SR_SID_LABEL_TLV of OpenconfigOspfTypes_OSPF_RI_SR_SID_LABEL_TLV_TYPES
 	OpenconfigOspfTypes_OSPF_RI_SR_SID_LABEL_TLV_TYPES_SR_SID_LABEL_TLV E_OpenconfigOspfTypes_OSPF_RI_SR_SID_LABEL_TLV_TYPES = 1
 )
-
 
 // E_OpenconfigOspfTypes_OSPF_TE_LINK_TLV_TYPE is a derived int64 type which is used to represent
 // the enumerated node OpenconfigOspfTypes_OSPF_TE_LINK_TLV_TYPE. An additional value named
@@ -4027,7 +3987,6 @@ const (
 	OpenconfigOspfTypes_OSPF_TE_LINK_TLV_TYPE_TE_LINK_UNRESERVED_BANDWIDTH E_OpenconfigOspfTypes_OSPF_TE_LINK_TLV_TYPE = 9
 )
 
-
 // E_OpenconfigOspfTypes_OSPF_TE_LSA_TLV_TYPE is a derived int64 type which is used to represent
 // the enumerated node OpenconfigOspfTypes_OSPF_TE_LSA_TLV_TYPE. An additional value named
 // OpenconfigOspfTypes_OSPF_TE_LSA_TLV_TYPE_UNSET is added to the enumeration which is used as
@@ -4060,7 +4019,6 @@ const (
 	OpenconfigOspfTypes_OSPF_TE_LSA_TLV_TYPE_TE_ROUTER_IPV6_ADDRESS E_OpenconfigOspfTypes_OSPF_TE_LSA_TLV_TYPE = 6
 )
 
-
 // E_OpenconfigOspfTypes_RI_LSA_TLV_TYPES is a derived int64 type which is used to represent
 // the enumerated node OpenconfigOspfTypes_RI_LSA_TLV_TYPES. An additional value named
 // OpenconfigOspfTypes_RI_LSA_TLV_TYPES_UNSET is added to the enumeration which is used as
@@ -4091,7 +4049,6 @@ const (
 	OpenconfigOspfTypes_RI_LSA_TLV_TYPES_RI_SR_SID_LABEL_RANGE E_OpenconfigOspfTypes_RI_LSA_TLV_TYPES = 5
 )
 
-
 // E_OpenconfigOspfTypes_ROUTER_LSA_TYPES is a derived int64 type which is used to represent
 // the enumerated node OpenconfigOspfTypes_ROUTER_LSA_TYPES. An additional value named
 // OpenconfigOspfTypes_ROUTER_LSA_TYPES_UNSET is added to the enumeration which is used as
@@ -4120,7 +4077,6 @@ const (
 	OpenconfigOspfTypes_ROUTER_LSA_TYPES_ROUTER_LSA_VIRTUAL_LINK E_OpenconfigOspfTypes_ROUTER_LSA_TYPES = 4
 )
 
-
 // E_OpenconfigOspfTypes_SR_ALGORITHM is a derived int64 type which is used to represent
 // the enumerated node OpenconfigOspfTypes_SR_ALGORITHM. An additional value named
 // OpenconfigOspfTypes_SR_ALGORITHM_UNSET is added to the enumeration which is used as
@@ -4144,7 +4100,6 @@ const (
 	// OpenconfigOspfTypes_SR_ALGORITHM_STRICT_SPF corresponds to the value STRICT_SPF of OpenconfigOspfTypes_SR_ALGORITHM
 	OpenconfigOspfTypes_SR_ALGORITHM_STRICT_SPF E_OpenconfigOspfTypes_SR_ALGORITHM = 2
 )
-
 
 // E_OpenconfigOspfTypes_TE_NODE_ATTRIBUTE_TLV_TYPE is a derived int64 type which is used to represent
 // the enumerated node OpenconfigOspfTypes_TE_NODE_ATTRIBUTE_TLV_TYPE. An additional value named
@@ -4170,7 +4125,6 @@ const (
 	OpenconfigOspfTypes_TE_NODE_ATTRIBUTE_TLV_TYPE_NODE_IPV6_LOCAL_ADDRESS E_OpenconfigOspfTypes_TE_NODE_ATTRIBUTE_TLV_TYPE = 2
 )
 
-
 // E_OpenconfigOspfv2_SrSidType is a derived int64 type which is used to represent
 // the enumerated node OpenconfigOspfv2_SrSidType. An additional value named
 // OpenconfigOspfv2_SrSidType_UNSET is added to the enumeration which is used as
@@ -4194,7 +4148,6 @@ const (
 	// OpenconfigOspfv2_SrSidType_SID corresponds to the value SID of OpenconfigOspfv2_SrSidType
 	OpenconfigOspfv2_SrSidType_SID E_OpenconfigOspfv2_SrSidType = 2
 )
-
 
 // E_OpenconfigPacketMatchTypes_ETHERTYPE is a derived int64 type which is used to represent
 // the enumerated node OpenconfigPacketMatchTypes_ETHERTYPE. An additional value named
@@ -4229,7 +4182,6 @@ const (
 	// OpenconfigPacketMatchTypes_ETHERTYPE_ETHERTYPE_VLAN corresponds to the value ETHERTYPE_VLAN of OpenconfigPacketMatchTypes_ETHERTYPE
 	OpenconfigPacketMatchTypes_ETHERTYPE_ETHERTYPE_VLAN E_OpenconfigPacketMatchTypes_ETHERTYPE = 7
 )
-
 
 // E_OpenconfigPacketMatchTypes_IP_PROTOCOL is a derived int64 type which is used to represent
 // the enumerated node OpenconfigPacketMatchTypes_IP_PROTOCOL. An additional value named
@@ -4269,7 +4221,6 @@ const (
 	OpenconfigPacketMatchTypes_IP_PROTOCOL_IP_UDP E_OpenconfigPacketMatchTypes_IP_PROTOCOL = 9
 )
 
-
 // E_OpenconfigPacketMatchTypes_TCP_FLAGS is a derived int64 type which is used to represent
 // the enumerated node OpenconfigPacketMatchTypes_TCP_FLAGS. An additional value named
 // OpenconfigPacketMatchTypes_TCP_FLAGS_UNSET is added to the enumeration which is used as
@@ -4306,7 +4257,6 @@ const (
 	OpenconfigPacketMatchTypes_TCP_FLAGS_TCP_URG E_OpenconfigPacketMatchTypes_TCP_FLAGS = 8
 )
 
-
 // E_OpenconfigPimTypes_PIM_MODE is a derived int64 type which is used to represent
 // the enumerated node OpenconfigPimTypes_PIM_MODE. An additional value named
 // OpenconfigPimTypes_PIM_MODE_UNSET is added to the enumeration which is used as
@@ -4330,7 +4280,6 @@ const (
 	// OpenconfigPimTypes_PIM_MODE_PIM_MODE_SPARSE corresponds to the value PIM_MODE_SPARSE of OpenconfigPimTypes_PIM_MODE
 	OpenconfigPimTypes_PIM_MODE_PIM_MODE_SPARSE E_OpenconfigPimTypes_PIM_MODE = 2
 )
-
 
 // E_OpenconfigPlatformTypes_COMPONENT_OPER_STATUS is a derived int64 type which is used to represent
 // the enumerated node OpenconfigPlatformTypes_COMPONENT_OPER_STATUS. An additional value named
@@ -4357,7 +4306,6 @@ const (
 	// OpenconfigPlatformTypes_COMPONENT_OPER_STATUS_INACTIVE corresponds to the value INACTIVE of OpenconfigPlatformTypes_COMPONENT_OPER_STATUS
 	OpenconfigPlatformTypes_COMPONENT_OPER_STATUS_INACTIVE E_OpenconfigPlatformTypes_COMPONENT_OPER_STATUS = 3
 )
-
 
 // E_OpenconfigPlatformTypes_OPENCONFIG_HARDWARE_COMPONENT is a derived int64 type which is used to represent
 // the enumerated node OpenconfigPlatformTypes_OPENCONFIG_HARDWARE_COMPONENT. An additional value named
@@ -4407,7 +4355,6 @@ const (
 	OpenconfigPlatformTypes_OPENCONFIG_HARDWARE_COMPONENT_TRANSCEIVER E_OpenconfigPlatformTypes_OPENCONFIG_HARDWARE_COMPONENT = 14
 )
 
-
 // E_OpenconfigPlatformTypes_OPENCONFIG_SOFTWARE_COMPONENT is a derived int64 type which is used to represent
 // the enumerated node OpenconfigPlatformTypes_OPENCONFIG_SOFTWARE_COMPONENT. An additional value named
 // OpenconfigPlatformTypes_OPENCONFIG_SOFTWARE_COMPONENT_UNSET is added to the enumeration which is used as
@@ -4429,7 +4376,6 @@ const (
 	// OpenconfigPlatformTypes_OPENCONFIG_SOFTWARE_COMPONENT_OPERATING_SYSTEM corresponds to the value OPERATING_SYSTEM of OpenconfigPlatformTypes_OPENCONFIG_SOFTWARE_COMPONENT
 	OpenconfigPlatformTypes_OPENCONFIG_SOFTWARE_COMPONENT_OPERATING_SYSTEM E_OpenconfigPlatformTypes_OPENCONFIG_SOFTWARE_COMPONENT = 1
 )
-
 
 // E_OpenconfigPolicyTypes_INSTALL_PROTOCOL_TYPE is a derived int64 type which is used to represent
 // the enumerated node OpenconfigPolicyTypes_INSTALL_PROTOCOL_TYPE. An additional value named
@@ -4469,7 +4415,6 @@ const (
 	OpenconfigPolicyTypes_INSTALL_PROTOCOL_TYPE_STATIC E_OpenconfigPolicyTypes_INSTALL_PROTOCOL_TYPE = 9
 )
 
-
 // E_OpenconfigRoutingPolicy_DefaultPolicyType is a derived int64 type which is used to represent
 // the enumerated node OpenconfigRoutingPolicy_DefaultPolicyType. An additional value named
 // OpenconfigRoutingPolicy_DefaultPolicyType_UNSET is added to the enumeration which is used as
@@ -4493,7 +4438,6 @@ const (
 	// OpenconfigRoutingPolicy_DefaultPolicyType_REJECT_ROUTE corresponds to the value REJECT_ROUTE of OpenconfigRoutingPolicy_DefaultPolicyType
 	OpenconfigRoutingPolicy_DefaultPolicyType_REJECT_ROUTE E_OpenconfigRoutingPolicy_DefaultPolicyType = 2
 )
-
 
 // E_OpenconfigRoutingPolicy_MatchSetOptionsRestrictedType is a derived int64 type which is used to represent
 // the enumerated node OpenconfigRoutingPolicy_MatchSetOptionsRestrictedType. An additional value named
@@ -4519,7 +4463,6 @@ const (
 	OpenconfigRoutingPolicy_MatchSetOptionsRestrictedType_INVERT E_OpenconfigRoutingPolicy_MatchSetOptionsRestrictedType = 2
 )
 
-
 // E_OpenconfigRoutingPolicy_PolicyResultType is a derived int64 type which is used to represent
 // the enumerated node OpenconfigRoutingPolicy_PolicyResultType. An additional value named
 // OpenconfigRoutingPolicy_PolicyResultType_UNSET is added to the enumeration which is used as
@@ -4543,7 +4486,6 @@ const (
 	// OpenconfigRoutingPolicy_PolicyResultType_REJECT_ROUTE corresponds to the value REJECT_ROUTE of OpenconfigRoutingPolicy_PolicyResultType
 	OpenconfigRoutingPolicy_PolicyResultType_REJECT_ROUTE E_OpenconfigRoutingPolicy_PolicyResultType = 2
 )
-
 
 // E_OpenconfigRoutingPolicy_RoutingPolicy_DefinedSets_PrefixSets_PrefixSet_Config_Mode is a derived int64 type which is used to represent
 // the enumerated node OpenconfigRoutingPolicy_RoutingPolicy_DefinedSets_PrefixSets_PrefixSet_Config_Mode. An additional value named
@@ -4571,7 +4513,6 @@ const (
 	OpenconfigRoutingPolicy_RoutingPolicy_DefinedSets_PrefixSets_PrefixSet_Config_Mode_MIXED E_OpenconfigRoutingPolicy_RoutingPolicy_DefinedSets_PrefixSets_PrefixSet_Config_Mode = 3
 )
 
-
 // E_OpenconfigSegmentRouting_SrDataplaneType is a derived int64 type which is used to represent
 // the enumerated node OpenconfigSegmentRouting_SrDataplaneType. An additional value named
 // OpenconfigSegmentRouting_SrDataplaneType_UNSET is added to the enumeration which is used as
@@ -4595,7 +4536,6 @@ const (
 	// OpenconfigSegmentRouting_SrDataplaneType_IPV6 corresponds to the value IPV6 of OpenconfigSegmentRouting_SrDataplaneType
 	OpenconfigSegmentRouting_SrDataplaneType_IPV6 E_OpenconfigSegmentRouting_SrDataplaneType = 2
 )
-
 
 // E_OpenconfigSystemLogging_SYSLOG_FACILITY is a derived int64 type which is used to represent
 // the enumerated node OpenconfigSystemLogging_SYSLOG_FACILITY. An additional value named
@@ -4655,7 +4595,6 @@ const (
 	OpenconfigSystemLogging_SYSLOG_FACILITY_USER E_OpenconfigSystemLogging_SYSLOG_FACILITY = 19
 )
 
-
 // E_OpenconfigSystemLogging_SyslogSeverity is a derived int64 type which is used to represent
 // the enumerated node OpenconfigSystemLogging_SyslogSeverity. An additional value named
 // OpenconfigSystemLogging_SyslogSeverity_UNSET is added to the enumeration which is used as
@@ -4692,7 +4631,6 @@ const (
 	OpenconfigSystemLogging_SyslogSeverity_DEBUG E_OpenconfigSystemLogging_SyslogSeverity = 8
 )
 
-
 // E_OpenconfigSystem_NTP_AUTH_TYPE is a derived int64 type which is used to represent
 // the enumerated node OpenconfigSystem_NTP_AUTH_TYPE. An additional value named
 // OpenconfigSystem_NTP_AUTH_TYPE_UNSET is added to the enumeration which is used as
@@ -4714,7 +4652,6 @@ const (
 	// OpenconfigSystem_NTP_AUTH_TYPE_NTP_AUTH_MD5 corresponds to the value NTP_AUTH_MD5 of OpenconfigSystem_NTP_AUTH_TYPE
 	OpenconfigSystem_NTP_AUTH_TYPE_NTP_AUTH_MD5 E_OpenconfigSystem_NTP_AUTH_TYPE = 1
 )
-
 
 // E_OpenconfigSystem_System_Aaa_Accounting_Events_Event_Config_Record is a derived int64 type which is used to represent
 // the enumerated node OpenconfigSystem_System_Aaa_Accounting_Events_Event_Config_Record. An additional value named
@@ -4740,7 +4677,6 @@ const (
 	OpenconfigSystem_System_Aaa_Accounting_Events_Event_Config_Record_STOP E_OpenconfigSystem_System_Aaa_Accounting_Events_Event_Config_Record = 2
 )
 
-
 // E_OpenconfigSystem_System_Cpus_Cpu_State_Index is a derived int64 type which is used to represent
 // the enumerated node OpenconfigSystem_System_Cpus_Cpu_State_Index. An additional value named
 // OpenconfigSystem_System_Cpus_Cpu_State_Index_UNSET is added to the enumeration which is used as
@@ -4762,7 +4698,6 @@ const (
 	// OpenconfigSystem_System_Cpus_Cpu_State_Index_ALL corresponds to the value ALL of OpenconfigSystem_System_Cpus_Cpu_State_Index
 	OpenconfigSystem_System_Cpus_Cpu_State_Index_ALL E_OpenconfigSystem_System_Cpus_Cpu_State_Index = 1
 )
-
 
 // E_OpenconfigSystem_System_Ntp_Servers_Server_Config_AssociationType is a derived int64 type which is used to represent
 // the enumerated node OpenconfigSystem_System_Ntp_Servers_Server_Config_AssociationType. An additional value named
@@ -4790,7 +4725,6 @@ const (
 	OpenconfigSystem_System_Ntp_Servers_Server_Config_AssociationType_POOL E_OpenconfigSystem_System_Ntp_Servers_Server_Config_AssociationType = 3
 )
 
-
 // E_OpenconfigSystem_System_SshServer_Config_ProtocolVersion is a derived int64 type which is used to represent
 // the enumerated node OpenconfigSystem_System_SshServer_Config_ProtocolVersion. An additional value named
 // OpenconfigSystem_System_SshServer_Config_ProtocolVersion_UNSET is added to the enumeration which is used as
@@ -4816,7 +4750,6 @@ const (
 	// OpenconfigSystem_System_SshServer_Config_ProtocolVersion_V1_V2 corresponds to the value V1_V2 of OpenconfigSystem_System_SshServer_Config_ProtocolVersion
 	OpenconfigSystem_System_SshServer_Config_ProtocolVersion_V1_V2 E_OpenconfigSystem_System_SshServer_Config_ProtocolVersion = 3
 )
-
 
 // E_OpenconfigTypes_ADDRESS_FAMILY is a derived int64 type which is used to represent
 // the enumerated node OpenconfigTypes_ADDRESS_FAMILY. An additional value named
@@ -4846,7 +4779,6 @@ const (
 	OpenconfigTypes_ADDRESS_FAMILY_MPLS E_OpenconfigTypes_ADDRESS_FAMILY = 4
 )
 
-
 // E_OpenconfigVlanTypes_TPID_TYPES is a derived int64 type which is used to represent
 // the enumerated node OpenconfigVlanTypes_TPID_TYPES. An additional value named
 // OpenconfigVlanTypes_TPID_TYPES_UNSET is added to the enumeration which is used as
@@ -4875,7 +4807,6 @@ const (
 	OpenconfigVlanTypes_TPID_TYPES_TPID_0X9200 E_OpenconfigVlanTypes_TPID_TYPES = 4
 )
 
-
 // E_OpenconfigVlan_VlanModeType is a derived int64 type which is used to represent
 // the enumerated node OpenconfigVlan_VlanModeType. An additional value named
 // OpenconfigVlan_VlanModeType_UNSET is added to the enumeration which is used as
@@ -4899,4 +4830,3 @@ const (
 	// OpenconfigVlan_VlanModeType_TRUNK corresponds to the value TRUNK of OpenconfigVlan_VlanModeType
 	OpenconfigVlan_VlanModeType_TRUNK E_OpenconfigVlan_VlanModeType = 2
 )
-

@@ -82,6 +82,7 @@ func main() {
 	}
 
 	flag.Parse()
+	defer log.Flush()
 
 	//opts := credentials.ServerCredentials()
 	g := grpc.NewServer()
@@ -111,4 +112,5 @@ func main() {
 	if err := g.Serve(listen); err != nil {
 		log.Exitf("failed to serve: %v", err)
 	}
+
 }

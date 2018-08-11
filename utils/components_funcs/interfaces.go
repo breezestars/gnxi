@@ -11,6 +11,10 @@ import (
 	"strings"
 	"time"
 	"sync"
+	"github.com/go-redis/redis"
+	"github.com/tidwall/gjson"
+	"html/template"
+	"bytes"
 )
 
 func InitInterface(device *gostruct.Device) error {
@@ -396,6 +400,217 @@ func SyncInterface(device *gostruct.Device, mu *sync.RWMutex) error {
 	return nil
 }
 
+func InitInterfaceAggregate(device *gostruct.Device, client *redis.Client) error {
+
+	//device.Lacp = &gostruct.OpenconfigLacp_Lacp{}
+	//intfs := device.Lacp.GetOrCreateInterfaces()
+
+	intfs := device.GetOrCreateInterfaces()
+
+	portChannels := client.Keys("PORTCHANNEL|*")
+
+	//1) "PORTCHANNEL|ThisIsNotPC"
+	//2) "PORTCHANNEL|PortChannel04"
+
+	for _, value := range portChannels.Val() {
+		intfName := strings.Split(value, "|")[1]
+		intf, err := intfs.NewInterface(intfName)
+		if err != nil {
+			return err
+		}
+
+		intf.Config = &gostruct.OpenconfigInterfaces_Interfaces_Interface_Config{
+			Name: ygot.String(intfName),
+		}
+
+		intf.State = &gostruct.OpenconfigInterfaces_Interfaces_Interface_State{
+			Enabled:     ygot.Bool(false),
+			AdminStatus: gostruct.OpenconfigInterfaces_Interfaces_Interface_State_AdminStatus_DOWN,
+			OperStatus:  gostruct.OpenconfigInterfaces_Interfaces_Interface_State_OperStatus_DOWN,
+		}
+
+		cmd := "docker exec teamd cat /etc/teamd/" + intfName + ".conf"
+		json, err := exec.Command("bash", "-c", cmd).Output()
+		if err != nil {
+			return fmt.Errorf("Failed to execute command: %s", cmd)
+		}
+
+		dbMembers := client.HGet(value, "members@")
+		dbMemberIntfs := strings.Split(dbMembers.Val(), ",")
+		member := make([]string, 0)
+		if dbMembers.Val() != "" {
+			for _, value := range dbMemberIntfs {
+				member = append(member, value)
+			}
+		}
+
+		var lagType gostruct.E_OpenconfigIfAggregate_AggregationType
+		if gjson.Get(string(json), "runner.name").Value() == "lacp" {
+			lagType = gostruct.OpenconfigIfAggregate_AggregationType_LACP
+		} else {
+			lagType = gostruct.OpenconfigIfAggregate_AggregationType_UNSET
+		}
+
+		intf.Aggregation = &gostruct.OpenconfigInterfaces_Interfaces_Interface_Aggregation{
+			Config: &gostruct.OpenconfigInterfaces_Interfaces_Interface_Aggregation_Config{
+				LagType:  lagType,
+				MinLinks: ygot.Uint16(uint16(gjson.Get(string(json), "runner.min_ports").Uint())),
+			},
+			State: &gostruct.OpenconfigInterfaces_Interfaces_Interface_Aggregation_State{
+				LagType:  lagType,
+				MinLinks: ygot.Uint16(uint16(gjson.Get(string(json), "runner.min_ports").Uint())),
+				Member:   member,
+			},
+		}
+	}
+	return nil
+}
+
+func SyncInterfaceAggregate(device *gostruct.Device, client *redis.Client, mu *sync.RWMutex, ) error {
+
+	//device.Lacp = &gostruct.OpenconfigLacp_Lacp{}
+	//intfs := device.Lacp.GetOrCreateInterfaces()
+
+	for {
+		intfs := device.Interfaces
+
+		portChannels := client.Keys("PORTCHANNEL|*")
+
+		//1) "PORTCHANNEL|ThisIsNotPC"
+		//2) "PORTCHANNEL|PortChannel04"
+
+		for _, value := range portChannels.Val() {
+			intfName := strings.Split(value, "|")[1]
+			intf := intfs.GetInterface(intfName)
+
+			cmd := "sudo ip link show " + intfName + " up | grep state | awk -F' ' '{print $9}'"
+			intfResult, err := exec.Command("bash", "-c", cmd).Output()
+			if err != nil {
+				return fmt.Errorf("Failed to execute command: %s", cmd)
+			}
+
+			enabled := ygot.Bool(false)
+			adminStatus := gostruct.OpenconfigInterfaces_Interfaces_Interface_State_AdminStatus_DOWN
+			operStatus := gostruct.OpenconfigInterfaces_Interfaces_Interface_State_OperStatus_DOWN
+
+			if string(intfResult) == "UP" {
+				enabled = ygot.Bool(true)
+				adminStatus = gostruct.OpenconfigInterfaces_Interfaces_Interface_State_AdminStatus_UP
+				operStatus = gostruct.OpenconfigInterfaces_Interfaces_Interface_State_OperStatus_UP
+			}
+
+			intf.State = &gostruct.OpenconfigInterfaces_Interfaces_Interface_State{
+				Enabled:     enabled,
+				AdminStatus: adminStatus,
+				OperStatus:  operStatus,
+			}
+
+			cmd = "docker exec teamd cat /etc/teamd/" + intfName + ".conf"
+			json, err := exec.Command("bash", "-c", cmd).Output()
+			if err != nil {
+				return fmt.Errorf("Failed to execute command: %s", cmd)
+			}
+
+			dbMembers := client.HGet(value, "members@")
+			dbMemberIntfs := strings.Split(dbMembers.Val(), ",")
+			member := make([]string, 0)
+			if dbMembers.Val() != "" {
+				for _, value := range dbMemberIntfs {
+					member = append(member, value)
+				}
+			}
+
+			var lagType gostruct.E_OpenconfigIfAggregate_AggregationType
+			if gjson.Get(string(json), "runner.name").Value() == "lacp" {
+				lagType = gostruct.OpenconfigIfAggregate_AggregationType_LACP
+			} else {
+				lagType = gostruct.OpenconfigIfAggregate_AggregationType_UNSET
+			}
+
+			intf.Aggregation = &gostruct.OpenconfigInterfaces_Interfaces_Interface_Aggregation{
+				Config: &gostruct.OpenconfigInterfaces_Interfaces_Interface_Aggregation_Config{
+					LagType:  lagType,
+					MinLinks: ygot.Uint16(uint16(gjson.Get(string(json), "runner.min_ports").Uint())),
+				},
+				State: &gostruct.OpenconfigInterfaces_Interfaces_Interface_Aggregation_State{
+					LagType:  lagType,
+					MinLinks: ygot.Uint16(uint16(gjson.Get(string(json), "runner.min_ports").Uint())),
+					Member:   member,
+				},
+			}
+		}
+		fmt.Println("Syncing Interfaces Aggregate ...")
+		time.Sleep(5 * time.Second)
+	}
+	return nil
+}
+
+func SetInterfacePortchannel(key []string, value []string, str string, b bool) error {
+
+	type Teamd struct {
+		Device  string
+		HwAddr  string
+		Runner  string
+		MinPort int
+	}
+
+	filePath := "/etc/teamd/" + str + ".conf"
+
+	TEAMD_CONF_TMPL := `
+	{
+		"device": "{{.Device}}",
+		"hwaddr": "{{.HwAddr}}",
+		"runner": {
+		    "name": "{{.Runner}}",
+			"active": true,
+			"min_ports": {{.MinPort}},
+			"tx_hash": ["eth", "ipv4", "ipv6"]
+	    },
+		"link_watch": {
+		    "name": "ethtool"
+	    },
+		"ports": {
+	    }
+	}`
+
+	teml, err := template.New("teamConfig").Parse(TEAMD_CONF_TMPL)
+	if err != nil {
+		return status.Error(codes.Internal, "Failed to generator team config file")
+	}
+
+	var config bytes.Buffer
+	err = teml.Execute(&config, Teamd{})
+	if err != nil {
+		return status.Error(codes.Internal, "Failed to generator team config file")
+	}
+
+	fmt.Println(config)
+
+	cmdWrConfig := "sonic-cfggen -a '{\"PORTCHANNEL\": {\"+" + str + "+\":{}}}' --write-to-db"
+	_, err = exec.Command("bash", "-c", cmdWrConfig).Output()
+	if err != nil {
+		return status.Error(codes.Internal, "Failed to execute command: "+cmdWrConfig)
+	}
+
+	cmdGenConfig := "echo '" + config.String() + "' | (docker exec -i teamd bash -c 'cat > " + filePath + "')"
+	_, err = exec.Command("bash", "-c", cmdGenConfig).Output()
+	if err != nil {
+		return status.Error(codes.Internal, "Failed to execute command: "+cmdGenConfig)
+	}
+
+	cmdReadConfig := "docker exec -i teamd teamd -d -f " + filePath
+	_, err = exec.Command("bash", "-c", cmdReadConfig).Output()
+	if err != nil {
+		return status.Error(codes.Internal, "Failed to execute command: "+cmdReadConfig)
+	}
+
+	return nil
+}
+
+func DelInterfacePortchannel(key []string, value []string, str string, b bool) error {
+	return nil
+}
+
 func SetInterfaceConfigEnabled(key []string, value []string, str string, b bool) error {
 	var cmd string
 
@@ -419,11 +634,12 @@ func SetInterfaceConfigEnabled(key []string, value []string, str string, b bool)
 	return nil
 }
 
-func initInterfaceEthernet() {
-
+func DelInterfaceConfigEnabled(key []string, value []string, str string, b bool) error {
+	//DelVlan()
+	return nil
 }
 
-func initInterfaceAggregate() {
+func initInterfaceEthernet() {
 
 }
 

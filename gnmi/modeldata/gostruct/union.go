@@ -9,6 +9,7 @@ using the following YANG input files:
 	- github.com/openconfig/public/release/models/interfaces/openconfig-if-aggregate.yang
 	- github.com/openconfig/public/release/models/interfaces/openconfig-if-ethernet.yang
 	- github.com/openconfig/public/release/models/interfaces/openconfig-interfaces.yang
+	- github.com/openconfig/public/release/models/lacp/openconfig-lacp.yang
 	- github.com/openconfig/public/release/models/lldp/openconfig-lldp.yang
 	- github.com/openconfig/public/release/models/network-instance/openconfig-network-instance.yang
 	- github.com/openconfig/public/release/models/platform/openconfig-platform.yang
@@ -24,24 +25,6 @@ import (
 	"fmt"
 )
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Ipv4_Config_Protocol_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-acl/acl/acl-sets/acl-set/acl-entries/acl-entry/ipv4/config/protocol within the YANG schema.
 type OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Ipv4_Config_Protocol_Union interface {
@@ -51,7 +34,7 @@ type OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Ipv4_Config_Protocol_U
 // OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Ipv4_Config_Protocol_Union_E_OpenconfigPacketMatchTypes_IP_PROTOCOL is used when /openconfig-acl/acl/acl-sets/acl-set/acl-entries/acl-entry/ipv4/config/protocol
 // is to be set to a E_OpenconfigPacketMatchTypes_IP_PROTOCOL value.
 type OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Ipv4_Config_Protocol_Union_E_OpenconfigPacketMatchTypes_IP_PROTOCOL struct {
-	E_OpenconfigPacketMatchTypes_IP_PROTOCOL	E_OpenconfigPacketMatchTypes_IP_PROTOCOL
+	E_OpenconfigPacketMatchTypes_IP_PROTOCOL E_OpenconfigPacketMatchTypes_IP_PROTOCOL
 }
 
 // Is_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Ipv4_Config_Protocol_Union ensures that OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Ipv4_Config_Protocol_Union_E_OpenconfigPacketMatchTypes_IP_PROTOCOL
@@ -61,7 +44,7 @@ func (*OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Ipv4_Config_Protocol
 // OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Ipv4_Config_Protocol_Union_Uint8 is used when /openconfig-acl/acl/acl-sets/acl-set/acl-entries/acl-entry/ipv4/config/protocol
 // is to be set to a uint8 value.
 type OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Ipv4_Config_Protocol_Union_Uint8 struct {
-	Uint8	uint8
+	Uint8 uint8
 }
 
 // Is_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Ipv4_Config_Protocol_Union ensures that OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Ipv4_Config_Protocol_Union_Uint8
@@ -82,7 +65,6 @@ func (t *OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Ipv4_Config) To_Op
 	}
 }
 
-
 // OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Ipv4_State_Protocol_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-acl/acl/acl-sets/acl-set/acl-entries/acl-entry/ipv4/state/protocol within the YANG schema.
 type OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Ipv4_State_Protocol_Union interface {
@@ -92,7 +74,7 @@ type OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Ipv4_State_Protocol_Un
 // OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Ipv4_State_Protocol_Union_E_OpenconfigPacketMatchTypes_IP_PROTOCOL is used when /openconfig-acl/acl/acl-sets/acl-set/acl-entries/acl-entry/ipv4/state/protocol
 // is to be set to a E_OpenconfigPacketMatchTypes_IP_PROTOCOL value.
 type OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Ipv4_State_Protocol_Union_E_OpenconfigPacketMatchTypes_IP_PROTOCOL struct {
-	E_OpenconfigPacketMatchTypes_IP_PROTOCOL	E_OpenconfigPacketMatchTypes_IP_PROTOCOL
+	E_OpenconfigPacketMatchTypes_IP_PROTOCOL E_OpenconfigPacketMatchTypes_IP_PROTOCOL
 }
 
 // Is_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Ipv4_State_Protocol_Union ensures that OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Ipv4_State_Protocol_Union_E_OpenconfigPacketMatchTypes_IP_PROTOCOL
@@ -102,7 +84,7 @@ func (*OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Ipv4_State_Protocol_
 // OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Ipv4_State_Protocol_Union_Uint8 is used when /openconfig-acl/acl/acl-sets/acl-set/acl-entries/acl-entry/ipv4/state/protocol
 // is to be set to a uint8 value.
 type OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Ipv4_State_Protocol_Union_Uint8 struct {
-	Uint8	uint8
+	Uint8 uint8
 }
 
 // Is_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Ipv4_State_Protocol_Union ensures that OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Ipv4_State_Protocol_Union_Uint8
@@ -123,8 +105,6 @@ func (t *OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Ipv4_State) To_Ope
 	}
 }
 
-
-
 // OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Ipv6_Config_Protocol_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-acl/acl/acl-sets/acl-set/acl-entries/acl-entry/ipv6/config/protocol within the YANG schema.
 type OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Ipv6_Config_Protocol_Union interface {
@@ -134,7 +114,7 @@ type OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Ipv6_Config_Protocol_U
 // OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Ipv6_Config_Protocol_Union_E_OpenconfigPacketMatchTypes_IP_PROTOCOL is used when /openconfig-acl/acl/acl-sets/acl-set/acl-entries/acl-entry/ipv6/config/protocol
 // is to be set to a E_OpenconfigPacketMatchTypes_IP_PROTOCOL value.
 type OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Ipv6_Config_Protocol_Union_E_OpenconfigPacketMatchTypes_IP_PROTOCOL struct {
-	E_OpenconfigPacketMatchTypes_IP_PROTOCOL	E_OpenconfigPacketMatchTypes_IP_PROTOCOL
+	E_OpenconfigPacketMatchTypes_IP_PROTOCOL E_OpenconfigPacketMatchTypes_IP_PROTOCOL
 }
 
 // Is_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Ipv6_Config_Protocol_Union ensures that OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Ipv6_Config_Protocol_Union_E_OpenconfigPacketMatchTypes_IP_PROTOCOL
@@ -144,7 +124,7 @@ func (*OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Ipv6_Config_Protocol
 // OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Ipv6_Config_Protocol_Union_Uint8 is used when /openconfig-acl/acl/acl-sets/acl-set/acl-entries/acl-entry/ipv6/config/protocol
 // is to be set to a uint8 value.
 type OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Ipv6_Config_Protocol_Union_Uint8 struct {
-	Uint8	uint8
+	Uint8 uint8
 }
 
 // Is_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Ipv6_Config_Protocol_Union ensures that OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Ipv6_Config_Protocol_Union_Uint8
@@ -165,7 +145,6 @@ func (t *OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Ipv6_Config) To_Op
 	}
 }
 
-
 // OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Ipv6_State_Protocol_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-acl/acl/acl-sets/acl-set/acl-entries/acl-entry/ipv6/state/protocol within the YANG schema.
 type OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Ipv6_State_Protocol_Union interface {
@@ -175,7 +154,7 @@ type OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Ipv6_State_Protocol_Un
 // OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Ipv6_State_Protocol_Union_E_OpenconfigPacketMatchTypes_IP_PROTOCOL is used when /openconfig-acl/acl/acl-sets/acl-set/acl-entries/acl-entry/ipv6/state/protocol
 // is to be set to a E_OpenconfigPacketMatchTypes_IP_PROTOCOL value.
 type OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Ipv6_State_Protocol_Union_E_OpenconfigPacketMatchTypes_IP_PROTOCOL struct {
-	E_OpenconfigPacketMatchTypes_IP_PROTOCOL	E_OpenconfigPacketMatchTypes_IP_PROTOCOL
+	E_OpenconfigPacketMatchTypes_IP_PROTOCOL E_OpenconfigPacketMatchTypes_IP_PROTOCOL
 }
 
 // Is_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Ipv6_State_Protocol_Union ensures that OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Ipv6_State_Protocol_Union_E_OpenconfigPacketMatchTypes_IP_PROTOCOL
@@ -185,7 +164,7 @@ func (*OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Ipv6_State_Protocol_
 // OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Ipv6_State_Protocol_Union_Uint8 is used when /openconfig-acl/acl/acl-sets/acl-set/acl-entries/acl-entry/ipv6/state/protocol
 // is to be set to a uint8 value.
 type OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Ipv6_State_Protocol_Union_Uint8 struct {
-	Uint8	uint8
+	Uint8 uint8
 }
 
 // Is_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Ipv6_State_Protocol_Union ensures that OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Ipv6_State_Protocol_Union_Uint8
@@ -206,8 +185,6 @@ func (t *OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Ipv6_State) To_Ope
 	}
 }
 
-
-
 // OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_L2_Config_Ethertype_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-acl/acl/acl-sets/acl-set/acl-entries/acl-entry/l2/config/ethertype within the YANG schema.
 type OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_L2_Config_Ethertype_Union interface {
@@ -217,7 +194,7 @@ type OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_L2_Config_Ethertype_Un
 // OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_L2_Config_Ethertype_Union_E_OpenconfigPacketMatchTypes_ETHERTYPE is used when /openconfig-acl/acl/acl-sets/acl-set/acl-entries/acl-entry/l2/config/ethertype
 // is to be set to a E_OpenconfigPacketMatchTypes_ETHERTYPE value.
 type OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_L2_Config_Ethertype_Union_E_OpenconfigPacketMatchTypes_ETHERTYPE struct {
-	E_OpenconfigPacketMatchTypes_ETHERTYPE	E_OpenconfigPacketMatchTypes_ETHERTYPE
+	E_OpenconfigPacketMatchTypes_ETHERTYPE E_OpenconfigPacketMatchTypes_ETHERTYPE
 }
 
 // Is_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_L2_Config_Ethertype_Union ensures that OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_L2_Config_Ethertype_Union_E_OpenconfigPacketMatchTypes_ETHERTYPE
@@ -227,7 +204,7 @@ func (*OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_L2_Config_Ethertype_
 // OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_L2_Config_Ethertype_Union_Uint16 is used when /openconfig-acl/acl/acl-sets/acl-set/acl-entries/acl-entry/l2/config/ethertype
 // is to be set to a uint16 value.
 type OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_L2_Config_Ethertype_Union_Uint16 struct {
-	Uint16	uint16
+	Uint16 uint16
 }
 
 // Is_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_L2_Config_Ethertype_Union ensures that OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_L2_Config_Ethertype_Union_Uint16
@@ -248,7 +225,6 @@ func (t *OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_L2_Config) To_Open
 	}
 }
 
-
 // OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_L2_State_Ethertype_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-acl/acl/acl-sets/acl-set/acl-entries/acl-entry/l2/state/ethertype within the YANG schema.
 type OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_L2_State_Ethertype_Union interface {
@@ -258,7 +234,7 @@ type OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_L2_State_Ethertype_Uni
 // OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_L2_State_Ethertype_Union_E_OpenconfigPacketMatchTypes_ETHERTYPE is used when /openconfig-acl/acl/acl-sets/acl-set/acl-entries/acl-entry/l2/state/ethertype
 // is to be set to a E_OpenconfigPacketMatchTypes_ETHERTYPE value.
 type OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_L2_State_Ethertype_Union_E_OpenconfigPacketMatchTypes_ETHERTYPE struct {
-	E_OpenconfigPacketMatchTypes_ETHERTYPE	E_OpenconfigPacketMatchTypes_ETHERTYPE
+	E_OpenconfigPacketMatchTypes_ETHERTYPE E_OpenconfigPacketMatchTypes_ETHERTYPE
 }
 
 // Is_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_L2_State_Ethertype_Union ensures that OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_L2_State_Ethertype_Union_E_OpenconfigPacketMatchTypes_ETHERTYPE
@@ -268,7 +244,7 @@ func (*OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_L2_State_Ethertype_U
 // OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_L2_State_Ethertype_Union_Uint16 is used when /openconfig-acl/acl/acl-sets/acl-set/acl-entries/acl-entry/l2/state/ethertype
 // is to be set to a uint16 value.
 type OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_L2_State_Ethertype_Union_Uint16 struct {
-	Uint16	uint16
+	Uint16 uint16
 }
 
 // Is_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_L2_State_Ethertype_Union ensures that OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_L2_State_Ethertype_Union_Uint16
@@ -289,9 +265,6 @@ func (t *OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_L2_State) To_Openc
 	}
 }
 
-
-
-
 // OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_DestinationPort_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-acl/acl/acl-sets/acl-set/acl-entries/acl-entry/transport/config/destination-port within the YANG schema.
 type OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_DestinationPort_Union interface {
@@ -301,7 +274,7 @@ type OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_Desti
 // OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_DestinationPort_Union_E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_DestinationPort is used when /openconfig-acl/acl/acl-sets/acl-set/acl-entries/acl-entry/transport/config/destination-port
 // is to be set to a E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_DestinationPort value.
 type OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_DestinationPort_Union_E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_DestinationPort struct {
-	E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_DestinationPort	E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_DestinationPort
+	E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_DestinationPort E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_DestinationPort
 }
 
 // Is_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_DestinationPort_Union ensures that OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_DestinationPort_Union_E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_DestinationPort
@@ -311,7 +284,7 @@ func (*OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_Des
 // OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_DestinationPort_Union_String is used when /openconfig-acl/acl/acl-sets/acl-set/acl-entries/acl-entry/transport/config/destination-port
 // is to be set to a string value.
 type OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_DestinationPort_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_DestinationPort_Union ensures that OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_DestinationPort_Union_String
@@ -321,7 +294,7 @@ func (*OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_Des
 // OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_DestinationPort_Union_Uint16 is used when /openconfig-acl/acl/acl-sets/acl-set/acl-entries/acl-entry/transport/config/destination-port
 // is to be set to a uint16 value.
 type OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_DestinationPort_Union_Uint16 struct {
-	Uint16	uint16
+	Uint16 uint16
 }
 
 // Is_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_DestinationPort_Union ensures that OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_DestinationPort_Union_Uint16
@@ -353,7 +326,7 @@ type OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_Sourc
 // OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_SourcePort_Union_E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_SourcePort is used when /openconfig-acl/acl/acl-sets/acl-set/acl-entries/acl-entry/transport/config/source-port
 // is to be set to a E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_SourcePort value.
 type OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_SourcePort_Union_E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_SourcePort struct {
-	E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_SourcePort	E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_SourcePort
+	E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_SourcePort E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_SourcePort
 }
 
 // Is_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_SourcePort_Union ensures that OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_SourcePort_Union_E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_SourcePort
@@ -363,7 +336,7 @@ func (*OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_Sou
 // OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_SourcePort_Union_String is used when /openconfig-acl/acl/acl-sets/acl-set/acl-entries/acl-entry/transport/config/source-port
 // is to be set to a string value.
 type OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_SourcePort_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_SourcePort_Union ensures that OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_SourcePort_Union_String
@@ -373,7 +346,7 @@ func (*OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_Sou
 // OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_SourcePort_Union_Uint16 is used when /openconfig-acl/acl/acl-sets/acl-set/acl-entries/acl-entry/transport/config/source-port
 // is to be set to a uint16 value.
 type OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_SourcePort_Union_Uint16 struct {
-	Uint16	uint16
+	Uint16 uint16
 }
 
 // Is_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_SourcePort_Union ensures that OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_SourcePort_Union_Uint16
@@ -396,7 +369,6 @@ func (t *OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config) 
 	}
 }
 
-
 // OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_State_DestinationPort_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-acl/acl/acl-sets/acl-set/acl-entries/acl-entry/transport/state/destination-port within the YANG schema.
 type OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_State_DestinationPort_Union interface {
@@ -406,7 +378,7 @@ type OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_State_Destin
 // OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_State_DestinationPort_Union_E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_DestinationPort is used when /openconfig-acl/acl/acl-sets/acl-set/acl-entries/acl-entry/transport/state/destination-port
 // is to be set to a E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_DestinationPort value.
 type OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_State_DestinationPort_Union_E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_DestinationPort struct {
-	E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_DestinationPort	E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_DestinationPort
+	E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_DestinationPort E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_DestinationPort
 }
 
 // Is_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_State_DestinationPort_Union ensures that OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_State_DestinationPort_Union_E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_DestinationPort
@@ -416,7 +388,7 @@ func (*OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_State_Dest
 // OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_State_DestinationPort_Union_String is used when /openconfig-acl/acl/acl-sets/acl-set/acl-entries/acl-entry/transport/state/destination-port
 // is to be set to a string value.
 type OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_State_DestinationPort_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_State_DestinationPort_Union ensures that OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_State_DestinationPort_Union_String
@@ -426,7 +398,7 @@ func (*OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_State_Dest
 // OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_State_DestinationPort_Union_Uint16 is used when /openconfig-acl/acl/acl-sets/acl-set/acl-entries/acl-entry/transport/state/destination-port
 // is to be set to a uint16 value.
 type OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_State_DestinationPort_Union_Uint16 struct {
-	Uint16	uint16
+	Uint16 uint16
 }
 
 // Is_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_State_DestinationPort_Union ensures that OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_State_DestinationPort_Union_Uint16
@@ -458,7 +430,7 @@ type OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_State_Source
 // OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_State_SourcePort_Union_E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_SourcePort is used when /openconfig-acl/acl/acl-sets/acl-set/acl-entries/acl-entry/transport/state/source-port
 // is to be set to a E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_SourcePort value.
 type OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_State_SourcePort_Union_E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_SourcePort struct {
-	E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_SourcePort	E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_SourcePort
+	E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_SourcePort E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_SourcePort
 }
 
 // Is_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_State_SourcePort_Union ensures that OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_State_SourcePort_Union_E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_SourcePort
@@ -468,7 +440,7 @@ func (*OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_State_Sour
 // OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_State_SourcePort_Union_String is used when /openconfig-acl/acl/acl-sets/acl-set/acl-entries/acl-entry/transport/state/source-port
 // is to be set to a string value.
 type OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_State_SourcePort_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_State_SourcePort_Union ensures that OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_State_SourcePort_Union_String
@@ -478,7 +450,7 @@ func (*OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_State_Sour
 // OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_State_SourcePort_Union_Uint16 is used when /openconfig-acl/acl/acl-sets/acl-set/acl-entries/acl-entry/transport/state/source-port
 // is to be set to a uint16 value.
 type OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_State_SourcePort_Union_Uint16 struct {
-	Uint16	uint16
+	Uint16 uint16
 }
 
 // Is_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_State_SourcePort_Union ensures that OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_State_SourcePort_Union_Uint16
@@ -501,229 +473,6 @@ func (t *OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_State) T
 	}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // OpenconfigBgp_Bgp_Neighbors_Neighbor_RouteReflector_Config_RouteReflectorClusterId_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-bgp/bgp/neighbors/neighbor/route-reflector/config/route-reflector-cluster-id within the YANG schema.
 type OpenconfigBgp_Bgp_Neighbors_Neighbor_RouteReflector_Config_RouteReflectorClusterId_Union interface {
@@ -733,7 +482,7 @@ type OpenconfigBgp_Bgp_Neighbors_Neighbor_RouteReflector_Config_RouteReflectorCl
 // OpenconfigBgp_Bgp_Neighbors_Neighbor_RouteReflector_Config_RouteReflectorClusterId_Union_String is used when /openconfig-bgp/bgp/neighbors/neighbor/route-reflector/config/route-reflector-cluster-id
 // is to be set to a string value.
 type OpenconfigBgp_Bgp_Neighbors_Neighbor_RouteReflector_Config_RouteReflectorClusterId_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigBgp_Bgp_Neighbors_Neighbor_RouteReflector_Config_RouteReflectorClusterId_Union ensures that OpenconfigBgp_Bgp_Neighbors_Neighbor_RouteReflector_Config_RouteReflectorClusterId_Union_String
@@ -743,7 +492,7 @@ func (*OpenconfigBgp_Bgp_Neighbors_Neighbor_RouteReflector_Config_RouteReflector
 // OpenconfigBgp_Bgp_Neighbors_Neighbor_RouteReflector_Config_RouteReflectorClusterId_Union_Uint32 is used when /openconfig-bgp/bgp/neighbors/neighbor/route-reflector/config/route-reflector-cluster-id
 // is to be set to a uint32 value.
 type OpenconfigBgp_Bgp_Neighbors_Neighbor_RouteReflector_Config_RouteReflectorClusterId_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigBgp_Bgp_Neighbors_Neighbor_RouteReflector_Config_RouteReflectorClusterId_Union ensures that OpenconfigBgp_Bgp_Neighbors_Neighbor_RouteReflector_Config_RouteReflectorClusterId_Union_Uint32
@@ -764,7 +513,6 @@ func (t *OpenconfigBgp_Bgp_Neighbors_Neighbor_RouteReflector_Config) To_Openconf
 	}
 }
 
-
 // OpenconfigBgp_Bgp_Neighbors_Neighbor_RouteReflector_State_RouteReflectorClusterId_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-bgp/bgp/neighbors/neighbor/route-reflector/state/route-reflector-cluster-id within the YANG schema.
 type OpenconfigBgp_Bgp_Neighbors_Neighbor_RouteReflector_State_RouteReflectorClusterId_Union interface {
@@ -774,7 +522,7 @@ type OpenconfigBgp_Bgp_Neighbors_Neighbor_RouteReflector_State_RouteReflectorClu
 // OpenconfigBgp_Bgp_Neighbors_Neighbor_RouteReflector_State_RouteReflectorClusterId_Union_String is used when /openconfig-bgp/bgp/neighbors/neighbor/route-reflector/state/route-reflector-cluster-id
 // is to be set to a string value.
 type OpenconfigBgp_Bgp_Neighbors_Neighbor_RouteReflector_State_RouteReflectorClusterId_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigBgp_Bgp_Neighbors_Neighbor_RouteReflector_State_RouteReflectorClusterId_Union ensures that OpenconfigBgp_Bgp_Neighbors_Neighbor_RouteReflector_State_RouteReflectorClusterId_Union_String
@@ -784,7 +532,7 @@ func (*OpenconfigBgp_Bgp_Neighbors_Neighbor_RouteReflector_State_RouteReflectorC
 // OpenconfigBgp_Bgp_Neighbors_Neighbor_RouteReflector_State_RouteReflectorClusterId_Union_Uint32 is used when /openconfig-bgp/bgp/neighbors/neighbor/route-reflector/state/route-reflector-cluster-id
 // is to be set to a uint32 value.
 type OpenconfigBgp_Bgp_Neighbors_Neighbor_RouteReflector_State_RouteReflectorClusterId_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigBgp_Bgp_Neighbors_Neighbor_RouteReflector_State_RouteReflectorClusterId_Union ensures that OpenconfigBgp_Bgp_Neighbors_Neighbor_RouteReflector_State_RouteReflectorClusterId_Union_Uint32
@@ -805,120 +553,6 @@ func (t *OpenconfigBgp_Bgp_Neighbors_Neighbor_RouteReflector_State) To_Openconfi
 	}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // OpenconfigBgp_Bgp_PeerGroups_PeerGroup_RouteReflector_Config_RouteReflectorClusterId_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-bgp/bgp/peer-groups/peer-group/route-reflector/config/route-reflector-cluster-id within the YANG schema.
 type OpenconfigBgp_Bgp_PeerGroups_PeerGroup_RouteReflector_Config_RouteReflectorClusterId_Union interface {
@@ -928,7 +562,7 @@ type OpenconfigBgp_Bgp_PeerGroups_PeerGroup_RouteReflector_Config_RouteReflector
 // OpenconfigBgp_Bgp_PeerGroups_PeerGroup_RouteReflector_Config_RouteReflectorClusterId_Union_String is used when /openconfig-bgp/bgp/peer-groups/peer-group/route-reflector/config/route-reflector-cluster-id
 // is to be set to a string value.
 type OpenconfigBgp_Bgp_PeerGroups_PeerGroup_RouteReflector_Config_RouteReflectorClusterId_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigBgp_Bgp_PeerGroups_PeerGroup_RouteReflector_Config_RouteReflectorClusterId_Union ensures that OpenconfigBgp_Bgp_PeerGroups_PeerGroup_RouteReflector_Config_RouteReflectorClusterId_Union_String
@@ -938,7 +572,7 @@ func (*OpenconfigBgp_Bgp_PeerGroups_PeerGroup_RouteReflector_Config_RouteReflect
 // OpenconfigBgp_Bgp_PeerGroups_PeerGroup_RouteReflector_Config_RouteReflectorClusterId_Union_Uint32 is used when /openconfig-bgp/bgp/peer-groups/peer-group/route-reflector/config/route-reflector-cluster-id
 // is to be set to a uint32 value.
 type OpenconfigBgp_Bgp_PeerGroups_PeerGroup_RouteReflector_Config_RouteReflectorClusterId_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigBgp_Bgp_PeerGroups_PeerGroup_RouteReflector_Config_RouteReflectorClusterId_Union ensures that OpenconfigBgp_Bgp_PeerGroups_PeerGroup_RouteReflector_Config_RouteReflectorClusterId_Union_Uint32
@@ -959,7 +593,6 @@ func (t *OpenconfigBgp_Bgp_PeerGroups_PeerGroup_RouteReflector_Config) To_Openco
 	}
 }
 
-
 // OpenconfigBgp_Bgp_PeerGroups_PeerGroup_RouteReflector_State_RouteReflectorClusterId_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-bgp/bgp/peer-groups/peer-group/route-reflector/state/route-reflector-cluster-id within the YANG schema.
 type OpenconfigBgp_Bgp_PeerGroups_PeerGroup_RouteReflector_State_RouteReflectorClusterId_Union interface {
@@ -969,7 +602,7 @@ type OpenconfigBgp_Bgp_PeerGroups_PeerGroup_RouteReflector_State_RouteReflectorC
 // OpenconfigBgp_Bgp_PeerGroups_PeerGroup_RouteReflector_State_RouteReflectorClusterId_Union_String is used when /openconfig-bgp/bgp/peer-groups/peer-group/route-reflector/state/route-reflector-cluster-id
 // is to be set to a string value.
 type OpenconfigBgp_Bgp_PeerGroups_PeerGroup_RouteReflector_State_RouteReflectorClusterId_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigBgp_Bgp_PeerGroups_PeerGroup_RouteReflector_State_RouteReflectorClusterId_Union ensures that OpenconfigBgp_Bgp_PeerGroups_PeerGroup_RouteReflector_State_RouteReflectorClusterId_Union_String
@@ -979,7 +612,7 @@ func (*OpenconfigBgp_Bgp_PeerGroups_PeerGroup_RouteReflector_State_RouteReflecto
 // OpenconfigBgp_Bgp_PeerGroups_PeerGroup_RouteReflector_State_RouteReflectorClusterId_Union_Uint32 is used when /openconfig-bgp/bgp/peer-groups/peer-group/route-reflector/state/route-reflector-cluster-id
 // is to be set to a uint32 value.
 type OpenconfigBgp_Bgp_PeerGroups_PeerGroup_RouteReflector_State_RouteReflectorClusterId_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigBgp_Bgp_PeerGroups_PeerGroup_RouteReflector_State_RouteReflectorClusterId_Union ensures that OpenconfigBgp_Bgp_PeerGroups_PeerGroup_RouteReflector_State_RouteReflectorClusterId_Union_Uint32
@@ -1000,29 +633,6 @@ func (t *OpenconfigBgp_Bgp_PeerGroups_PeerGroup_RouteReflector_State) To_Opencon
 	}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // OpenconfigInterfaces_Interfaces_Interface_Aggregation_SwitchedVlan_Config_TrunkVlans_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-interfaces/interfaces/interface/aggregation/switched-vlan/config/trunk-vlans within the YANG schema.
 type OpenconfigInterfaces_Interfaces_Interface_Aggregation_SwitchedVlan_Config_TrunkVlans_Union interface {
@@ -1032,7 +642,7 @@ type OpenconfigInterfaces_Interfaces_Interface_Aggregation_SwitchedVlan_Config_T
 // OpenconfigInterfaces_Interfaces_Interface_Aggregation_SwitchedVlan_Config_TrunkVlans_Union_String is used when /openconfig-interfaces/interfaces/interface/aggregation/switched-vlan/config/trunk-vlans
 // is to be set to a string value.
 type OpenconfigInterfaces_Interfaces_Interface_Aggregation_SwitchedVlan_Config_TrunkVlans_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigInterfaces_Interfaces_Interface_Aggregation_SwitchedVlan_Config_TrunkVlans_Union ensures that OpenconfigInterfaces_Interfaces_Interface_Aggregation_SwitchedVlan_Config_TrunkVlans_Union_String
@@ -1042,7 +652,7 @@ func (*OpenconfigInterfaces_Interfaces_Interface_Aggregation_SwitchedVlan_Config
 // OpenconfigInterfaces_Interfaces_Interface_Aggregation_SwitchedVlan_Config_TrunkVlans_Union_Uint16 is used when /openconfig-interfaces/interfaces/interface/aggregation/switched-vlan/config/trunk-vlans
 // is to be set to a uint16 value.
 type OpenconfigInterfaces_Interfaces_Interface_Aggregation_SwitchedVlan_Config_TrunkVlans_Union_Uint16 struct {
-	Uint16	uint16
+	Uint16 uint16
 }
 
 // Is_OpenconfigInterfaces_Interfaces_Interface_Aggregation_SwitchedVlan_Config_TrunkVlans_Union ensures that OpenconfigInterfaces_Interfaces_Interface_Aggregation_SwitchedVlan_Config_TrunkVlans_Union_Uint16
@@ -1063,7 +673,6 @@ func (t *OpenconfigInterfaces_Interfaces_Interface_Aggregation_SwitchedVlan_Conf
 	}
 }
 
-
 // OpenconfigInterfaces_Interfaces_Interface_Aggregation_SwitchedVlan_State_TrunkVlans_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-interfaces/interfaces/interface/aggregation/switched-vlan/state/trunk-vlans within the YANG schema.
 type OpenconfigInterfaces_Interfaces_Interface_Aggregation_SwitchedVlan_State_TrunkVlans_Union interface {
@@ -1073,7 +682,7 @@ type OpenconfigInterfaces_Interfaces_Interface_Aggregation_SwitchedVlan_State_Tr
 // OpenconfigInterfaces_Interfaces_Interface_Aggregation_SwitchedVlan_State_TrunkVlans_Union_String is used when /openconfig-interfaces/interfaces/interface/aggregation/switched-vlan/state/trunk-vlans
 // is to be set to a string value.
 type OpenconfigInterfaces_Interfaces_Interface_Aggregation_SwitchedVlan_State_TrunkVlans_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigInterfaces_Interfaces_Interface_Aggregation_SwitchedVlan_State_TrunkVlans_Union ensures that OpenconfigInterfaces_Interfaces_Interface_Aggregation_SwitchedVlan_State_TrunkVlans_Union_String
@@ -1083,7 +692,7 @@ func (*OpenconfigInterfaces_Interfaces_Interface_Aggregation_SwitchedVlan_State_
 // OpenconfigInterfaces_Interfaces_Interface_Aggregation_SwitchedVlan_State_TrunkVlans_Union_Uint16 is used when /openconfig-interfaces/interfaces/interface/aggregation/switched-vlan/state/trunk-vlans
 // is to be set to a uint16 value.
 type OpenconfigInterfaces_Interfaces_Interface_Aggregation_SwitchedVlan_State_TrunkVlans_Union_Uint16 struct {
-	Uint16	uint16
+	Uint16 uint16
 }
 
 // Is_OpenconfigInterfaces_Interfaces_Interface_Aggregation_SwitchedVlan_State_TrunkVlans_Union ensures that OpenconfigInterfaces_Interfaces_Interface_Aggregation_SwitchedVlan_State_TrunkVlans_Union_Uint16
@@ -1104,13 +713,6 @@ func (t *OpenconfigInterfaces_Interfaces_Interface_Aggregation_SwitchedVlan_Stat
 	}
 }
 
-
-
-
-
-
-
-
 // OpenconfigInterfaces_Interfaces_Interface_Ethernet_SwitchedVlan_Config_TrunkVlans_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-interfaces/interfaces/interface/ethernet/switched-vlan/config/trunk-vlans within the YANG schema.
 type OpenconfigInterfaces_Interfaces_Interface_Ethernet_SwitchedVlan_Config_TrunkVlans_Union interface {
@@ -1120,7 +722,7 @@ type OpenconfigInterfaces_Interfaces_Interface_Ethernet_SwitchedVlan_Config_Trun
 // OpenconfigInterfaces_Interfaces_Interface_Ethernet_SwitchedVlan_Config_TrunkVlans_Union_String is used when /openconfig-interfaces/interfaces/interface/ethernet/switched-vlan/config/trunk-vlans
 // is to be set to a string value.
 type OpenconfigInterfaces_Interfaces_Interface_Ethernet_SwitchedVlan_Config_TrunkVlans_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigInterfaces_Interfaces_Interface_Ethernet_SwitchedVlan_Config_TrunkVlans_Union ensures that OpenconfigInterfaces_Interfaces_Interface_Ethernet_SwitchedVlan_Config_TrunkVlans_Union_String
@@ -1130,7 +732,7 @@ func (*OpenconfigInterfaces_Interfaces_Interface_Ethernet_SwitchedVlan_Config_Tr
 // OpenconfigInterfaces_Interfaces_Interface_Ethernet_SwitchedVlan_Config_TrunkVlans_Union_Uint16 is used when /openconfig-interfaces/interfaces/interface/ethernet/switched-vlan/config/trunk-vlans
 // is to be set to a uint16 value.
 type OpenconfigInterfaces_Interfaces_Interface_Ethernet_SwitchedVlan_Config_TrunkVlans_Union_Uint16 struct {
-	Uint16	uint16
+	Uint16 uint16
 }
 
 // Is_OpenconfigInterfaces_Interfaces_Interface_Ethernet_SwitchedVlan_Config_TrunkVlans_Union ensures that OpenconfigInterfaces_Interfaces_Interface_Ethernet_SwitchedVlan_Config_TrunkVlans_Union_Uint16
@@ -1151,7 +753,6 @@ func (t *OpenconfigInterfaces_Interfaces_Interface_Ethernet_SwitchedVlan_Config)
 	}
 }
 
-
 // OpenconfigInterfaces_Interfaces_Interface_Ethernet_SwitchedVlan_State_TrunkVlans_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-interfaces/interfaces/interface/ethernet/switched-vlan/state/trunk-vlans within the YANG schema.
 type OpenconfigInterfaces_Interfaces_Interface_Ethernet_SwitchedVlan_State_TrunkVlans_Union interface {
@@ -1161,7 +762,7 @@ type OpenconfigInterfaces_Interfaces_Interface_Ethernet_SwitchedVlan_State_Trunk
 // OpenconfigInterfaces_Interfaces_Interface_Ethernet_SwitchedVlan_State_TrunkVlans_Union_String is used when /openconfig-interfaces/interfaces/interface/ethernet/switched-vlan/state/trunk-vlans
 // is to be set to a string value.
 type OpenconfigInterfaces_Interfaces_Interface_Ethernet_SwitchedVlan_State_TrunkVlans_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigInterfaces_Interfaces_Interface_Ethernet_SwitchedVlan_State_TrunkVlans_Union ensures that OpenconfigInterfaces_Interfaces_Interface_Ethernet_SwitchedVlan_State_TrunkVlans_Union_String
@@ -1171,7 +772,7 @@ func (*OpenconfigInterfaces_Interfaces_Interface_Ethernet_SwitchedVlan_State_Tru
 // OpenconfigInterfaces_Interfaces_Interface_Ethernet_SwitchedVlan_State_TrunkVlans_Union_Uint16 is used when /openconfig-interfaces/interfaces/interface/ethernet/switched-vlan/state/trunk-vlans
 // is to be set to a uint16 value.
 type OpenconfigInterfaces_Interfaces_Interface_Ethernet_SwitchedVlan_State_TrunkVlans_Union_Uint16 struct {
-	Uint16	uint16
+	Uint16 uint16
 }
 
 // Is_OpenconfigInterfaces_Interfaces_Interface_Ethernet_SwitchedVlan_State_TrunkVlans_Union ensures that OpenconfigInterfaces_Interfaces_Interface_Ethernet_SwitchedVlan_State_TrunkVlans_Union_Uint16
@@ -1192,11 +793,6 @@ func (t *OpenconfigInterfaces_Interfaces_Interface_Ethernet_SwitchedVlan_State) 
 	}
 }
 
-
-
-
-
-
 // OpenconfigInterfaces_Interfaces_Interface_RoutedVlan_Config_Vlan_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-interfaces/interfaces/interface/routed-vlan/config/vlan within the YANG schema.
 type OpenconfigInterfaces_Interfaces_Interface_RoutedVlan_Config_Vlan_Union interface {
@@ -1206,7 +802,7 @@ type OpenconfigInterfaces_Interfaces_Interface_RoutedVlan_Config_Vlan_Union inte
 // OpenconfigInterfaces_Interfaces_Interface_RoutedVlan_Config_Vlan_Union_String is used when /openconfig-interfaces/interfaces/interface/routed-vlan/config/vlan
 // is to be set to a string value.
 type OpenconfigInterfaces_Interfaces_Interface_RoutedVlan_Config_Vlan_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigInterfaces_Interfaces_Interface_RoutedVlan_Config_Vlan_Union ensures that OpenconfigInterfaces_Interfaces_Interface_RoutedVlan_Config_Vlan_Union_String
@@ -1216,7 +812,7 @@ func (*OpenconfigInterfaces_Interfaces_Interface_RoutedVlan_Config_Vlan_Union_St
 // OpenconfigInterfaces_Interfaces_Interface_RoutedVlan_Config_Vlan_Union_Uint16 is used when /openconfig-interfaces/interfaces/interface/routed-vlan/config/vlan
 // is to be set to a uint16 value.
 type OpenconfigInterfaces_Interfaces_Interface_RoutedVlan_Config_Vlan_Union_Uint16 struct {
-	Uint16	uint16
+	Uint16 uint16
 }
 
 // Is_OpenconfigInterfaces_Interfaces_Interface_RoutedVlan_Config_Vlan_Union ensures that OpenconfigInterfaces_Interfaces_Interface_RoutedVlan_Config_Vlan_Union_Uint16
@@ -1237,7 +833,6 @@ func (t *OpenconfigInterfaces_Interfaces_Interface_RoutedVlan_Config) To_Opencon
 	}
 }
 
-
 // OpenconfigInterfaces_Interfaces_Interface_RoutedVlan_State_Vlan_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-interfaces/interfaces/interface/routed-vlan/state/vlan within the YANG schema.
 type OpenconfigInterfaces_Interfaces_Interface_RoutedVlan_State_Vlan_Union interface {
@@ -1247,7 +842,7 @@ type OpenconfigInterfaces_Interfaces_Interface_RoutedVlan_State_Vlan_Union inter
 // OpenconfigInterfaces_Interfaces_Interface_RoutedVlan_State_Vlan_Union_String is used when /openconfig-interfaces/interfaces/interface/routed-vlan/state/vlan
 // is to be set to a string value.
 type OpenconfigInterfaces_Interfaces_Interface_RoutedVlan_State_Vlan_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigInterfaces_Interfaces_Interface_RoutedVlan_State_Vlan_Union ensures that OpenconfigInterfaces_Interfaces_Interface_RoutedVlan_State_Vlan_Union_String
@@ -1257,7 +852,7 @@ func (*OpenconfigInterfaces_Interfaces_Interface_RoutedVlan_State_Vlan_Union_Str
 // OpenconfigInterfaces_Interfaces_Interface_RoutedVlan_State_Vlan_Union_Uint16 is used when /openconfig-interfaces/interfaces/interface/routed-vlan/state/vlan
 // is to be set to a uint16 value.
 type OpenconfigInterfaces_Interfaces_Interface_RoutedVlan_State_Vlan_Union_Uint16 struct {
-	Uint16	uint16
+	Uint16 uint16
 }
 
 // Is_OpenconfigInterfaces_Interfaces_Interface_RoutedVlan_State_Vlan_Union ensures that OpenconfigInterfaces_Interfaces_Interface_RoutedVlan_State_Vlan_Union_Uint16
@@ -1278,15 +873,6 @@ func (t *OpenconfigInterfaces_Interfaces_Interface_RoutedVlan_State) To_Openconf
 	}
 }
 
-
-
-
-
-
-
-
-
-
 // OpenconfigInterfaces_Interfaces_Interface_Subinterfaces_Subinterface_Vlan_Config_VlanId_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-interfaces/interfaces/interface/subinterfaces/subinterface/vlan/config/vlan-id within the YANG schema.
 type OpenconfigInterfaces_Interfaces_Interface_Subinterfaces_Subinterface_Vlan_Config_VlanId_Union interface {
@@ -1296,7 +882,7 @@ type OpenconfigInterfaces_Interfaces_Interface_Subinterfaces_Subinterface_Vlan_C
 // OpenconfigInterfaces_Interfaces_Interface_Subinterfaces_Subinterface_Vlan_Config_VlanId_Union_String is used when /openconfig-interfaces/interfaces/interface/subinterfaces/subinterface/vlan/config/vlan-id
 // is to be set to a string value.
 type OpenconfigInterfaces_Interfaces_Interface_Subinterfaces_Subinterface_Vlan_Config_VlanId_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigInterfaces_Interfaces_Interface_Subinterfaces_Subinterface_Vlan_Config_VlanId_Union ensures that OpenconfigInterfaces_Interfaces_Interface_Subinterfaces_Subinterface_Vlan_Config_VlanId_Union_String
@@ -1306,7 +892,7 @@ func (*OpenconfigInterfaces_Interfaces_Interface_Subinterfaces_Subinterface_Vlan
 // OpenconfigInterfaces_Interfaces_Interface_Subinterfaces_Subinterface_Vlan_Config_VlanId_Union_Uint16 is used when /openconfig-interfaces/interfaces/interface/subinterfaces/subinterface/vlan/config/vlan-id
 // is to be set to a uint16 value.
 type OpenconfigInterfaces_Interfaces_Interface_Subinterfaces_Subinterface_Vlan_Config_VlanId_Union_Uint16 struct {
-	Uint16	uint16
+	Uint16 uint16
 }
 
 // Is_OpenconfigInterfaces_Interfaces_Interface_Subinterfaces_Subinterface_Vlan_Config_VlanId_Union ensures that OpenconfigInterfaces_Interfaces_Interface_Subinterfaces_Subinterface_Vlan_Config_VlanId_Union_Uint16
@@ -1327,7 +913,6 @@ func (t *OpenconfigInterfaces_Interfaces_Interface_Subinterfaces_Subinterface_Vl
 	}
 }
 
-
 // OpenconfigInterfaces_Interfaces_Interface_Subinterfaces_Subinterface_Vlan_State_VlanId_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-interfaces/interfaces/interface/subinterfaces/subinterface/vlan/state/vlan-id within the YANG schema.
 type OpenconfigInterfaces_Interfaces_Interface_Subinterfaces_Subinterface_Vlan_State_VlanId_Union interface {
@@ -1337,7 +922,7 @@ type OpenconfigInterfaces_Interfaces_Interface_Subinterfaces_Subinterface_Vlan_S
 // OpenconfigInterfaces_Interfaces_Interface_Subinterfaces_Subinterface_Vlan_State_VlanId_Union_String is used when /openconfig-interfaces/interfaces/interface/subinterfaces/subinterface/vlan/state/vlan-id
 // is to be set to a string value.
 type OpenconfigInterfaces_Interfaces_Interface_Subinterfaces_Subinterface_Vlan_State_VlanId_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigInterfaces_Interfaces_Interface_Subinterfaces_Subinterface_Vlan_State_VlanId_Union ensures that OpenconfigInterfaces_Interfaces_Interface_Subinterfaces_Subinterface_Vlan_State_VlanId_Union_String
@@ -1347,7 +932,7 @@ func (*OpenconfigInterfaces_Interfaces_Interface_Subinterfaces_Subinterface_Vlan
 // OpenconfigInterfaces_Interfaces_Interface_Subinterfaces_Subinterface_Vlan_State_VlanId_Union_Uint16 is used when /openconfig-interfaces/interfaces/interface/subinterfaces/subinterface/vlan/state/vlan-id
 // is to be set to a uint16 value.
 type OpenconfigInterfaces_Interfaces_Interface_Subinterfaces_Subinterface_Vlan_State_VlanId_Union_Uint16 struct {
-	Uint16	uint16
+	Uint16 uint16
 }
 
 // Is_OpenconfigInterfaces_Interfaces_Interface_Subinterfaces_Subinterface_Vlan_State_VlanId_Union ensures that OpenconfigInterfaces_Interfaces_Interface_Subinterfaces_Subinterface_Vlan_State_VlanId_Union_Uint16
@@ -1368,32 +953,6 @@ func (t *OpenconfigInterfaces_Interfaces_Interface_Subinterfaces_Subinterface_Vl
 	}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // OpenconfigLocalRouting_LocalRoutes_LocalAggregates_Aggregate_Config_SetTag_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-local-routing/local-routes/local-aggregates/aggregate/config/set-tag within the YANG schema.
 type OpenconfigLocalRouting_LocalRoutes_LocalAggregates_Aggregate_Config_SetTag_Union interface {
@@ -1403,7 +962,7 @@ type OpenconfigLocalRouting_LocalRoutes_LocalAggregates_Aggregate_Config_SetTag_
 // OpenconfigLocalRouting_LocalRoutes_LocalAggregates_Aggregate_Config_SetTag_Union_String is used when /openconfig-local-routing/local-routes/local-aggregates/aggregate/config/set-tag
 // is to be set to a string value.
 type OpenconfigLocalRouting_LocalRoutes_LocalAggregates_Aggregate_Config_SetTag_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigLocalRouting_LocalRoutes_LocalAggregates_Aggregate_Config_SetTag_Union ensures that OpenconfigLocalRouting_LocalRoutes_LocalAggregates_Aggregate_Config_SetTag_Union_String
@@ -1413,7 +972,7 @@ func (*OpenconfigLocalRouting_LocalRoutes_LocalAggregates_Aggregate_Config_SetTa
 // OpenconfigLocalRouting_LocalRoutes_LocalAggregates_Aggregate_Config_SetTag_Union_Uint32 is used when /openconfig-local-routing/local-routes/local-aggregates/aggregate/config/set-tag
 // is to be set to a uint32 value.
 type OpenconfigLocalRouting_LocalRoutes_LocalAggregates_Aggregate_Config_SetTag_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigLocalRouting_LocalRoutes_LocalAggregates_Aggregate_Config_SetTag_Union ensures that OpenconfigLocalRouting_LocalRoutes_LocalAggregates_Aggregate_Config_SetTag_Union_Uint32
@@ -1434,7 +993,6 @@ func (t *OpenconfigLocalRouting_LocalRoutes_LocalAggregates_Aggregate_Config) To
 	}
 }
 
-
 // OpenconfigLocalRouting_LocalRoutes_LocalAggregates_Aggregate_State_SetTag_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-local-routing/local-routes/local-aggregates/aggregate/state/set-tag within the YANG schema.
 type OpenconfigLocalRouting_LocalRoutes_LocalAggregates_Aggregate_State_SetTag_Union interface {
@@ -1444,7 +1002,7 @@ type OpenconfigLocalRouting_LocalRoutes_LocalAggregates_Aggregate_State_SetTag_U
 // OpenconfigLocalRouting_LocalRoutes_LocalAggregates_Aggregate_State_SetTag_Union_String is used when /openconfig-local-routing/local-routes/local-aggregates/aggregate/state/set-tag
 // is to be set to a string value.
 type OpenconfigLocalRouting_LocalRoutes_LocalAggregates_Aggregate_State_SetTag_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigLocalRouting_LocalRoutes_LocalAggregates_Aggregate_State_SetTag_Union ensures that OpenconfigLocalRouting_LocalRoutes_LocalAggregates_Aggregate_State_SetTag_Union_String
@@ -1454,7 +1012,7 @@ func (*OpenconfigLocalRouting_LocalRoutes_LocalAggregates_Aggregate_State_SetTag
 // OpenconfigLocalRouting_LocalRoutes_LocalAggregates_Aggregate_State_SetTag_Union_Uint32 is used when /openconfig-local-routing/local-routes/local-aggregates/aggregate/state/set-tag
 // is to be set to a uint32 value.
 type OpenconfigLocalRouting_LocalRoutes_LocalAggregates_Aggregate_State_SetTag_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigLocalRouting_LocalRoutes_LocalAggregates_Aggregate_State_SetTag_Union ensures that OpenconfigLocalRouting_LocalRoutes_LocalAggregates_Aggregate_State_SetTag_Union_Uint32
@@ -1475,10 +1033,6 @@ func (t *OpenconfigLocalRouting_LocalRoutes_LocalAggregates_Aggregate_State) To_
 	}
 }
 
-
-
-
-
 // OpenconfigLocalRouting_LocalRoutes_StaticRoutes_Static_Config_SetTag_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-local-routing/local-routes/static-routes/static/config/set-tag within the YANG schema.
 type OpenconfigLocalRouting_LocalRoutes_StaticRoutes_Static_Config_SetTag_Union interface {
@@ -1488,7 +1042,7 @@ type OpenconfigLocalRouting_LocalRoutes_StaticRoutes_Static_Config_SetTag_Union 
 // OpenconfigLocalRouting_LocalRoutes_StaticRoutes_Static_Config_SetTag_Union_String is used when /openconfig-local-routing/local-routes/static-routes/static/config/set-tag
 // is to be set to a string value.
 type OpenconfigLocalRouting_LocalRoutes_StaticRoutes_Static_Config_SetTag_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigLocalRouting_LocalRoutes_StaticRoutes_Static_Config_SetTag_Union ensures that OpenconfigLocalRouting_LocalRoutes_StaticRoutes_Static_Config_SetTag_Union_String
@@ -1498,7 +1052,7 @@ func (*OpenconfigLocalRouting_LocalRoutes_StaticRoutes_Static_Config_SetTag_Unio
 // OpenconfigLocalRouting_LocalRoutes_StaticRoutes_Static_Config_SetTag_Union_Uint32 is used when /openconfig-local-routing/local-routes/static-routes/static/config/set-tag
 // is to be set to a uint32 value.
 type OpenconfigLocalRouting_LocalRoutes_StaticRoutes_Static_Config_SetTag_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigLocalRouting_LocalRoutes_StaticRoutes_Static_Config_SetTag_Union ensures that OpenconfigLocalRouting_LocalRoutes_StaticRoutes_Static_Config_SetTag_Union_Uint32
@@ -1519,9 +1073,6 @@ func (t *OpenconfigLocalRouting_LocalRoutes_StaticRoutes_Static_Config) To_Openc
 	}
 }
 
-
-
-
 // OpenconfigLocalRouting_LocalRoutes_StaticRoutes_Static_NextHops_NextHop_Config_NextHop_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-local-routing/local-routes/static-routes/static/next-hops/next-hop/config/next-hop within the YANG schema.
 type OpenconfigLocalRouting_LocalRoutes_StaticRoutes_Static_NextHops_NextHop_Config_NextHop_Union interface {
@@ -1531,7 +1082,7 @@ type OpenconfigLocalRouting_LocalRoutes_StaticRoutes_Static_NextHops_NextHop_Con
 // OpenconfigLocalRouting_LocalRoutes_StaticRoutes_Static_NextHops_NextHop_Config_NextHop_Union_E_OpenconfigLocalRouting_LOCAL_DEFINED_NEXT_HOP is used when /openconfig-local-routing/local-routes/static-routes/static/next-hops/next-hop/config/next-hop
 // is to be set to a E_OpenconfigLocalRouting_LOCAL_DEFINED_NEXT_HOP value.
 type OpenconfigLocalRouting_LocalRoutes_StaticRoutes_Static_NextHops_NextHop_Config_NextHop_Union_E_OpenconfigLocalRouting_LOCAL_DEFINED_NEXT_HOP struct {
-	E_OpenconfigLocalRouting_LOCAL_DEFINED_NEXT_HOP	E_OpenconfigLocalRouting_LOCAL_DEFINED_NEXT_HOP
+	E_OpenconfigLocalRouting_LOCAL_DEFINED_NEXT_HOP E_OpenconfigLocalRouting_LOCAL_DEFINED_NEXT_HOP
 }
 
 // Is_OpenconfigLocalRouting_LocalRoutes_StaticRoutes_Static_NextHops_NextHop_Config_NextHop_Union ensures that OpenconfigLocalRouting_LocalRoutes_StaticRoutes_Static_NextHops_NextHop_Config_NextHop_Union_E_OpenconfigLocalRouting_LOCAL_DEFINED_NEXT_HOP
@@ -1541,7 +1092,7 @@ func (*OpenconfigLocalRouting_LocalRoutes_StaticRoutes_Static_NextHops_NextHop_C
 // OpenconfigLocalRouting_LocalRoutes_StaticRoutes_Static_NextHops_NextHop_Config_NextHop_Union_String is used when /openconfig-local-routing/local-routes/static-routes/static/next-hops/next-hop/config/next-hop
 // is to be set to a string value.
 type OpenconfigLocalRouting_LocalRoutes_StaticRoutes_Static_NextHops_NextHop_Config_NextHop_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigLocalRouting_LocalRoutes_StaticRoutes_Static_NextHops_NextHop_Config_NextHop_Union ensures that OpenconfigLocalRouting_LocalRoutes_StaticRoutes_Static_NextHops_NextHop_Config_NextHop_Union_String
@@ -1562,10 +1113,6 @@ func (t *OpenconfigLocalRouting_LocalRoutes_StaticRoutes_Static_NextHops_NextHop
 	}
 }
 
-
-
-
-
 // OpenconfigLocalRouting_LocalRoutes_StaticRoutes_Static_NextHops_NextHop_State_NextHop_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-local-routing/local-routes/static-routes/static/next-hops/next-hop/state/next-hop within the YANG schema.
 type OpenconfigLocalRouting_LocalRoutes_StaticRoutes_Static_NextHops_NextHop_State_NextHop_Union interface {
@@ -1575,7 +1122,7 @@ type OpenconfigLocalRouting_LocalRoutes_StaticRoutes_Static_NextHops_NextHop_Sta
 // OpenconfigLocalRouting_LocalRoutes_StaticRoutes_Static_NextHops_NextHop_State_NextHop_Union_E_OpenconfigLocalRouting_LOCAL_DEFINED_NEXT_HOP is used when /openconfig-local-routing/local-routes/static-routes/static/next-hops/next-hop/state/next-hop
 // is to be set to a E_OpenconfigLocalRouting_LOCAL_DEFINED_NEXT_HOP value.
 type OpenconfigLocalRouting_LocalRoutes_StaticRoutes_Static_NextHops_NextHop_State_NextHop_Union_E_OpenconfigLocalRouting_LOCAL_DEFINED_NEXT_HOP struct {
-	E_OpenconfigLocalRouting_LOCAL_DEFINED_NEXT_HOP	E_OpenconfigLocalRouting_LOCAL_DEFINED_NEXT_HOP
+	E_OpenconfigLocalRouting_LOCAL_DEFINED_NEXT_HOP E_OpenconfigLocalRouting_LOCAL_DEFINED_NEXT_HOP
 }
 
 // Is_OpenconfigLocalRouting_LocalRoutes_StaticRoutes_Static_NextHops_NextHop_State_NextHop_Union ensures that OpenconfigLocalRouting_LocalRoutes_StaticRoutes_Static_NextHops_NextHop_State_NextHop_Union_E_OpenconfigLocalRouting_LOCAL_DEFINED_NEXT_HOP
@@ -1585,7 +1132,7 @@ func (*OpenconfigLocalRouting_LocalRoutes_StaticRoutes_Static_NextHops_NextHop_S
 // OpenconfigLocalRouting_LocalRoutes_StaticRoutes_Static_NextHops_NextHop_State_NextHop_Union_String is used when /openconfig-local-routing/local-routes/static-routes/static/next-hops/next-hop/state/next-hop
 // is to be set to a string value.
 type OpenconfigLocalRouting_LocalRoutes_StaticRoutes_Static_NextHops_NextHop_State_NextHop_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigLocalRouting_LocalRoutes_StaticRoutes_Static_NextHops_NextHop_State_NextHop_Union ensures that OpenconfigLocalRouting_LocalRoutes_StaticRoutes_Static_NextHops_NextHop_State_NextHop_Union_String
@@ -1606,7 +1153,6 @@ func (t *OpenconfigLocalRouting_LocalRoutes_StaticRoutes_Static_NextHops_NextHop
 	}
 }
 
-
 // OpenconfigLocalRouting_LocalRoutes_StaticRoutes_Static_State_SetTag_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-local-routing/local-routes/static-routes/static/state/set-tag within the YANG schema.
 type OpenconfigLocalRouting_LocalRoutes_StaticRoutes_Static_State_SetTag_Union interface {
@@ -1616,7 +1162,7 @@ type OpenconfigLocalRouting_LocalRoutes_StaticRoutes_Static_State_SetTag_Union i
 // OpenconfigLocalRouting_LocalRoutes_StaticRoutes_Static_State_SetTag_Union_String is used when /openconfig-local-routing/local-routes/static-routes/static/state/set-tag
 // is to be set to a string value.
 type OpenconfigLocalRouting_LocalRoutes_StaticRoutes_Static_State_SetTag_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigLocalRouting_LocalRoutes_StaticRoutes_Static_State_SetTag_Union ensures that OpenconfigLocalRouting_LocalRoutes_StaticRoutes_Static_State_SetTag_Union_String
@@ -1626,7 +1172,7 @@ func (*OpenconfigLocalRouting_LocalRoutes_StaticRoutes_Static_State_SetTag_Union
 // OpenconfigLocalRouting_LocalRoutes_StaticRoutes_Static_State_SetTag_Union_Uint32 is used when /openconfig-local-routing/local-routes/static-routes/static/state/set-tag
 // is to be set to a uint32 value.
 type OpenconfigLocalRouting_LocalRoutes_StaticRoutes_Static_State_SetTag_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigLocalRouting_LocalRoutes_StaticRoutes_Static_State_SetTag_Union ensures that OpenconfigLocalRouting_LocalRoutes_StaticRoutes_Static_State_SetTag_Union_Uint32
@@ -1647,19 +1193,6 @@ func (t *OpenconfigLocalRouting_LocalRoutes_StaticRoutes_Static_State) To_Openco
 	}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 // OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-mpls/mpls/global/reserved-label-blocks/reserved-label-block/config/lower-bound within the YANG schema.
 type OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound_Union interface {
@@ -1669,7 +1202,7 @@ type OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_Lo
 // OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound_Union_E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound is used when /openconfig-mpls/mpls/global/reserved-label-blocks/reserved-label-block/config/lower-bound
 // is to be set to a E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound value.
 type OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound_Union_E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound struct {
-	E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound	E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound
+	E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound
 }
 
 // Is_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound_Union ensures that OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound_Union_E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound
@@ -1679,7 +1212,7 @@ func (*OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_
 // OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound_Union_Uint32 is used when /openconfig-mpls/mpls/global/reserved-label-blocks/reserved-label-block/config/lower-bound
 // is to be set to a uint32 value.
 type OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound_Union ensures that OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound_Union_Uint32
@@ -1709,7 +1242,7 @@ type OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_Up
 // OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound_Union_E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound is used when /openconfig-mpls/mpls/global/reserved-label-blocks/reserved-label-block/config/upper-bound
 // is to be set to a E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound value.
 type OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound_Union_E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound struct {
-	E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound	E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound
+	E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound
 }
 
 // Is_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound_Union ensures that OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound_Union_E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound
@@ -1719,7 +1252,7 @@ func (*OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_
 // OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound_Union_Uint32 is used when /openconfig-mpls/mpls/global/reserved-label-blocks/reserved-label-block/config/upper-bound
 // is to be set to a uint32 value.
 type OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound_Union ensures that OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound_Union_Uint32
@@ -1740,7 +1273,6 @@ func (t *OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Confi
 	}
 }
 
-
 // OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_State_LowerBound_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-mpls/mpls/global/reserved-label-blocks/reserved-label-block/state/lower-bound within the YANG schema.
 type OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_State_LowerBound_Union interface {
@@ -1750,7 +1282,7 @@ type OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_State_Low
 // OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_State_LowerBound_Union_E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound is used when /openconfig-mpls/mpls/global/reserved-label-blocks/reserved-label-block/state/lower-bound
 // is to be set to a E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound value.
 type OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_State_LowerBound_Union_E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound struct {
-	E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound	E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound
+	E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound
 }
 
 // Is_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_State_LowerBound_Union ensures that OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_State_LowerBound_Union_E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound
@@ -1760,7 +1292,7 @@ func (*OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_State_L
 // OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_State_LowerBound_Union_Uint32 is used when /openconfig-mpls/mpls/global/reserved-label-blocks/reserved-label-block/state/lower-bound
 // is to be set to a uint32 value.
 type OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_State_LowerBound_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_State_LowerBound_Union ensures that OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_State_LowerBound_Union_Uint32
@@ -1790,7 +1322,7 @@ type OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_State_Upp
 // OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_State_UpperBound_Union_E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound is used when /openconfig-mpls/mpls/global/reserved-label-blocks/reserved-label-block/state/upper-bound
 // is to be set to a E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound value.
 type OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_State_UpperBound_Union_E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound struct {
-	E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound	E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound
+	E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound
 }
 
 // Is_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_State_UpperBound_Union ensures that OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_State_UpperBound_Union_E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound
@@ -1800,7 +1332,7 @@ func (*OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_State_U
 // OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_State_UpperBound_Union_Uint32 is used when /openconfig-mpls/mpls/global/reserved-label-blocks/reserved-label-block/state/upper-bound
 // is to be set to a uint32 value.
 type OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_State_UpperBound_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_State_UpperBound_Union ensures that OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_State_UpperBound_Union_Uint32
@@ -1821,60 +1353,6 @@ func (t *OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_State
 	}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-mpls/mpls/lsps/static-lsps/static-lsp/egress/config/incoming-label within the YANG schema.
 type OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel_Union interface {
@@ -1884,7 +1362,7 @@ type OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel_U
 // OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel is used when /openconfig-mpls/mpls/lsps/static-lsps/static-lsp/egress/config/incoming-label
 // is to be set to a E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel value.
 type OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel struct {
-	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel
+	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel
 }
 
 // Is_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel_Union ensures that OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel
@@ -1894,7 +1372,7 @@ func (*OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel
 // OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel_Union_Uint32 is used when /openconfig-mpls/mpls/lsps/static-lsps/static-lsp/egress/config/incoming-label
 // is to be set to a uint32 value.
 type OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel_Union ensures that OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel_Union_Uint32
@@ -1924,7 +1402,7 @@ type OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel_Union
 // OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel is used when /openconfig-mpls/mpls/lsps/static-lsps/static-lsp/egress/config/push-label
 // is to be set to a E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel value.
 type OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel struct {
-	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel
+	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel
 }
 
 // Is_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel_Union ensures that OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel
@@ -1934,7 +1412,7 @@ func (*OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel_Uni
 // OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel_Union_Uint32 is used when /openconfig-mpls/mpls/lsps/static-lsps/static-lsp/egress/config/push-label
 // is to be set to a uint32 value.
 type OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel_Union ensures that OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel_Union_Uint32
@@ -1955,7 +1433,6 @@ func (t *OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config) To_Opencon
 	}
 }
 
-
 // OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_State_IncomingLabel_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-mpls/mpls/lsps/static-lsps/static-lsp/egress/state/incoming-label within the YANG schema.
 type OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_State_IncomingLabel_Union interface {
@@ -1965,7 +1442,7 @@ type OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_State_IncomingLabel_Un
 // OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_State_IncomingLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel is used when /openconfig-mpls/mpls/lsps/static-lsps/static-lsp/egress/state/incoming-label
 // is to be set to a E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel value.
 type OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_State_IncomingLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel struct {
-	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel
+	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel
 }
 
 // Is_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_State_IncomingLabel_Union ensures that OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_State_IncomingLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel
@@ -1975,7 +1452,7 @@ func (*OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_State_IncomingLabel_
 // OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_State_IncomingLabel_Union_Uint32 is used when /openconfig-mpls/mpls/lsps/static-lsps/static-lsp/egress/state/incoming-label
 // is to be set to a uint32 value.
 type OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_State_IncomingLabel_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_State_IncomingLabel_Union ensures that OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_State_IncomingLabel_Union_Uint32
@@ -2005,7 +1482,7 @@ type OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_State_PushLabel_Union 
 // OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_State_PushLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel is used when /openconfig-mpls/mpls/lsps/static-lsps/static-lsp/egress/state/push-label
 // is to be set to a E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel value.
 type OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_State_PushLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel struct {
-	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel
+	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel
 }
 
 // Is_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_State_PushLabel_Union ensures that OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_State_PushLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel
@@ -2015,7 +1492,7 @@ func (*OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_State_PushLabel_Unio
 // OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_State_PushLabel_Union_Uint32 is used when /openconfig-mpls/mpls/lsps/static-lsps/static-lsp/egress/state/push-label
 // is to be set to a uint32 value.
 type OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_State_PushLabel_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_State_PushLabel_Union ensures that OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_State_PushLabel_Union_Uint32
@@ -2036,8 +1513,6 @@ func (t *OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_State) To_Openconf
 	}
 }
 
-
-
 // OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_Config_IncomingLabel_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-mpls/mpls/lsps/static-lsps/static-lsp/ingress/config/incoming-label within the YANG schema.
 type OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_Config_IncomingLabel_Union interface {
@@ -2047,7 +1522,7 @@ type OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_Config_IncomingLabel_
 // OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_Config_IncomingLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel is used when /openconfig-mpls/mpls/lsps/static-lsps/static-lsp/ingress/config/incoming-label
 // is to be set to a E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel value.
 type OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_Config_IncomingLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel struct {
-	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel
+	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel
 }
 
 // Is_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_Config_IncomingLabel_Union ensures that OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_Config_IncomingLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel
@@ -2057,7 +1532,7 @@ func (*OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_Config_IncomingLabe
 // OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_Config_IncomingLabel_Union_Uint32 is used when /openconfig-mpls/mpls/lsps/static-lsps/static-lsp/ingress/config/incoming-label
 // is to be set to a uint32 value.
 type OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_Config_IncomingLabel_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_Config_IncomingLabel_Union ensures that OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_Config_IncomingLabel_Union_Uint32
@@ -2087,7 +1562,7 @@ type OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_Config_PushLabel_Unio
 // OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_Config_PushLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel is used when /openconfig-mpls/mpls/lsps/static-lsps/static-lsp/ingress/config/push-label
 // is to be set to a E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel value.
 type OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_Config_PushLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel struct {
-	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel
+	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel
 }
 
 // Is_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_Config_PushLabel_Union ensures that OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_Config_PushLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel
@@ -2097,7 +1572,7 @@ func (*OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_Config_PushLabel_Un
 // OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_Config_PushLabel_Union_Uint32 is used when /openconfig-mpls/mpls/lsps/static-lsps/static-lsp/ingress/config/push-label
 // is to be set to a uint32 value.
 type OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_Config_PushLabel_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_Config_PushLabel_Union ensures that OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_Config_PushLabel_Union_Uint32
@@ -2118,7 +1593,6 @@ func (t *OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_Config) To_Openco
 	}
 }
 
-
 // OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_State_IncomingLabel_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-mpls/mpls/lsps/static-lsps/static-lsp/ingress/state/incoming-label within the YANG schema.
 type OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_State_IncomingLabel_Union interface {
@@ -2128,7 +1602,7 @@ type OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_State_IncomingLabel_U
 // OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_State_IncomingLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel is used when /openconfig-mpls/mpls/lsps/static-lsps/static-lsp/ingress/state/incoming-label
 // is to be set to a E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel value.
 type OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_State_IncomingLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel struct {
-	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel
+	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel
 }
 
 // Is_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_State_IncomingLabel_Union ensures that OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_State_IncomingLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel
@@ -2138,7 +1612,7 @@ func (*OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_State_IncomingLabel
 // OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_State_IncomingLabel_Union_Uint32 is used when /openconfig-mpls/mpls/lsps/static-lsps/static-lsp/ingress/state/incoming-label
 // is to be set to a uint32 value.
 type OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_State_IncomingLabel_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_State_IncomingLabel_Union ensures that OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_State_IncomingLabel_Union_Uint32
@@ -2168,7 +1642,7 @@ type OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_State_PushLabel_Union
 // OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_State_PushLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel is used when /openconfig-mpls/mpls/lsps/static-lsps/static-lsp/ingress/state/push-label
 // is to be set to a E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel value.
 type OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_State_PushLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel struct {
-	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel
+	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel
 }
 
 // Is_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_State_PushLabel_Union ensures that OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_State_PushLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel
@@ -2178,7 +1652,7 @@ func (*OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_State_PushLabel_Uni
 // OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_State_PushLabel_Union_Uint32 is used when /openconfig-mpls/mpls/lsps/static-lsps/static-lsp/ingress/state/push-label
 // is to be set to a uint32 value.
 type OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_State_PushLabel_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_State_PushLabel_Union ensures that OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_State_PushLabel_Union_Uint32
@@ -2199,9 +1673,6 @@ func (t *OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_State) To_Opencon
 	}
 }
 
-
-
-
 // OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Transit_Config_IncomingLabel_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-mpls/mpls/lsps/static-lsps/static-lsp/transit/config/incoming-label within the YANG schema.
 type OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Transit_Config_IncomingLabel_Union interface {
@@ -2211,7 +1682,7 @@ type OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Transit_Config_IncomingLabel_
 // OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Transit_Config_IncomingLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel is used when /openconfig-mpls/mpls/lsps/static-lsps/static-lsp/transit/config/incoming-label
 // is to be set to a E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel value.
 type OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Transit_Config_IncomingLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel struct {
-	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel
+	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel
 }
 
 // Is_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Transit_Config_IncomingLabel_Union ensures that OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Transit_Config_IncomingLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel
@@ -2221,7 +1692,7 @@ func (*OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Transit_Config_IncomingLabe
 // OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Transit_Config_IncomingLabel_Union_Uint32 is used when /openconfig-mpls/mpls/lsps/static-lsps/static-lsp/transit/config/incoming-label
 // is to be set to a uint32 value.
 type OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Transit_Config_IncomingLabel_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Transit_Config_IncomingLabel_Union ensures that OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Transit_Config_IncomingLabel_Union_Uint32
@@ -2251,7 +1722,7 @@ type OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Transit_Config_PushLabel_Unio
 // OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Transit_Config_PushLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel is used when /openconfig-mpls/mpls/lsps/static-lsps/static-lsp/transit/config/push-label
 // is to be set to a E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel value.
 type OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Transit_Config_PushLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel struct {
-	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel
+	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel
 }
 
 // Is_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Transit_Config_PushLabel_Union ensures that OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Transit_Config_PushLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel
@@ -2261,7 +1732,7 @@ func (*OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Transit_Config_PushLabel_Un
 // OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Transit_Config_PushLabel_Union_Uint32 is used when /openconfig-mpls/mpls/lsps/static-lsps/static-lsp/transit/config/push-label
 // is to be set to a uint32 value.
 type OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Transit_Config_PushLabel_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Transit_Config_PushLabel_Union ensures that OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Transit_Config_PushLabel_Union_Uint32
@@ -2282,7 +1753,6 @@ func (t *OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Transit_Config) To_Openco
 	}
 }
 
-
 // OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Transit_State_IncomingLabel_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-mpls/mpls/lsps/static-lsps/static-lsp/transit/state/incoming-label within the YANG schema.
 type OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Transit_State_IncomingLabel_Union interface {
@@ -2292,7 +1762,7 @@ type OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Transit_State_IncomingLabel_U
 // OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Transit_State_IncomingLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel is used when /openconfig-mpls/mpls/lsps/static-lsps/static-lsp/transit/state/incoming-label
 // is to be set to a E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel value.
 type OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Transit_State_IncomingLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel struct {
-	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel
+	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel
 }
 
 // Is_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Transit_State_IncomingLabel_Union ensures that OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Transit_State_IncomingLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel
@@ -2302,7 +1772,7 @@ func (*OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Transit_State_IncomingLabel
 // OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Transit_State_IncomingLabel_Union_Uint32 is used when /openconfig-mpls/mpls/lsps/static-lsps/static-lsp/transit/state/incoming-label
 // is to be set to a uint32 value.
 type OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Transit_State_IncomingLabel_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Transit_State_IncomingLabel_Union ensures that OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Transit_State_IncomingLabel_Union_Uint32
@@ -2332,7 +1802,7 @@ type OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Transit_State_PushLabel_Union
 // OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Transit_State_PushLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel is used when /openconfig-mpls/mpls/lsps/static-lsps/static-lsp/transit/state/push-label
 // is to be set to a E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel value.
 type OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Transit_State_PushLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel struct {
-	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel
+	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel
 }
 
 // Is_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Transit_State_PushLabel_Union ensures that OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Transit_State_PushLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel
@@ -2342,7 +1812,7 @@ func (*OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Transit_State_PushLabel_Uni
 // OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Transit_State_PushLabel_Union_Uint32 is used when /openconfig-mpls/mpls/lsps/static-lsps/static-lsp/transit/state/push-label
 // is to be set to a uint32 value.
 type OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Transit_State_PushLabel_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Transit_State_PushLabel_Union ensures that OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Transit_State_PushLabel_Union_Uint32
@@ -2363,51 +1833,26 @@ func (t *OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Transit_State) To_Opencon
 	}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-mpls/mpls/signaling-protocols/rsvp-te/interface-attributes/interface/bandwidth-reservations/bandwidth-reservation/priority within the YANG schema.
 type OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union interface {
 	Is_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union()
 }
 
-// OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority is used when /openconfig-mpls/mpls/signaling-protocols/rsvp-te/interface-attributes/interface/bandwidth-reservations/bandwidth-reservation/priority
-// is to be set to a E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority value.
-type OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority struct {
-	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority
+// OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority is used when /openconfig-mpls/mpls/signaling-protocols/rsvp-te/interface-attributes/interface/bandwidth-reservations/bandwidth-reservation/priority
+// is to be set to a E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority value.
+type OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority struct {
+	E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority
 }
 
-// Is_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union ensures that OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority
+// Is_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union ensures that OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority
 // implements the OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union interface.
-func (*OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority) Is_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union() {}
+func (*OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority) Is_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union() {}
 
 // OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union_Uint8 is used when /openconfig-mpls/mpls/signaling-protocols/rsvp-te/interface-attributes/interface/bandwidth-reservations/bandwidth-reservation/priority
 // is to be set to a uint8 value.
 type OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union_Uint8 struct {
-	Uint8	uint8
+	Uint8 uint8
 }
 
 // Is_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union ensures that OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union_Uint8
@@ -2419,38 +1864,14 @@ func (*OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interfa
 // cannot be converted to a type within the union.
 func (t *OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation) To_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union(i interface{}) (OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union, error) {
 	switch v := i.(type) {
-	case E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority:
-		return &OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority{v}, nil
+	case E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority:
+		return &OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority{v}, nil
 	case uint8:
 		return &OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union_Uint8{v}, nil
 	default:
-		return nil, fmt.Errorf("cannot convert %v to OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union, unknown union type, got: %T, want any of [E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority, uint8]", i, i)
+		return nil, fmt.Errorf("cannot convert %v to OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union, unknown union type, got: %T, want any of [E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority, uint8]", i, i)
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_RecordRouteObjects_RecordRouteObject_State_ReportedLabel_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-mpls/mpls/signaling-protocols/rsvp-te/sessions/session/record-route-objects/record-route-object/state/reported-label within the YANG schema.
@@ -2461,7 +1882,7 @@ type OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_RecordRouteO
 // OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_RecordRouteObjects_RecordRouteObject_State_ReportedLabel_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_RecordRouteObjects_RecordRouteObject_State_ReportedLabel is used when /openconfig-mpls/mpls/signaling-protocols/rsvp-te/sessions/session/record-route-objects/record-route-object/state/reported-label
 // is to be set to a E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_RecordRouteObjects_RecordRouteObject_State_ReportedLabel value.
 type OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_RecordRouteObjects_RecordRouteObject_State_ReportedLabel_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_RecordRouteObjects_RecordRouteObject_State_ReportedLabel struct {
-	E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_RecordRouteObjects_RecordRouteObject_State_ReportedLabel	E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_RecordRouteObjects_RecordRouteObject_State_ReportedLabel
+	E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_RecordRouteObjects_RecordRouteObject_State_ReportedLabel E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_RecordRouteObjects_RecordRouteObject_State_ReportedLabel
 }
 
 // Is_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_RecordRouteObjects_RecordRouteObject_State_ReportedLabel_Union ensures that OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_RecordRouteObjects_RecordRouteObject_State_ReportedLabel_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_RecordRouteObjects_RecordRouteObject_State_ReportedLabel
@@ -2471,7 +1892,7 @@ func (*OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_RecordRout
 // OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_RecordRouteObjects_RecordRouteObject_State_ReportedLabel_Union_Uint32 is used when /openconfig-mpls/mpls/signaling-protocols/rsvp-te/sessions/session/record-route-objects/record-route-object/state/reported-label
 // is to be set to a uint32 value.
 type OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_RecordRouteObjects_RecordRouteObject_State_ReportedLabel_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_RecordRouteObjects_RecordRouteObject_State_ReportedLabel_Union ensures that OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_RecordRouteObjects_RecordRouteObject_State_ReportedLabel_Union_Uint32
@@ -2492,7 +1913,6 @@ func (t *OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_RecordRo
 	}
 }
 
-
 // OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelIn_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-mpls/mpls/signaling-protocols/rsvp-te/sessions/session/state/label-in within the YANG schema.
 type OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelIn_Union interface {
@@ -2502,7 +1922,7 @@ type OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelI
 // OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelIn_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelIn is used when /openconfig-mpls/mpls/signaling-protocols/rsvp-te/sessions/session/state/label-in
 // is to be set to a E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelIn value.
 type OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelIn_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelIn struct {
-	E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelIn	E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelIn
+	E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelIn E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelIn
 }
 
 // Is_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelIn_Union ensures that OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelIn_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelIn
@@ -2512,7 +1932,7 @@ func (*OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_Labe
 // OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelIn_Union_Uint32 is used when /openconfig-mpls/mpls/signaling-protocols/rsvp-te/sessions/session/state/label-in
 // is to be set to a uint32 value.
 type OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelIn_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelIn_Union ensures that OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelIn_Union_Uint32
@@ -2542,7 +1962,7 @@ type OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelO
 // OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelOut_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelOut is used when /openconfig-mpls/mpls/signaling-protocols/rsvp-te/sessions/session/state/label-out
 // is to be set to a E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelOut value.
 type OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelOut_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelOut struct {
-	E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelOut	E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelOut
+	E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelOut E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelOut
 }
 
 // Is_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelOut_Union ensures that OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelOut_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelOut
@@ -2552,7 +1972,7 @@ func (*OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_Labe
 // OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelOut_Union_Uint32 is used when /openconfig-mpls/mpls/signaling-protocols/rsvp-te/sessions/session/state/label-out
 // is to be set to a uint32 value.
 type OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelOut_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelOut_Union ensures that OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelOut_Union_Uint32
@@ -2573,7 +1993,6 @@ func (t *OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State) T
 	}
 }
 
-
 // OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_SenderTspec_PeakDataRate_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-mpls/mpls/signaling-protocols/rsvp-te/sessions/session/state/sender-tspec/peak-data-rate within the YANG schema.
 type OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_SenderTspec_PeakDataRate_Union interface {
@@ -2583,7 +2002,7 @@ type OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_Sender
 // OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_SenderTspec_PeakDataRate_Union_Binary is used when /openconfig-mpls/mpls/signaling-protocols/rsvp-te/sessions/session/state/sender-tspec/peak-data-rate
 // is to be set to a Binary value.
 type OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_SenderTspec_PeakDataRate_Union_Binary struct {
-	Binary	Binary
+	Binary Binary
 }
 
 // Is_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_SenderTspec_PeakDataRate_Union ensures that OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_SenderTspec_PeakDataRate_Union_Binary
@@ -2593,7 +2012,7 @@ func (*OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_Send
 // OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_SenderTspec_PeakDataRate_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_SenderTspec_PeakDataRate is used when /openconfig-mpls/mpls/signaling-protocols/rsvp-te/sessions/session/state/sender-tspec/peak-data-rate
 // is to be set to a E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_SenderTspec_PeakDataRate value.
 type OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_SenderTspec_PeakDataRate_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_SenderTspec_PeakDataRate struct {
-	E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_SenderTspec_PeakDataRate	E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_SenderTspec_PeakDataRate
+	E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_SenderTspec_PeakDataRate E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_SenderTspec_PeakDataRate
 }
 
 // Is_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_SenderTspec_PeakDataRate_Union ensures that OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_SenderTspec_PeakDataRate_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_SenderTspec_PeakDataRate
@@ -2614,29 +2033,26 @@ func (t *OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_Se
 	}
 }
 
-
-
-
 // OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-mpls/mpls/signaling-protocols/segment-routing/aggregate-sid-counters/aggregate-sid-counter/mpls-label within the YANG schema.
 type OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union interface {
 	Is_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union()
 }
 
-// OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel is used when /openconfig-mpls/mpls/signaling-protocols/segment-routing/aggregate-sid-counters/aggregate-sid-counter/mpls-label
-// is to be set to a E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel value.
-type OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel struct {
-	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel
+// OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel is used when /openconfig-mpls/mpls/signaling-protocols/segment-routing/aggregate-sid-counters/aggregate-sid-counter/mpls-label
+// is to be set to a E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel value.
+type OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel struct {
+	E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel
 }
 
-// Is_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union ensures that OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel
+// Is_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union ensures that OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel
 // implements the OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union interface.
-func (*OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel) Is_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union() {}
+func (*OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel) Is_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union() {}
 
 // OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union_Uint32 is used when /openconfig-mpls/mpls/signaling-protocols/segment-routing/aggregate-sid-counters/aggregate-sid-counter/mpls-label
 // is to be set to a uint32 value.
 type OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union ensures that OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union_Uint32
@@ -2648,23 +2064,14 @@ func (*OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounter
 // cannot be converted to a type within the union.
 func (t *OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter) To_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union(i interface{}) (OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union, error) {
 	switch v := i.(type) {
-	case E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel:
-		return &OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel{v}, nil
+	case E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel:
+		return &OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel{v}, nil
 	case uint32:
 		return &OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union_Uint32{v}, nil
 	default:
-		return nil, fmt.Errorf("cannot convert %v to OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union, unknown union type, got: %T, want any of [E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel, uint32]", i, i)
+		return nil, fmt.Errorf("cannot convert %v to OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union, unknown union type, got: %T, want any of [E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel, uint32]", i, i)
 	}
 }
-
-
-
-
-
-
-
-
-
 
 // OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-mpls/mpls/signaling-protocols/segment-routing/interfaces/interface/sid-counters/sid-counter/mpls-label within the YANG schema.
@@ -2672,20 +2079,20 @@ type OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_
 	Is_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_Union()
 }
 
-// OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel is used when /openconfig-mpls/mpls/signaling-protocols/segment-routing/interfaces/interface/sid-counters/sid-counter/mpls-label
-// is to be set to a E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel value.
-type OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel struct {
-	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel
+// OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel is used when /openconfig-mpls/mpls/signaling-protocols/segment-routing/interfaces/interface/sid-counters/sid-counter/mpls-label
+// is to be set to a E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel value.
+type OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel struct {
+	E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel
 }
 
-// Is_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_Union ensures that OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel
+// Is_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_Union ensures that OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel
 // implements the OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_Union interface.
-func (*OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel) Is_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_Union() {}
+func (*OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel) Is_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_Union() {}
 
 // OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_Union_Uint32 is used when /openconfig-mpls/mpls/signaling-protocols/segment-routing/interfaces/interface/sid-counters/sid-counter/mpls-label
 // is to be set to a uint32 value.
 type OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_Union ensures that OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_Union_Uint32
@@ -2697,58 +2104,14 @@ func (*OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interfac
 // cannot be converted to a type within the union.
 func (t *OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter) To_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_Union(i interface{}) (OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_Union, error) {
 	switch v := i.(type) {
-	case E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel:
-		return &OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel{v}, nil
+	case E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel:
+		return &OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel{v}, nil
 	case uint32:
 		return &OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_Union_Uint32{v}, nil
 	default:
-		return nil, fmt.Errorf("cannot convert %v to OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_Union, unknown union type, got: %T, want any of [E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel, uint32]", i, i)
+		return nil, fmt.Errorf("cannot convert %v to OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_Union, unknown union type, got: %T, want any of [E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel, uint32]", i, i)
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/afts/ethernet/mac-entry/next-hops/next-hop/state/popped-mpls-label-stack within the YANG schema.
@@ -2759,7 +2122,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_Ma
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack is used when /openconfig-network-instance/network-instances/network-instance/afts/ethernet/mac-entry/next-hops/next-hop/state/popped-mpls-label-stack
 // is to be set to a E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack struct {
-	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack
+	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack
@@ -2769,7 +2132,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/afts/ethernet/mac-entry/next-hops/next-hop/state/popped-mpls-label-stack
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack_Union_Uint32
@@ -2799,7 +2162,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_Ma
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack is used when /openconfig-network-instance/network-instances/network-instance/afts/ethernet/mac-entry/next-hops/next-hop/state/pushed-mpls-label-stack
 // is to be set to a E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack struct {
-	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack
+	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack
@@ -2809,7 +2172,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/afts/ethernet/mac-entry/next-hops/next-hop/state/pushed-mpls-label-stack
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack_Union_Uint32
@@ -2830,17 +2193,6 @@ func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Etherne
 	}
 }
 
-
-
-
-
-
-
-
-
-
-
-
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ipv4Unicast_Ipv4Entry_NextHops_NextHop_State_PoppedMplsLabelStack_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/afts/ipv4-unicast/ipv4-entry/next-hops/next-hop/state/popped-mpls-label-stack within the YANG schema.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ipv4Unicast_Ipv4Entry_NextHops_NextHop_State_PoppedMplsLabelStack_Union interface {
@@ -2850,7 +2202,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ipv4Unicast
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ipv4Unicast_Ipv4Entry_NextHops_NextHop_State_PoppedMplsLabelStack_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack is used when /openconfig-network-instance/network-instances/network-instance/afts/ipv4-unicast/ipv4-entry/next-hops/next-hop/state/popped-mpls-label-stack
 // is to be set to a E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ipv4Unicast_Ipv4Entry_NextHops_NextHop_State_PoppedMplsLabelStack_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack struct {
-	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack
+	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ipv4Unicast_Ipv4Entry_NextHops_NextHop_State_PoppedMplsLabelStack_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ipv4Unicast_Ipv4Entry_NextHops_NextHop_State_PoppedMplsLabelStack_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack
@@ -2860,7 +2212,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ipv4Unica
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ipv4Unicast_Ipv4Entry_NextHops_NextHop_State_PoppedMplsLabelStack_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/afts/ipv4-unicast/ipv4-entry/next-hops/next-hop/state/popped-mpls-label-stack
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ipv4Unicast_Ipv4Entry_NextHops_NextHop_State_PoppedMplsLabelStack_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ipv4Unicast_Ipv4Entry_NextHops_NextHop_State_PoppedMplsLabelStack_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ipv4Unicast_Ipv4Entry_NextHops_NextHop_State_PoppedMplsLabelStack_Union_Uint32
@@ -2890,7 +2242,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ipv4Unicast
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ipv4Unicast_Ipv4Entry_NextHops_NextHop_State_PushedMplsLabelStack_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack is used when /openconfig-network-instance/network-instances/network-instance/afts/ipv4-unicast/ipv4-entry/next-hops/next-hop/state/pushed-mpls-label-stack
 // is to be set to a E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ipv4Unicast_Ipv4Entry_NextHops_NextHop_State_PushedMplsLabelStack_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack struct {
-	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack
+	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ipv4Unicast_Ipv4Entry_NextHops_NextHop_State_PushedMplsLabelStack_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ipv4Unicast_Ipv4Entry_NextHops_NextHop_State_PushedMplsLabelStack_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack
@@ -2900,7 +2252,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ipv4Unica
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ipv4Unicast_Ipv4Entry_NextHops_NextHop_State_PushedMplsLabelStack_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/afts/ipv4-unicast/ipv4-entry/next-hops/next-hop/state/pushed-mpls-label-stack
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ipv4Unicast_Ipv4Entry_NextHops_NextHop_State_PushedMplsLabelStack_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ipv4Unicast_Ipv4Entry_NextHops_NextHop_State_PushedMplsLabelStack_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ipv4Unicast_Ipv4Entry_NextHops_NextHop_State_PushedMplsLabelStack_Union_Uint32
@@ -2921,17 +2273,6 @@ func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ipv4Uni
 	}
 }
 
-
-
-
-
-
-
-
-
-
-
-
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ipv6Unicast_Ipv6Entry_NextHops_NextHop_State_PoppedMplsLabelStack_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/afts/ipv6-unicast/ipv6-entry/next-hops/next-hop/state/popped-mpls-label-stack within the YANG schema.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ipv6Unicast_Ipv6Entry_NextHops_NextHop_State_PoppedMplsLabelStack_Union interface {
@@ -2941,7 +2282,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ipv6Unicast
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ipv6Unicast_Ipv6Entry_NextHops_NextHop_State_PoppedMplsLabelStack_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack is used when /openconfig-network-instance/network-instances/network-instance/afts/ipv6-unicast/ipv6-entry/next-hops/next-hop/state/popped-mpls-label-stack
 // is to be set to a E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ipv6Unicast_Ipv6Entry_NextHops_NextHop_State_PoppedMplsLabelStack_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack struct {
-	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack
+	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ipv6Unicast_Ipv6Entry_NextHops_NextHop_State_PoppedMplsLabelStack_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ipv6Unicast_Ipv6Entry_NextHops_NextHop_State_PoppedMplsLabelStack_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack
@@ -2951,7 +2292,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ipv6Unica
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ipv6Unicast_Ipv6Entry_NextHops_NextHop_State_PoppedMplsLabelStack_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/afts/ipv6-unicast/ipv6-entry/next-hops/next-hop/state/popped-mpls-label-stack
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ipv6Unicast_Ipv6Entry_NextHops_NextHop_State_PoppedMplsLabelStack_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ipv6Unicast_Ipv6Entry_NextHops_NextHop_State_PoppedMplsLabelStack_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ipv6Unicast_Ipv6Entry_NextHops_NextHop_State_PoppedMplsLabelStack_Union_Uint32
@@ -2981,7 +2322,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ipv6Unicast
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ipv6Unicast_Ipv6Entry_NextHops_NextHop_State_PushedMplsLabelStack_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack is used when /openconfig-network-instance/network-instances/network-instance/afts/ipv6-unicast/ipv6-entry/next-hops/next-hop/state/pushed-mpls-label-stack
 // is to be set to a E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ipv6Unicast_Ipv6Entry_NextHops_NextHop_State_PushedMplsLabelStack_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack struct {
-	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack
+	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ipv6Unicast_Ipv6Entry_NextHops_NextHop_State_PushedMplsLabelStack_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ipv6Unicast_Ipv6Entry_NextHops_NextHop_State_PushedMplsLabelStack_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack
@@ -2991,7 +2332,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ipv6Unica
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ipv6Unicast_Ipv6Entry_NextHops_NextHop_State_PushedMplsLabelStack_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/afts/ipv6-unicast/ipv6-entry/next-hops/next-hop/state/pushed-mpls-label-stack
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ipv6Unicast_Ipv6Entry_NextHops_NextHop_State_PushedMplsLabelStack_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ipv6Unicast_Ipv6Entry_NextHops_NextHop_State_PushedMplsLabelStack_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ipv6Unicast_Ipv6Entry_NextHops_NextHop_State_PushedMplsLabelStack_Union_Uint32
@@ -3012,9 +2353,6 @@ func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ipv6Uni
 	}
 }
 
-
-
-
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_Config_Label_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/afts/mpls/label-entry/label within the YANG schema.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_Config_Label_Union interface {
@@ -3024,7 +2362,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelE
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_Config_Label_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_Config_Label is used when /openconfig-network-instance/network-instances/network-instance/afts/mpls/label-entry/label
 // is to be set to a E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_Config_Label value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_Config_Label_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_Config_Label struct {
-	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_Config_Label	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_Config_Label
+	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_Config_Label E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_Config_Label
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_Config_Label_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_Config_Label_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_Config_Label
@@ -3034,7 +2372,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_Labe
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_Config_Label_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/afts/mpls/label-entry/label
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_Config_Label_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_Config_Label_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_Config_Label_Union_Uint32
@@ -3055,14 +2393,6 @@ func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_La
 	}
 }
 
-
-
-
-
-
-
-
-
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_NextHops_NextHop_State_PoppedMplsLabelStack_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/afts/mpls/label-entry/next-hops/next-hop/state/popped-mpls-label-stack within the YANG schema.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_NextHops_NextHop_State_PoppedMplsLabelStack_Union interface {
@@ -3072,7 +2402,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelE
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_NextHops_NextHop_State_PoppedMplsLabelStack_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack is used when /openconfig-network-instance/network-instances/network-instance/afts/mpls/label-entry/next-hops/next-hop/state/popped-mpls-label-stack
 // is to be set to a E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_NextHops_NextHop_State_PoppedMplsLabelStack_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack struct {
-	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack
+	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_NextHops_NextHop_State_PoppedMplsLabelStack_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_NextHops_NextHop_State_PoppedMplsLabelStack_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack
@@ -3082,7 +2412,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_Labe
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_NextHops_NextHop_State_PoppedMplsLabelStack_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/afts/mpls/label-entry/next-hops/next-hop/state/popped-mpls-label-stack
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_NextHops_NextHop_State_PoppedMplsLabelStack_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_NextHops_NextHop_State_PoppedMplsLabelStack_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_NextHops_NextHop_State_PoppedMplsLabelStack_Union_Uint32
@@ -3112,7 +2442,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelE
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_NextHops_NextHop_State_PushedMplsLabelStack_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack is used when /openconfig-network-instance/network-instances/network-instance/afts/mpls/label-entry/next-hops/next-hop/state/pushed-mpls-label-stack
 // is to be set to a E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_NextHops_NextHop_State_PushedMplsLabelStack_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack struct {
-	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack
+	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_NextHops_NextHop_State_PushedMplsLabelStack_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_NextHops_NextHop_State_PushedMplsLabelStack_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack
@@ -3122,7 +2452,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_Labe
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_NextHops_NextHop_State_PushedMplsLabelStack_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/afts/mpls/label-entry/next-hops/next-hop/state/pushed-mpls-label-stack
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_NextHops_NextHop_State_PushedMplsLabelStack_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_NextHops_NextHop_State_PushedMplsLabelStack_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_NextHops_NextHop_State_PushedMplsLabelStack_Union_Uint32
@@ -3143,7 +2473,6 @@ func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_La
 	}
 }
 
-
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_State_Label_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/afts/mpls/label-entry/state/label within the YANG schema.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_State_Label_Union interface {
@@ -3153,7 +2482,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelE
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_State_Label_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_Config_Label is used when /openconfig-network-instance/network-instances/network-instance/afts/mpls/label-entry/state/label
 // is to be set to a E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_Config_Label value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_State_Label_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_Config_Label struct {
-	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_Config_Label	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_Config_Label
+	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_Config_Label E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_Config_Label
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_State_Label_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_State_Label_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_Config_Label
@@ -3163,7 +2492,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_Labe
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_State_Label_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/afts/mpls/label-entry/state/label
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_State_Label_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_State_Label_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_LabelEntry_State_Label_Union_Uint32
@@ -3184,9 +2513,6 @@ func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Mpls_La
 	}
 }
 
-
-
-
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_Config_IpProtocol_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/afts/policy-forwarding/policy-forwarding-entry/config/ip-protocol within the YANG schema.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_Config_IpProtocol_Union interface {
@@ -3196,7 +2522,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwa
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_Config_IpProtocol_Union_E_OpenconfigPacketMatchTypes_IP_PROTOCOL is used when /openconfig-network-instance/network-instances/network-instance/afts/policy-forwarding/policy-forwarding-entry/config/ip-protocol
 // is to be set to a E_OpenconfigPacketMatchTypes_IP_PROTOCOL value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_Config_IpProtocol_Union_E_OpenconfigPacketMatchTypes_IP_PROTOCOL struct {
-	E_OpenconfigPacketMatchTypes_IP_PROTOCOL	E_OpenconfigPacketMatchTypes_IP_PROTOCOL
+	E_OpenconfigPacketMatchTypes_IP_PROTOCOL E_OpenconfigPacketMatchTypes_IP_PROTOCOL
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_Config_IpProtocol_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_Config_IpProtocol_Union_E_OpenconfigPacketMatchTypes_IP_PROTOCOL
@@ -3206,7 +2532,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyFor
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_Config_IpProtocol_Union_Uint8 is used when /openconfig-network-instance/network-instances/network-instance/afts/policy-forwarding/policy-forwarding-entry/config/ip-protocol
 // is to be set to a uint8 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_Config_IpProtocol_Union_Uint8 struct {
-	Uint8	uint8
+	Uint8 uint8
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_Config_IpProtocol_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_Config_IpProtocol_Union_Uint8
@@ -3236,7 +2562,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwa
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_Config_MplsLabel_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_Config_MplsLabel is used when /openconfig-network-instance/network-instances/network-instance/afts/policy-forwarding/policy-forwarding-entry/config/mpls-label
 // is to be set to a E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_Config_MplsLabel value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_Config_MplsLabel_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_Config_MplsLabel struct {
-	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_Config_MplsLabel	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_Config_MplsLabel
+	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_Config_MplsLabel E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_Config_MplsLabel
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_Config_MplsLabel_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_Config_MplsLabel_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_Config_MplsLabel
@@ -3246,7 +2572,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyFor
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_Config_MplsLabel_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/afts/policy-forwarding/policy-forwarding-entry/config/mpls-label
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_Config_MplsLabel_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_Config_MplsLabel_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_Config_MplsLabel_Union_Uint32
@@ -3267,13 +2593,6 @@ func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyF
 	}
 }
 
-
-
-
-
-
-
-
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_NextHops_NextHop_State_PoppedMplsLabelStack_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/afts/policy-forwarding/policy-forwarding-entry/next-hops/next-hop/state/popped-mpls-label-stack within the YANG schema.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_NextHops_NextHop_State_PoppedMplsLabelStack_Union interface {
@@ -3283,7 +2602,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwa
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_NextHops_NextHop_State_PoppedMplsLabelStack_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack is used when /openconfig-network-instance/network-instances/network-instance/afts/policy-forwarding/policy-forwarding-entry/next-hops/next-hop/state/popped-mpls-label-stack
 // is to be set to a E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_NextHops_NextHop_State_PoppedMplsLabelStack_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack struct {
-	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack
+	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_NextHops_NextHop_State_PoppedMplsLabelStack_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_NextHops_NextHop_State_PoppedMplsLabelStack_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PoppedMplsLabelStack
@@ -3293,7 +2612,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyFor
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_NextHops_NextHop_State_PoppedMplsLabelStack_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/afts/policy-forwarding/policy-forwarding-entry/next-hops/next-hop/state/popped-mpls-label-stack
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_NextHops_NextHop_State_PoppedMplsLabelStack_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_NextHops_NextHop_State_PoppedMplsLabelStack_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_NextHops_NextHop_State_PoppedMplsLabelStack_Union_Uint32
@@ -3323,7 +2642,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwa
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_NextHops_NextHop_State_PushedMplsLabelStack_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack is used when /openconfig-network-instance/network-instances/network-instance/afts/policy-forwarding/policy-forwarding-entry/next-hops/next-hop/state/pushed-mpls-label-stack
 // is to be set to a E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_NextHops_NextHop_State_PushedMplsLabelStack_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack struct {
-	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack
+	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_NextHops_NextHop_State_PushedMplsLabelStack_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_NextHops_NextHop_State_PushedMplsLabelStack_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_Ethernet_MacEntry_NextHops_NextHop_State_PushedMplsLabelStack
@@ -3333,7 +2652,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyFor
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_NextHops_NextHop_State_PushedMplsLabelStack_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/afts/policy-forwarding/policy-forwarding-entry/next-hops/next-hop/state/pushed-mpls-label-stack
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_NextHops_NextHop_State_PushedMplsLabelStack_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_NextHops_NextHop_State_PushedMplsLabelStack_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_NextHops_NextHop_State_PushedMplsLabelStack_Union_Uint32
@@ -3354,7 +2673,6 @@ func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyF
 	}
 }
 
-
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_State_IpProtocol_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/afts/policy-forwarding/policy-forwarding-entry/state/ip-protocol within the YANG schema.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_State_IpProtocol_Union interface {
@@ -3364,7 +2682,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwa
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_State_IpProtocol_Union_E_OpenconfigPacketMatchTypes_IP_PROTOCOL is used when /openconfig-network-instance/network-instances/network-instance/afts/policy-forwarding/policy-forwarding-entry/state/ip-protocol
 // is to be set to a E_OpenconfigPacketMatchTypes_IP_PROTOCOL value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_State_IpProtocol_Union_E_OpenconfigPacketMatchTypes_IP_PROTOCOL struct {
-	E_OpenconfigPacketMatchTypes_IP_PROTOCOL	E_OpenconfigPacketMatchTypes_IP_PROTOCOL
+	E_OpenconfigPacketMatchTypes_IP_PROTOCOL E_OpenconfigPacketMatchTypes_IP_PROTOCOL
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_State_IpProtocol_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_State_IpProtocol_Union_E_OpenconfigPacketMatchTypes_IP_PROTOCOL
@@ -3374,7 +2692,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyFor
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_State_IpProtocol_Union_Uint8 is used when /openconfig-network-instance/network-instances/network-instance/afts/policy-forwarding/policy-forwarding-entry/state/ip-protocol
 // is to be set to a uint8 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_State_IpProtocol_Union_Uint8 struct {
-	Uint8	uint8
+	Uint8 uint8
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_State_IpProtocol_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_State_IpProtocol_Union_Uint8
@@ -3404,7 +2722,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwa
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_State_MplsLabel_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_Config_MplsLabel is used when /openconfig-network-instance/network-instances/network-instance/afts/policy-forwarding/policy-forwarding-entry/state/mpls-label
 // is to be set to a E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_Config_MplsLabel value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_State_MplsLabel_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_Config_MplsLabel struct {
-	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_Config_MplsLabel	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_Config_MplsLabel
+	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_Config_MplsLabel E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_Config_MplsLabel
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_State_MplsLabel_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_State_MplsLabel_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_Config_MplsLabel
@@ -3414,7 +2732,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyFor
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_State_MplsLabel_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/afts/policy-forwarding/policy-forwarding-entry/state/mpls-label
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_State_MplsLabel_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_State_MplsLabel_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyForwarding_PolicyForwardingEntry_State_MplsLabel_Union_Uint32
@@ -3435,57 +2753,6 @@ func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Afts_PolicyF
 	}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/mpls/global/reserved-label-blocks/reserved-label-block/config/lower-bound within the YANG schema.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound_Union interface {
@@ -3495,7 +2762,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Global_Rese
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound_Union_E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound is used when /openconfig-network-instance/network-instances/network-instance/mpls/global/reserved-label-blocks/reserved-label-block/config/lower-bound
 // is to be set to a E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound_Union_E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound struct {
-	E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound	E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound
+	E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound_Union_E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound
@@ -3505,7 +2772,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Global_Re
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/mpls/global/reserved-label-blocks/reserved-label-block/config/lower-bound
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound_Union_Uint32
@@ -3535,7 +2802,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Global_Rese
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound_Union_E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound is used when /openconfig-network-instance/network-instances/network-instance/mpls/global/reserved-label-blocks/reserved-label-block/config/upper-bound
 // is to be set to a E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound_Union_E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound struct {
-	E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound	E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound
+	E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound_Union_E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound
@@ -3545,7 +2812,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Global_Re
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/mpls/global/reserved-label-blocks/reserved-label-block/config/upper-bound
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound_Union_Uint32
@@ -3566,7 +2833,6 @@ func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Global_
 	}
 }
 
-
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_State_LowerBound_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/mpls/global/reserved-label-blocks/reserved-label-block/state/lower-bound within the YANG schema.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_State_LowerBound_Union interface {
@@ -3576,7 +2842,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Global_Rese
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_State_LowerBound_Union_E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound is used when /openconfig-network-instance/network-instances/network-instance/mpls/global/reserved-label-blocks/reserved-label-block/state/lower-bound
 // is to be set to a E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_State_LowerBound_Union_E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound struct {
-	E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound	E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound
+	E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_State_LowerBound_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_State_LowerBound_Union_E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_LowerBound
@@ -3586,7 +2852,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Global_Re
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_State_LowerBound_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/mpls/global/reserved-label-blocks/reserved-label-block/state/lower-bound
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_State_LowerBound_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_State_LowerBound_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_State_LowerBound_Union_Uint32
@@ -3616,7 +2882,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Global_Rese
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_State_UpperBound_Union_E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound is used when /openconfig-network-instance/network-instances/network-instance/mpls/global/reserved-label-blocks/reserved-label-block/state/upper-bound
 // is to be set to a E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_State_UpperBound_Union_E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound struct {
-	E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound	E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound
+	E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_State_UpperBound_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_State_UpperBound_Union_E_OpenconfigMpls_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_Config_UpperBound
@@ -3626,7 +2892,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Global_Re
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_State_UpperBound_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/mpls/global/reserved-label-blocks/reserved-label-block/state/upper-bound
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_State_UpperBound_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_State_UpperBound_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Global_ReservedLabelBlocks_ReservedLabelBlock_State_UpperBound_Union_Uint32
@@ -3647,60 +2913,6 @@ func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Global_
 	}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/mpls/lsps/static-lsps/static-lsp/egress/config/incoming-label within the YANG schema.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel_Union interface {
@@ -3710,7 +2922,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_Static
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel is used when /openconfig-network-instance/network-instances/network-instance/mpls/lsps/static-lsps/static-lsp/egress/config/incoming-label
 // is to be set to a E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel struct {
-	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel
+	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel
@@ -3720,7 +2932,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_Stat
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/mpls/lsps/static-lsps/static-lsp/egress/config/incoming-label
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel_Union_Uint32
@@ -3750,7 +2962,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_Static
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel is used when /openconfig-network-instance/network-instances/network-instance/mpls/lsps/static-lsps/static-lsp/egress/config/push-label
 // is to be set to a E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel struct {
-	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel
+	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel
@@ -3760,7 +2972,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_Stat
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/mpls/lsps/static-lsps/static-lsp/egress/config/push-label
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel_Union_Uint32
@@ -3781,7 +2993,6 @@ func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_St
 	}
 }
 
-
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Egress_State_IncomingLabel_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/mpls/lsps/static-lsps/static-lsp/egress/state/incoming-label within the YANG schema.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Egress_State_IncomingLabel_Union interface {
@@ -3791,7 +3002,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_Static
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Egress_State_IncomingLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel is used when /openconfig-network-instance/network-instances/network-instance/mpls/lsps/static-lsps/static-lsp/egress/state/incoming-label
 // is to be set to a E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Egress_State_IncomingLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel struct {
-	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel
+	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Egress_State_IncomingLabel_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Egress_State_IncomingLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel
@@ -3801,7 +3012,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_Stat
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Egress_State_IncomingLabel_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/mpls/lsps/static-lsps/static-lsp/egress/state/incoming-label
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Egress_State_IncomingLabel_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Egress_State_IncomingLabel_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Egress_State_IncomingLabel_Union_Uint32
@@ -3831,7 +3042,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_Static
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Egress_State_PushLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel is used when /openconfig-network-instance/network-instances/network-instance/mpls/lsps/static-lsps/static-lsp/egress/state/push-label
 // is to be set to a E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Egress_State_PushLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel struct {
-	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel
+	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Egress_State_PushLabel_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Egress_State_PushLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel
@@ -3841,7 +3052,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_Stat
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Egress_State_PushLabel_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/mpls/lsps/static-lsps/static-lsp/egress/state/push-label
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Egress_State_PushLabel_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Egress_State_PushLabel_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Egress_State_PushLabel_Union_Uint32
@@ -3862,8 +3073,6 @@ func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_St
 	}
 }
 
-
-
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_Config_IncomingLabel_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/mpls/lsps/static-lsps/static-lsp/ingress/config/incoming-label within the YANG schema.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_Config_IncomingLabel_Union interface {
@@ -3873,7 +3082,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_Static
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_Config_IncomingLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel is used when /openconfig-network-instance/network-instances/network-instance/mpls/lsps/static-lsps/static-lsp/ingress/config/incoming-label
 // is to be set to a E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_Config_IncomingLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel struct {
-	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel
+	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_Config_IncomingLabel_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_Config_IncomingLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel
@@ -3883,7 +3092,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_Stat
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_Config_IncomingLabel_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/mpls/lsps/static-lsps/static-lsp/ingress/config/incoming-label
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_Config_IncomingLabel_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_Config_IncomingLabel_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_Config_IncomingLabel_Union_Uint32
@@ -3913,7 +3122,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_Static
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_Config_PushLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel is used when /openconfig-network-instance/network-instances/network-instance/mpls/lsps/static-lsps/static-lsp/ingress/config/push-label
 // is to be set to a E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_Config_PushLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel struct {
-	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel
+	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_Config_PushLabel_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_Config_PushLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel
@@ -3923,7 +3132,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_Stat
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_Config_PushLabel_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/mpls/lsps/static-lsps/static-lsp/ingress/config/push-label
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_Config_PushLabel_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_Config_PushLabel_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_Config_PushLabel_Union_Uint32
@@ -3944,7 +3153,6 @@ func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_St
 	}
 }
 
-
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_State_IncomingLabel_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/mpls/lsps/static-lsps/static-lsp/ingress/state/incoming-label within the YANG schema.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_State_IncomingLabel_Union interface {
@@ -3954,7 +3162,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_Static
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_State_IncomingLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel is used when /openconfig-network-instance/network-instances/network-instance/mpls/lsps/static-lsps/static-lsp/ingress/state/incoming-label
 // is to be set to a E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_State_IncomingLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel struct {
-	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel
+	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_State_IncomingLabel_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_State_IncomingLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel
@@ -3964,7 +3172,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_Stat
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_State_IncomingLabel_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/mpls/lsps/static-lsps/static-lsp/ingress/state/incoming-label
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_State_IncomingLabel_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_State_IncomingLabel_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_State_IncomingLabel_Union_Uint32
@@ -3994,7 +3202,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_Static
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_State_PushLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel is used when /openconfig-network-instance/network-instances/network-instance/mpls/lsps/static-lsps/static-lsp/ingress/state/push-label
 // is to be set to a E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_State_PushLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel struct {
-	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel
+	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_State_PushLabel_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_State_PushLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel
@@ -4004,7 +3212,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_Stat
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_State_PushLabel_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/mpls/lsps/static-lsps/static-lsp/ingress/state/push-label
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_State_PushLabel_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_State_PushLabel_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Ingress_State_PushLabel_Union_Uint32
@@ -4025,9 +3233,6 @@ func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_St
 	}
 }
 
-
-
-
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Transit_Config_IncomingLabel_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/mpls/lsps/static-lsps/static-lsp/transit/config/incoming-label within the YANG schema.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Transit_Config_IncomingLabel_Union interface {
@@ -4037,7 +3242,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_Static
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Transit_Config_IncomingLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel is used when /openconfig-network-instance/network-instances/network-instance/mpls/lsps/static-lsps/static-lsp/transit/config/incoming-label
 // is to be set to a E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Transit_Config_IncomingLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel struct {
-	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel
+	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Transit_Config_IncomingLabel_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Transit_Config_IncomingLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel
@@ -4047,7 +3252,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_Stat
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Transit_Config_IncomingLabel_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/mpls/lsps/static-lsps/static-lsp/transit/config/incoming-label
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Transit_Config_IncomingLabel_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Transit_Config_IncomingLabel_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Transit_Config_IncomingLabel_Union_Uint32
@@ -4077,7 +3282,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_Static
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Transit_Config_PushLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel is used when /openconfig-network-instance/network-instances/network-instance/mpls/lsps/static-lsps/static-lsp/transit/config/push-label
 // is to be set to a E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Transit_Config_PushLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel struct {
-	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel
+	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Transit_Config_PushLabel_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Transit_Config_PushLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel
@@ -4087,7 +3292,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_Stat
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Transit_Config_PushLabel_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/mpls/lsps/static-lsps/static-lsp/transit/config/push-label
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Transit_Config_PushLabel_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Transit_Config_PushLabel_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Transit_Config_PushLabel_Union_Uint32
@@ -4108,7 +3313,6 @@ func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_St
 	}
 }
 
-
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Transit_State_IncomingLabel_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/mpls/lsps/static-lsps/static-lsp/transit/state/incoming-label within the YANG schema.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Transit_State_IncomingLabel_Union interface {
@@ -4118,7 +3322,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_Static
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Transit_State_IncomingLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel is used when /openconfig-network-instance/network-instances/network-instance/mpls/lsps/static-lsps/static-lsp/transit/state/incoming-label
 // is to be set to a E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Transit_State_IncomingLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel struct {
-	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel
+	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Transit_State_IncomingLabel_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Transit_State_IncomingLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_IncomingLabel
@@ -4128,7 +3332,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_Stat
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Transit_State_IncomingLabel_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/mpls/lsps/static-lsps/static-lsp/transit/state/incoming-label
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Transit_State_IncomingLabel_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Transit_State_IncomingLabel_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Transit_State_IncomingLabel_Union_Uint32
@@ -4158,7 +3362,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_Static
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Transit_State_PushLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel is used when /openconfig-network-instance/network-instances/network-instance/mpls/lsps/static-lsps/static-lsp/transit/state/push-label
 // is to be set to a E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Transit_State_PushLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel struct {
-	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel
+	E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Transit_State_PushLabel_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Transit_State_PushLabel_Union_E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel
@@ -4168,7 +3372,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_Stat
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Transit_State_PushLabel_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/mpls/lsps/static-lsps/static-lsp/transit/state/push-label
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Transit_State_PushLabel_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Transit_State_PushLabel_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_StaticLsps_StaticLsp_Transit_State_PushLabel_Union_Uint32
@@ -4189,51 +3393,26 @@ func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Lsps_St
 	}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/mpls/signaling-protocols/rsvp-te/interface-attributes/interface/bandwidth-reservations/bandwidth-reservation/priority within the YANG schema.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union interface {
 	Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union()
 }
 
-// OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority is used when /openconfig-network-instance/network-instances/network-instance/mpls/signaling-protocols/rsvp-te/interface-attributes/interface/bandwidth-reservations/bandwidth-reservation/priority
-// is to be set to a E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority value.
-type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority struct {
-	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority
+// OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority is used when /openconfig-network-instance/network-instances/network-instance/mpls/signaling-protocols/rsvp-te/interface-attributes/interface/bandwidth-reservations/bandwidth-reservation/priority
+// is to be set to a E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority value.
+type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority struct {
+	E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority
 }
 
-// Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority
+// Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority
 // implements the OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union interface.
-func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority) Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union() {}
+func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority) Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union() {}
 
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union_Uint8 is used when /openconfig-network-instance/network-instances/network-instance/mpls/signaling-protocols/rsvp-te/interface-attributes/interface/bandwidth-reservations/bandwidth-reservation/priority
 // is to be set to a uint8 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union_Uint8 struct {
-	Uint8	uint8
+	Uint8 uint8
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union_Uint8
@@ -4245,38 +3424,14 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Signaling
 // cannot be converted to a type within the union.
 func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation) To_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union(i interface{}) (OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union, error) {
 	switch v := i.(type) {
-	case E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority:
-		return &OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority{v}, nil
+	case E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority:
+		return &OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority{v}, nil
 	case uint8:
 		return &OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union_Uint8{v}, nil
 	default:
-		return nil, fmt.Errorf("cannot convert %v to OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union, unknown union type, got: %T, want any of [E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority, uint8]", i, i)
+		return nil, fmt.Errorf("cannot convert %v to OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority_Union, unknown union type, got: %T, want any of [E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority, uint8]", i, i)
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_RecordRouteObjects_RecordRouteObject_State_ReportedLabel_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/mpls/signaling-protocols/rsvp-te/sessions/session/record-route-objects/record-route-object/state/reported-label within the YANG schema.
@@ -4287,7 +3442,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingPr
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_RecordRouteObjects_RecordRouteObject_State_ReportedLabel_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_RecordRouteObjects_RecordRouteObject_State_ReportedLabel is used when /openconfig-network-instance/network-instances/network-instance/mpls/signaling-protocols/rsvp-te/sessions/session/record-route-objects/record-route-object/state/reported-label
 // is to be set to a E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_RecordRouteObjects_RecordRouteObject_State_ReportedLabel value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_RecordRouteObjects_RecordRouteObject_State_ReportedLabel_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_RecordRouteObjects_RecordRouteObject_State_ReportedLabel struct {
-	E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_RecordRouteObjects_RecordRouteObject_State_ReportedLabel	E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_RecordRouteObjects_RecordRouteObject_State_ReportedLabel
+	E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_RecordRouteObjects_RecordRouteObject_State_ReportedLabel E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_RecordRouteObjects_RecordRouteObject_State_ReportedLabel
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_RecordRouteObjects_RecordRouteObject_State_ReportedLabel_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_RecordRouteObjects_RecordRouteObject_State_ReportedLabel_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_RecordRouteObjects_RecordRouteObject_State_ReportedLabel
@@ -4297,7 +3452,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Signaling
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_RecordRouteObjects_RecordRouteObject_State_ReportedLabel_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/mpls/signaling-protocols/rsvp-te/sessions/session/record-route-objects/record-route-object/state/reported-label
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_RecordRouteObjects_RecordRouteObject_State_ReportedLabel_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_RecordRouteObjects_RecordRouteObject_State_ReportedLabel_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_RecordRouteObjects_RecordRouteObject_State_ReportedLabel_Union_Uint32
@@ -4318,7 +3473,6 @@ func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Signali
 	}
 }
 
-
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelIn_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/mpls/signaling-protocols/rsvp-te/sessions/session/state/label-in within the YANG schema.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelIn_Union interface {
@@ -4328,7 +3482,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingPr
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelIn_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelIn is used when /openconfig-network-instance/network-instances/network-instance/mpls/signaling-protocols/rsvp-te/sessions/session/state/label-in
 // is to be set to a E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelIn value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelIn_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelIn struct {
-	E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelIn	E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelIn
+	E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelIn E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelIn
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelIn_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelIn_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelIn
@@ -4338,7 +3492,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Signaling
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelIn_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/mpls/signaling-protocols/rsvp-te/sessions/session/state/label-in
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelIn_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelIn_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelIn_Union_Uint32
@@ -4368,7 +3522,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingPr
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelOut_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelOut is used when /openconfig-network-instance/network-instances/network-instance/mpls/signaling-protocols/rsvp-te/sessions/session/state/label-out
 // is to be set to a E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelOut value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelOut_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelOut struct {
-	E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelOut	E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelOut
+	E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelOut E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelOut
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelOut_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelOut_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelOut
@@ -4378,7 +3532,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Signaling
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelOut_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/mpls/signaling-protocols/rsvp-te/sessions/session/state/label-out
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelOut_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelOut_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_LabelOut_Union_Uint32
@@ -4399,7 +3553,6 @@ func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Signali
 	}
 }
 
-
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_SenderTspec_PeakDataRate_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/mpls/signaling-protocols/rsvp-te/sessions/session/state/sender-tspec/peak-data-rate within the YANG schema.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_SenderTspec_PeakDataRate_Union interface {
@@ -4409,7 +3562,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingPr
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_SenderTspec_PeakDataRate_Union_Binary is used when /openconfig-network-instance/network-instances/network-instance/mpls/signaling-protocols/rsvp-te/sessions/session/state/sender-tspec/peak-data-rate
 // is to be set to a Binary value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_SenderTspec_PeakDataRate_Union_Binary struct {
-	Binary	Binary
+	Binary Binary
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_SenderTspec_PeakDataRate_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_SenderTspec_PeakDataRate_Union_Binary
@@ -4419,7 +3572,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Signaling
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_SenderTspec_PeakDataRate_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_SenderTspec_PeakDataRate is used when /openconfig-network-instance/network-instances/network-instance/mpls/signaling-protocols/rsvp-te/sessions/session/state/sender-tspec/peak-data-rate
 // is to be set to a E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_SenderTspec_PeakDataRate value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_SenderTspec_PeakDataRate_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_SenderTspec_PeakDataRate struct {
-	E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_SenderTspec_PeakDataRate	E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_SenderTspec_PeakDataRate
+	E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_SenderTspec_PeakDataRate E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_SenderTspec_PeakDataRate
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_SenderTspec_PeakDataRate_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_SenderTspec_PeakDataRate_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_SenderTspec_PeakDataRate
@@ -4440,29 +3593,26 @@ func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Signali
 	}
 }
 
-
-
-
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/mpls/signaling-protocols/segment-routing/aggregate-sid-counters/aggregate-sid-counter/mpls-label within the YANG schema.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union interface {
 	Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union()
 }
 
-// OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel is used when /openconfig-network-instance/network-instances/network-instance/mpls/signaling-protocols/segment-routing/aggregate-sid-counters/aggregate-sid-counter/mpls-label
-// is to be set to a E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel value.
-type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel struct {
-	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel
+// OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel is used when /openconfig-network-instance/network-instances/network-instance/mpls/signaling-protocols/segment-routing/aggregate-sid-counters/aggregate-sid-counter/mpls-label
+// is to be set to a E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel value.
+type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel struct {
+	E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel
 }
 
-// Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel
+// Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel
 // implements the OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union interface.
-func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel) Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union() {}
+func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel) Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union() {}
 
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/mpls/signaling-protocols/segment-routing/aggregate-sid-counters/aggregate-sid-counter/mpls-label
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union_Uint32
@@ -4474,23 +3624,14 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Signaling
 // cannot be converted to a type within the union.
 func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter) To_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union(i interface{}) (OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union, error) {
 	switch v := i.(type) {
-	case E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel:
-		return &OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel{v}, nil
+	case E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel:
+		return &OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel{v}, nil
 	case uint32:
 		return &OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union_Uint32{v}, nil
 	default:
-		return nil, fmt.Errorf("cannot convert %v to OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union, unknown union type, got: %T, want any of [E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel, uint32]", i, i)
+		return nil, fmt.Errorf("cannot convert %v to OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel_Union, unknown union type, got: %T, want any of [E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel, uint32]", i, i)
 	}
 }
-
-
-
-
-
-
-
-
-
 
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/mpls/signaling-protocols/segment-routing/interfaces/interface/sid-counters/sid-counter/mpls-label within the YANG schema.
@@ -4498,20 +3639,20 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingPr
 	Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_Union()
 }
 
-// OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel is used when /openconfig-network-instance/network-instances/network-instance/mpls/signaling-protocols/segment-routing/interfaces/interface/sid-counters/sid-counter/mpls-label
-// is to be set to a E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel value.
-type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel struct {
-	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel
+// OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel is used when /openconfig-network-instance/network-instances/network-instance/mpls/signaling-protocols/segment-routing/interfaces/interface/sid-counters/sid-counter/mpls-label
+// is to be set to a E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel value.
+type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel struct {
+	E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel
 }
 
-// Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel
+// Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel
 // implements the OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_Union interface.
-func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel) Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_Union() {}
+func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel) Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_Union() {}
 
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/mpls/signaling-protocols/segment-routing/interfaces/interface/sid-counters/sid-counter/mpls-label
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_Union_Uint32
@@ -4523,75 +3664,14 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_Signaling
 // cannot be converted to a type within the union.
 func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter) To_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_Union(i interface{}) (OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_Union, error) {
 	switch v := i.(type) {
-	case E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel:
-		return &OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel{v}, nil
+	case E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel:
+		return &OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_Union_E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel{v}, nil
 	case uint32:
 		return &OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_Union_Uint32{v}, nil
 	default:
-		return nil, fmt.Errorf("cannot convert %v to OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_Union, unknown union type, got: %T, want any of [E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel, uint32]", i, i)
+		return nil, fmt.Errorf("cannot convert %v to OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel_Union, unknown union type, got: %T, want any of [E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel, uint32]", i, i)
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Ipv4_Config_Protocol_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/policy-forwarding/policies/policy/rules/rule/ipv4/config/protocol within the YANG schema.
@@ -4602,7 +3682,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Ipv4_Config_Protocol_Union_E_OpenconfigPacketMatchTypes_IP_PROTOCOL is used when /openconfig-network-instance/network-instances/network-instance/policy-forwarding/policies/policy/rules/rule/ipv4/config/protocol
 // is to be set to a E_OpenconfigPacketMatchTypes_IP_PROTOCOL value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Ipv4_Config_Protocol_Union_E_OpenconfigPacketMatchTypes_IP_PROTOCOL struct {
-	E_OpenconfigPacketMatchTypes_IP_PROTOCOL	E_OpenconfigPacketMatchTypes_IP_PROTOCOL
+	E_OpenconfigPacketMatchTypes_IP_PROTOCOL E_OpenconfigPacketMatchTypes_IP_PROTOCOL
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Ipv4_Config_Protocol_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Ipv4_Config_Protocol_Union_E_OpenconfigPacketMatchTypes_IP_PROTOCOL
@@ -4612,7 +3692,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwardi
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Ipv4_Config_Protocol_Union_Uint8 is used when /openconfig-network-instance/network-instances/network-instance/policy-forwarding/policies/policy/rules/rule/ipv4/config/protocol
 // is to be set to a uint8 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Ipv4_Config_Protocol_Union_Uint8 struct {
-	Uint8	uint8
+	Uint8 uint8
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Ipv4_Config_Protocol_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Ipv4_Config_Protocol_Union_Uint8
@@ -4633,7 +3713,6 @@ func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwar
 	}
 }
 
-
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Ipv4_State_Protocol_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/policy-forwarding/policies/policy/rules/rule/ipv4/state/protocol within the YANG schema.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Ipv4_State_Protocol_Union interface {
@@ -4643,7 +3722,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Ipv4_State_Protocol_Union_E_OpenconfigPacketMatchTypes_IP_PROTOCOL is used when /openconfig-network-instance/network-instances/network-instance/policy-forwarding/policies/policy/rules/rule/ipv4/state/protocol
 // is to be set to a E_OpenconfigPacketMatchTypes_IP_PROTOCOL value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Ipv4_State_Protocol_Union_E_OpenconfigPacketMatchTypes_IP_PROTOCOL struct {
-	E_OpenconfigPacketMatchTypes_IP_PROTOCOL	E_OpenconfigPacketMatchTypes_IP_PROTOCOL
+	E_OpenconfigPacketMatchTypes_IP_PROTOCOL E_OpenconfigPacketMatchTypes_IP_PROTOCOL
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Ipv4_State_Protocol_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Ipv4_State_Protocol_Union_E_OpenconfigPacketMatchTypes_IP_PROTOCOL
@@ -4653,7 +3732,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwardi
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Ipv4_State_Protocol_Union_Uint8 is used when /openconfig-network-instance/network-instances/network-instance/policy-forwarding/policies/policy/rules/rule/ipv4/state/protocol
 // is to be set to a uint8 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Ipv4_State_Protocol_Union_Uint8 struct {
-	Uint8	uint8
+	Uint8 uint8
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Ipv4_State_Protocol_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Ipv4_State_Protocol_Union_Uint8
@@ -4674,8 +3753,6 @@ func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwar
 	}
 }
 
-
-
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Ipv6_Config_Protocol_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/policy-forwarding/policies/policy/rules/rule/ipv6/config/protocol within the YANG schema.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Ipv6_Config_Protocol_Union interface {
@@ -4685,7 +3762,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Ipv6_Config_Protocol_Union_E_OpenconfigPacketMatchTypes_IP_PROTOCOL is used when /openconfig-network-instance/network-instances/network-instance/policy-forwarding/policies/policy/rules/rule/ipv6/config/protocol
 // is to be set to a E_OpenconfigPacketMatchTypes_IP_PROTOCOL value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Ipv6_Config_Protocol_Union_E_OpenconfigPacketMatchTypes_IP_PROTOCOL struct {
-	E_OpenconfigPacketMatchTypes_IP_PROTOCOL	E_OpenconfigPacketMatchTypes_IP_PROTOCOL
+	E_OpenconfigPacketMatchTypes_IP_PROTOCOL E_OpenconfigPacketMatchTypes_IP_PROTOCOL
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Ipv6_Config_Protocol_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Ipv6_Config_Protocol_Union_E_OpenconfigPacketMatchTypes_IP_PROTOCOL
@@ -4695,7 +3772,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwardi
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Ipv6_Config_Protocol_Union_Uint8 is used when /openconfig-network-instance/network-instances/network-instance/policy-forwarding/policies/policy/rules/rule/ipv6/config/protocol
 // is to be set to a uint8 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Ipv6_Config_Protocol_Union_Uint8 struct {
-	Uint8	uint8
+	Uint8 uint8
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Ipv6_Config_Protocol_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Ipv6_Config_Protocol_Union_Uint8
@@ -4716,7 +3793,6 @@ func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwar
 	}
 }
 
-
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Ipv6_State_Protocol_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/policy-forwarding/policies/policy/rules/rule/ipv6/state/protocol within the YANG schema.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Ipv6_State_Protocol_Union interface {
@@ -4726,7 +3802,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Ipv6_State_Protocol_Union_E_OpenconfigPacketMatchTypes_IP_PROTOCOL is used when /openconfig-network-instance/network-instances/network-instance/policy-forwarding/policies/policy/rules/rule/ipv6/state/protocol
 // is to be set to a E_OpenconfigPacketMatchTypes_IP_PROTOCOL value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Ipv6_State_Protocol_Union_E_OpenconfigPacketMatchTypes_IP_PROTOCOL struct {
-	E_OpenconfigPacketMatchTypes_IP_PROTOCOL	E_OpenconfigPacketMatchTypes_IP_PROTOCOL
+	E_OpenconfigPacketMatchTypes_IP_PROTOCOL E_OpenconfigPacketMatchTypes_IP_PROTOCOL
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Ipv6_State_Protocol_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Ipv6_State_Protocol_Union_E_OpenconfigPacketMatchTypes_IP_PROTOCOL
@@ -4736,7 +3812,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwardi
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Ipv6_State_Protocol_Union_Uint8 is used when /openconfig-network-instance/network-instances/network-instance/policy-forwarding/policies/policy/rules/rule/ipv6/state/protocol
 // is to be set to a uint8 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Ipv6_State_Protocol_Union_Uint8 struct {
-	Uint8	uint8
+	Uint8 uint8
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Ipv6_State_Protocol_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Ipv6_State_Protocol_Union_Uint8
@@ -4757,8 +3833,6 @@ func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwar
 	}
 }
 
-
-
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_L2_Config_Ethertype_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/policy-forwarding/policies/policy/rules/rule/l2/config/ethertype within the YANG schema.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_L2_Config_Ethertype_Union interface {
@@ -4768,7 +3842,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_L2_Config_Ethertype_Union_E_OpenconfigPacketMatchTypes_ETHERTYPE is used when /openconfig-network-instance/network-instances/network-instance/policy-forwarding/policies/policy/rules/rule/l2/config/ethertype
 // is to be set to a E_OpenconfigPacketMatchTypes_ETHERTYPE value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_L2_Config_Ethertype_Union_E_OpenconfigPacketMatchTypes_ETHERTYPE struct {
-	E_OpenconfigPacketMatchTypes_ETHERTYPE	E_OpenconfigPacketMatchTypes_ETHERTYPE
+	E_OpenconfigPacketMatchTypes_ETHERTYPE E_OpenconfigPacketMatchTypes_ETHERTYPE
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_L2_Config_Ethertype_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_L2_Config_Ethertype_Union_E_OpenconfigPacketMatchTypes_ETHERTYPE
@@ -4778,7 +3852,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwardi
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_L2_Config_Ethertype_Union_Uint16 is used when /openconfig-network-instance/network-instances/network-instance/policy-forwarding/policies/policy/rules/rule/l2/config/ethertype
 // is to be set to a uint16 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_L2_Config_Ethertype_Union_Uint16 struct {
-	Uint16	uint16
+	Uint16 uint16
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_L2_Config_Ethertype_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_L2_Config_Ethertype_Union_Uint16
@@ -4799,7 +3873,6 @@ func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwar
 	}
 }
 
-
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_L2_State_Ethertype_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/policy-forwarding/policies/policy/rules/rule/l2/state/ethertype within the YANG schema.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_L2_State_Ethertype_Union interface {
@@ -4809,7 +3882,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_L2_State_Ethertype_Union_E_OpenconfigPacketMatchTypes_ETHERTYPE is used when /openconfig-network-instance/network-instances/network-instance/policy-forwarding/policies/policy/rules/rule/l2/state/ethertype
 // is to be set to a E_OpenconfigPacketMatchTypes_ETHERTYPE value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_L2_State_Ethertype_Union_E_OpenconfigPacketMatchTypes_ETHERTYPE struct {
-	E_OpenconfigPacketMatchTypes_ETHERTYPE	E_OpenconfigPacketMatchTypes_ETHERTYPE
+	E_OpenconfigPacketMatchTypes_ETHERTYPE E_OpenconfigPacketMatchTypes_ETHERTYPE
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_L2_State_Ethertype_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_L2_State_Ethertype_Union_E_OpenconfigPacketMatchTypes_ETHERTYPE
@@ -4819,7 +3892,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwardi
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_L2_State_Ethertype_Union_Uint16 is used when /openconfig-network-instance/network-instances/network-instance/policy-forwarding/policies/policy/rules/rule/l2/state/ethertype
 // is to be set to a uint16 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_L2_State_Ethertype_Union_Uint16 struct {
-	Uint16	uint16
+	Uint16 uint16
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_L2_State_Ethertype_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_L2_State_Ethertype_Union_Uint16
@@ -4840,9 +3913,6 @@ func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwar
 	}
 }
 
-
-
-
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Transport_Config_DestinationPort_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/policy-forwarding/policies/policy/rules/rule/transport/config/destination-port within the YANG schema.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Transport_Config_DestinationPort_Union interface {
@@ -4852,7 +3922,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Transport_Config_DestinationPort_Union_E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_DestinationPort is used when /openconfig-network-instance/network-instances/network-instance/policy-forwarding/policies/policy/rules/rule/transport/config/destination-port
 // is to be set to a E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_DestinationPort value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Transport_Config_DestinationPort_Union_E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_DestinationPort struct {
-	E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_DestinationPort	E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_DestinationPort
+	E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_DestinationPort E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_DestinationPort
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Transport_Config_DestinationPort_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Transport_Config_DestinationPort_Union_E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_DestinationPort
@@ -4862,7 +3932,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwardi
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Transport_Config_DestinationPort_Union_String is used when /openconfig-network-instance/network-instances/network-instance/policy-forwarding/policies/policy/rules/rule/transport/config/destination-port
 // is to be set to a string value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Transport_Config_DestinationPort_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Transport_Config_DestinationPort_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Transport_Config_DestinationPort_Union_String
@@ -4872,7 +3942,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwardi
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Transport_Config_DestinationPort_Union_Uint16 is used when /openconfig-network-instance/network-instances/network-instance/policy-forwarding/policies/policy/rules/rule/transport/config/destination-port
 // is to be set to a uint16 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Transport_Config_DestinationPort_Union_Uint16 struct {
-	Uint16	uint16
+	Uint16 uint16
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Transport_Config_DestinationPort_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Transport_Config_DestinationPort_Union_Uint16
@@ -4904,7 +3974,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Transport_Config_SourcePort_Union_E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_SourcePort is used when /openconfig-network-instance/network-instances/network-instance/policy-forwarding/policies/policy/rules/rule/transport/config/source-port
 // is to be set to a E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_SourcePort value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Transport_Config_SourcePort_Union_E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_SourcePort struct {
-	E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_SourcePort	E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_SourcePort
+	E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_SourcePort E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_SourcePort
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Transport_Config_SourcePort_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Transport_Config_SourcePort_Union_E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_SourcePort
@@ -4914,7 +3984,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwardi
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Transport_Config_SourcePort_Union_String is used when /openconfig-network-instance/network-instances/network-instance/policy-forwarding/policies/policy/rules/rule/transport/config/source-port
 // is to be set to a string value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Transport_Config_SourcePort_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Transport_Config_SourcePort_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Transport_Config_SourcePort_Union_String
@@ -4924,7 +3994,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwardi
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Transport_Config_SourcePort_Union_Uint16 is used when /openconfig-network-instance/network-instances/network-instance/policy-forwarding/policies/policy/rules/rule/transport/config/source-port
 // is to be set to a uint16 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Transport_Config_SourcePort_Union_Uint16 struct {
-	Uint16	uint16
+	Uint16 uint16
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Transport_Config_SourcePort_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Transport_Config_SourcePort_Union_Uint16
@@ -4947,7 +4017,6 @@ func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwar
 	}
 }
 
-
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Transport_State_DestinationPort_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/policy-forwarding/policies/policy/rules/rule/transport/state/destination-port within the YANG schema.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Transport_State_DestinationPort_Union interface {
@@ -4957,7 +4026,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Transport_State_DestinationPort_Union_E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_DestinationPort is used when /openconfig-network-instance/network-instances/network-instance/policy-forwarding/policies/policy/rules/rule/transport/state/destination-port
 // is to be set to a E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_DestinationPort value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Transport_State_DestinationPort_Union_E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_DestinationPort struct {
-	E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_DestinationPort	E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_DestinationPort
+	E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_DestinationPort E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_DestinationPort
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Transport_State_DestinationPort_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Transport_State_DestinationPort_Union_E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_DestinationPort
@@ -4967,7 +4036,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwardi
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Transport_State_DestinationPort_Union_String is used when /openconfig-network-instance/network-instances/network-instance/policy-forwarding/policies/policy/rules/rule/transport/state/destination-port
 // is to be set to a string value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Transport_State_DestinationPort_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Transport_State_DestinationPort_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Transport_State_DestinationPort_Union_String
@@ -4977,7 +4046,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwardi
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Transport_State_DestinationPort_Union_Uint16 is used when /openconfig-network-instance/network-instances/network-instance/policy-forwarding/policies/policy/rules/rule/transport/state/destination-port
 // is to be set to a uint16 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Transport_State_DestinationPort_Union_Uint16 struct {
-	Uint16	uint16
+	Uint16 uint16
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Transport_State_DestinationPort_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Transport_State_DestinationPort_Union_Uint16
@@ -5009,7 +4078,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Transport_State_SourcePort_Union_E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_SourcePort is used when /openconfig-network-instance/network-instances/network-instance/policy-forwarding/policies/policy/rules/rule/transport/state/source-port
 // is to be set to a E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_SourcePort value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Transport_State_SourcePort_Union_E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_SourcePort struct {
-	E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_SourcePort	E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_SourcePort
+	E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_SourcePort E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_SourcePort
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Transport_State_SourcePort_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Transport_State_SourcePort_Union_E_OpenconfigAcl_Acl_AclSets_AclSet_AclEntries_AclEntry_Transport_Config_SourcePort
@@ -5019,7 +4088,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwardi
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Transport_State_SourcePort_Union_String is used when /openconfig-network-instance/network-instances/network-instance/policy-forwarding/policies/policy/rules/rule/transport/state/source-port
 // is to be set to a string value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Transport_State_SourcePort_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Transport_State_SourcePort_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Transport_State_SourcePort_Union_String
@@ -5029,7 +4098,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwardi
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Transport_State_SourcePort_Union_Uint16 is used when /openconfig-network-instance/network-instances/network-instance/policy-forwarding/policies/policy/rules/rule/transport/state/source-port
 // is to be set to a uint16 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Transport_State_SourcePort_Union_Uint16 struct {
-	Uint16	uint16
+	Uint16 uint16
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Transport_State_SourcePort_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwarding_Policies_Policy_Rules_Rule_Transport_State_SourcePort_Union_Uint16
@@ -5052,207 +4121,6 @@ func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_PolicyForwar
 	}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Bgp_Neighbors_Neighbor_RouteReflector_Config_RouteReflectorClusterId_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/protocols/protocol/bgp/neighbors/neighbor/route-reflector/config/route-reflector-cluster-id within the YANG schema.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Bgp_Neighbors_Neighbor_RouteReflector_Config_RouteReflectorClusterId_Union interface {
@@ -5262,7 +4130,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protoc
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Bgp_Neighbors_Neighbor_RouteReflector_Config_RouteReflectorClusterId_Union_String is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/bgp/neighbors/neighbor/route-reflector/config/route-reflector-cluster-id
 // is to be set to a string value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Bgp_Neighbors_Neighbor_RouteReflector_Config_RouteReflectorClusterId_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Bgp_Neighbors_Neighbor_RouteReflector_Config_RouteReflectorClusterId_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Bgp_Neighbors_Neighbor_RouteReflector_Config_RouteReflectorClusterId_Union_String
@@ -5272,7 +4140,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Prot
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Bgp_Neighbors_Neighbor_RouteReflector_Config_RouteReflectorClusterId_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/bgp/neighbors/neighbor/route-reflector/config/route-reflector-cluster-id
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Bgp_Neighbors_Neighbor_RouteReflector_Config_RouteReflectorClusterId_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Bgp_Neighbors_Neighbor_RouteReflector_Config_RouteReflectorClusterId_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Bgp_Neighbors_Neighbor_RouteReflector_Config_RouteReflectorClusterId_Union_Uint32
@@ -5293,7 +4161,6 @@ func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Pr
 	}
 }
 
-
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Bgp_Neighbors_Neighbor_RouteReflector_State_RouteReflectorClusterId_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/protocols/protocol/bgp/neighbors/neighbor/route-reflector/state/route-reflector-cluster-id within the YANG schema.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Bgp_Neighbors_Neighbor_RouteReflector_State_RouteReflectorClusterId_Union interface {
@@ -5303,7 +4170,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protoc
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Bgp_Neighbors_Neighbor_RouteReflector_State_RouteReflectorClusterId_Union_String is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/bgp/neighbors/neighbor/route-reflector/state/route-reflector-cluster-id
 // is to be set to a string value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Bgp_Neighbors_Neighbor_RouteReflector_State_RouteReflectorClusterId_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Bgp_Neighbors_Neighbor_RouteReflector_State_RouteReflectorClusterId_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Bgp_Neighbors_Neighbor_RouteReflector_State_RouteReflectorClusterId_Union_String
@@ -5313,7 +4180,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Prot
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Bgp_Neighbors_Neighbor_RouteReflector_State_RouteReflectorClusterId_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/bgp/neighbors/neighbor/route-reflector/state/route-reflector-cluster-id
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Bgp_Neighbors_Neighbor_RouteReflector_State_RouteReflectorClusterId_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Bgp_Neighbors_Neighbor_RouteReflector_State_RouteReflectorClusterId_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Bgp_Neighbors_Neighbor_RouteReflector_State_RouteReflectorClusterId_Union_Uint32
@@ -5334,120 +4201,6 @@ func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Pr
 	}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Bgp_PeerGroups_PeerGroup_RouteReflector_Config_RouteReflectorClusterId_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/protocols/protocol/bgp/peer-groups/peer-group/route-reflector/config/route-reflector-cluster-id within the YANG schema.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Bgp_PeerGroups_PeerGroup_RouteReflector_Config_RouteReflectorClusterId_Union interface {
@@ -5457,7 +4210,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protoc
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Bgp_PeerGroups_PeerGroup_RouteReflector_Config_RouteReflectorClusterId_Union_String is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/bgp/peer-groups/peer-group/route-reflector/config/route-reflector-cluster-id
 // is to be set to a string value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Bgp_PeerGroups_PeerGroup_RouteReflector_Config_RouteReflectorClusterId_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Bgp_PeerGroups_PeerGroup_RouteReflector_Config_RouteReflectorClusterId_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Bgp_PeerGroups_PeerGroup_RouteReflector_Config_RouteReflectorClusterId_Union_String
@@ -5467,7 +4220,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Prot
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Bgp_PeerGroups_PeerGroup_RouteReflector_Config_RouteReflectorClusterId_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/bgp/peer-groups/peer-group/route-reflector/config/route-reflector-cluster-id
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Bgp_PeerGroups_PeerGroup_RouteReflector_Config_RouteReflectorClusterId_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Bgp_PeerGroups_PeerGroup_RouteReflector_Config_RouteReflectorClusterId_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Bgp_PeerGroups_PeerGroup_RouteReflector_Config_RouteReflectorClusterId_Union_Uint32
@@ -5488,7 +4241,6 @@ func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Pr
 	}
 }
 
-
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Bgp_PeerGroups_PeerGroup_RouteReflector_State_RouteReflectorClusterId_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/protocols/protocol/bgp/peer-groups/peer-group/route-reflector/state/route-reflector-cluster-id within the YANG schema.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Bgp_PeerGroups_PeerGroup_RouteReflector_State_RouteReflectorClusterId_Union interface {
@@ -5498,7 +4250,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protoc
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Bgp_PeerGroups_PeerGroup_RouteReflector_State_RouteReflectorClusterId_Union_String is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/bgp/peer-groups/peer-group/route-reflector/state/route-reflector-cluster-id
 // is to be set to a string value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Bgp_PeerGroups_PeerGroup_RouteReflector_State_RouteReflectorClusterId_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Bgp_PeerGroups_PeerGroup_RouteReflector_State_RouteReflectorClusterId_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Bgp_PeerGroups_PeerGroup_RouteReflector_State_RouteReflectorClusterId_Union_String
@@ -5508,7 +4260,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Prot
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Bgp_PeerGroups_PeerGroup_RouteReflector_State_RouteReflectorClusterId_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/bgp/peer-groups/peer-group/route-reflector/state/route-reflector-cluster-id
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Bgp_PeerGroups_PeerGroup_RouteReflector_State_RouteReflectorClusterId_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Bgp_PeerGroups_PeerGroup_RouteReflector_State_RouteReflectorClusterId_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Bgp_PeerGroups_PeerGroup_RouteReflector_State_RouteReflectorClusterId_Union_Uint32
@@ -5529,142 +4281,6 @@ func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Pr
 	}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_Config_SidId_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/protocols/protocol/isis/interfaces/interface/levels/level/afi-safi/af/segment-routing/adjacency-sids/adjacency-sid/sid-id within the YANG schema.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_Config_SidId_Union interface {
@@ -5674,7 +4290,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protoc
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_Config_SidId_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_Config_SidId is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/isis/interfaces/interface/levels/level/afi-safi/af/segment-routing/adjacency-sids/adjacency-sid/sid-id
 // is to be set to a E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_Config_SidId value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_Config_SidId_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_Config_SidId struct {
-	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_Config_SidId	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_Config_SidId
+	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_Config_SidId E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_Config_SidId
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_Config_SidId_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_Config_SidId_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_Config_SidId
@@ -5684,7 +4300,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Prot
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_Config_SidId_Union_String is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/isis/interfaces/interface/levels/level/afi-safi/af/segment-routing/adjacency-sids/adjacency-sid/sid-id
 // is to be set to a string value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_Config_SidId_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_Config_SidId_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_Config_SidId_Union_String
@@ -5694,7 +4310,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Prot
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_Config_SidId_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/isis/interfaces/interface/levels/level/afi-safi/af/segment-routing/adjacency-sids/adjacency-sid/sid-id
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_Config_SidId_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_Config_SidId_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_Config_SidId_Union_Uint32
@@ -5717,8 +4333,6 @@ func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Pr
 	}
 }
 
-
-
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_State_AllocatedDynamicLocal_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/protocols/protocol/isis/interfaces/interface/levels/level/afi-safi/af/segment-routing/adjacency-sids/adjacency-sid/state/allocated-dynamic-local within the YANG schema.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_State_AllocatedDynamicLocal_Union interface {
@@ -5728,7 +4342,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protoc
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_State_AllocatedDynamicLocal_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_State_AllocatedDynamicLocal is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/isis/interfaces/interface/levels/level/afi-safi/af/segment-routing/adjacency-sids/adjacency-sid/state/allocated-dynamic-local
 // is to be set to a E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_State_AllocatedDynamicLocal value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_State_AllocatedDynamicLocal_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_State_AllocatedDynamicLocal struct {
-	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_State_AllocatedDynamicLocal	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_State_AllocatedDynamicLocal
+	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_State_AllocatedDynamicLocal E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_State_AllocatedDynamicLocal
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_State_AllocatedDynamicLocal_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_State_AllocatedDynamicLocal_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_State_AllocatedDynamicLocal
@@ -5738,7 +4352,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Prot
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_State_AllocatedDynamicLocal_Union_String is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/isis/interfaces/interface/levels/level/afi-safi/af/segment-routing/adjacency-sids/adjacency-sid/state/allocated-dynamic-local
 // is to be set to a string value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_State_AllocatedDynamicLocal_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_State_AllocatedDynamicLocal_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_State_AllocatedDynamicLocal_Union_String
@@ -5748,7 +4362,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Prot
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_State_AllocatedDynamicLocal_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/isis/interfaces/interface/levels/level/afi-safi/af/segment-routing/adjacency-sids/adjacency-sid/state/allocated-dynamic-local
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_State_AllocatedDynamicLocal_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_State_AllocatedDynamicLocal_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_State_AllocatedDynamicLocal_Union_Uint32
@@ -5780,7 +4394,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protoc
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_State_SidId_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_Config_SidId is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/isis/interfaces/interface/levels/level/afi-safi/af/segment-routing/adjacency-sids/adjacency-sid/state/sid-id
 // is to be set to a E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_Config_SidId value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_State_SidId_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_Config_SidId struct {
-	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_Config_SidId	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_Config_SidId
+	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_Config_SidId E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_Config_SidId
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_State_SidId_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_State_SidId_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_Config_SidId
@@ -5790,7 +4404,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Prot
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_State_SidId_Union_String is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/isis/interfaces/interface/levels/level/afi-safi/af/segment-routing/adjacency-sids/adjacency-sid/state/sid-id
 // is to be set to a string value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_State_SidId_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_State_SidId_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_State_SidId_Union_String
@@ -5800,7 +4414,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Prot
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_State_SidId_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/isis/interfaces/interface/levels/level/afi-safi/af/segment-routing/adjacency-sids/adjacency-sid/state/sid-id
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_State_SidId_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_State_SidId_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_AdjacencySids_AdjacencySid_State_SidId_Union_Uint32
@@ -5823,9 +4437,6 @@ func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Pr
 	}
 }
 
-
-
-
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_Config_SidId_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/protocols/protocol/isis/interfaces/interface/levels/level/afi-safi/af/segment-routing/prefix-sids/prefix-sid/config/sid-id within the YANG schema.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_Config_SidId_Union interface {
@@ -5835,7 +4446,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protoc
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_Config_SidId_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_Config_SidId is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/isis/interfaces/interface/levels/level/afi-safi/af/segment-routing/prefix-sids/prefix-sid/config/sid-id
 // is to be set to a E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_Config_SidId value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_Config_SidId_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_Config_SidId struct {
-	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_Config_SidId	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_Config_SidId
+	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_Config_SidId E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_Config_SidId
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_Config_SidId_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_Config_SidId_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_Config_SidId
@@ -5845,7 +4456,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Prot
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_Config_SidId_Union_String is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/isis/interfaces/interface/levels/level/afi-safi/af/segment-routing/prefix-sids/prefix-sid/config/sid-id
 // is to be set to a string value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_Config_SidId_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_Config_SidId_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_Config_SidId_Union_String
@@ -5855,7 +4466,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Prot
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_Config_SidId_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/isis/interfaces/interface/levels/level/afi-safi/af/segment-routing/prefix-sids/prefix-sid/config/sid-id
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_Config_SidId_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_Config_SidId_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_Config_SidId_Union_Uint32
@@ -5878,7 +4489,6 @@ func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Pr
 	}
 }
 
-
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_State_SidId_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/protocols/protocol/isis/interfaces/interface/levels/level/afi-safi/af/segment-routing/prefix-sids/prefix-sid/state/sid-id within the YANG schema.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_State_SidId_Union interface {
@@ -5888,7 +4498,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protoc
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_State_SidId_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_Config_SidId is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/isis/interfaces/interface/levels/level/afi-safi/af/segment-routing/prefix-sids/prefix-sid/state/sid-id
 // is to be set to a E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_Config_SidId value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_State_SidId_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_Config_SidId struct {
-	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_Config_SidId	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_Config_SidId
+	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_Config_SidId E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_Config_SidId
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_State_SidId_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_State_SidId_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_Config_SidId
@@ -5898,7 +4508,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Prot
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_State_SidId_Union_String is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/isis/interfaces/interface/levels/level/afi-safi/af/segment-routing/prefix-sids/prefix-sid/state/sid-id
 // is to be set to a string value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_State_SidId_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_State_SidId_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_State_SidId_Union_String
@@ -5908,7 +4518,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Prot
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_State_SidId_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/isis/interfaces/interface/levels/level/afi-safi/af/segment-routing/prefix-sids/prefix-sid/state/sid-id
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_State_SidId_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_State_SidId_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_AfiSafi_Af_SegmentRouting_PrefixSids_PrefixSid_State_SidId_Union_Uint32
@@ -5931,499 +4541,6 @@ func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Pr
 	}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_RouterCapabilities_Capability_Subtlvs_Subtlv_SegmentRoutingCapability_SrgbDescriptors_SrgbDescriptor_State_Label_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/protocols/protocol/isis/levels/level/link-state-database/lsp/tlvs/tlv/router-capabilities/capability/subtlvs/subtlv/segment-routing-capability/srgb-descriptors/srgb-descriptor/state/label within the YANG schema.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_RouterCapabilities_Capability_Subtlvs_Subtlv_SegmentRoutingCapability_SrgbDescriptors_SrgbDescriptor_State_Label_Union interface {
@@ -6433,7 +4550,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protoc
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_RouterCapabilities_Capability_Subtlvs_Subtlv_SegmentRoutingCapability_SrgbDescriptors_SrgbDescriptor_State_Label_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_RouterCapabilities_Capability_Subtlvs_Subtlv_SegmentRoutingCapability_SrgbDescriptors_SrgbDescriptor_State_Label is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/isis/levels/level/link-state-database/lsp/tlvs/tlv/router-capabilities/capability/subtlvs/subtlv/segment-routing-capability/srgb-descriptors/srgb-descriptor/state/label
 // is to be set to a E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_RouterCapabilities_Capability_Subtlvs_Subtlv_SegmentRoutingCapability_SrgbDescriptors_SrgbDescriptor_State_Label value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_RouterCapabilities_Capability_Subtlvs_Subtlv_SegmentRoutingCapability_SrgbDescriptors_SrgbDescriptor_State_Label_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_RouterCapabilities_Capability_Subtlvs_Subtlv_SegmentRoutingCapability_SrgbDescriptors_SrgbDescriptor_State_Label struct {
-	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_RouterCapabilities_Capability_Subtlvs_Subtlv_SegmentRoutingCapability_SrgbDescriptors_SrgbDescriptor_State_Label	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_RouterCapabilities_Capability_Subtlvs_Subtlv_SegmentRoutingCapability_SrgbDescriptors_SrgbDescriptor_State_Label
+	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_RouterCapabilities_Capability_Subtlvs_Subtlv_SegmentRoutingCapability_SrgbDescriptors_SrgbDescriptor_State_Label E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_RouterCapabilities_Capability_Subtlvs_Subtlv_SegmentRoutingCapability_SrgbDescriptors_SrgbDescriptor_State_Label
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_RouterCapabilities_Capability_Subtlvs_Subtlv_SegmentRoutingCapability_SrgbDescriptors_SrgbDescriptor_State_Label_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_RouterCapabilities_Capability_Subtlvs_Subtlv_SegmentRoutingCapability_SrgbDescriptors_SrgbDescriptor_State_Label_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_RouterCapabilities_Capability_Subtlvs_Subtlv_SegmentRoutingCapability_SrgbDescriptors_SrgbDescriptor_State_Label
@@ -6443,7 +4560,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Prot
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_RouterCapabilities_Capability_Subtlvs_Subtlv_SegmentRoutingCapability_SrgbDescriptors_SrgbDescriptor_State_Label_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/isis/levels/level/link-state-database/lsp/tlvs/tlv/router-capabilities/capability/subtlvs/subtlv/segment-routing-capability/srgb-descriptors/srgb-descriptor/state/label
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_RouterCapabilities_Capability_Subtlvs_Subtlv_SegmentRoutingCapability_SrgbDescriptors_SrgbDescriptor_State_Label_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_RouterCapabilities_Capability_Subtlvs_Subtlv_SegmentRoutingCapability_SrgbDescriptors_SrgbDescriptor_State_Label_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Levels_Level_LinkStateDatabase_Lsp_Tlvs_Tlv_RouterCapabilities_Capability_Subtlvs_Subtlv_SegmentRoutingCapability_SrgbDescriptors_SrgbDescriptor_State_Label_Union_Uint32
@@ -6464,27 +4581,6 @@ func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Pr
 	}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_LocalAggregates_Aggregate_Config_SetTag_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/protocols/protocol/local-aggregates/aggregate/config/set-tag within the YANG schema.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_LocalAggregates_Aggregate_Config_SetTag_Union interface {
@@ -6494,7 +4590,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protoc
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_LocalAggregates_Aggregate_Config_SetTag_Union_String is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/local-aggregates/aggregate/config/set-tag
 // is to be set to a string value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_LocalAggregates_Aggregate_Config_SetTag_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_LocalAggregates_Aggregate_Config_SetTag_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_LocalAggregates_Aggregate_Config_SetTag_Union_String
@@ -6504,7 +4600,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Prot
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_LocalAggregates_Aggregate_Config_SetTag_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/local-aggregates/aggregate/config/set-tag
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_LocalAggregates_Aggregate_Config_SetTag_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_LocalAggregates_Aggregate_Config_SetTag_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_LocalAggregates_Aggregate_Config_SetTag_Union_Uint32
@@ -6525,7 +4621,6 @@ func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Pr
 	}
 }
 
-
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_LocalAggregates_Aggregate_State_SetTag_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/protocols/protocol/local-aggregates/aggregate/state/set-tag within the YANG schema.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_LocalAggregates_Aggregate_State_SetTag_Union interface {
@@ -6535,7 +4630,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protoc
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_LocalAggregates_Aggregate_State_SetTag_Union_String is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/local-aggregates/aggregate/state/set-tag
 // is to be set to a string value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_LocalAggregates_Aggregate_State_SetTag_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_LocalAggregates_Aggregate_State_SetTag_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_LocalAggregates_Aggregate_State_SetTag_Union_String
@@ -6545,7 +4640,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Prot
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_LocalAggregates_Aggregate_State_SetTag_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/local-aggregates/aggregate/state/set-tag
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_LocalAggregates_Aggregate_State_SetTag_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_LocalAggregates_Aggregate_State_SetTag_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_LocalAggregates_Aggregate_State_SetTag_Union_Uint32
@@ -6566,9 +4661,6 @@ func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Pr
 	}
 }
 
-
-
-
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Config_Identifier_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/protocols/protocol/ospfv2/areas/area/identifier within the YANG schema.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Config_Identifier_Union interface {
@@ -6578,7 +4670,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protoc
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Config_Identifier_Union_String is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/ospfv2/areas/area/identifier
 // is to be set to a string value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Config_Identifier_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Config_Identifier_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Config_Identifier_Union_String
@@ -6588,7 +4680,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Prot
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Config_Identifier_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/ospfv2/areas/area/identifier
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Config_Identifier_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Config_Identifier_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Config_Identifier_Union_Uint32
@@ -6609,50 +4701,6 @@ func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Pr
 	}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_ExtendedLink_State_LinkData_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/protocols/protocol/ospfv2/areas/area/lsdb/lsa-types/lsa-type/lsas/lsa/opaque-lsa/extended-link/state/link-data within the YANG schema.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_ExtendedLink_State_LinkData_Union interface {
@@ -6662,7 +4710,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protoc
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_ExtendedLink_State_LinkData_Union_String is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/ospfv2/areas/area/lsdb/lsa-types/lsa-type/lsas/lsa/opaque-lsa/extended-link/state/link-data
 // is to be set to a string value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_ExtendedLink_State_LinkData_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_ExtendedLink_State_LinkData_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_ExtendedLink_State_LinkData_Union_String
@@ -6672,7 +4720,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Prot
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_ExtendedLink_State_LinkData_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/ospfv2/areas/area/lsdb/lsa-types/lsa-type/lsas/lsa/opaque-lsa/extended-link/state/link-data
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_ExtendedLink_State_LinkData_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_ExtendedLink_State_LinkData_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_ExtendedLink_State_LinkData_Union_Uint32
@@ -6693,62 +4741,6 @@ func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Pr
 	}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_RouterInformation_Tlvs_Tlv_SegmentRoutingSidLabelRange_Tlvs_Tlv_State_Type_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/protocols/protocol/ospfv2/areas/area/lsdb/lsa-types/lsa-type/lsas/lsa/opaque-lsa/router-information/tlvs/tlv/segment-routing-sid-label-range/tlvs/tlv/state/type within the YANG schema.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_RouterInformation_Tlvs_Tlv_SegmentRoutingSidLabelRange_Tlvs_Tlv_State_Type_Union interface {
@@ -6758,7 +4750,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protoc
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_RouterInformation_Tlvs_Tlv_SegmentRoutingSidLabelRange_Tlvs_Tlv_State_Type_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_RouterInformation_Tlvs_Tlv_SegmentRoutingSidLabelRange_Tlvs_Tlv_State_Type is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/ospfv2/areas/area/lsdb/lsa-types/lsa-type/lsas/lsa/opaque-lsa/router-information/tlvs/tlv/segment-routing-sid-label-range/tlvs/tlv/state/type
 // is to be set to a E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_RouterInformation_Tlvs_Tlv_SegmentRoutingSidLabelRange_Tlvs_Tlv_State_Type value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_RouterInformation_Tlvs_Tlv_SegmentRoutingSidLabelRange_Tlvs_Tlv_State_Type_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_RouterInformation_Tlvs_Tlv_SegmentRoutingSidLabelRange_Tlvs_Tlv_State_Type struct {
-	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_RouterInformation_Tlvs_Tlv_SegmentRoutingSidLabelRange_Tlvs_Tlv_State_Type	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_RouterInformation_Tlvs_Tlv_SegmentRoutingSidLabelRange_Tlvs_Tlv_State_Type
+	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_RouterInformation_Tlvs_Tlv_SegmentRoutingSidLabelRange_Tlvs_Tlv_State_Type E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_RouterInformation_Tlvs_Tlv_SegmentRoutingSidLabelRange_Tlvs_Tlv_State_Type
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_RouterInformation_Tlvs_Tlv_SegmentRoutingSidLabelRange_Tlvs_Tlv_State_Type_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_RouterInformation_Tlvs_Tlv_SegmentRoutingSidLabelRange_Tlvs_Tlv_State_Type_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_RouterInformation_Tlvs_Tlv_SegmentRoutingSidLabelRange_Tlvs_Tlv_State_Type
@@ -6768,7 +4760,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Prot
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_RouterInformation_Tlvs_Tlv_SegmentRoutingSidLabelRange_Tlvs_Tlv_State_Type_Union_E_OpenconfigOspfTypes_OSPF_RI_SR_SID_LABEL_TLV_TYPES is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/ospfv2/areas/area/lsdb/lsa-types/lsa-type/lsas/lsa/opaque-lsa/router-information/tlvs/tlv/segment-routing-sid-label-range/tlvs/tlv/state/type
 // is to be set to a E_OpenconfigOspfTypes_OSPF_RI_SR_SID_LABEL_TLV_TYPES value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_RouterInformation_Tlvs_Tlv_SegmentRoutingSidLabelRange_Tlvs_Tlv_State_Type_Union_E_OpenconfigOspfTypes_OSPF_RI_SR_SID_LABEL_TLV_TYPES struct {
-	E_OpenconfigOspfTypes_OSPF_RI_SR_SID_LABEL_TLV_TYPES	E_OpenconfigOspfTypes_OSPF_RI_SR_SID_LABEL_TLV_TYPES
+	E_OpenconfigOspfTypes_OSPF_RI_SR_SID_LABEL_TLV_TYPES E_OpenconfigOspfTypes_OSPF_RI_SR_SID_LABEL_TLV_TYPES
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_RouterInformation_Tlvs_Tlv_SegmentRoutingSidLabelRange_Tlvs_Tlv_State_Type_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_RouterInformation_Tlvs_Tlv_SegmentRoutingSidLabelRange_Tlvs_Tlv_State_Type_Union_E_OpenconfigOspfTypes_OSPF_RI_SR_SID_LABEL_TLV_TYPES
@@ -6789,9 +4781,6 @@ func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Pr
 	}
 }
 
-
-
-
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_RouterInformation_Tlvs_Tlv_State_Type_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/protocols/protocol/ospfv2/areas/area/lsdb/lsa-types/lsa-type/lsas/lsa/opaque-lsa/router-information/tlvs/tlv/state/type within the YANG schema.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_RouterInformation_Tlvs_Tlv_State_Type_Union interface {
@@ -6801,7 +4790,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protoc
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_RouterInformation_Tlvs_Tlv_State_Type_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_RouterInformation_Tlvs_Tlv_State_Type is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/ospfv2/areas/area/lsdb/lsa-types/lsa-type/lsas/lsa/opaque-lsa/router-information/tlvs/tlv/state/type
 // is to be set to a E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_RouterInformation_Tlvs_Tlv_State_Type value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_RouterInformation_Tlvs_Tlv_State_Type_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_RouterInformation_Tlvs_Tlv_State_Type struct {
-	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_RouterInformation_Tlvs_Tlv_State_Type	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_RouterInformation_Tlvs_Tlv_State_Type
+	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_RouterInformation_Tlvs_Tlv_State_Type E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_RouterInformation_Tlvs_Tlv_State_Type
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_RouterInformation_Tlvs_Tlv_State_Type_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_RouterInformation_Tlvs_Tlv_State_Type_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_RouterInformation_Tlvs_Tlv_State_Type
@@ -6811,7 +4800,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Prot
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_RouterInformation_Tlvs_Tlv_State_Type_Union_E_OpenconfigOspfTypes_RI_LSA_TLV_TYPES is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/ospfv2/areas/area/lsdb/lsa-types/lsa-type/lsas/lsa/opaque-lsa/router-information/tlvs/tlv/state/type
 // is to be set to a E_OpenconfigOspfTypes_RI_LSA_TLV_TYPES value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_RouterInformation_Tlvs_Tlv_State_Type_Union_E_OpenconfigOspfTypes_RI_LSA_TLV_TYPES struct {
-	E_OpenconfigOspfTypes_RI_LSA_TLV_TYPES	E_OpenconfigOspfTypes_RI_LSA_TLV_TYPES
+	E_OpenconfigOspfTypes_RI_LSA_TLV_TYPES E_OpenconfigOspfTypes_RI_LSA_TLV_TYPES
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_RouterInformation_Tlvs_Tlv_State_Type_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_RouterInformation_Tlvs_Tlv_State_Type_Union_E_OpenconfigOspfTypes_RI_LSA_TLV_TYPES
@@ -6832,19 +4821,6 @@ func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Pr
 	}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_Link_SubTlvs_SubTlv_State_Type_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/protocols/protocol/ospfv2/areas/area/lsdb/lsa-types/lsa-type/lsas/lsa/opaque-lsa/traffic-engineering/tlvs/tlv/link/sub-tlvs/sub-tlv/state/type within the YANG schema.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_Link_SubTlvs_SubTlv_State_Type_Union interface {
@@ -6854,7 +4830,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protoc
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_Link_SubTlvs_SubTlv_State_Type_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_Link_SubTlvs_SubTlv_State_Type is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/ospfv2/areas/area/lsdb/lsa-types/lsa-type/lsas/lsa/opaque-lsa/traffic-engineering/tlvs/tlv/link/sub-tlvs/sub-tlv/state/type
 // is to be set to a E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_Link_SubTlvs_SubTlv_State_Type value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_Link_SubTlvs_SubTlv_State_Type_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_Link_SubTlvs_SubTlv_State_Type struct {
-	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_Link_SubTlvs_SubTlv_State_Type	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_Link_SubTlvs_SubTlv_State_Type
+	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_Link_SubTlvs_SubTlv_State_Type E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_Link_SubTlvs_SubTlv_State_Type
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_Link_SubTlvs_SubTlv_State_Type_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_Link_SubTlvs_SubTlv_State_Type_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_Link_SubTlvs_SubTlv_State_Type
@@ -6864,7 +4840,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Prot
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_Link_SubTlvs_SubTlv_State_Type_Union_E_OpenconfigOspfTypes_OSPF_TE_LINK_TLV_TYPE is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/ospfv2/areas/area/lsdb/lsa-types/lsa-type/lsas/lsa/opaque-lsa/traffic-engineering/tlvs/tlv/link/sub-tlvs/sub-tlv/state/type
 // is to be set to a E_OpenconfigOspfTypes_OSPF_TE_LINK_TLV_TYPE value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_Link_SubTlvs_SubTlv_State_Type_Union_E_OpenconfigOspfTypes_OSPF_TE_LINK_TLV_TYPE struct {
-	E_OpenconfigOspfTypes_OSPF_TE_LINK_TLV_TYPE	E_OpenconfigOspfTypes_OSPF_TE_LINK_TLV_TYPE
+	E_OpenconfigOspfTypes_OSPF_TE_LINK_TLV_TYPE E_OpenconfigOspfTypes_OSPF_TE_LINK_TLV_TYPE
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_Link_SubTlvs_SubTlv_State_Type_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_Link_SubTlvs_SubTlv_State_Type_Union_E_OpenconfigOspfTypes_OSPF_TE_LINK_TLV_TYPE
@@ -6885,15 +4861,6 @@ func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Pr
 	}
 }
 
-
-
-
-
-
-
-
-
-
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_NodeAttribute_SubTlvs_SubTlv_State_Type_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/protocols/protocol/ospfv2/areas/area/lsdb/lsa-types/lsa-type/lsas/lsa/opaque-lsa/traffic-engineering/tlvs/tlv/node-attribute/sub-tlvs/sub-tlv/state/type within the YANG schema.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_NodeAttribute_SubTlvs_SubTlv_State_Type_Union interface {
@@ -6903,7 +4870,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protoc
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_NodeAttribute_SubTlvs_SubTlv_State_Type_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_NodeAttribute_SubTlvs_SubTlv_State_Type is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/ospfv2/areas/area/lsdb/lsa-types/lsa-type/lsas/lsa/opaque-lsa/traffic-engineering/tlvs/tlv/node-attribute/sub-tlvs/sub-tlv/state/type
 // is to be set to a E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_NodeAttribute_SubTlvs_SubTlv_State_Type value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_NodeAttribute_SubTlvs_SubTlv_State_Type_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_NodeAttribute_SubTlvs_SubTlv_State_Type struct {
-	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_NodeAttribute_SubTlvs_SubTlv_State_Type	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_NodeAttribute_SubTlvs_SubTlv_State_Type
+	E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_NodeAttribute_SubTlvs_SubTlv_State_Type E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_NodeAttribute_SubTlvs_SubTlv_State_Type
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_NodeAttribute_SubTlvs_SubTlv_State_Type_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_NodeAttribute_SubTlvs_SubTlv_State_Type_Union_E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_NodeAttribute_SubTlvs_SubTlv_State_Type
@@ -6913,7 +4880,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Prot
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_NodeAttribute_SubTlvs_SubTlv_State_Type_Union_E_OpenconfigOspfTypes_TE_NODE_ATTRIBUTE_TLV_TYPE is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/ospfv2/areas/area/lsdb/lsa-types/lsa-type/lsas/lsa/opaque-lsa/traffic-engineering/tlvs/tlv/node-attribute/sub-tlvs/sub-tlv/state/type
 // is to be set to a E_OpenconfigOspfTypes_TE_NODE_ATTRIBUTE_TLV_TYPE value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_NodeAttribute_SubTlvs_SubTlv_State_Type_Union_E_OpenconfigOspfTypes_TE_NODE_ATTRIBUTE_TLV_TYPE struct {
-	E_OpenconfigOspfTypes_TE_NODE_ATTRIBUTE_TLV_TYPE	E_OpenconfigOspfTypes_TE_NODE_ATTRIBUTE_TLV_TYPE
+	E_OpenconfigOspfTypes_TE_NODE_ATTRIBUTE_TLV_TYPE E_OpenconfigOspfTypes_TE_NODE_ATTRIBUTE_TLV_TYPE
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_NodeAttribute_SubTlvs_SubTlv_State_Type_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_OpaqueLsa_TrafficEngineering_Tlvs_Tlv_NodeAttribute_SubTlvs_SubTlv_State_Type_Union_E_OpenconfigOspfTypes_TE_NODE_ATTRIBUTE_TLV_TYPE
@@ -6934,17 +4901,6 @@ func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Pr
 	}
 }
 
-
-
-
-
-
-
-
-
-
-
-
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_RouterLsa_State_LinkData_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/protocols/protocol/ospfv2/areas/area/lsdb/lsa-types/lsa-type/lsas/lsa/router-lsa/state/link-data within the YANG schema.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_RouterLsa_State_LinkData_Union interface {
@@ -6954,7 +4910,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protoc
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_RouterLsa_State_LinkData_Union_String is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/ospfv2/areas/area/lsdb/lsa-types/lsa-type/lsas/lsa/router-lsa/state/link-data
 // is to be set to a string value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_RouterLsa_State_LinkData_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_RouterLsa_State_LinkData_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_RouterLsa_State_LinkData_Union_String
@@ -6964,7 +4920,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Prot
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_RouterLsa_State_LinkData_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/ospfv2/areas/area/lsdb/lsa-types/lsa-type/lsas/lsa/router-lsa/state/link-data
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_RouterLsa_State_LinkData_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_RouterLsa_State_LinkData_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_LsaTypes_LsaType_Lsas_Lsa_RouterLsa_State_LinkData_Union_Uint32
@@ -6985,17 +4941,6 @@ func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Pr
 	}
 }
 
-
-
-
-
-
-
-
-
-
-
-
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_State_Identifier_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/protocols/protocol/ospfv2/areas/area/lsdb/state/identifier within the YANG schema.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_State_Identifier_Union interface {
@@ -7005,7 +4950,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protoc
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_State_Identifier_Union_String is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/ospfv2/areas/area/lsdb/state/identifier
 // is to be set to a string value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_State_Identifier_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_State_Identifier_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_State_Identifier_Union_String
@@ -7015,7 +4960,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Prot
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_State_Identifier_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/ospfv2/areas/area/lsdb/state/identifier
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_State_Identifier_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_State_Identifier_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_Lsdb_State_Identifier_Union_Uint32
@@ -7036,10 +4981,6 @@ func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Pr
 	}
 }
 
-
-
-
-
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_State_Identifier_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/protocols/protocol/ospfv2/areas/area/state/identifier within the YANG schema.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_State_Identifier_Union interface {
@@ -7049,7 +4990,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protoc
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_State_Identifier_Union_String is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/ospfv2/areas/area/state/identifier
 // is to be set to a string value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_State_Identifier_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_State_Identifier_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_State_Identifier_Union_String
@@ -7059,7 +5000,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Prot
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_State_Identifier_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/ospfv2/areas/area/state/identifier
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_State_Identifier_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_State_Identifier_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Ospfv2_Areas_Area_State_Identifier_Union_Uint32
@@ -7080,65 +5021,6 @@ func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Pr
 	}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_StaticRoutes_Static_Config_SetTag_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/protocols/protocol/static-routes/static/config/set-tag within the YANG schema.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_StaticRoutes_Static_Config_SetTag_Union interface {
@@ -7148,7 +5030,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protoc
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_StaticRoutes_Static_Config_SetTag_Union_String is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/static-routes/static/config/set-tag
 // is to be set to a string value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_StaticRoutes_Static_Config_SetTag_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_StaticRoutes_Static_Config_SetTag_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_StaticRoutes_Static_Config_SetTag_Union_String
@@ -7158,7 +5040,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Prot
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_StaticRoutes_Static_Config_SetTag_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/static-routes/static/config/set-tag
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_StaticRoutes_Static_Config_SetTag_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_StaticRoutes_Static_Config_SetTag_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_StaticRoutes_Static_Config_SetTag_Union_Uint32
@@ -7179,9 +5061,6 @@ func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Pr
 	}
 }
 
-
-
-
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_StaticRoutes_Static_NextHops_NextHop_Config_NextHop_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/protocols/protocol/static-routes/static/next-hops/next-hop/config/next-hop within the YANG schema.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_StaticRoutes_Static_NextHops_NextHop_Config_NextHop_Union interface {
@@ -7191,7 +5070,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protoc
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_StaticRoutes_Static_NextHops_NextHop_Config_NextHop_Union_E_OpenconfigLocalRouting_LOCAL_DEFINED_NEXT_HOP is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/static-routes/static/next-hops/next-hop/config/next-hop
 // is to be set to a E_OpenconfigLocalRouting_LOCAL_DEFINED_NEXT_HOP value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_StaticRoutes_Static_NextHops_NextHop_Config_NextHop_Union_E_OpenconfigLocalRouting_LOCAL_DEFINED_NEXT_HOP struct {
-	E_OpenconfigLocalRouting_LOCAL_DEFINED_NEXT_HOP	E_OpenconfigLocalRouting_LOCAL_DEFINED_NEXT_HOP
+	E_OpenconfigLocalRouting_LOCAL_DEFINED_NEXT_HOP E_OpenconfigLocalRouting_LOCAL_DEFINED_NEXT_HOP
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_StaticRoutes_Static_NextHops_NextHop_Config_NextHop_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_StaticRoutes_Static_NextHops_NextHop_Config_NextHop_Union_E_OpenconfigLocalRouting_LOCAL_DEFINED_NEXT_HOP
@@ -7201,7 +5080,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Prot
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_StaticRoutes_Static_NextHops_NextHop_Config_NextHop_Union_String is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/static-routes/static/next-hops/next-hop/config/next-hop
 // is to be set to a string value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_StaticRoutes_Static_NextHops_NextHop_Config_NextHop_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_StaticRoutes_Static_NextHops_NextHop_Config_NextHop_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_StaticRoutes_Static_NextHops_NextHop_Config_NextHop_Union_String
@@ -7222,10 +5101,6 @@ func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Pr
 	}
 }
 
-
-
-
-
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_StaticRoutes_Static_NextHops_NextHop_State_NextHop_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/protocols/protocol/static-routes/static/next-hops/next-hop/state/next-hop within the YANG schema.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_StaticRoutes_Static_NextHops_NextHop_State_NextHop_Union interface {
@@ -7235,7 +5110,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protoc
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_StaticRoutes_Static_NextHops_NextHop_State_NextHop_Union_E_OpenconfigLocalRouting_LOCAL_DEFINED_NEXT_HOP is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/static-routes/static/next-hops/next-hop/state/next-hop
 // is to be set to a E_OpenconfigLocalRouting_LOCAL_DEFINED_NEXT_HOP value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_StaticRoutes_Static_NextHops_NextHop_State_NextHop_Union_E_OpenconfigLocalRouting_LOCAL_DEFINED_NEXT_HOP struct {
-	E_OpenconfigLocalRouting_LOCAL_DEFINED_NEXT_HOP	E_OpenconfigLocalRouting_LOCAL_DEFINED_NEXT_HOP
+	E_OpenconfigLocalRouting_LOCAL_DEFINED_NEXT_HOP E_OpenconfigLocalRouting_LOCAL_DEFINED_NEXT_HOP
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_StaticRoutes_Static_NextHops_NextHop_State_NextHop_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_StaticRoutes_Static_NextHops_NextHop_State_NextHop_Union_E_OpenconfigLocalRouting_LOCAL_DEFINED_NEXT_HOP
@@ -7245,7 +5120,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Prot
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_StaticRoutes_Static_NextHops_NextHop_State_NextHop_Union_String is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/static-routes/static/next-hops/next-hop/state/next-hop
 // is to be set to a string value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_StaticRoutes_Static_NextHops_NextHop_State_NextHop_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_StaticRoutes_Static_NextHops_NextHop_State_NextHop_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_StaticRoutes_Static_NextHops_NextHop_State_NextHop_Union_String
@@ -7266,7 +5141,6 @@ func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Pr
 	}
 }
 
-
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_StaticRoutes_Static_State_SetTag_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-network-instance/network-instances/network-instance/protocols/protocol/static-routes/static/state/set-tag within the YANG schema.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_StaticRoutes_Static_State_SetTag_Union interface {
@@ -7276,7 +5150,7 @@ type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protoc
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_StaticRoutes_Static_State_SetTag_Union_String is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/static-routes/static/state/set-tag
 // is to be set to a string value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_StaticRoutes_Static_State_SetTag_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_StaticRoutes_Static_State_SetTag_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_StaticRoutes_Static_State_SetTag_Union_String
@@ -7286,7 +5160,7 @@ func (*OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Prot
 // OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_StaticRoutes_Static_State_SetTag_Union_Uint32 is used when /openconfig-network-instance/network-instances/network-instance/protocols/protocol/static-routes/static/state/set-tag
 // is to be set to a uint32 value.
 type OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_StaticRoutes_Static_State_SetTag_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_StaticRoutes_Static_State_SetTag_Union ensures that OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_StaticRoutes_Static_State_SetTag_Union_Uint32
@@ -7307,61 +5181,6 @@ func (t *OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Pr
 	}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // OpenconfigPlatform_Components_Component_Properties_Property_Config_Value_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-platform/components/component/properties/property/config/value within the YANG schema.
 type OpenconfigPlatform_Components_Component_Properties_Property_Config_Value_Union interface {
@@ -7371,7 +5190,7 @@ type OpenconfigPlatform_Components_Component_Properties_Property_Config_Value_Un
 // OpenconfigPlatform_Components_Component_Properties_Property_Config_Value_Union_Bool is used when /openconfig-platform/components/component/properties/property/config/value
 // is to be set to a bool value.
 type OpenconfigPlatform_Components_Component_Properties_Property_Config_Value_Union_Bool struct {
-	Bool	bool
+	Bool bool
 }
 
 // Is_OpenconfigPlatform_Components_Component_Properties_Property_Config_Value_Union ensures that OpenconfigPlatform_Components_Component_Properties_Property_Config_Value_Union_Bool
@@ -7381,7 +5200,7 @@ func (*OpenconfigPlatform_Components_Component_Properties_Property_Config_Value_
 // OpenconfigPlatform_Components_Component_Properties_Property_Config_Value_Union_Float64 is used when /openconfig-platform/components/component/properties/property/config/value
 // is to be set to a float64 value.
 type OpenconfigPlatform_Components_Component_Properties_Property_Config_Value_Union_Float64 struct {
-	Float64	float64
+	Float64 float64
 }
 
 // Is_OpenconfigPlatform_Components_Component_Properties_Property_Config_Value_Union ensures that OpenconfigPlatform_Components_Component_Properties_Property_Config_Value_Union_Float64
@@ -7391,7 +5210,7 @@ func (*OpenconfigPlatform_Components_Component_Properties_Property_Config_Value_
 // OpenconfigPlatform_Components_Component_Properties_Property_Config_Value_Union_Int64 is used when /openconfig-platform/components/component/properties/property/config/value
 // is to be set to a int64 value.
 type OpenconfigPlatform_Components_Component_Properties_Property_Config_Value_Union_Int64 struct {
-	Int64	int64
+	Int64 int64
 }
 
 // Is_OpenconfigPlatform_Components_Component_Properties_Property_Config_Value_Union ensures that OpenconfigPlatform_Components_Component_Properties_Property_Config_Value_Union_Int64
@@ -7401,7 +5220,7 @@ func (*OpenconfigPlatform_Components_Component_Properties_Property_Config_Value_
 // OpenconfigPlatform_Components_Component_Properties_Property_Config_Value_Union_String is used when /openconfig-platform/components/component/properties/property/config/value
 // is to be set to a string value.
 type OpenconfigPlatform_Components_Component_Properties_Property_Config_Value_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigPlatform_Components_Component_Properties_Property_Config_Value_Union ensures that OpenconfigPlatform_Components_Component_Properties_Property_Config_Value_Union_String
@@ -7411,7 +5230,7 @@ func (*OpenconfigPlatform_Components_Component_Properties_Property_Config_Value_
 // OpenconfigPlatform_Components_Component_Properties_Property_Config_Value_Union_Uint64 is used when /openconfig-platform/components/component/properties/property/config/value
 // is to be set to a uint64 value.
 type OpenconfigPlatform_Components_Component_Properties_Property_Config_Value_Union_Uint64 struct {
-	Uint64	uint64
+	Uint64 uint64
 }
 
 // Is_OpenconfigPlatform_Components_Component_Properties_Property_Config_Value_Union ensures that OpenconfigPlatform_Components_Component_Properties_Property_Config_Value_Union_Uint64
@@ -7438,7 +5257,6 @@ func (t *OpenconfigPlatform_Components_Component_Properties_Property_Config) To_
 	}
 }
 
-
 // OpenconfigPlatform_Components_Component_Properties_Property_State_Value_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-platform/components/component/properties/property/state/value within the YANG schema.
 type OpenconfigPlatform_Components_Component_Properties_Property_State_Value_Union interface {
@@ -7448,7 +5266,7 @@ type OpenconfigPlatform_Components_Component_Properties_Property_State_Value_Uni
 // OpenconfigPlatform_Components_Component_Properties_Property_State_Value_Union_Bool is used when /openconfig-platform/components/component/properties/property/state/value
 // is to be set to a bool value.
 type OpenconfigPlatform_Components_Component_Properties_Property_State_Value_Union_Bool struct {
-	Bool	bool
+	Bool bool
 }
 
 // Is_OpenconfigPlatform_Components_Component_Properties_Property_State_Value_Union ensures that OpenconfigPlatform_Components_Component_Properties_Property_State_Value_Union_Bool
@@ -7458,7 +5276,7 @@ func (*OpenconfigPlatform_Components_Component_Properties_Property_State_Value_U
 // OpenconfigPlatform_Components_Component_Properties_Property_State_Value_Union_Float64 is used when /openconfig-platform/components/component/properties/property/state/value
 // is to be set to a float64 value.
 type OpenconfigPlatform_Components_Component_Properties_Property_State_Value_Union_Float64 struct {
-	Float64	float64
+	Float64 float64
 }
 
 // Is_OpenconfigPlatform_Components_Component_Properties_Property_State_Value_Union ensures that OpenconfigPlatform_Components_Component_Properties_Property_State_Value_Union_Float64
@@ -7468,7 +5286,7 @@ func (*OpenconfigPlatform_Components_Component_Properties_Property_State_Value_U
 // OpenconfigPlatform_Components_Component_Properties_Property_State_Value_Union_Int64 is used when /openconfig-platform/components/component/properties/property/state/value
 // is to be set to a int64 value.
 type OpenconfigPlatform_Components_Component_Properties_Property_State_Value_Union_Int64 struct {
-	Int64	int64
+	Int64 int64
 }
 
 // Is_OpenconfigPlatform_Components_Component_Properties_Property_State_Value_Union ensures that OpenconfigPlatform_Components_Component_Properties_Property_State_Value_Union_Int64
@@ -7478,7 +5296,7 @@ func (*OpenconfigPlatform_Components_Component_Properties_Property_State_Value_U
 // OpenconfigPlatform_Components_Component_Properties_Property_State_Value_Union_String is used when /openconfig-platform/components/component/properties/property/state/value
 // is to be set to a string value.
 type OpenconfigPlatform_Components_Component_Properties_Property_State_Value_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigPlatform_Components_Component_Properties_Property_State_Value_Union ensures that OpenconfigPlatform_Components_Component_Properties_Property_State_Value_Union_String
@@ -7488,7 +5306,7 @@ func (*OpenconfigPlatform_Components_Component_Properties_Property_State_Value_U
 // OpenconfigPlatform_Components_Component_Properties_Property_State_Value_Union_Uint64 is used when /openconfig-platform/components/component/properties/property/state/value
 // is to be set to a uint64 value.
 type OpenconfigPlatform_Components_Component_Properties_Property_State_Value_Union_Uint64 struct {
-	Uint64	uint64
+	Uint64 uint64
 }
 
 // Is_OpenconfigPlatform_Components_Component_Properties_Property_State_Value_Union ensures that OpenconfigPlatform_Components_Component_Properties_Property_State_Value_Union_Uint64
@@ -7515,7 +5333,6 @@ func (t *OpenconfigPlatform_Components_Component_Properties_Property_State) To_O
 	}
 }
 
-
 // OpenconfigPlatform_Components_Component_State_Type_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-platform/components/component/state/type within the YANG schema.
 type OpenconfigPlatform_Components_Component_State_Type_Union interface {
@@ -7525,7 +5342,7 @@ type OpenconfigPlatform_Components_Component_State_Type_Union interface {
 // OpenconfigPlatform_Components_Component_State_Type_Union_E_OpenconfigPlatformTypes_OPENCONFIG_HARDWARE_COMPONENT is used when /openconfig-platform/components/component/state/type
 // is to be set to a E_OpenconfigPlatformTypes_OPENCONFIG_HARDWARE_COMPONENT value.
 type OpenconfigPlatform_Components_Component_State_Type_Union_E_OpenconfigPlatformTypes_OPENCONFIG_HARDWARE_COMPONENT struct {
-	E_OpenconfigPlatformTypes_OPENCONFIG_HARDWARE_COMPONENT	E_OpenconfigPlatformTypes_OPENCONFIG_HARDWARE_COMPONENT
+	E_OpenconfigPlatformTypes_OPENCONFIG_HARDWARE_COMPONENT E_OpenconfigPlatformTypes_OPENCONFIG_HARDWARE_COMPONENT
 }
 
 // Is_OpenconfigPlatform_Components_Component_State_Type_Union ensures that OpenconfigPlatform_Components_Component_State_Type_Union_E_OpenconfigPlatformTypes_OPENCONFIG_HARDWARE_COMPONENT
@@ -7535,7 +5352,7 @@ func (*OpenconfigPlatform_Components_Component_State_Type_Union_E_OpenconfigPlat
 // OpenconfigPlatform_Components_Component_State_Type_Union_E_OpenconfigPlatformTypes_OPENCONFIG_SOFTWARE_COMPONENT is used when /openconfig-platform/components/component/state/type
 // is to be set to a E_OpenconfigPlatformTypes_OPENCONFIG_SOFTWARE_COMPONENT value.
 type OpenconfigPlatform_Components_Component_State_Type_Union_E_OpenconfigPlatformTypes_OPENCONFIG_SOFTWARE_COMPONENT struct {
-	E_OpenconfigPlatformTypes_OPENCONFIG_SOFTWARE_COMPONENT	E_OpenconfigPlatformTypes_OPENCONFIG_SOFTWARE_COMPONENT
+	E_OpenconfigPlatformTypes_OPENCONFIG_SOFTWARE_COMPONENT E_OpenconfigPlatformTypes_OPENCONFIG_SOFTWARE_COMPONENT
 }
 
 // Is_OpenconfigPlatform_Components_Component_State_Type_Union ensures that OpenconfigPlatform_Components_Component_State_Type_Union_E_OpenconfigPlatformTypes_OPENCONFIG_SOFTWARE_COMPONENT
@@ -7556,32 +5373,6 @@ func (t *OpenconfigPlatform_Components_Component_State) To_OpenconfigPlatform_Co
 	}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // OpenconfigRoutingPolicy_RoutingPolicy_DefinedSets_TagSets_TagSet_Config_TagValue_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-routing-policy/routing-policy/defined-sets/tag-sets/tag-set/config/tag-value within the YANG schema.
 type OpenconfigRoutingPolicy_RoutingPolicy_DefinedSets_TagSets_TagSet_Config_TagValue_Union interface {
@@ -7591,7 +5382,7 @@ type OpenconfigRoutingPolicy_RoutingPolicy_DefinedSets_TagSets_TagSet_Config_Tag
 // OpenconfigRoutingPolicy_RoutingPolicy_DefinedSets_TagSets_TagSet_Config_TagValue_Union_String is used when /openconfig-routing-policy/routing-policy/defined-sets/tag-sets/tag-set/config/tag-value
 // is to be set to a string value.
 type OpenconfigRoutingPolicy_RoutingPolicy_DefinedSets_TagSets_TagSet_Config_TagValue_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigRoutingPolicy_RoutingPolicy_DefinedSets_TagSets_TagSet_Config_TagValue_Union ensures that OpenconfigRoutingPolicy_RoutingPolicy_DefinedSets_TagSets_TagSet_Config_TagValue_Union_String
@@ -7601,7 +5392,7 @@ func (*OpenconfigRoutingPolicy_RoutingPolicy_DefinedSets_TagSets_TagSet_Config_T
 // OpenconfigRoutingPolicy_RoutingPolicy_DefinedSets_TagSets_TagSet_Config_TagValue_Union_Uint32 is used when /openconfig-routing-policy/routing-policy/defined-sets/tag-sets/tag-set/config/tag-value
 // is to be set to a uint32 value.
 type OpenconfigRoutingPolicy_RoutingPolicy_DefinedSets_TagSets_TagSet_Config_TagValue_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigRoutingPolicy_RoutingPolicy_DefinedSets_TagSets_TagSet_Config_TagValue_Union ensures that OpenconfigRoutingPolicy_RoutingPolicy_DefinedSets_TagSets_TagSet_Config_TagValue_Union_Uint32
@@ -7622,7 +5413,6 @@ func (t *OpenconfigRoutingPolicy_RoutingPolicy_DefinedSets_TagSets_TagSet_Config
 	}
 }
 
-
 // OpenconfigRoutingPolicy_RoutingPolicy_DefinedSets_TagSets_TagSet_State_TagValue_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-routing-policy/routing-policy/defined-sets/tag-sets/tag-set/state/tag-value within the YANG schema.
 type OpenconfigRoutingPolicy_RoutingPolicy_DefinedSets_TagSets_TagSet_State_TagValue_Union interface {
@@ -7632,7 +5422,7 @@ type OpenconfigRoutingPolicy_RoutingPolicy_DefinedSets_TagSets_TagSet_State_TagV
 // OpenconfigRoutingPolicy_RoutingPolicy_DefinedSets_TagSets_TagSet_State_TagValue_Union_String is used when /openconfig-routing-policy/routing-policy/defined-sets/tag-sets/tag-set/state/tag-value
 // is to be set to a string value.
 type OpenconfigRoutingPolicy_RoutingPolicy_DefinedSets_TagSets_TagSet_State_TagValue_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigRoutingPolicy_RoutingPolicy_DefinedSets_TagSets_TagSet_State_TagValue_Union ensures that OpenconfigRoutingPolicy_RoutingPolicy_DefinedSets_TagSets_TagSet_State_TagValue_Union_String
@@ -7642,7 +5432,7 @@ func (*OpenconfigRoutingPolicy_RoutingPolicy_DefinedSets_TagSets_TagSet_State_Ta
 // OpenconfigRoutingPolicy_RoutingPolicy_DefinedSets_TagSets_TagSet_State_TagValue_Union_Uint32 is used when /openconfig-routing-policy/routing-policy/defined-sets/tag-sets/tag-set/state/tag-value
 // is to be set to a uint32 value.
 type OpenconfigRoutingPolicy_RoutingPolicy_DefinedSets_TagSets_TagSet_State_TagValue_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigRoutingPolicy_RoutingPolicy_DefinedSets_TagSets_TagSet_State_TagValue_Union ensures that OpenconfigRoutingPolicy_RoutingPolicy_DefinedSets_TagSets_TagSet_State_TagValue_Union_Uint32
@@ -7663,36 +5453,6 @@ func (t *OpenconfigRoutingPolicy_RoutingPolicy_DefinedSets_TagSets_TagSet_State)
 	}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // OpenconfigSystem_System_Aaa_Accounting_Config_AccountingMethod_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-system/system/aaa/accounting/config/accounting-method within the YANG schema.
 type OpenconfigSystem_System_Aaa_Accounting_Config_AccountingMethod_Union interface {
@@ -7702,7 +5462,7 @@ type OpenconfigSystem_System_Aaa_Accounting_Config_AccountingMethod_Union interf
 // OpenconfigSystem_System_Aaa_Accounting_Config_AccountingMethod_Union_E_OpenconfigAaaTypes_AAA_METHOD_TYPE is used when /openconfig-system/system/aaa/accounting/config/accounting-method
 // is to be set to a E_OpenconfigAaaTypes_AAA_METHOD_TYPE value.
 type OpenconfigSystem_System_Aaa_Accounting_Config_AccountingMethod_Union_E_OpenconfigAaaTypes_AAA_METHOD_TYPE struct {
-	E_OpenconfigAaaTypes_AAA_METHOD_TYPE	E_OpenconfigAaaTypes_AAA_METHOD_TYPE
+	E_OpenconfigAaaTypes_AAA_METHOD_TYPE E_OpenconfigAaaTypes_AAA_METHOD_TYPE
 }
 
 // Is_OpenconfigSystem_System_Aaa_Accounting_Config_AccountingMethod_Union ensures that OpenconfigSystem_System_Aaa_Accounting_Config_AccountingMethod_Union_E_OpenconfigAaaTypes_AAA_METHOD_TYPE
@@ -7712,7 +5472,7 @@ func (*OpenconfigSystem_System_Aaa_Accounting_Config_AccountingMethod_Union_E_Op
 // OpenconfigSystem_System_Aaa_Accounting_Config_AccountingMethod_Union_String is used when /openconfig-system/system/aaa/accounting/config/accounting-method
 // is to be set to a string value.
 type OpenconfigSystem_System_Aaa_Accounting_Config_AccountingMethod_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigSystem_System_Aaa_Accounting_Config_AccountingMethod_Union ensures that OpenconfigSystem_System_Aaa_Accounting_Config_AccountingMethod_Union_String
@@ -7733,11 +5493,6 @@ func (t *OpenconfigSystem_System_Aaa_Accounting_Config) To_OpenconfigSystem_Syst
 	}
 }
 
-
-
-
-
-
 // OpenconfigSystem_System_Aaa_Accounting_State_AccountingMethod_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-system/system/aaa/accounting/state/accounting-method within the YANG schema.
 type OpenconfigSystem_System_Aaa_Accounting_State_AccountingMethod_Union interface {
@@ -7747,7 +5502,7 @@ type OpenconfigSystem_System_Aaa_Accounting_State_AccountingMethod_Union interfa
 // OpenconfigSystem_System_Aaa_Accounting_State_AccountingMethod_Union_E_OpenconfigAaaTypes_AAA_METHOD_TYPE is used when /openconfig-system/system/aaa/accounting/state/accounting-method
 // is to be set to a E_OpenconfigAaaTypes_AAA_METHOD_TYPE value.
 type OpenconfigSystem_System_Aaa_Accounting_State_AccountingMethod_Union_E_OpenconfigAaaTypes_AAA_METHOD_TYPE struct {
-	E_OpenconfigAaaTypes_AAA_METHOD_TYPE	E_OpenconfigAaaTypes_AAA_METHOD_TYPE
+	E_OpenconfigAaaTypes_AAA_METHOD_TYPE E_OpenconfigAaaTypes_AAA_METHOD_TYPE
 }
 
 // Is_OpenconfigSystem_System_Aaa_Accounting_State_AccountingMethod_Union ensures that OpenconfigSystem_System_Aaa_Accounting_State_AccountingMethod_Union_E_OpenconfigAaaTypes_AAA_METHOD_TYPE
@@ -7757,7 +5512,7 @@ func (*OpenconfigSystem_System_Aaa_Accounting_State_AccountingMethod_Union_E_Ope
 // OpenconfigSystem_System_Aaa_Accounting_State_AccountingMethod_Union_String is used when /openconfig-system/system/aaa/accounting/state/accounting-method
 // is to be set to a string value.
 type OpenconfigSystem_System_Aaa_Accounting_State_AccountingMethod_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigSystem_System_Aaa_Accounting_State_AccountingMethod_Union ensures that OpenconfigSystem_System_Aaa_Accounting_State_AccountingMethod_Union_String
@@ -7778,11 +5533,6 @@ func (t *OpenconfigSystem_System_Aaa_Accounting_State) To_OpenconfigSystem_Syste
 	}
 }
 
-
-
-
-
-
 // OpenconfigSystem_System_Aaa_Authentication_Config_AuthenticationMethod_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-system/system/aaa/authentication/config/authentication-method within the YANG schema.
 type OpenconfigSystem_System_Aaa_Authentication_Config_AuthenticationMethod_Union interface {
@@ -7792,7 +5542,7 @@ type OpenconfigSystem_System_Aaa_Authentication_Config_AuthenticationMethod_Unio
 // OpenconfigSystem_System_Aaa_Authentication_Config_AuthenticationMethod_Union_E_OpenconfigAaaTypes_AAA_METHOD_TYPE is used when /openconfig-system/system/aaa/authentication/config/authentication-method
 // is to be set to a E_OpenconfigAaaTypes_AAA_METHOD_TYPE value.
 type OpenconfigSystem_System_Aaa_Authentication_Config_AuthenticationMethod_Union_E_OpenconfigAaaTypes_AAA_METHOD_TYPE struct {
-	E_OpenconfigAaaTypes_AAA_METHOD_TYPE	E_OpenconfigAaaTypes_AAA_METHOD_TYPE
+	E_OpenconfigAaaTypes_AAA_METHOD_TYPE E_OpenconfigAaaTypes_AAA_METHOD_TYPE
 }
 
 // Is_OpenconfigSystem_System_Aaa_Authentication_Config_AuthenticationMethod_Union ensures that OpenconfigSystem_System_Aaa_Authentication_Config_AuthenticationMethod_Union_E_OpenconfigAaaTypes_AAA_METHOD_TYPE
@@ -7802,7 +5552,7 @@ func (*OpenconfigSystem_System_Aaa_Authentication_Config_AuthenticationMethod_Un
 // OpenconfigSystem_System_Aaa_Authentication_Config_AuthenticationMethod_Union_String is used when /openconfig-system/system/aaa/authentication/config/authentication-method
 // is to be set to a string value.
 type OpenconfigSystem_System_Aaa_Authentication_Config_AuthenticationMethod_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigSystem_System_Aaa_Authentication_Config_AuthenticationMethod_Union ensures that OpenconfigSystem_System_Aaa_Authentication_Config_AuthenticationMethod_Union_String
@@ -7823,7 +5573,6 @@ func (t *OpenconfigSystem_System_Aaa_Authentication_Config) To_OpenconfigSystem_
 	}
 }
 
-
 // OpenconfigSystem_System_Aaa_Authentication_State_AuthenticationMethod_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-system/system/aaa/authentication/state/authentication-method within the YANG schema.
 type OpenconfigSystem_System_Aaa_Authentication_State_AuthenticationMethod_Union interface {
@@ -7833,7 +5582,7 @@ type OpenconfigSystem_System_Aaa_Authentication_State_AuthenticationMethod_Union
 // OpenconfigSystem_System_Aaa_Authentication_State_AuthenticationMethod_Union_E_OpenconfigAaaTypes_AAA_METHOD_TYPE is used when /openconfig-system/system/aaa/authentication/state/authentication-method
 // is to be set to a E_OpenconfigAaaTypes_AAA_METHOD_TYPE value.
 type OpenconfigSystem_System_Aaa_Authentication_State_AuthenticationMethod_Union_E_OpenconfigAaaTypes_AAA_METHOD_TYPE struct {
-	E_OpenconfigAaaTypes_AAA_METHOD_TYPE	E_OpenconfigAaaTypes_AAA_METHOD_TYPE
+	E_OpenconfigAaaTypes_AAA_METHOD_TYPE E_OpenconfigAaaTypes_AAA_METHOD_TYPE
 }
 
 // Is_OpenconfigSystem_System_Aaa_Authentication_State_AuthenticationMethod_Union ensures that OpenconfigSystem_System_Aaa_Authentication_State_AuthenticationMethod_Union_E_OpenconfigAaaTypes_AAA_METHOD_TYPE
@@ -7843,7 +5592,7 @@ func (*OpenconfigSystem_System_Aaa_Authentication_State_AuthenticationMethod_Uni
 // OpenconfigSystem_System_Aaa_Authentication_State_AuthenticationMethod_Union_String is used when /openconfig-system/system/aaa/authentication/state/authentication-method
 // is to be set to a string value.
 type OpenconfigSystem_System_Aaa_Authentication_State_AuthenticationMethod_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigSystem_System_Aaa_Authentication_State_AuthenticationMethod_Union ensures that OpenconfigSystem_System_Aaa_Authentication_State_AuthenticationMethod_Union_String
@@ -7864,9 +5613,6 @@ func (t *OpenconfigSystem_System_Aaa_Authentication_State) To_OpenconfigSystem_S
 	}
 }
 
-
-
-
 // OpenconfigSystem_System_Aaa_Authentication_Users_User_Config_Role_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-system/system/aaa/authentication/users/user/config/role within the YANG schema.
 type OpenconfigSystem_System_Aaa_Authentication_Users_User_Config_Role_Union interface {
@@ -7876,7 +5622,7 @@ type OpenconfigSystem_System_Aaa_Authentication_Users_User_Config_Role_Union int
 // OpenconfigSystem_System_Aaa_Authentication_Users_User_Config_Role_Union_E_OpenconfigAaaTypes_SYSTEM_DEFINED_ROLES is used when /openconfig-system/system/aaa/authentication/users/user/config/role
 // is to be set to a E_OpenconfigAaaTypes_SYSTEM_DEFINED_ROLES value.
 type OpenconfigSystem_System_Aaa_Authentication_Users_User_Config_Role_Union_E_OpenconfigAaaTypes_SYSTEM_DEFINED_ROLES struct {
-	E_OpenconfigAaaTypes_SYSTEM_DEFINED_ROLES	E_OpenconfigAaaTypes_SYSTEM_DEFINED_ROLES
+	E_OpenconfigAaaTypes_SYSTEM_DEFINED_ROLES E_OpenconfigAaaTypes_SYSTEM_DEFINED_ROLES
 }
 
 // Is_OpenconfigSystem_System_Aaa_Authentication_Users_User_Config_Role_Union ensures that OpenconfigSystem_System_Aaa_Authentication_Users_User_Config_Role_Union_E_OpenconfigAaaTypes_SYSTEM_DEFINED_ROLES
@@ -7886,7 +5632,7 @@ func (*OpenconfigSystem_System_Aaa_Authentication_Users_User_Config_Role_Union_E
 // OpenconfigSystem_System_Aaa_Authentication_Users_User_Config_Role_Union_String is used when /openconfig-system/system/aaa/authentication/users/user/config/role
 // is to be set to a string value.
 type OpenconfigSystem_System_Aaa_Authentication_Users_User_Config_Role_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigSystem_System_Aaa_Authentication_Users_User_Config_Role_Union ensures that OpenconfigSystem_System_Aaa_Authentication_Users_User_Config_Role_Union_String
@@ -7907,7 +5653,6 @@ func (t *OpenconfigSystem_System_Aaa_Authentication_Users_User_Config) To_Openco
 	}
 }
 
-
 // OpenconfigSystem_System_Aaa_Authentication_Users_User_State_Role_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-system/system/aaa/authentication/users/user/state/role within the YANG schema.
 type OpenconfigSystem_System_Aaa_Authentication_Users_User_State_Role_Union interface {
@@ -7917,7 +5662,7 @@ type OpenconfigSystem_System_Aaa_Authentication_Users_User_State_Role_Union inte
 // OpenconfigSystem_System_Aaa_Authentication_Users_User_State_Role_Union_E_OpenconfigAaaTypes_SYSTEM_DEFINED_ROLES is used when /openconfig-system/system/aaa/authentication/users/user/state/role
 // is to be set to a E_OpenconfigAaaTypes_SYSTEM_DEFINED_ROLES value.
 type OpenconfigSystem_System_Aaa_Authentication_Users_User_State_Role_Union_E_OpenconfigAaaTypes_SYSTEM_DEFINED_ROLES struct {
-	E_OpenconfigAaaTypes_SYSTEM_DEFINED_ROLES	E_OpenconfigAaaTypes_SYSTEM_DEFINED_ROLES
+	E_OpenconfigAaaTypes_SYSTEM_DEFINED_ROLES E_OpenconfigAaaTypes_SYSTEM_DEFINED_ROLES
 }
 
 // Is_OpenconfigSystem_System_Aaa_Authentication_Users_User_State_Role_Union ensures that OpenconfigSystem_System_Aaa_Authentication_Users_User_State_Role_Union_E_OpenconfigAaaTypes_SYSTEM_DEFINED_ROLES
@@ -7927,7 +5672,7 @@ func (*OpenconfigSystem_System_Aaa_Authentication_Users_User_State_Role_Union_E_
 // OpenconfigSystem_System_Aaa_Authentication_Users_User_State_Role_Union_String is used when /openconfig-system/system/aaa/authentication/users/user/state/role
 // is to be set to a string value.
 type OpenconfigSystem_System_Aaa_Authentication_Users_User_State_Role_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigSystem_System_Aaa_Authentication_Users_User_State_Role_Union ensures that OpenconfigSystem_System_Aaa_Authentication_Users_User_State_Role_Union_String
@@ -7948,8 +5693,6 @@ func (t *OpenconfigSystem_System_Aaa_Authentication_Users_User_State) To_Opencon
 	}
 }
 
-
-
 // OpenconfigSystem_System_Aaa_Authorization_Config_AuthorizationMethod_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-system/system/aaa/authorization/config/authorization-method within the YANG schema.
 type OpenconfigSystem_System_Aaa_Authorization_Config_AuthorizationMethod_Union interface {
@@ -7959,7 +5702,7 @@ type OpenconfigSystem_System_Aaa_Authorization_Config_AuthorizationMethod_Union 
 // OpenconfigSystem_System_Aaa_Authorization_Config_AuthorizationMethod_Union_E_OpenconfigAaaTypes_AAA_METHOD_TYPE is used when /openconfig-system/system/aaa/authorization/config/authorization-method
 // is to be set to a E_OpenconfigAaaTypes_AAA_METHOD_TYPE value.
 type OpenconfigSystem_System_Aaa_Authorization_Config_AuthorizationMethod_Union_E_OpenconfigAaaTypes_AAA_METHOD_TYPE struct {
-	E_OpenconfigAaaTypes_AAA_METHOD_TYPE	E_OpenconfigAaaTypes_AAA_METHOD_TYPE
+	E_OpenconfigAaaTypes_AAA_METHOD_TYPE E_OpenconfigAaaTypes_AAA_METHOD_TYPE
 }
 
 // Is_OpenconfigSystem_System_Aaa_Authorization_Config_AuthorizationMethod_Union ensures that OpenconfigSystem_System_Aaa_Authorization_Config_AuthorizationMethod_Union_E_OpenconfigAaaTypes_AAA_METHOD_TYPE
@@ -7969,7 +5712,7 @@ func (*OpenconfigSystem_System_Aaa_Authorization_Config_AuthorizationMethod_Unio
 // OpenconfigSystem_System_Aaa_Authorization_Config_AuthorizationMethod_Union_String is used when /openconfig-system/system/aaa/authorization/config/authorization-method
 // is to be set to a string value.
 type OpenconfigSystem_System_Aaa_Authorization_Config_AuthorizationMethod_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigSystem_System_Aaa_Authorization_Config_AuthorizationMethod_Union ensures that OpenconfigSystem_System_Aaa_Authorization_Config_AuthorizationMethod_Union_String
@@ -7990,11 +5733,6 @@ func (t *OpenconfigSystem_System_Aaa_Authorization_Config) To_OpenconfigSystem_S
 	}
 }
 
-
-
-
-
-
 // OpenconfigSystem_System_Aaa_Authorization_State_AuthorizationMethod_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-system/system/aaa/authorization/state/authorization-method within the YANG schema.
 type OpenconfigSystem_System_Aaa_Authorization_State_AuthorizationMethod_Union interface {
@@ -8004,7 +5742,7 @@ type OpenconfigSystem_System_Aaa_Authorization_State_AuthorizationMethod_Union i
 // OpenconfigSystem_System_Aaa_Authorization_State_AuthorizationMethod_Union_E_OpenconfigAaaTypes_AAA_METHOD_TYPE is used when /openconfig-system/system/aaa/authorization/state/authorization-method
 // is to be set to a E_OpenconfigAaaTypes_AAA_METHOD_TYPE value.
 type OpenconfigSystem_System_Aaa_Authorization_State_AuthorizationMethod_Union_E_OpenconfigAaaTypes_AAA_METHOD_TYPE struct {
-	E_OpenconfigAaaTypes_AAA_METHOD_TYPE	E_OpenconfigAaaTypes_AAA_METHOD_TYPE
+	E_OpenconfigAaaTypes_AAA_METHOD_TYPE E_OpenconfigAaaTypes_AAA_METHOD_TYPE
 }
 
 // Is_OpenconfigSystem_System_Aaa_Authorization_State_AuthorizationMethod_Union ensures that OpenconfigSystem_System_Aaa_Authorization_State_AuthorizationMethod_Union_E_OpenconfigAaaTypes_AAA_METHOD_TYPE
@@ -8014,7 +5752,7 @@ func (*OpenconfigSystem_System_Aaa_Authorization_State_AuthorizationMethod_Union
 // OpenconfigSystem_System_Aaa_Authorization_State_AuthorizationMethod_Union_String is used when /openconfig-system/system/aaa/authorization/state/authorization-method
 // is to be set to a string value.
 type OpenconfigSystem_System_Aaa_Authorization_State_AuthorizationMethod_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigSystem_System_Aaa_Authorization_State_AuthorizationMethod_Union ensures that OpenconfigSystem_System_Aaa_Authorization_State_AuthorizationMethod_Union_String
@@ -8035,27 +5773,6 @@ func (t *OpenconfigSystem_System_Aaa_Authorization_State) To_OpenconfigSystem_Sy
 	}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // OpenconfigSystem_System_Alarms_Alarm_State_TypeId_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-system/system/alarms/alarm/state/type-id within the YANG schema.
 type OpenconfigSystem_System_Alarms_Alarm_State_TypeId_Union interface {
@@ -8065,7 +5782,7 @@ type OpenconfigSystem_System_Alarms_Alarm_State_TypeId_Union interface {
 // OpenconfigSystem_System_Alarms_Alarm_State_TypeId_Union_E_OpenconfigAlarmTypes_OPENCONFIG_ALARM_TYPE_ID is used when /openconfig-system/system/alarms/alarm/state/type-id
 // is to be set to a E_OpenconfigAlarmTypes_OPENCONFIG_ALARM_TYPE_ID value.
 type OpenconfigSystem_System_Alarms_Alarm_State_TypeId_Union_E_OpenconfigAlarmTypes_OPENCONFIG_ALARM_TYPE_ID struct {
-	E_OpenconfigAlarmTypes_OPENCONFIG_ALARM_TYPE_ID	E_OpenconfigAlarmTypes_OPENCONFIG_ALARM_TYPE_ID
+	E_OpenconfigAlarmTypes_OPENCONFIG_ALARM_TYPE_ID E_OpenconfigAlarmTypes_OPENCONFIG_ALARM_TYPE_ID
 }
 
 // Is_OpenconfigSystem_System_Alarms_Alarm_State_TypeId_Union ensures that OpenconfigSystem_System_Alarms_Alarm_State_TypeId_Union_E_OpenconfigAlarmTypes_OPENCONFIG_ALARM_TYPE_ID
@@ -8075,7 +5792,7 @@ func (*OpenconfigSystem_System_Alarms_Alarm_State_TypeId_Union_E_OpenconfigAlarm
 // OpenconfigSystem_System_Alarms_Alarm_State_TypeId_Union_String is used when /openconfig-system/system/alarms/alarm/state/type-id
 // is to be set to a string value.
 type OpenconfigSystem_System_Alarms_Alarm_State_TypeId_Union_String struct {
-	String	string
+	String string
 }
 
 // Is_OpenconfigSystem_System_Alarms_Alarm_State_TypeId_Union ensures that OpenconfigSystem_System_Alarms_Alarm_State_TypeId_Union_String
@@ -8096,12 +5813,6 @@ func (t *OpenconfigSystem_System_Alarms_Alarm_State) To_OpenconfigSystem_System_
 	}
 }
 
-
-
-
-
-
-
 // OpenconfigSystem_System_Cpus_Cpu_State_Index_Union is an interface that is implemented by valid types for the union
 // for the leaf /openconfig-system/system/cpus/cpu/index within the YANG schema.
 type OpenconfigSystem_System_Cpus_Cpu_State_Index_Union interface {
@@ -8111,7 +5822,7 @@ type OpenconfigSystem_System_Cpus_Cpu_State_Index_Union interface {
 // OpenconfigSystem_System_Cpus_Cpu_State_Index_Union_E_OpenconfigSystem_System_Cpus_Cpu_State_Index is used when /openconfig-system/system/cpus/cpu/index
 // is to be set to a E_OpenconfigSystem_System_Cpus_Cpu_State_Index value.
 type OpenconfigSystem_System_Cpus_Cpu_State_Index_Union_E_OpenconfigSystem_System_Cpus_Cpu_State_Index struct {
-	E_OpenconfigSystem_System_Cpus_Cpu_State_Index	E_OpenconfigSystem_System_Cpus_Cpu_State_Index
+	E_OpenconfigSystem_System_Cpus_Cpu_State_Index E_OpenconfigSystem_System_Cpus_Cpu_State_Index
 }
 
 // Is_OpenconfigSystem_System_Cpus_Cpu_State_Index_Union ensures that OpenconfigSystem_System_Cpus_Cpu_State_Index_Union_E_OpenconfigSystem_System_Cpus_Cpu_State_Index
@@ -8121,7 +5832,7 @@ func (*OpenconfigSystem_System_Cpus_Cpu_State_Index_Union_E_OpenconfigSystem_Sys
 // OpenconfigSystem_System_Cpus_Cpu_State_Index_Union_Uint32 is used when /openconfig-system/system/cpus/cpu/index
 // is to be set to a uint32 value.
 type OpenconfigSystem_System_Cpus_Cpu_State_Index_Union_Uint32 struct {
-	Uint32	uint32
+	Uint32 uint32
 }
 
 // Is_OpenconfigSystem_System_Cpus_Cpu_State_Index_Union ensures that OpenconfigSystem_System_Cpus_Cpu_State_Index_Union_Uint32
@@ -8141,65 +5852,3 @@ func (t *OpenconfigSystem_System_Cpus_Cpu) To_OpenconfigSystem_System_Cpus_Cpu_S
 		return nil, fmt.Errorf("cannot convert %v to OpenconfigSystem_System_Cpus_Cpu_State_Index_Union, unknown union type, got: %T, want any of [E_OpenconfigSystem_System_Cpus_Cpu_State_Index, uint32]", i, i)
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

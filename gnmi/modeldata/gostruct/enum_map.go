@@ -9,6 +9,7 @@ using the following YANG input files:
 	- github.com/openconfig/public/release/models/interfaces/openconfig-if-aggregate.yang
 	- github.com/openconfig/public/release/models/interfaces/openconfig-if-ethernet.yang
 	- github.com/openconfig/public/release/models/interfaces/openconfig-interfaces.yang
+	- github.com/openconfig/public/release/models/lacp/openconfig-lacp.yang
 	- github.com/openconfig/public/release/models/lldp/openconfig-lldp.yang
 	- github.com/openconfig/public/release/models/network-instance/openconfig-network-instance.yang
 	- github.com/openconfig/public/release/models/platform/openconfig-platform.yang
@@ -25,7 +26,6 @@ import (
 
 	"github.com/openconfig/ygot/ygot"
 )
-
 
 // ΛEnum is a map, keyed by the name of the type defined for each enum in the
 // generated Go code, which provides a mapping between the constant int64 value
@@ -101,15 +101,15 @@ var ΛEnum = map[string]map[int64]ygot.EnumDefinition{
 		4: {Name: "OTS", DefiningModule: "openconfig-alarm-types"},
 	},
 	"E_OpenconfigBgpTypes_AFI_SAFI_TYPE": {
-		1: {Name: "IPV4_LABELED_UNICAST", DefiningModule: "openconfig-bgp-types"},
-		2: {Name: "IPV4_UNICAST", DefiningModule: "openconfig-bgp-types"},
-		3: {Name: "IPV6_LABELED_UNICAST", DefiningModule: "openconfig-bgp-types"},
-		4: {Name: "IPV6_UNICAST", DefiningModule: "openconfig-bgp-types"},
-		5: {Name: "L2VPN_EVPN", DefiningModule: "openconfig-bgp-types"},
-		6: {Name: "L2VPN_VPLS", DefiningModule: "openconfig-bgp-types"},
-		7: {Name: "L3VPN_IPV4_MULTICAST", DefiningModule: "openconfig-bgp-types"},
-		8: {Name: "L3VPN_IPV4_UNICAST", DefiningModule: "openconfig-bgp-types"},
-		9: {Name: "L3VPN_IPV6_MULTICAST", DefiningModule: "openconfig-bgp-types"},
+		1:  {Name: "IPV4_LABELED_UNICAST", DefiningModule: "openconfig-bgp-types"},
+		2:  {Name: "IPV4_UNICAST", DefiningModule: "openconfig-bgp-types"},
+		3:  {Name: "IPV6_LABELED_UNICAST", DefiningModule: "openconfig-bgp-types"},
+		4:  {Name: "IPV6_UNICAST", DefiningModule: "openconfig-bgp-types"},
+		5:  {Name: "L2VPN_EVPN", DefiningModule: "openconfig-bgp-types"},
+		6:  {Name: "L2VPN_VPLS", DefiningModule: "openconfig-bgp-types"},
+		7:  {Name: "L3VPN_IPV4_MULTICAST", DefiningModule: "openconfig-bgp-types"},
+		8:  {Name: "L3VPN_IPV4_UNICAST", DefiningModule: "openconfig-bgp-types"},
+		9:  {Name: "L3VPN_IPV6_MULTICAST", DefiningModule: "openconfig-bgp-types"},
 		10: {Name: "L3VPN_IPV6_UNICAST", DefiningModule: "openconfig-bgp-types"},
 		11: {Name: "SRTE_POLICY_IPV4", DefiningModule: "openconfig-bgp-types"},
 		12: {Name: "SRTE_POLICY_IPV6", DefiningModule: "openconfig-bgp-types"},
@@ -131,15 +131,15 @@ var ΛEnum = map[string]map[int64]ygot.EnumDefinition{
 		7: {Name: "UPDATE_MESSAGE_ERROR", DefiningModule: "openconfig-bgp-errors"},
 	},
 	"E_OpenconfigBgpTypes_BGP_ERROR_SUBCODE": {
-		1: {Name: "ADMINISTRATIVE_RESET", DefiningModule: "openconfig-bgp-errors"},
-		2: {Name: "ADMINISTRATIVE_SHUTDOWN", DefiningModule: "openconfig-bgp-errors"},
-		3: {Name: "ATTRIBUTE_FLAGS_ERROR", DefiningModule: "openconfig-bgp-errors"},
-		4: {Name: "ATTRIBUTE_LENGTH_ERROR", DefiningModule: "openconfig-bgp-errors"},
-		5: {Name: "BAD_BGP_IDENTIFIER", DefiningModule: "openconfig-bgp-errors"},
-		6: {Name: "BAD_MESSAGE_LENGTH", DefiningModule: "openconfig-bgp-errors"},
-		7: {Name: "BAD_MESSAGE_TYPE", DefiningModule: "openconfig-bgp-errors"},
-		8: {Name: "BAD_PEER_AS", DefiningModule: "openconfig-bgp-errors"},
-		9: {Name: "CEASE_SUBCODE", DefiningModule: "openconfig-bgp-errors"},
+		1:  {Name: "ADMINISTRATIVE_RESET", DefiningModule: "openconfig-bgp-errors"},
+		2:  {Name: "ADMINISTRATIVE_SHUTDOWN", DefiningModule: "openconfig-bgp-errors"},
+		3:  {Name: "ATTRIBUTE_FLAGS_ERROR", DefiningModule: "openconfig-bgp-errors"},
+		4:  {Name: "ATTRIBUTE_LENGTH_ERROR", DefiningModule: "openconfig-bgp-errors"},
+		5:  {Name: "BAD_BGP_IDENTIFIER", DefiningModule: "openconfig-bgp-errors"},
+		6:  {Name: "BAD_MESSAGE_LENGTH", DefiningModule: "openconfig-bgp-errors"},
+		7:  {Name: "BAD_MESSAGE_TYPE", DefiningModule: "openconfig-bgp-errors"},
+		8:  {Name: "BAD_PEER_AS", DefiningModule: "openconfig-bgp-errors"},
+		9:  {Name: "CEASE_SUBCODE", DefiningModule: "openconfig-bgp-errors"},
 		10: {Name: "CONNECTION_NOT_SYNCHRONIZED", DefiningModule: "openconfig-bgp-errors"},
 		11: {Name: "CONNECTION_REJECTED", DefiningModule: "openconfig-bgp-errors"},
 		12: {Name: "CONN_COLLISION_RESOLUTION", DefiningModule: "openconfig-bgp-errors"},
@@ -202,15 +202,15 @@ var ΛEnum = map[string]map[int64]ygot.EnumDefinition{
 		2: {Name: "STATIC"},
 	},
 	"E_OpenconfigIfEthernet_ETHERNET_SPEED": {
-		1: {Name: "SPEED_100GB", DefiningModule: "openconfig-if-ethernet"},
-		2: {Name: "SPEED_100MB", DefiningModule: "openconfig-if-ethernet"},
-		3: {Name: "SPEED_10GB", DefiningModule: "openconfig-if-ethernet"},
-		4: {Name: "SPEED_10MB", DefiningModule: "openconfig-if-ethernet"},
-		5: {Name: "SPEED_1GB", DefiningModule: "openconfig-if-ethernet"},
-		6: {Name: "SPEED_2500MB", DefiningModule: "openconfig-if-ethernet"},
-		7: {Name: "SPEED_25GB", DefiningModule: "openconfig-if-ethernet"},
-		8: {Name: "SPEED_40GB", DefiningModule: "openconfig-if-ethernet"},
-		9: {Name: "SPEED_50GB", DefiningModule: "openconfig-if-ethernet"},
+		1:  {Name: "SPEED_100GB", DefiningModule: "openconfig-if-ethernet"},
+		2:  {Name: "SPEED_100MB", DefiningModule: "openconfig-if-ethernet"},
+		3:  {Name: "SPEED_10GB", DefiningModule: "openconfig-if-ethernet"},
+		4:  {Name: "SPEED_10MB", DefiningModule: "openconfig-if-ethernet"},
+		5:  {Name: "SPEED_1GB", DefiningModule: "openconfig-if-ethernet"},
+		6:  {Name: "SPEED_2500MB", DefiningModule: "openconfig-if-ethernet"},
+		7:  {Name: "SPEED_25GB", DefiningModule: "openconfig-if-ethernet"},
+		8:  {Name: "SPEED_40GB", DefiningModule: "openconfig-if-ethernet"},
+		9:  {Name: "SPEED_50GB", DefiningModule: "openconfig-if-ethernet"},
 		10: {Name: "SPEED_5GB", DefiningModule: "openconfig-if-ethernet"},
 		11: {Name: "SPEED_UNKNOWN", DefiningModule: "openconfig-if-ethernet"},
 	},
@@ -237,15 +237,15 @@ var ΛEnum = map[string]map[int64]ygot.EnumDefinition{
 		8: {Name: "LOWER_LAYER_DOWN"},
 	},
 	"E_OpenconfigIsisLsdbTypes_ISIS_SUBTLV_TYPE": {
-		1: {Name: "IP_REACHABILITY_IPV4_ROUTER_ID", DefiningModule: "openconfig-isis-lsdb-types"},
-		2: {Name: "IP_REACHABILITY_IPV6_ROUTER_ID", DefiningModule: "openconfig-isis-lsdb-types"},
-		3: {Name: "IP_REACHABILITY_PREFIX_FLAGS", DefiningModule: "openconfig-isis-lsdb-types"},
-		4: {Name: "IP_REACHABILITY_PREFIX_SID", DefiningModule: "openconfig-isis-lsdb-types"},
-		5: {Name: "IP_REACHABILITY_SUBTLVS_TYPE", DefiningModule: "openconfig-isis-lsdb-types"},
-		6: {Name: "IP_REACHABILITY_TAG", DefiningModule: "openconfig-isis-lsdb-types"},
-		7: {Name: "IP_REACHABILITY_TAG64", DefiningModule: "openconfig-isis-lsdb-types"},
-		8: {Name: "IS_REACHABILITY_ADJ_LAN_SID", DefiningModule: "openconfig-isis-lsdb-types"},
-		9: {Name: "IS_REACHABILITY_ADJ_SID", DefiningModule: "openconfig-isis-lsdb-types"},
+		1:  {Name: "IP_REACHABILITY_IPV4_ROUTER_ID", DefiningModule: "openconfig-isis-lsdb-types"},
+		2:  {Name: "IP_REACHABILITY_IPV6_ROUTER_ID", DefiningModule: "openconfig-isis-lsdb-types"},
+		3:  {Name: "IP_REACHABILITY_PREFIX_FLAGS", DefiningModule: "openconfig-isis-lsdb-types"},
+		4:  {Name: "IP_REACHABILITY_PREFIX_SID", DefiningModule: "openconfig-isis-lsdb-types"},
+		5:  {Name: "IP_REACHABILITY_SUBTLVS_TYPE", DefiningModule: "openconfig-isis-lsdb-types"},
+		6:  {Name: "IP_REACHABILITY_TAG", DefiningModule: "openconfig-isis-lsdb-types"},
+		7:  {Name: "IP_REACHABILITY_TAG64", DefiningModule: "openconfig-isis-lsdb-types"},
+		8:  {Name: "IS_REACHABILITY_ADJ_LAN_SID", DefiningModule: "openconfig-isis-lsdb-types"},
+		9:  {Name: "IS_REACHABILITY_ADJ_SID", DefiningModule: "openconfig-isis-lsdb-types"},
 		10: {Name: "IS_REACHABILITY_ADMIN_GROUP", DefiningModule: "openconfig-isis-lsdb-types"},
 		11: {Name: "IS_REACHABILITY_AVAILABLE_BANDWIDTH", DefiningModule: "openconfig-isis-lsdb-types"},
 		12: {Name: "IS_REACHABILITY_BANDWIDTH_CONSTRAINTS", DefiningModule: "openconfig-isis-lsdb-types"},
@@ -274,15 +274,15 @@ var ΛEnum = map[string]map[int64]ygot.EnumDefinition{
 		35: {Name: "ROUTER_CAPABILITY_SUBTLVS_TYPE", DefiningModule: "openconfig-isis-lsdb-types"},
 	},
 	"E_OpenconfigIsisLsdbTypes_ISIS_TLV_TYPE": {
-		1: {Name: "AREA_ADDRESSES", DefiningModule: "openconfig-isis-lsdb-types"},
-		2: {Name: "AUTHENTICATION", DefiningModule: "openconfig-isis-lsdb-types"},
-		3: {Name: "DYNAMIC_NAME", DefiningModule: "openconfig-isis-lsdb-types"},
-		4: {Name: "EXTENDED_IPV4_REACHABILITY", DefiningModule: "openconfig-isis-lsdb-types"},
-		5: {Name: "EXTENDED_IS_REACHABILITY", DefiningModule: "openconfig-isis-lsdb-types"},
-		6: {Name: "IIS_NEIGHBORS", DefiningModule: "openconfig-isis-lsdb-types"},
-		7: {Name: "INSTANCE_ID", DefiningModule: "openconfig-isis-lsdb-types"},
-		8: {Name: "IPV4_EXTERNAL_REACHABILITY", DefiningModule: "openconfig-isis-lsdb-types"},
-		9: {Name: "IPV4_INTERFACE_ADDRESSES", DefiningModule: "openconfig-isis-lsdb-types"},
+		1:  {Name: "AREA_ADDRESSES", DefiningModule: "openconfig-isis-lsdb-types"},
+		2:  {Name: "AUTHENTICATION", DefiningModule: "openconfig-isis-lsdb-types"},
+		3:  {Name: "DYNAMIC_NAME", DefiningModule: "openconfig-isis-lsdb-types"},
+		4:  {Name: "EXTENDED_IPV4_REACHABILITY", DefiningModule: "openconfig-isis-lsdb-types"},
+		5:  {Name: "EXTENDED_IS_REACHABILITY", DefiningModule: "openconfig-isis-lsdb-types"},
+		6:  {Name: "IIS_NEIGHBORS", DefiningModule: "openconfig-isis-lsdb-types"},
+		7:  {Name: "INSTANCE_ID", DefiningModule: "openconfig-isis-lsdb-types"},
+		8:  {Name: "IPV4_EXTERNAL_REACHABILITY", DefiningModule: "openconfig-isis-lsdb-types"},
+		9:  {Name: "IPV4_INTERFACE_ADDRESSES", DefiningModule: "openconfig-isis-lsdb-types"},
 		10: {Name: "IPV4_INTERNAL_REACHABILITY", DefiningModule: "openconfig-isis-lsdb-types"},
 		11: {Name: "IPV4_SRLG", DefiningModule: "openconfig-isis-lsdb-types"},
 		12: {Name: "IPV4_TE_ROUTER_ID", DefiningModule: "openconfig-isis-lsdb-types"},
@@ -353,16 +353,32 @@ var ΛEnum = map[string]map[int64]ygot.EnumDefinition{
 		1: {Name: "NARROW_METRIC"},
 		2: {Name: "WIDE_METRIC"},
 	},
+	"E_OpenconfigLacp_LacpActivityType": {
+		1: {Name: "ACTIVE"},
+		2: {Name: "PASSIVE"},
+	},
+	"E_OpenconfigLacp_LacpPeriodType": {
+		1: {Name: "FAST"},
+		2: {Name: "SLOW"},
+	},
+	"E_OpenconfigLacp_LacpSynchronizationType": {
+		1: {Name: "IN_SYNC"},
+		2: {Name: "OUT_SYNC"},
+	},
+	"E_OpenconfigLacp_LacpTimeoutType": {
+		1: {Name: "LONG"},
+		2: {Name: "SHORT"},
+	},
 	"E_OpenconfigLldpTypes_LLDP_SYSTEM_CAPABILITY": {
-		1: {Name: "C_VLAN", DefiningModule: "openconfig-lldp-types"},
-		2: {Name: "DOCSIS_CABLE_DEVICE", DefiningModule: "openconfig-lldp-types"},
-		3: {Name: "MAC_BRIDGE", DefiningModule: "openconfig-lldp-types"},
-		4: {Name: "OTHER", DefiningModule: "openconfig-lldp-types"},
-		5: {Name: "REPEATER", DefiningModule: "openconfig-lldp-types"},
-		6: {Name: "ROUTER", DefiningModule: "openconfig-lldp-types"},
-		7: {Name: "STATION_ONLY", DefiningModule: "openconfig-lldp-types"},
-		8: {Name: "S_VLAN", DefiningModule: "openconfig-lldp-types"},
-		9: {Name: "TELEPHONE", DefiningModule: "openconfig-lldp-types"},
+		1:  {Name: "C_VLAN", DefiningModule: "openconfig-lldp-types"},
+		2:  {Name: "DOCSIS_CABLE_DEVICE", DefiningModule: "openconfig-lldp-types"},
+		3:  {Name: "MAC_BRIDGE", DefiningModule: "openconfig-lldp-types"},
+		4:  {Name: "OTHER", DefiningModule: "openconfig-lldp-types"},
+		5:  {Name: "REPEATER", DefiningModule: "openconfig-lldp-types"},
+		6:  {Name: "ROUTER", DefiningModule: "openconfig-lldp-types"},
+		7:  {Name: "STATION_ONLY", DefiningModule: "openconfig-lldp-types"},
+		8:  {Name: "S_VLAN", DefiningModule: "openconfig-lldp-types"},
+		9:  {Name: "TELEPHONE", DefiningModule: "openconfig-lldp-types"},
 		10: {Name: "TWO_PORT_MAC_RELAY", DefiningModule: "openconfig-lldp-types"},
 		11: {Name: "WLAN_ACCESS_POINT", DefiningModule: "openconfig-lldp-types"},
 	},
@@ -487,6 +503,9 @@ var ΛEnum = map[string]map[int64]ygot.EnumDefinition{
 		8: {Name: "ENTROPY_LABEL_INDICATOR"},
 		9: {Name: "NO_LABEL"},
 	},
+	"E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority": {
+		1: {Name: "ALL"},
+	},
 	"E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Neighbors_Neighbor_State_NeighborStatus": {
 		1: {Name: "UP"},
 		2: {Name: "DOWN"},
@@ -521,6 +540,14 @@ var ΛEnum = map[string]map[int64]ygot.EnumDefinition{
 	"E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_Sessions_Session_State_Status": {
 		1: {Name: "UP"},
 		2: {Name: "DOWN"},
+	},
+	"E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel": {
+		1: {Name: "IPV4_EXPLICIT_NULL"},
+		2: {Name: "ROUTER_ALERT"},
+		3: {Name: "IPV6_EXPLICIT_NULL"},
+		4: {Name: "IMPLICIT_NULL"},
+		8: {Name: "ENTROPY_LABEL_INDICATOR"},
+		9: {Name: "NO_LABEL"},
 	},
 	"E_OpenconfigMpls_Mpls_TeInterfaceAttributes_Interface_IgpFloodingBandwidth_Config_ThresholdSpecification": {
 		1: {Name: "MIRRORED_UP_DOWN"},
@@ -589,17 +616,6 @@ var ΛEnum = map[string]map[int64]ygot.EnumDefinition{
 	"E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Fdb_MacTable_Entries_Entry_State_EntryType": {
 		1: {Name: "STATIC"},
 		2: {Name: "DYNAMIC"},
-	},
-	"E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority": {
-		1: {Name: "ALL"},
-	},
-	"E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel": {
-		1: {Name: "IPV4_EXPLICIT_NULL"},
-		2: {Name: "ROUTER_ALERT"},
-		3: {Name: "IPV6_EXPLICIT_NULL"},
-		4: {Name: "IMPLICIT_NULL"},
-		8: {Name: "ENTROPY_LABEL_INDICATOR"},
-		9: {Name: "NO_LABEL"},
 	},
 	"E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Protocols_Protocol_Isis_Interfaces_Interface_Levels_Level_Adjacencies_Adjacency_State_Nlpid": {
 		1: {Name: "IPV4"},
@@ -943,15 +959,15 @@ var ΛEnum = map[string]map[int64]ygot.EnumDefinition{
 		3: {Name: "INACTIVE", DefiningModule: "openconfig-platform-types"},
 	},
 	"E_OpenconfigPlatformTypes_OPENCONFIG_HARDWARE_COMPONENT": {
-		1: {Name: "BACKPLANE", DefiningModule: "openconfig-platform-types"},
-		2: {Name: "CHASSIS", DefiningModule: "openconfig-platform-types"},
-		3: {Name: "CONTROLLER_CARD", DefiningModule: "openconfig-platform-types"},
-		4: {Name: "CPU", DefiningModule: "openconfig-platform-types"},
-		5: {Name: "FABRIC", DefiningModule: "openconfig-platform-types"},
-		6: {Name: "FAN", DefiningModule: "openconfig-platform-types"},
-		7: {Name: "FRU", DefiningModule: "openconfig-platform-types"},
-		8: {Name: "INTEGRATED_CIRCUIT", DefiningModule: "openconfig-platform-types"},
-		9: {Name: "LINECARD", DefiningModule: "openconfig-platform-types"},
+		1:  {Name: "BACKPLANE", DefiningModule: "openconfig-platform-types"},
+		2:  {Name: "CHASSIS", DefiningModule: "openconfig-platform-types"},
+		3:  {Name: "CONTROLLER_CARD", DefiningModule: "openconfig-platform-types"},
+		4:  {Name: "CPU", DefiningModule: "openconfig-platform-types"},
+		5:  {Name: "FABRIC", DefiningModule: "openconfig-platform-types"},
+		6:  {Name: "FAN", DefiningModule: "openconfig-platform-types"},
+		7:  {Name: "FRU", DefiningModule: "openconfig-platform-types"},
+		8:  {Name: "INTEGRATED_CIRCUIT", DefiningModule: "openconfig-platform-types"},
+		9:  {Name: "LINECARD", DefiningModule: "openconfig-platform-types"},
 		10: {Name: "PORT", DefiningModule: "openconfig-platform-types"},
 		11: {Name: "POWER_SUPPLY", DefiningModule: "openconfig-platform-types"},
 		12: {Name: "SENSOR", DefiningModule: "openconfig-platform-types"},
@@ -994,15 +1010,15 @@ var ΛEnum = map[string]map[int64]ygot.EnumDefinition{
 		2: {Name: "IPV6"},
 	},
 	"E_OpenconfigSystemLogging_SYSLOG_FACILITY": {
-		1: {Name: "ALL", DefiningModule: "openconfig-system-logging"},
-		2: {Name: "AUDIT", DefiningModule: "openconfig-system-logging"},
-		3: {Name: "AUTH", DefiningModule: "openconfig-system-logging"},
-		4: {Name: "AUTHPRIV", DefiningModule: "openconfig-system-logging"},
-		5: {Name: "CONSOLE", DefiningModule: "openconfig-system-logging"},
-		6: {Name: "KERNEL", DefiningModule: "openconfig-system-logging"},
-		7: {Name: "LOCAL0", DefiningModule: "openconfig-system-logging"},
-		8: {Name: "LOCAL1", DefiningModule: "openconfig-system-logging"},
-		9: {Name: "LOCAL2", DefiningModule: "openconfig-system-logging"},
+		1:  {Name: "ALL", DefiningModule: "openconfig-system-logging"},
+		2:  {Name: "AUDIT", DefiningModule: "openconfig-system-logging"},
+		3:  {Name: "AUTH", DefiningModule: "openconfig-system-logging"},
+		4:  {Name: "AUTHPRIV", DefiningModule: "openconfig-system-logging"},
+		5:  {Name: "CONSOLE", DefiningModule: "openconfig-system-logging"},
+		6:  {Name: "KERNEL", DefiningModule: "openconfig-system-logging"},
+		7:  {Name: "LOCAL0", DefiningModule: "openconfig-system-logging"},
+		8:  {Name: "LOCAL1", DefiningModule: "openconfig-system-logging"},
+		9:  {Name: "LOCAL2", DefiningModule: "openconfig-system-logging"},
 		10: {Name: "LOCAL3", DefiningModule: "openconfig-system-logging"},
 		11: {Name: "LOCAL4", DefiningModule: "openconfig-system-logging"},
 		12: {Name: "LOCAL5", DefiningModule: "openconfig-system-logging"},
@@ -1061,7 +1077,6 @@ var ΛEnum = map[string]map[int64]ygot.EnumDefinition{
 		2: {Name: "TRUNK"},
 	},
 }
-
 
 // ΛEnumTypes is a map, keyed by a YANG schema path, of the enumerated types that
 // correspond with the leaf. The type is represented as a reflect.Type. The naming
@@ -1347,6 +1362,27 @@ var ΛEnumTypes = map[string][]reflect.Type{
 	"/interfaces/interface/subinterfaces/subinterface/state/oper-status": []reflect.Type{
 		reflect.TypeOf((E_OpenconfigInterfaces_Interfaces_Interface_State_OperStatus)(0)),
 	},
+	"/lacp/interfaces/interface/config/interval": []reflect.Type{
+		reflect.TypeOf((E_OpenconfigLacp_LacpPeriodType)(0)),
+	},
+	"/lacp/interfaces/interface/config/lacp-mode": []reflect.Type{
+		reflect.TypeOf((E_OpenconfigLacp_LacpActivityType)(0)),
+	},
+	"/lacp/interfaces/interface/members/member/state/activity": []reflect.Type{
+		reflect.TypeOf((E_OpenconfigLacp_LacpActivityType)(0)),
+	},
+	"/lacp/interfaces/interface/members/member/state/synchronization": []reflect.Type{
+		reflect.TypeOf((E_OpenconfigLacp_LacpSynchronizationType)(0)),
+	},
+	"/lacp/interfaces/interface/members/member/state/timeout": []reflect.Type{
+		reflect.TypeOf((E_OpenconfigLacp_LacpTimeoutType)(0)),
+	},
+	"/lacp/interfaces/interface/state/interval": []reflect.Type{
+		reflect.TypeOf((E_OpenconfigLacp_LacpPeriodType)(0)),
+	},
+	"/lacp/interfaces/interface/state/lacp-mode": []reflect.Type{
+		reflect.TypeOf((E_OpenconfigLacp_LacpActivityType)(0)),
+	},
 	"/lldp/config/chassis-id-type": []reflect.Type{
 		reflect.TypeOf((E_OpenconfigLldp_ChassisIdType)(0)),
 	},
@@ -1510,7 +1546,7 @@ var ΛEnumTypes = map[string][]reflect.Type{
 		reflect.TypeOf((E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel)(0)),
 	},
 	"/mpls/signaling-protocols/rsvp-te/interface-attributes/interface/bandwidth-reservations/bandwidth-reservation/priority": []reflect.Type{
-		reflect.TypeOf((E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority)(0)),
+		reflect.TypeOf((E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority)(0)),
 	},
 	"/mpls/signaling-protocols/rsvp-te/interface-attributes/interface/protection/config/link-protection-style-requested": []reflect.Type{
 		reflect.TypeOf((E_OpenconfigMplsTypes_PROTECTION_TYPE)(0)),
@@ -1543,10 +1579,10 @@ var ΛEnumTypes = map[string][]reflect.Type{
 		reflect.TypeOf((E_OpenconfigMplsTypes_LSP_ROLE)(0)),
 	},
 	"/mpls/signaling-protocols/segment-routing/aggregate-sid-counters/aggregate-sid-counter/mpls-label": []reflect.Type{
-		reflect.TypeOf((E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel)(0)),
+		reflect.TypeOf((E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel)(0)),
 	},
 	"/mpls/signaling-protocols/segment-routing/interfaces/interface/sid-counters/sid-counter/mpls-label": []reflect.Type{
-		reflect.TypeOf((E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel)(0)),
+		reflect.TypeOf((E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel)(0)),
 	},
 	"/mpls/te-global-attributes/srlgs/srlg/config/flooding-type": []reflect.Type{
 		reflect.TypeOf((E_OpenconfigMpls_MplsSrlgFloodingType)(0)),
@@ -1837,7 +1873,7 @@ var ΛEnumTypes = map[string][]reflect.Type{
 		reflect.TypeOf((E_OpenconfigMpls_Mpls_Lsps_StaticLsps_StaticLsp_Egress_Config_PushLabel)(0)),
 	},
 	"/network-instances/network-instance/mpls/signaling-protocols/rsvp-te/interface-attributes/interface/bandwidth-reservations/bandwidth-reservation/priority": []reflect.Type{
-		reflect.TypeOf((E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority)(0)),
+		reflect.TypeOf((E_OpenconfigMpls_Mpls_SignalingProtocols_RsvpTe_InterfaceAttributes_Interface_BandwidthReservations_BandwidthReservation_State_Priority)(0)),
 	},
 	"/network-instances/network-instance/mpls/signaling-protocols/rsvp-te/interface-attributes/interface/protection/config/link-protection-style-requested": []reflect.Type{
 		reflect.TypeOf((E_OpenconfigMplsTypes_PROTECTION_TYPE)(0)),
@@ -1870,10 +1906,10 @@ var ΛEnumTypes = map[string][]reflect.Type{
 		reflect.TypeOf((E_OpenconfigMplsTypes_LSP_ROLE)(0)),
 	},
 	"/network-instances/network-instance/mpls/signaling-protocols/segment-routing/aggregate-sid-counters/aggregate-sid-counter/mpls-label": []reflect.Type{
-		reflect.TypeOf((E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel)(0)),
+		reflect.TypeOf((E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel)(0)),
 	},
 	"/network-instances/network-instance/mpls/signaling-protocols/segment-routing/interfaces/interface/sid-counters/sid-counter/mpls-label": []reflect.Type{
-		reflect.TypeOf((E_OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Mpls_SignalingProtocols_SegmentRouting_Interfaces_Interface_SidCounters_SidCounter_State_MplsLabel)(0)),
+		reflect.TypeOf((E_OpenconfigMpls_Mpls_SignalingProtocols_SegmentRouting_AggregateSidCounters_AggregateSidCounter_State_MplsLabel)(0)),
 	},
 	"/network-instances/network-instance/mpls/te-global-attributes/srlgs/srlg/config/flooding-type": []reflect.Type{
 		reflect.TypeOf((E_OpenconfigMpls_MplsSrlgFloodingType)(0)),
@@ -2888,4 +2924,3 @@ var ΛEnumTypes = map[string][]reflect.Type{
 		reflect.TypeOf((E_OpenconfigSystem_System_SshServer_Config_ProtocolVersion)(0)),
 	},
 }
-

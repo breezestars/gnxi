@@ -1,8 +1,28 @@
 package components_funcs
 
-import "github.com/breezestars/gnxi/gnmi/modeldata/gostruct"
+import (
+	"github.com/breezestars/gnxi/gnmi/modeldata/gostruct"
+	"github.com/tidwall/gjson"
+	"os/exec"
+	"google.golang.org/grpc/status"
+	"google.golang.org/grpc/codes"
+	"fmt"
+)
 
 func InitLldp(device *gostruct.Device) error {
+
+	cmd := "lldpctl -f json"
+	json, err := exec.Command("bash", "-c", cmd).Output()
+	if err != nil {
+		return status.Error(codes.Internal, "Failed to execute command: "+cmd)
+	}
+
+	fmt.Println(string(json))
+	fmt.Println(gjson.Get(string(json), "lldp.interface"))
+	intfs := gjson.Get(string(json), "lldp.interface").Array()
+	for k,v := range intfs{
+		fmt.Println(k,", ",v)
+	}
 
 	//inf, err := lldp.NewInterface("eth0")
 	//if err != nil {

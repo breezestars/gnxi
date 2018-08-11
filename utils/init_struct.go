@@ -63,5 +63,15 @@ func InitGoStruct(mu *sync.RWMutex) (*gostruct.Device, error) {
 
 	go components_funcs.SyncVlan(device, configClient, mu)
 
+	tInterfaceAgg := time.Now()
+	err = components_funcs.InitInterfaceAggregate(device, configClient)
+	if err != nil {
+		return nil, err
+	}
+	tInterfaceAggD := time.Since(tInterfaceAgg)
+	fmt.Printf("=== Init InterfaceAggregate, took %s === \n", tInterfaceAggD )
+
+	go components_funcs.SyncInterfaceAggregate(device, configClient, mu)
+
 	return device, nil
 }
