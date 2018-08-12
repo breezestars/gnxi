@@ -36,6 +36,10 @@ var (
 			path: []string{"interfaces","interface","aggregation", "config", "lag-type"},
 			setFunc:dataSetFunc(SetInterfacePortchannel),
 		},
+		{
+			path: []string{"interfaces","interface","ethernet", "config", "aggregate-id"},
+			setFunc:dataSetFunc(SetInterfacePortchannelMember),
+		},
 	}
 
 	delTbl = []path2DataFunc{
@@ -49,7 +53,11 @@ var (
 		},
 		{
 			path: []string{"interfaces","interface","aggregation", "config", "lag-type"},
-			setFunc:dataSetFunc(DelInterfacePortchannel),
+			delFunc:dataDelFunc(DelInterfacePortchannel),
+		},
+		{
+			path: []string{"interfaces","interface","ethernet", "config", "aggregate-id"},
+			delFunc:dataDelFunc(DelInterfacePortchannelMember),
 		},
 	}
 )

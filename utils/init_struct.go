@@ -10,20 +10,20 @@ import (
 )
 
 func InitGoStruct(mu *sync.RWMutex) (*gostruct.Device, error) {
-	dbAddr:="localhost:6379"
-	dbPass:=""
+	dbAddr := "localhost:6379"
+	dbPass := ""
 
 	applClient := redis.NewClient(&redis.Options{
 		Addr:     dbAddr,
 		Password: dbPass, // no password set
-		DB:       0,  // use appl DB
+		DB:       0,      // use appl DB
 		PoolSize: 10,
 	})
 
 	configClient := redis.NewClient(&redis.Options{
 		Addr:     dbAddr,
 		Password: dbPass, // no password set
-		DB:       4,  // use config DB
+		DB:       4,      // use config DB
 		PoolSize: 10,
 	})
 
@@ -45,24 +45,24 @@ func InitGoStruct(mu *sync.RWMutex) (*gostruct.Device, error) {
 	fmt.Printf("=== Init Components, took %s === \n", tComponentD)
 
 	tLldp := time.Now()
-	err = components_funcs.InitLldp(device,applClient)
+	err = components_funcs.InitLldp(device, applClient)
 	if err != nil {
 		return nil, err
 	}
 	tLldpD := time.Since(tLldp)
 	fmt.Printf("=== Init LLDP, took %s === \n", tLldpD)
 
-	go components_funcs.SyncLldp(device,applClient, mu)
+	go components_funcs.SyncLldp(device, applClient, mu)
 
 	tInterface := time.Now()
-	err = components_funcs.InitInterface(device)
+	err = components_funcs.InitInterface(device, applClient, configClient)
 	if err != nil {
 		return nil, err
 	}
 	tInterfaceD := time.Since(tInterface)
 	fmt.Printf("=== Init Interface, took %s === \n", tInterfaceD)
 
-	go components_funcs.SyncInterface(device, mu)
+	go components_funcs.SyncInterface(device, applClient, configClient, mu)
 
 	tVlan := time.Now()
 	err = components_funcs.InitVlan(device, configClient)
@@ -80,7 +80,7 @@ func InitGoStruct(mu *sync.RWMutex) (*gostruct.Device, error) {
 		return nil, err
 	}
 	tInterfaceAggD := time.Since(tInterfaceAgg)
-	fmt.Printf("=== Init InterfaceAggregate, took %s === \n", tInterfaceAggD )
+	fmt.Printf("=== Init InterfaceAggregate, took %s === \n", tInterfaceAggD)
 
 	go components_funcs.SyncInterfaceAggregate(device, configClient, mu)
 
