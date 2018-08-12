@@ -354,40 +354,44 @@ func (s *Server) Get(ctx context.Context, req *pb.GetRequest) (*pb.GetResponse, 
 			continue
 		}
 
-		// Return all leaf nodes of the sub-tree.
-		if len(req.GetUseModels()) != len(s.model.modelData) && req.GetEncoding() != pb.Encoding_JSON_IETF {
-			results, err := ygot.TogNMINotifications(nodeStruct, ts, ygot.GNMINotificationsConfig{UsePathElem: true, PathElemPrefix: fullPath.Elem})
-			if err != nil {
-				return nil, status.Errorf(codes.Internal, "error in serializing GoStruct to notifications: %v", err)
-			}
-			if len(results) != 1 {
-				return nil, status.Errorf(codes.Internal, "ygot.TogNMINotifications() return %d notifications instead of one", len(results))
-			}
-			notifications[i] = results[0]
-			continue
+		if req.GetUseModels() != nil {
+			return nil, status.Errorf(codes.Unimplemented, "filtering Get using use_models is unsupported, got: %v", req.GetUseModels())
 		}
 
-		// Return IETF JSON for the sub-tree.
-		jsonTree, err := ygot.ConstructIETFJSON(nodeStruct, &ygot.RFC7951JSONConfig{AppendModuleName: true})
+		// Return IETF JSON by default.
+		jsonEncoder := func() (map[string]interface{}, error) {
+			return ygot.ConstructIETFJSON(nodeStruct, &ygot.RFC7951JSONConfig{AppendModuleName: true})
+		}
+		jsonType := "IETF"
+		buildUpdate := func(b []byte) *pb.Update {
+			return &pb.Update{Path: path, Val: &pb.TypedValue{Value: &pb.TypedValue_JsonIetfVal{JsonIetfVal: b}}}
+		}
+
+		if req.GetEncoding() == pb.Encoding_JSON {
+			jsonEncoder = func() (map[string]interface{}, error) {
+				return ygot.ConstructInternalJSON(nodeStruct)
+			}
+			jsonType = "Internal"
+			buildUpdate = func(b []byte) *pb.Update {
+				return &pb.Update{Path: path, Val: &pb.TypedValue{Value: &pb.TypedValue_JsonVal{JsonVal: b}}}
+			}
+		}
+
+		jsonTree, err := jsonEncoder()
 		if err != nil {
-			msg := fmt.Sprintf("error in constructing IETF JSON tree from requested node: %v", err)
+			msg := fmt.Sprintf("error in constructing %s JSON tree from requested node: %v", jsonType, err)
 			log.Error(msg)
 			return nil, status.Error(codes.Internal, msg)
 		}
+
 		jsonDump, err := json.Marshal(jsonTree)
 		if err != nil {
-			msg := fmt.Sprintf("error in marshaling IETF JSON tree to bytes: %v", err)
+			msg := fmt.Sprintf("error in marshaling %s JSON tree to bytes: %v", jsonType, err)
 			log.Error(msg)
 			return nil, status.Error(codes.Internal, msg)
 		}
-		update := &pb.Update{
-			Path: path,
-			Val: &pb.TypedValue{
-				Value: &pb.TypedValue_JsonIetfVal{
-					JsonIetfVal: jsonDump,
-				},
-			},
-		}
+
+		update := buildUpdate(jsonDump)
 		notifications[i] = &pb.Notification{
 			Timestamp: ts,
 			Prefix:    prefix,
@@ -446,4 +450,12 @@ func (s *Server) Set(ctx context.Context, req *pb.SetRequest) (*pb.SetResponse, 
 // Subscribe method is not implemented.
 func (s *Server) Subscribe(stream pb.GNMI_SubscribeServer) error {
 	return status.Error(codes.Unimplemented, "Subscribe is not implemented.")
+}
+
+// InternalUpdate is an experimental feature to let the server update its
+// internal states. Use it with your own risk.
+func (s *Server) InternalUpdate(fp func(config ygot.ValidatedGoStruct) error) error {
+	s.mu.Lock()
+	defer s.mu.Unlock()
+	return fp(s.config)
 }

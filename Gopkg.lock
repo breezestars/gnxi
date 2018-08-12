@@ -43,6 +43,29 @@
 
 [[projects]]
   branch = "master"
+  name = "github.com/google/gnxi"
+  packages = [
+    "gnoi",
+    "gnoi/cert",
+    "gnoi/cert/pb",
+    "utils/entity"
+  ]
+  revision = "c94bd636a234540a52668048c45d4febdd1bb117"
+
+[[projects]]
+  name = "github.com/google/go-cmp"
+  packages = [
+    "cmp",
+    "cmp/cmpopts",
+    "cmp/internal/diff",
+    "cmp/internal/function",
+    "cmp/internal/value"
+  ]
+  revision = "3af367b6b30c263d47e8895973edcca9a49cf029"
+  version = "v0.2.0"
+
+[[projects]]
+  branch = "master"
   name = "github.com/kylelemons/godebug"
   packages = [
     "diff",
@@ -174,6 +197,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "4fdad3776eeef178326ae2fbcb52e1cfcbb31fbeaaa17901f95856438576ec28"
+  inputs-digest = "347c611aed99d19bd198f782b490a05564b0b756ca008c4ea669da8ccb87c155"
   solver-name = "gps-cdcl"
   solver-version = 1
