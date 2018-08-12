@@ -414,6 +414,7 @@ func InitInterfaceAggregate(device *gostruct.Device, client *redis.Client) error
 
 	for _, value := range portChannels.Val() {
 		intfName := strings.Split(value, "|")[1]
+		fmt.Println(value, intfName)
 		intf, err := intfs.NewInterface(intfName)
 		if err != nil {
 			return err
@@ -481,7 +482,7 @@ func SyncInterfaceAggregate(device *gostruct.Device, client *redis.Client, mu *s
 
 		for _, value := range portChannels.Val() {
 			intfName := strings.Split(value, "|")[1]
-			intf := intfs.GetInterface(intfName)
+			intf := intfs.GetOrCreateInterface(intfName)
 
 			cmd := "sudo ip link show " + intfName + " up | grep state | awk -F' ' '{print $9}'"
 			intfResult, err := exec.Command("bash", "-c", cmd).Output()
@@ -547,6 +548,8 @@ func SyncInterfaceAggregate(device *gostruct.Device, client *redis.Client, mu *s
 
 func SetInterfacePortchannel(key []string, value []string, str string, b bool) error {
 
+	//-update /interfaces/interface[name=test]/aggregation/config/lag-type:lacp
+
 	type Teamd struct {
 		Device  string
 		HwAddr  string
@@ -557,21 +560,27 @@ func SetInterfacePortchannel(key []string, value []string, str string, b bool) e
 	filePath := "/etc/teamd/" + str + ".conf"
 
 	TEAMD_CONF_TMPL := `
-	{
-		"device": "{{.Device}}",
-		"hwaddr": "{{.HwAddr}}",
-		"runner": {
-		    "name": "{{.Runner}}",
-			"active": true,
-			"min_ports": {{.MinPort}},
-			"tx_hash": ["eth", "ipv4", "ipv6"]
-	    },
-		"link_watch": {
-		    "name": "ethtool"
-	    },
-		"ports": {
-	    }
-	}`
+{
+    "device": "{{.Device}}",
+    "hwaddr": "{{.HwAddr}}",
+    "runner": {
+        "name": "{{.Runner}}",
+        "active": true,
+        "min_ports": {{.MinPort}},
+        "tx_hash": ["eth", "ipv4", "ipv6"]
+    },
+    "link_watch": {
+        "name": "ethtool"
+    },
+    "ports": {
+    }
+}`
+
+	cmdGetMac := "ip link show eth0 | grep ether | awk -F' ' '{print $2}'"
+	mac, err := exec.Command("bash", "-c", cmdGetMac).Output()
+	if err != nil {
+		return fmt.Errorf("Failed to execute command: %s", cmdGetMac)
+	}
 
 	teml, err := template.New("teamConfig").Parse(TEAMD_CONF_TMPL)
 	if err != nil {
@@ -579,14 +588,17 @@ func SetInterfacePortchannel(key []string, value []string, str string, b bool) e
 	}
 
 	var config bytes.Buffer
-	err = teml.Execute(&config, Teamd{})
+	err = teml.Execute(&config, Teamd{
+		Device:  value[0],
+		HwAddr:  string(mac[:len(mac)-2]),
+		Runner:  str,
+		MinPort: 1,
+	})
 	if err != nil {
 		return status.Error(codes.Internal, "Failed to generator team config file")
 	}
 
-	fmt.Println(config)
-
-	cmdWrConfig := "sonic-cfggen -a '{\"PORTCHANNEL\": {\"+" + str + "+\":{}}}' --write-to-db"
+	cmdWrConfig := "sonic-cfggen -a '{\"PORTCHANNEL\": {\"" + str + "\":{}}}' --write-to-db"
 	_, err = exec.Command("bash", "-c", cmdWrConfig).Output()
 	if err != nil {
 		return status.Error(codes.Internal, "Failed to execute command: "+cmdWrConfig)
@@ -598,7 +610,7 @@ func SetInterfacePortchannel(key []string, value []string, str string, b bool) e
 		return status.Error(codes.Internal, "Failed to execute command: "+cmdGenConfig)
 	}
 
-	cmdReadConfig := "docker exec -i teamd teamd -d -f " + filePath
+	cmdReadConfig := "docker exec teamd teamd -d -f " + filePath
 	_, err = exec.Command("bash", "-c", cmdReadConfig).Output()
 	if err != nil {
 		return status.Error(codes.Internal, "Failed to execute command: "+cmdReadConfig)
@@ -608,7 +620,7 @@ func SetInterfacePortchannel(key []string, value []string, str string, b bool) e
 }
 
 func DelInterfacePortchannel(key []string, value []string, str string, b bool) error {
-	return nil
+	return status.Error(codes.Unimplemented, "DelInterfacePortchannel is not implement yet")
 }
 
 func SetInterfaceConfigEnabled(key []string, value []string, str string, b bool) error {
@@ -631,11 +643,6 @@ func SetInterfaceConfigEnabled(key []string, value []string, str string, b bool)
 	if strings.Contains(string(result), "Cannot find device") {
 		return status.Error(codes.Internal, "Cannot find device: "+value[len(value)-1])
 	}
-	return nil
-}
-
-func DelInterfaceConfigEnabled(key []string, value []string, str string, b bool) error {
-	//DelVlan()
 	return nil
 }
 
