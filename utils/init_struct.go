@@ -10,10 +10,19 @@ import (
 )
 
 func InitGoStruct(mu *sync.RWMutex) (*gostruct.Device, error) {
+	dbAddr:="localhost:6379"
+	dbPass:=""
+
+	applClient := redis.NewClient(&redis.Options{
+		Addr:     dbAddr,
+		Password: dbPass, // no password set
+		DB:       0,  // use appl DB
+		PoolSize: 10,
+	})
 
 	configClient := redis.NewClient(&redis.Options{
-		Addr:     "localhost:6379",
-		Password: "", // no password set
+		Addr:     dbAddr,
+		Password: dbPass, // no password set
 		DB:       4,  // use config DB
 		PoolSize: 10,
 	})
@@ -36,12 +45,14 @@ func InitGoStruct(mu *sync.RWMutex) (*gostruct.Device, error) {
 	fmt.Printf("=== Init Components, took %s === \n", tComponentD)
 
 	tLldp := time.Now()
-	err = components_funcs.InitLldp(device)
+	err = components_funcs.InitLldp(device,applClient)
 	if err != nil {
 		return nil, err
 	}
 	tLldpD := time.Since(tLldp)
 	fmt.Printf("=== Init LLDP, took %s === \n", tLldpD)
+
+	go components_funcs.SyncLldp(device,applClient, mu)
 
 	tInterface := time.Now()
 	err = components_funcs.InitInterface(device)
