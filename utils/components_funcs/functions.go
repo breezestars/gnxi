@@ -28,16 +28,10 @@ var (
 			path:    []string{"network-instances", "network-instance", "vlans", "vlan", "members", "member", "state", "interface", "config", "name"},
 			setFunc: dataSetFunc(SetVlanMember),
 		},
-		//{
-		//	// TODO: Need to check can't set access-vlan when ethernet is trunk
-		//	path:  []string{"interfaces", "interface", "ethernet", "switched-vlan", "config", "access-vlan"},
-		//	setFunc: dataSetFunc(SetInterfaceAccessVlan),
-		//},
-		//{
-		//	// TODO:
-		//	path:  []string{"interfaces", "interface", "ethernet", "switched-vlan", "config", "native-vlan"},
-		//	setFunc:dataSetFunc(SetInterfaceNativeVlan),
-		//},
+		{
+			path:    []string{"interfaces", "interface", "ethernet", "switched-vlan", "config", "access-vlan"},
+			setFunc: dataSetFunc(SetInterfaceAccessVlan),
+		},
 		{
 			path:    []string{"interfaces", "interface", "config", "enabled"},
 			setFunc: dataSetFunc(SetInterfaceConfigEnabled),

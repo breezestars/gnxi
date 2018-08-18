@@ -14,6 +14,10 @@ import (
 	"google.golang.org/grpc/codes"
 )
 
+const (
+	DEFAULT_VLAN = "1000"
+)
+
 func InitVlan(device *gostruct.Device, client *redis.Client) error {
 
 	device.NetworkInstances = &gostruct.OpenconfigNetworkInstance_NetworkInstances{}
@@ -135,6 +139,33 @@ func SetVlan(key []string, value []string, str string, b bool) error {
 }
 
 func DelVlan(key []string, value []string, str string, b bool) error {
+	dbAddr := "localhost:6379"
+	dbPass := ""
+
+	applClient := redis.NewClient(&redis.Options{
+		Addr:     dbAddr,
+		Password: dbPass, // no password set
+		DB:       0,      // use appl DB
+		PoolSize: 10,
+	})
+
+	keys := applClient.Keys("VLAN_MEMBER_TABLE:Vlan" + value[1] + ":*").Val()
+	for _, member := range keys {
+		cmd := "sudo config vlan member del " + value[1] + " " + strings.Split(member, ":")[2]
+
+		_, err := exec.Command("bash", "-c", cmd).Output()
+		if err != nil {
+			return status.Error(codes.Internal, "Failed to execute command: "+cmd)
+		}
+
+		cmd = "sudo config vlan member add " + DEFAULT_VLAN + " " + strings.Split(member, ":")[2]
+
+		_, err = exec.Command("bash", "-c", cmd).Output()
+		if err != nil {
+			return status.Error(codes.Internal, "Failed to execute command: "+cmd)
+		}
+	}
+
 	cmd := "sudo config vlan del " + value[1]
 
 	_, err := exec.Command("bash", "-c", cmd).Output()
@@ -144,9 +175,73 @@ func DelVlan(key []string, value []string, str string, b bool) error {
 	return nil
 }
 
+//Set interface as trunk port. The function will delete all other untagged vlan.
 func SetVlanMember(key []string, value []string, str string, b bool) error {
-	cmd := "sudo config vlan member add " + value[1] + " " + value[2]
+	dbAddr := "localhost:6379"
+	dbPass := ""
 
+	applClient := redis.NewClient(&redis.Options{
+		Addr:     dbAddr,
+		Password: dbPass, // no password set
+		DB:       0,      // use appl DB
+		PoolSize: 10,
+	})
+
+	keys := applClient.Keys("VLAN_MEMBER_TABLE:*:" + str).Val()
+	if len(keys) == 0 {
+
+	} else {
+		for _, vlan := range keys {
+			if applClient.HGet(vlan, "tagging_mode").Val() == "untagged" {
+				vlanId := strings.Split(strings.Split(vlan, "Vlan")[1], ":")[0]
+				cmd := "sudo config vlan member del " + vlanId + " " + str
+				fmt.Println(cmd)
+				_, err := exec.Command("bash", "-c", cmd).Output()
+				if err != nil {
+					return status.Error(codes.Internal, "Failed to execute command: "+cmd)
+				}
+			}
+		}
+	}
+
+	cmd := "sudo config vlan member add " + value[1] + " " + str
+	fmt.Println(cmd)
+
+	_, err := exec.Command("bash", "-c", cmd).Output()
+	if err != nil {
+		return status.Error(codes.Internal, "Failed to execute command: "+cmd)
+	}
+	return nil
+}
+
+func SetInterfaceAccessVlan(key []string, value []string, str string, b bool) error {
+	dbAddr := "localhost:6379"
+	dbPass := ""
+
+	applClient := redis.NewClient(&redis.Options{
+		Addr:     dbAddr,
+		Password: dbPass, // no password set
+		DB:       0,      // use appl DB
+		PoolSize: 10,
+	})
+
+	keys := applClient.Keys("VLAN_MEMBER_TABLE:*:" + value[0]).Val()
+	if len(keys) == 0 {
+
+	} else {
+		for _, vlan := range keys {
+			vlanId := strings.Split(strings.Split(vlan, "Vlan")[1], ":")[0]
+			cmd := "sudo config vlan member del " + vlanId + " " + value[0]
+			fmt.Println(cmd)
+			_, err := exec.Command("bash", "-c", cmd).Output()
+			if err != nil {
+				return status.Error(codes.Internal, "Failed to execute command: "+cmd)
+			}
+		}
+	}
+
+	cmd := "sudo config vlan member add -u " + str + " " + value[0]
+	fmt.Println(cmd)
 	_, err := exec.Command("bash", "-c", cmd).Output()
 	if err != nil {
 		return status.Error(codes.Internal, "Failed to execute command: "+cmd)
@@ -158,6 +253,13 @@ func DelVlanMember(key []string, value []string, str string, b bool) error {
 	cmd := "sudo config vlan member del " + value[1] + " " + value[2]
 
 	_, err := exec.Command("bash", "-c", cmd).Output()
+	if err != nil {
+		return status.Error(codes.Internal, "Failed to execute command: "+cmd)
+	}
+
+	cmd = "sudo config vlan member add -u " + DEFAULT_VLAN + " " + value[2]
+
+	_, err = exec.Command("bash", "-c", cmd).Output()
 	if err != nil {
 		return status.Error(codes.Internal, "Failed to execute command: "+cmd)
 	}

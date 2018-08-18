@@ -84,7 +84,7 @@ func InitInterface(device *gostruct.Device, appClient *redis.Client, configClien
 		//2) "VLAN_MEMBER_TABLE:Vlan12:Ethernet12"
 
 		var accessVlan *uint16
-		var nativeVlan *uint16
+		//var nativeVlan *uint16
 		var intfMode gostruct.E_OpenconfigVlan_VlanModeType
 		trunkConfigVlans := make([]gostruct.OpenconfigInterfaces_Interfaces_Interface_Ethernet_SwitchedVlan_Config_TrunkVlans_Union, 0)
 		trunkStateVlans := make([]gostruct.OpenconfigInterfaces_Interfaces_Interface_Ethernet_SwitchedVlan_State_TrunkVlans_Union, 0)
@@ -93,11 +93,11 @@ func InitInterface(device *gostruct.Device, appClient *redis.Client, configClien
 			intfMode = gostruct.OpenconfigVlan_VlanModeType_TRUNK
 			for _, vlanMember := range intfVlan {
 				if appClient.HGet(vlanMember, "tagging_mode").Val() == "untagged" {
-					nativeVlanInt, err := strconv.Atoi(strings.Split(strings.Split(vlanMember, ":")[1], "Vlan")[1])
-					if err != nil {
-						return err
-					}
-					nativeVlan = ygot.Uint16(uint16(nativeVlanInt))
+					//nativeVlanInt, err := strconv.Atoi(strings.Split(strings.Split(vlanMember, ":")[1], "Vlan")[1])
+					//if err != nil {
+					//	return err
+					//}
+					//nativeVlan = ygot.Uint16(uint16(nativeVlanInt))
 				} else {
 					trunkVlanInt, err := strconv.Atoi(strings.Split(strings.Split(vlanMember, ":")[1], "Vlan")[1])
 					if err != nil {
@@ -112,13 +112,33 @@ func InitInterface(device *gostruct.Device, appClient *redis.Client, configClien
 				}
 			}
 		} else {
-			intfMode = gostruct.OpenconfigVlan_VlanModeType_ACCESS
-			accessVlanInt, err := strconv.Atoi(strings.Split(strings.Split(intfVlan[0], ":")[1], "Vlan")[1])
-			if err != nil {
-				return err
+			if len(intfVlan) == 1 {
+				mode := appClient.HGet(intfVlan[0], "tagging_mode").Val()
+				if mode == "tagged" {
+					intfMode = gostruct.OpenconfigVlan_VlanModeType_TRUNK
+					trunkVlanInt, err := strconv.Atoi(strings.Split(strings.Split(intfVlan[0], ":")[1], "Vlan")[1])
+					if err != nil {
+						return err
+					}
+					trunkConfigVlans = append(trunkConfigVlans, &gostruct.OpenconfigInterfaces_Interfaces_Interface_Ethernet_SwitchedVlan_Config_TrunkVlans_Union_Uint16{
+						Uint16: uint16(trunkVlanInt),
+					})
+					trunkStateVlans = append(trunkStateVlans, &gostruct.OpenconfigInterfaces_Interfaces_Interface_Ethernet_SwitchedVlan_State_TrunkVlans_Union_Uint16{
+						Uint16: uint16(trunkVlanInt),
+					})
+				} else {
+					intfMode = gostruct.OpenconfigVlan_VlanModeType_ACCESS
+					accessVlanInt, err := strconv.Atoi(strings.Split(strings.Split(intfVlan[0], ":")[1], "Vlan")[1])
+					if err != nil {
+						return err
+					}
+					accessVlan = ygot.Uint16(uint16(accessVlanInt))
+					//nativeVlan = accessVlan
+				}
+			} else {
+				intfMode = gostruct.OpenconfigVlan_VlanModeType_ACCESS
+				accessVlan = ygot.Uint16(uint16(0))
 			}
-			accessVlan = ygot.Uint16(uint16(accessVlanInt))
-			nativeVlan = accessVlan
 		}
 
 		InOctets, err := strconv.ParseUint(intStatDetail[1], 10, 64)
@@ -202,14 +222,14 @@ func InitInterface(device *gostruct.Device, appClient *redis.Client, configClien
 				Config: &gostruct.OpenconfigInterfaces_Interfaces_Interface_Ethernet_SwitchedVlan_Config{
 					AccessVlan:    accessVlan,
 					InterfaceMode: intfMode,
-					NativeVlan:    nativeVlan,
-					TrunkVlans:    trunkConfigVlans,
+					//NativeVlan:    nativeVlan,
+					TrunkVlans: trunkConfigVlans,
 				},
 				State: &gostruct.OpenconfigInterfaces_Interfaces_Interface_Ethernet_SwitchedVlan_State{
 					AccessVlan:    accessVlan,
 					InterfaceMode: intfMode,
-					NativeVlan:    nativeVlan,
-					TrunkVlans:    trunkStateVlans,
+					//NativeVlan:    nativeVlan,
+					TrunkVlans: trunkStateVlans,
 				},
 			},
 		}
@@ -280,7 +300,7 @@ func SyncInterface(device *gostruct.Device, appClient *redis.Client, configClien
 			//2) "VLAN_MEMBER_TABLE:Vlan12:Ethernet12"
 
 			var accessVlan *uint16
-			var nativeVlan *uint16
+			//var nativeVlan *uint16
 			var intfMode gostruct.E_OpenconfigVlan_VlanModeType
 			trunkConfigVlans := make([]gostruct.OpenconfigInterfaces_Interfaces_Interface_Ethernet_SwitchedVlan_Config_TrunkVlans_Union, 0)
 			trunkStateVlans := make([]gostruct.OpenconfigInterfaces_Interfaces_Interface_Ethernet_SwitchedVlan_State_TrunkVlans_Union, 0)
@@ -289,11 +309,11 @@ func SyncInterface(device *gostruct.Device, appClient *redis.Client, configClien
 				intfMode = gostruct.OpenconfigVlan_VlanModeType_TRUNK
 				for _, vlanMember := range intfVlan {
 					if appClient.HGet(vlanMember, "tagging_mode").Val() == "untagged" {
-						nativeVlanInt, err := strconv.Atoi(strings.Split(strings.Split(vlanMember, ":")[1], "Vlan")[1])
-						if err != nil {
-							return err
-						}
-						nativeVlan = ygot.Uint16(uint16(nativeVlanInt))
+						//nativeVlanInt, err := strconv.Atoi(strings.Split(strings.Split(vlanMember, ":")[1], "Vlan")[1])
+						//if err != nil {
+						//	return err
+						//}
+						//nativeVlan = ygot.Uint16(uint16(nativeVlanInt))
 					} else {
 						trunkVlanInt, err := strconv.Atoi(strings.Split(strings.Split(vlanMember, ":")[1], "Vlan")[1])
 						if err != nil {
@@ -308,13 +328,33 @@ func SyncInterface(device *gostruct.Device, appClient *redis.Client, configClien
 					}
 				}
 			} else {
-				intfMode = gostruct.OpenconfigVlan_VlanModeType_ACCESS
-				accessVlanInt, err := strconv.Atoi(strings.Split(strings.Split(intfVlan[0], ":")[1], "Vlan")[1])
-				if err != nil {
-					return err
+				if len(intfVlan) == 1 {
+					mode := appClient.HGet(intfVlan[0], "tagging_mode").Val()
+					if mode == "tagged" {
+						intfMode = gostruct.OpenconfigVlan_VlanModeType_TRUNK
+						trunkVlanInt, err := strconv.Atoi(strings.Split(strings.Split(intfVlan[0], ":")[1], "Vlan")[1])
+						if err != nil {
+							return err
+						}
+						trunkConfigVlans = append(trunkConfigVlans, &gostruct.OpenconfigInterfaces_Interfaces_Interface_Ethernet_SwitchedVlan_Config_TrunkVlans_Union_Uint16{
+							Uint16: uint16(trunkVlanInt),
+						})
+						trunkStateVlans = append(trunkStateVlans, &gostruct.OpenconfigInterfaces_Interfaces_Interface_Ethernet_SwitchedVlan_State_TrunkVlans_Union_Uint16{
+							Uint16: uint16(trunkVlanInt),
+						})
+					} else {
+						intfMode = gostruct.OpenconfigVlan_VlanModeType_ACCESS
+						accessVlanInt, err := strconv.Atoi(strings.Split(strings.Split(intfVlan[0], ":")[1], "Vlan")[1])
+						if err != nil {
+							return err
+						}
+						accessVlan = ygot.Uint16(uint16(accessVlanInt))
+						//nativeVlan = accessVlan
+					}
+				} else {
+					intfMode = gostruct.OpenconfigVlan_VlanModeType_ACCESS
+					accessVlan = ygot.Uint16(uint16(0))
 				}
-				accessVlan = ygot.Uint16(uint16(accessVlanInt))
-				nativeVlan = accessVlan
 			}
 
 			InOctets, err := strconv.ParseUint(intStatDetail[1], 10, 64)
@@ -398,14 +438,14 @@ func SyncInterface(device *gostruct.Device, appClient *redis.Client, configClien
 					Config: &gostruct.OpenconfigInterfaces_Interfaces_Interface_Ethernet_SwitchedVlan_Config{
 						AccessVlan:    accessVlan,
 						InterfaceMode: intfMode,
-						NativeVlan:    nativeVlan,
-						TrunkVlans:    trunkConfigVlans,
+						//NativeVlan:    nativeVlan,
+						TrunkVlans: trunkConfigVlans,
 					},
 					State: &gostruct.OpenconfigInterfaces_Interfaces_Interface_Ethernet_SwitchedVlan_State{
 						AccessVlan:    accessVlan,
 						InterfaceMode: intfMode,
-						NativeVlan:    nativeVlan,
-						TrunkVlans:    trunkStateVlans,
+						//NativeVlan:    nativeVlan,
+						TrunkVlans: trunkStateVlans,
 					},
 				},
 			}
