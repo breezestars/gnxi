@@ -5,7 +5,7 @@ import (
 	"github.com/go-redis/redis"
 	"strconv"
 	"github.com/openconfig/ygot/ygot"
-				"strings"
+	"strings"
 	"time"
 	"fmt"
 	"sync"
@@ -77,6 +77,7 @@ func InitVlan(device *gostruct.Device, client *redis.Client) error {
 func SyncVlan(device *gostruct.Device, client *redis.Client, mu *sync.RWMutex) error {
 	for {
 		// TODO: Here is use static 'sonic' to be name, need to change to dynamic
+		device.NetworkInstances.NetworkInstance["sonic"].Vlans = &gostruct.OpenconfigNetworkInstance_NetworkInstances_NetworkInstance_Vlans{}
 		vlans := device.NetworkInstances.NetworkInstance["sonic"].Vlans
 
 		keys := client.Keys("VLAN|*")
@@ -90,7 +91,6 @@ func SyncVlan(device *gostruct.Device, client *redis.Client, mu *sync.RWMutex) e
 				return err
 			}
 
-			vlans.DeleteVlan(uint16(vlanId))
 			vlan, err := vlans.NewVlan(uint16(vlanId))
 			if err != nil {
 				fmt.Println("Error 2")
@@ -135,7 +135,7 @@ func SetVlan(key []string, value []string, str string, b bool) error {
 }
 
 func DelVlan(key []string, value []string, str string, b bool) error {
-	cmd := "sudo config vlan del " + str
+	cmd := "sudo config vlan del " + value[1]
 
 	_, err := exec.Command("bash", "-c", cmd).Output()
 	if err != nil {
